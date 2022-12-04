@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.10.23)  4 DEC 2022 20:40
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.10.23)  4 DEC 2022 20:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -349,6 +349,9 @@ LaTeX Warning: Label `fig:firstExample' multiply defined.
 
 LaTeX Warning: Label `fig:firstExample' multiply defined.
 
+
+LaTeX Warning: Label `fig:firstExample' multiply defined.
+
 )
 \openout1 = `paper.aux'.
 
@@ -475,6 +478,14 @@ Package pdftex.def Info: RayCasting1.png  used on input line 49.
 LaTeX Warning: Citation `Appa2015RayCF' on page 1 undefined on input line 50.
 
 
+LaTeX Warning: Citation `10.1145/325165.325247' on page 1 undefined on input li
+ne 59.
+
+
+LaTeX Warning: Citation `haggstrom2018real' on page 1 undefined on input line 5
+9.
+
+
 LaTeX Warning: Citation `511' on page 1 undefined on input line 59.
 
 
@@ -482,7 +493,7 @@ LaTeX Warning: Citation `10.1145/78964.78965' on page 1 undefined on input line
  60.
 
 
-Underfull \vbox (badness 3271) has occurred while \output is active []
+Underfull \vbox (badness 1694) has occurred while \output is active []
 
 
 
@@ -493,9 +504,6 @@ File: weighted_interpolation.png Graphic file (type png)
 <use weighted_interpolation.png>
 Package pdftex.def Info: weighted_interpolation.png  used on input line 69.
 (pdftex.def)             Requested size: 192.00073pt x 90.85135pt.
-
-LaTeX Warning: Citation `729595' on page 1 undefined on input line 73.
-
 
 LaTeX Warning: Citation `729595' on page 1 undefined on input line 73.
 
@@ -517,10 +525,14 @@ LaTeX Warning: Citation `511' on page 1 undefined on input line 76.
 LaTeX Warning: Citation `10.1145/78964.78965' on page 1 undefined on input line
  76.
 
+
+Underfull \vbox (badness 5133) has occurred while \output is active []
+
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
 (Font)              scaled to size 8.99994pt on input line 78.
 LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 7
 8.
+
 (c:/texlive/2022/texmf-dist/tex/latex/psnfss/ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 ) [1{c:/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
@@ -535,7 +547,7 @@ ne 85.
 LaTeX Warning: Citation `10.1145/78964.78965' on page 2 undefined on input line
  88.
 
-<wall.png, id=28, 819.8128pt x 523.9575pt>
+<wall.png, id=27, 819.8128pt x 523.9575pt>
 File: wall.png Graphic file (type png)
 <use wall.png>
 Package pdftex.def Info: wall.png  used on input line 94.
@@ -556,13 +568,23 @@ ne 104.
 LaTeX Warning: Citation `10.1145/78964.78965' on page 2 undefined on input line
  104.
 
-<pyramide.png, id=29, 1128.46594pt x 606.76688pt>
+<pyramide.png, id=28, 1128.46594pt x 606.76688pt>
 File: pyramide.png Graphic file (type png)
 <use pyramide.png>
 Package pdftex.def Info: pyramide.png  used on input line 110.
 (pdftex.def)             Requested size: 192.00073pt x 103.23233pt.
-(./paper.bbl)) [2 <./weighted_interpolation.PNG> <./wall.PNG> <./pyramide.PNG>]
-(./paper.aux)
+
+Package lineno Warning: Linenumber reference failed, 
+(lineno)                rerun to get it right.
+
+(./paper.bbl)) [2 <./weighted_interpolation.PNG> <./wall.PNG>]
+Underfull \hbox (badness 10000) has occurred while \output is active
+[]
+ []
+
+[3
+
+ <./pyramide.PNG>] (./paper.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -572,10 +594,10 @@ LaTeX Warning: There were multiply-defined labels.
  ) 
 Here is how much of TeX's memory you used:
  10141 strings out of 475071
- 157937 string characters out of 5782907
- 517097 words of memory out of 5000000
- 31337 multiletter control sequences out of 15000+600000
- 527576 words of font info for 108 fonts, out of 8000000 for 9000
+ 157958 string characters out of 5782907
+ 517219 words of memory out of 5000000
+ 31338 multiletter control sequences out of 15000+600000
+ 524808 words of font info for 106 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  87i,12n,91p,1163b,478s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {c:/texlive/2022/texmf-dist/fonts/enc/dvips/base/8r.enc}<c:/texlive/2022/texm
@@ -585,13 +607,12 @@ public/amsfonts/cm/cmsy9.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/ams
 fonts/symbols/msbm10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/urw/helvetic/u
 hvr8a.pfb><c:/texlive/2022/texmf-dist/fonts/type1/urw/symbol/usyr.pfb><c:/texli
 ve/2022/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2022/texmf-dist
-/fonts/type1/urw/times/utmbi8a.pfb><c:/texlive/2022/texmf-dist/fonts/type1/urw/
-times/utmr8a.pfb><c:/texlive/2022/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-
-Output written on paper.pdf (2 pages, 166145 bytes).
+/fonts/type1/urw/times/utmr8a.pfb><c:/texlive/2022/texmf-dist/fonts/type1/urw/t
+imes/utmri8a.pfb>
+Output written on paper.pdf (3 pages, 160514 bytes).
 PDF statistics:
- 97 PDF objects out of 1000 (max. 8388607)
+ 96 PDF objects out of 1000 (max. 8388607)
  64 compressed objects within 1 object stream
- 19 named destinations out of 1000 (max. 500000)
+ 20 named destinations out of 1000 (max. 500000)
  21 words of extra memory for PDF output out of 10000 (max. 10000000)
 
