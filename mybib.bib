@@ -8,6 +8,35 @@
   year={2015}
 }
 
+@ARTICLE{511,
+  author={Levoy, M.},
+  journal={IEEE Computer Graphics and Applications}, 
+  title={Display of surfaces from volume data}, 
+  year={1988},
+  volume={8},
+  number={3},
+  pages={29-37},
+  doi={10.1109/38.511}}
+
+@article{10.1145/78964.78965,
+author = {Levoy, Marc},
+title = {Efficient Ray Tracing of Volume Data},
+year = {1990},
+issue_date = {July 1990},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {9},
+number = {3},
+issn = {0730-0301},
+url = {https://doi.org/10.1145/78964.78965},
+doi = {10.1145/78964.78965},
+abstract = {Volume rendering is a technique for visualizing sampled scalar or vector fields of three spatial dimensions without fitting geometric primitives to the data. A subset of these techniques generates images by computing 2-D projections of a colored semitransparent volume, where the color and opacity at each point are derived from the data using local operators. Since all voxels participate in the generation of each image, rendering time grows linearly with the size of the dataset. This paper presents a front-to-back image-order volume-rendering algorithm and discusses two techniques for improving its performance. The first technique employs a pyramid of binary volumes to encode spatial coherence present in the data, and the second technique uses an opacity threshold to adaptively terminate ray tracing. Although the actual time saved depends on the data, speedups of an order of magnitude have been observed for datasets of useful size and complexity. Examples from two applications are given: medical imaging and molecular graphics.},
+journal = {ACM Trans. Graph.},
+month = {jul},
+pages = {245–261},
+numpages = {17}
+}
+
 
 
 @article{10.1145/964965.808594,
@@ -29,4 +58,43 @@ pages = {165–174},
 numpages = {10},
 keywords = {Simulation of natural phenomena, Radiative transport, Ray tracing, Clouds, Particle systems, Raster graphics, Stochastic modeling, Light scattering, Computer graphics}
 }
+
+@inproceedings{10.1145/147130.147155,
+author = {Danskin, John and Hanrahan, Pat},
+title = {Fast Algorithms for Volume Ray Tracing},
+year = {1992},
+isbn = {0897915275},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/147130.147155},
+doi = {10.1145/147130.147155},
+booktitle = {Proceedings of the 1992 Workshop on Volume Visualization},
+pages = {91–98},
+numpages = {8},
+location = {Boston, Massachusetts, USA},
+series = {VVS '92}
+}
+
+
+
+
+@article{10.1145/97880.97886,
+author = {Arvo, James and Kirk, David},
+title = {Particle Transport and Image Synthesis},
+year = {1990},
+issue_date = {Aug. 1990},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {24},
+number = {4},
+issn = {0097-8930},
+url = {https://doi.org/10.1145/97880.97886},
+doi = {10.1145/97880.97886},
+abstract = {The rendering equation is similar to the linear Boltzmann equation which has been widely studied in physics and nuclear engineering. Consequently, many of the powerful techniques which have been developed in these fields can be applied to problems in image synthesis. In this paper we adapt several statistical techniques commonly used in neutron transport to stochastic ray tracing and, more generally, to Monte Carlo solution of the rendering equation. First, we describe a technique known as Russian roulette which can be used to terminate the recursive tracing of rays without introducing statistical bias. We also examine the practice of creating ray trees in classical ray tracing in the light of a well-known technique in particle transport known as splitting. We show that neither ray trees nor paths as described in [10] constitute an optimal sampling plan in themselves and that a hybrid may be more efficient.},
+journal = {SIGGRAPH Comput. Graph.},
+month = {sep},
+pages = {63–66},
+numpages = {4}
+}
+
 
