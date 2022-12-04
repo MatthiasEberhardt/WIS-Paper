@@ -1,5 +1,5 @@
 base = paper
-$(base).pdf: $(base).tex body.tex mybib.bib
+$(base).pdf: $(base).tex body.tex bib.bib
 	pdflatex $<
 	bibtex $(base)
 	pdflatex $<
