@@ -63,7 +63,7 @@
 \ifpdf \usepackage[pdftex]{graphicx} \pdfcompresslevel=9
 \else \usepackage[dvips]{graphicx} \fi
 
-
+\DeclareUnicodeCharacter{202F}{FIX ME!!!!}
 % WIS hack if you work in german
 % \usepackage{ngerman}
 
@@ -72,7 +72,8 @@
 
 \usepackage{amssymb}
 % end of prologue
-
+\usepackage[switch]{lineno}
+\linenumbers
 \input{body.tex}
 
 \end{document}

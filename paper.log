@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.10.23)  4 DEC 2022 15:32
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.10.23)  4 DEC 2022 20:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -302,6 +302,8 @@ File: pdftex.def 2022/09/22 v1.2b Graphics/color driver for pdftex
 \Gin@req@height=\dimen144
 \Gin@req@width=\dimen145
 )
+   defining Unicode char U+202F (decimal 8239)
+
 (./egweblnk.sty
 Package: egweblnk 2004/10/29 v2.2 DF's support for http web links in class egpu
 bl
@@ -316,13 +318,38 @@ Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
-)) (./body.tex
+))
+(c:/texlive/2022/texmf-dist/tex/latex/lineno/lineno.sty
+Package: lineno 2005/11/02 line numbers on paragraphs v4.41
+\linenopenalty=\count271
+\output=\toks20
+\linenoprevgraf=\count272
+\linenumbersep=\dimen146
+\linenumberwidth=\dimen147
+\c@linenumber=\count273
+\c@pagewiselinenumber=\count274
+\c@LN@truepage=\count275
+\c@internallinenumber=\count276
+\c@internallinenumbers=\count277
+\quotelinenumbersep=\dimen148
+\bframerule=\dimen149
+\bframesep=\dimen150
+\bframebox=\box51
+LaTeX Info: Redefining \\ on input line 3056.
+) (./body.tex
 (c:/texlive/2022/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2022-09-28 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count271
-\l__pdf_internal_box=\box51
+\l__color_backend_stack_int=\count278
+\l__pdf_internal_box=\box52
 )
-(./paper.aux)
+(./paper.aux
+
+LaTeX Warning: Label `fig:firstExample' multiply defined.
+
+
+LaTeX Warning: Label `fig:firstExample' multiply defined.
+
+)
 \openout1 = `paper.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 31.
@@ -361,17 +388,17 @@ Package hyperref Info: Link coloring ON on input line 31.
 
 (c:/texlive/2022/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count272
-\scratchdimen=\dimen146
-\scratchbox=\box52
-\nofMPsegments=\count273
-\nofMParguments=\count274
-\everyMPshowfont=\toks20
-\MPscratchCnt=\count275
-\MPscratchDim=\dimen147
-\MPnumerator=\count276
-\makeMPintoPDFobject=\count277
-\everyMPtoPDFconversion=\toks21
+\scratchcounter=\count279
+\scratchdimen=\dimen151
+\scratchbox=\box53
+\nofMPsegments=\count280
+\nofMParguments=\count281
+\everyMPshowfont=\toks21
+\MPscratchCnt=\count282
+\MPscratchDim=\dimen152
+\MPnumerator=\count283
+\makeMPintoPDFobject=\count284
+\everyMPtoPDFconversion=\toks22
 ) (c:/texlive/2022/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 
@@ -434,51 +461,118 @@ Underfull \hbox (badness 10000) in paragraph at lines 36--37
 
  []
 
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 5.39996pt on input line 41.
 
-Underfull \vbox (badness 1675) has occurred while \output is active []
+LaTeX Warning: Citation `511' on page 1 undefined on input line 42.
+
+<RayCasting1.png, id=4, 250.9375pt x 134.5025pt>
+File: RayCasting1.png Graphic file (type png)
+<use RayCasting1.png>
+Package pdftex.def Info: RayCasting1.png  used on input line 49.
+(pdftex.def)             Requested size: 192.00073pt x 102.91663pt.
+
+LaTeX Warning: Citation `Appa2015RayCF' on page 1 undefined on input line 50.
+
+
+LaTeX Warning: Citation `511' on page 1 undefined on input line 59.
+
+
+LaTeX Warning: Citation `10.1145/78964.78965' on page 1 undefined on input line
+ 60.
+
+
+Underfull \vbox (badness 3271) has occurred while \output is active []
+
+
+
+LaTeX Warning: Citation `729595' on page 1 undefined on input line 63.
+
+<weighted_interpolation.png, id=5, 870.25125pt x 411.78844pt>
+File: weighted_interpolation.png Graphic file (type png)
+<use weighted_interpolation.png>
+Package pdftex.def Info: weighted_interpolation.png  used on input line 69.
+(pdftex.def)             Requested size: 192.00073pt x 90.85135pt.
+
+LaTeX Warning: Citation `729595' on page 1 undefined on input line 73.
+
+
+LaTeX Warning: Citation `729595' on page 1 undefined on input line 73.
+
+
+LaTeX Warning: Citation `Sabella1988ARA' on page 1 undefined on input line 76.
+
+
+LaTeX Warning: Citation `Upson1988VbufferVV' on page 1 undefined on input line 
+76.
+
+
+LaTeX Warning: Citation `10.1145/378456.378484' on page 1 undefined on input li
+ne 76.
+
+
+LaTeX Warning: Citation `511' on page 1 undefined on input line 76.
+
+
+LaTeX Warning: Citation `10.1145/78964.78965' on page 1 undefined on input line
+ 76.
 
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 8.99994pt on input line 64.
-LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 6
-4.
-
+(Font)              scaled to size 8.99994pt on input line 78.
+LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 7
+8.
 (c:/texlive/2022/texmf-dist/tex/latex/psnfss/ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 ) [1{c:/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 
-]
+ <./RayCasting1.png>]
+
+LaTeX Warning: Citation `10.1145/147130.147155' on page 2 undefined on input li
+ne 85.
+
+
+LaTeX Warning: Citation `10.1145/78964.78965' on page 2 undefined on input line
+ 88.
+
 
 LaTeX Warning: Citation `10.1145/97880.97886' on page 2 undefined on input line
- 68.
+ 90.
 
 
 LaTeX Warning: Citation `10.1145/147130.147155' on page 2 undefined on input li
-ne 68.
+ne 90.
 
-<RayCasting1.png, id=25, 250.9375pt x 134.5025pt>
-File: RayCasting1.png Graphic file (type png)
-<use RayCasting1.png>
-Package pdftex.def Info: RayCasting1.png  used on input line 80.
-(pdftex.def)             Requested size: 192.00073pt x 102.91663pt.
 
-LaTeX Warning: Citation `Appa2015RayCF' on page 2 undefined on input line 81.
+LaTeX Warning: Citation `10.1145/147130.147155' on page 2 undefined on input li
+ne 93.
 
-(./paper.bbl)) [2
 
- <./RayCasting1.png>] (./paper.aux)
+LaTeX Warning: Citation `10.1145/78964.78965' on page 2 undefined on input line
+ 93.
+
+<pyramide.png, id=28, 1128.46594pt x 606.76688pt>
+File: pyramide.png Graphic file (type png)
+<use pyramide.png>
+Package pdftex.def Info: pyramide.png  used on input line 99.
+(pdftex.def)             Requested size: 192.00073pt x 103.23233pt.
+(./paper.bbl)) [2 <./weighted_interpolation.PNG> <./pyramide.PNG>] (./paper.aux
+)
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: There were multiply-defined labels.
+
  ) 
 Here is how much of TeX's memory you used:
- 9877 strings out of 475071
- 153760 string characters out of 5782907
- 506336 words of memory out of 5000000
- 31086 multiletter control sequences out of 15000+600000
- 521918 words of font info for 104 fonts, out of 8000000 for 9000
+ 10133 strings out of 475071
+ 157842 string characters out of 5782907
+ 517040 words of memory out of 5000000
+ 31331 multiletter control sequences out of 15000+600000
+ 527576 words of font info for 108 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 87i,12n,91p,1193b,442s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 87i,12n,91p,1163b,478s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {c:/texlive/2022/texmf-dist/fonts/enc/dvips/base/8r.enc}<c:/texlive/2022/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2022/texmf-dist/fo
 nts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/
@@ -486,12 +580,13 @@ public/amsfonts/cm/cmsy9.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/ams
 fonts/symbols/msbm10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/urw/helvetic/u
 hvr8a.pfb><c:/texlive/2022/texmf-dist/fonts/type1/urw/symbol/usyr.pfb><c:/texli
 ve/2022/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2022/texmf-dist
-/fonts/type1/urw/times/utmr8a.pfb><c:/texlive/2022/texmf-dist/fonts/type1/urw/t
-imes/utmri8a.pfb>
-Output written on paper.pdf (2 pages, 96753 bytes).
+/fonts/type1/urw/times/utmbi8a.pfb><c:/texlive/2022/texmf-dist/fonts/type1/urw/
+times/utmr8a.pfb><c:/texlive/2022/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+
+Output written on paper.pdf (2 pages, 152129 bytes).
 PDF statistics:
- 81 PDF objects out of 1000 (max. 8388607)
- 56 compressed objects within 1 object stream
- 16 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 93 PDF objects out of 1000 (max. 8388607)
+ 62 compressed objects within 1 object stream
+ 18 named destinations out of 1000 (max. 500000)
+ 16 words of extra memory for PDF output out of 10000 (max. 10000000)
 
