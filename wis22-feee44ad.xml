@@ -1,0 +1,144 @@
+<?xml version="1.0"?>
+<Review>
+  <!--
+REVIEWER'S REPORT FORM
+======================
+
+Please,
+- Replace ONLY " ... " between the appropriate tags with your text.
+- Do not remove or change any tags!
+- Do not use "&", "<" or ">" in what you type, rather use "&amp;", "&lt;" and "&gt;"!- Please check this review form if it is a valid xml file, just open it with a browser. Then please upload it to the server, you can check the results on the website.
+-->
+  <Reviewer>feee44ad</Reviewer>
+  <Review></Review>
+  <Conference>WIS_2022</Conference>
+  <Submission>1035</Submission>
+  <Summary>
+    <!--This is a Textfield for Summary please enter text in the ... fields. 
+Description for the field: Please summarize the paper in 1 - 2 paragraphs and state what you consider to be the contributions of this paper to computer graphics. 
+-->
+	  <value>The submission introduces the reader to the topic of procedural noise generation and explains the background and motivation for it.
+	  Furthermore, it aims to give an overview of a wide range of various procedural noise functions commonly used in Computer Graphics, and gives a comparison for those noise functions.
+	  (At the point of time of this review, the paper was not finished, so not all topics mentioned above are included in the reviewed version.)
+	  </value>
+  </Summary>
+  <ClarityofExposition>
+    <!--This is a Textfield for Clarity of Exposition please enter text in the ... fields. 
+Description for the field: Is the exposition clear? How could it be improved?
+-->
+    <value>In general, the submitted paper is quite understandable, with certain problems. These problems include:
+	
+	1) Several spelling mistakes ("remaines" in l. 12; "requering" in l. 19; "describen" in l. 48;
+	"reffered" in l.85; "it's" in l. 99; "funtions" l. 118; "throughth" in l. 119; "funtions" in l. 130;
+	"necceserally" in l.134; "potentionally" in l. 137; "it's" in l. 140).
+    
+	2) One grammatical mistake: in the sentence on line 46, there seems to be a missing word ("It can be used as a source of cheap
+	to compute visual detail generator, ...").
+	
+	3) Use of colloquial/ unscientific language ("such infamous images", l. 10), and repetition ("For a more formal definition of noise we will use some definitions ...", l.77).
+
+	The submission also contains many positive aspects, several of which I would like to emphasize:
+    
+	1) Both the abstract as well as the introduction of the paper are very well written in my opinion, and make it easy to quickly get an overview of the paper as well as the topic of procedural noise in general.
+	
+	2) The paragraph from line 118 to line 134 does a good job to summarize the most important/ desirable properties of noise functions in a concise and understandable manner.
+    </value>
+  </ClarityofExposition>
+  <TechnicalSoundness>
+    <!--This is a Textfield for Technical Soundness please enter text in the ... fields. 
+Description for the field: Is the paper technically sound?
+-->
+    <value>
+		The submission gives both an intuitive description of noise functions (approximately lines 108 to 143), as well as a more technical and formal definition (first half of section 2).
+		This formal definition, as I understand it, defines noise over the frequency domain (or the related power spectrum), and makes use of n-th order moments to characterize the specific noise.
+		The intuitive explanation is very helpful in my opinion and gives a good introduction, even for readers not familiar with the topic.
+		The formal definition however left me with two questions:
+		
+		1) The submission states that noise is created by manipulation of the power spectrum (line 138), which is itself the square of the amplitudes of the frequency domain.
+		It is not clear to me why the square is used, instead of the amplitudes by themselves.
+		
+		2) After their definition, the n-th order moments are no longer mentioned in the submission, so I am not certain how relevant they are and if they do deserve mention at all.
+		It should be noted however, that I am not very knowledgeable on the matter, and that the submission is not finished either, so it might be that the n-th order moments become relevant in a later chapter,
+		or that I simply do not understand their relevance. If that is so, this point of criticism should be ignored.
+
+		All concepts and formalisms introduced in this submission have been defined correctly, as far as I can tell.
+	</value>
+  </TechnicalSoundness>
+  <QualityofReferences>
+    <!--This is a Textfield for Quality of References please enter text in the ... fields. 
+Description for the field: Are the references adequate? List any additional references that are needed.
+-->
+    <value>
+		The submission in its current state lists 3 references, which seems acceptable, given that the submission is an early and incomplete draft.
+		The final submission should contain more extensive references however, especially considering that it is supposed to represent something akin to a state of the art report.
+		After going through the paper, I noticed several instances of what appears to be missing citations:
+		
+		1) The image for Figure 2 (Perlin Noise 2D), seems to be taken from wikimedia (https://commons.wikimedia.org/wiki/File:PerlinNoise2d.png), without citing the source.
+		Even though the original image has been released into public domain, it is still best practice to clearly cite all sources.
+		
+		2) On line 100, there is a passage ("With the use of the preceding definitions, we can define noise as a stationary and random process, for which the control of the power
+		spectrum is provided mostly as the summation of a number of independent scaled instances of typically band-limited noise. ..."),
+		which seems to be taken from "A survey of procedural noise functions", page 3 ("A noise is a stationary and normal random process. Control of the power spectrum is provided,
+		either directly, or through the summation of a number of independent scaled instances of (typically band-limited) noise."), without clear attribution of the source.
+		The source is mentioned in the submission (on line 73) sometime before the actual quote (line 100), but, to me at least, it is not immediately clear
+		that this piece of text is meant to be a quote.
+		
+		3) In general, citations are rather sparse in section 2, which would benefit from more thorough citations (e.g., a source for the power spectrum of the noises (around line 56) would be nice).
+
+		The references selected as sources for the submission themselves are of high quality and very relevant for the topic, as far as I can tell.
+	</value>
+  </QualityofReferences>
+  <Reproducibility>
+    <!--This is a Textfield for Reproducibility please enter text in the ... fields. 
+Description for the field: Could the work be reproduced from the information in the paper? Are all important algorithmic or system details discussed adequately?
+-->
+    <value>The current version of the paper contains no algorithms that would need to be reproduced.</value>
+  </Reproducibility>
+  <OverallRecommendation>
+    <!--This is a Scorebox for OverallRecommendation please enter ONLY the number in the ... fields. Possible values for the value field are: 
+0 - -
+1 - 1 - very poor
+2 - 2 - poor
+3 - 3 - clearly below EG standard
+4 - 4 - dubious - not quite acceptable
+5 - 5 - marginal - only just acceptable
+6 - 6 - acceptable
+7 - 7 - good
+8 - 8 - very good
+9 - 9 - excellent
+-->
+    <value>4</value>
+  </OverallRecommendation>
+  <ExplanationofRecommendation>
+    <!--This is a Textfield for Explanation of Recommendation please enter text in the ... fields. 
+Description for the field: Explain your recommendation by discussing the strengths and weaknesses of the submission, contributions, and the potential impact of the paper. Include suggestions for improvement. Be thorough. Be fair. Be courteous. Your evaluation will be forwarded to the authors during the rebuttal period.
+-->
+    <value>The content of the paper is mostly well written and easily understandable. In my opinion, the abstract and introduction (apart from some spelling mistakes) are very good. I think that the formal definitions in chapter 2 do need some reworking,
+	especially to point out how they are relevant for the paper at large. Apart from this minor criticism, I have no problems with the (semantic) content of the paper and would rate it
+	as good (7). The reason for the overall lower evaluation, and the main issue I have with this submission, are the stylistic errors (spelling, grammar mistakes,
+	and especially missing citations). However, these issues can be addressed without too much effort.
+	As a further remark, I noticed that the current version of the paper is already quite extensive (~ 1500 words), whereas the final version is 
+	supposed to have 2500 - 3500 words, which leaves only around 2000 words for the remaining part (the description of the various algorithms), which I presume to be the focus of the paper.
+	It might be helpful to cut some parts from the Introduction or Definition to leave more place for the main part.
+	
+	</value>
+  </ExplanationofRecommendation>
+  <ConfidentialComments>
+    <!--This is a Textfield for Confidential Comments please enter text in the ... fields. 
+Description for the field: (for the Programme Committee only) These comments will NOT be forwarded to the paper author(s). Please do not mention any other papers that are currently in review, or the names of people associated with these papers.
+-->
+    <value>Due to various factors (the unfinished nature of the submission, my lack of expertise in the topic, and the fact that this is my first review),
+	I am not very confident in my evaluation. Nonetheless, I hope that my review is somewhat useful and not too harsh.</value>
+  </ConfidentialComments>
+  <EvaluationConfidence>
+    <!--This is a Scorebox for EvaluationConfidence please enter ONLY the number in the ... fields. Possible values for the value field are: 
+0 - -
+1 - 1 - Very unconfident, really just a guess
+2 - 2 - Rather unconfident, but I know a bit
+3 - 3 - Moderately confident, I know as much as most
+4 - 4 - Pretty confident, I know this area well
+5 - 5 - Extremely confident, I consider myself an expert
+-->
+    <value>2</value>
+  </EvaluationConfidence>
+</Review>
