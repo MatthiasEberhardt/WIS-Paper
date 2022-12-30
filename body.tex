@@ -102,6 +102,7 @@ The above described termination after a certain threshold is reached creates a b
 
 \subsection{Pyramid Data Structures}
 The following optimizations require a data structure called a pyramid\cite{10.1145/147130.147155}. Similar to a set of mip-maps with decreasing resolutions, a pyramide is a set of 3d arrays with decreasing resolutions. The different volumes of which the pyramid consists are called the levels of the pyramid. The lowest level (called level 0) is equal to the original volume. In general, level $n + 1$ is half the size of level $n$, and each voxel in level $n+1$ contains some information about 8 voxels in the lower volume\cite{10.1145/78964.78965}. What information exactly is stored in the levels contains on what specific pyramid is used, of which there are multiple kinds. The first one is the so called average pyramid, which,as the name suggets, stores the average of the 8 lower voxels in each voxel of the higher level (see figure 4).
+
  \begin{figure}[htb]
   \centering
   % the following command controls the width of the embedded file
