@@ -165,14 +165,14 @@ However, if the opacity is smaller the average pyramid is used to approximate th
 Once a cell in the maximum pyramid has been checked, the algorithm advances to the next cell and checks if the new cell has the same parent as the old one. If not, we move up one level in the pyramid. This is done to ensure that the algorithm always advances with the largest possible step size.
 After that, the same procedure is repeated until the ray has moved through the entire pyramid.
 Further improvements to this algorithm can be madeby considering two observations:
-Firstly, it is very rare for the cell in the highest level of the maximum pyramid to have a \alpha lower than $k$ (this would mean that the entire volume is almost completly transparent). It is therefore preferable not to start at the highest level but samewhat lower. XXX suggests in [CITE] to start two levels lower.
+Firstly, it is very rare for the cell in the highest level of the maximum pyramid to have a $\alpha$ lower than $k$ (this would mean that the entire volume is almost completly transparent). It is therefore preferable not to start at the highest level but samewhat lower. XXX suggests in [CITE] to start two levels lower.
 Secondly, finding the cells that the ray intersects is a computationally relatively expensive operation that might not amortize itself at lower levels. Therefore, it might be more effiecient to start sampling at the lowest level of the average pyramid before the lowest level of the maximum pyramid is reached. XXX suggests in [] to sample level 0  of the average pyramid once level 2 of the maximum pyramid is reached. [REFORMULATE?]
 
 
 
 \subsection{Homogenity Acceleration}
 This algorithm works conceptually the same as presence acceleration. The difference is that homogenity acceleration takes fewer samples in regions with high homogenity and not in regions of low opacity. The idea behind the algorithm is that in a region where all voxels are very similar to each other, accumulating x different samples and accumulating the average of the region x times yields a very similar result. The algorithm works in the same way as presence acceleration, only the maximum pyramid is replaced with the range pyramid.
-\subsection{\beta  Acceleration}
+\subsection{$\beta$  Acceleration}
 %-------------------------------------------------------------------------
 
 

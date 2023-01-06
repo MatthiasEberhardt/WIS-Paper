@@ -1,0 +1,53 @@
+This is BibTeX, Version 0.99d (TeX Live 2022/dev/Debian)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: paper.aux
+The style file: eg-alpha-doi.bst
+Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
+Reallocated global_strs (elt_size=200001) to 20 items from 10.
+Reallocated glb_str_end (elt_size=4) to 20 items from 10.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Database file #1: bib.bib
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Warning--empty booktitle in Appa2015RayCF
+You've used 12 entries,
+            3585 wiz_defined-function locations,
+            816 strings with 7372 characters,
+and the built_in function-call counts, 5982 in all, are:
+= -- 614
+> -- 180
+< -- 6
++ -- 56
+- -- 54
+* -- 433
+:= -- 831
+add.period$ -- 30
+call.type$ -- 12
+change.case$ -- 68
+chr.to.int$ -- 12
+cite$ -- 13
+duplicate$ -- 202
+empty$ -- 553
+format.name$ -- 72
+if$ -- 1480
+int.to.chr$ -- 1
+int.to.str$ -- 0
+missing$ -- 11
+newline$ -- 69
+num.names$ -- 36
+pop$ -- 111
+preamble$ -- 1
+purify$ -- 80
+quote$ -- 0
+skip$ -- 394
+stack$ -- 0
+substring$ -- 266
+swap$ -- 61
+text.length$ -- 6
+text.prefix$ -- 6
+top$ -- 0
+type$ -- 108
+warning$ -- 1
+while$ -- 39
+width$ -- 13
+write$ -- 163
+(There was 1 warning)

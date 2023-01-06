@@ -1,0 +1,654 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2022.12.4)  6 JAN 2023 09:42
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**paper.tex
+(./paper.tex
+LaTeX2e <2021-11-15> patch level 1
+L3 programming layer <2022-01-21> (./egpubl.cls
+Document Class: egpubl 2018/12/14 Document Style for EG Publications v3.74
+\c@table=\count185
+\c@figure=\count186
+\c@part=\count187
+\c@section=\count188
+\c@subsection=\count189
+\c@subsubsection=\count190
+\c@paragraph=\count191
+\c@subparagraph=\count192
+\titlespace=\skip47
+\teaserspace=\skip48
+(/usr/share/texlive/texmf-dist/tex/latex/comment/comment.sty
+\CommentStream=\write3
+
+Excluding comment 'comment') Excluding comment 'CCSXML'
+\c@p@volume=\count193
+\every@verbatim=\toks16
+\verbatim@line=\toks17
+
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/ifpdf.sty
+Package: ifpdf 2019/10/25 v3.4 ifpdf legacy package. Use iftex instead.
+
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2020/03/06 v1.0d TeX engine tests
+)) (./paper.lbl)
+\openout9 = `paper.lbl'.
+
+)
+(/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
+) (./dfadobe.sty
+Package: dfadobe 2000/03/05 v1.4 T1-encoded Times (except symbols), Courier, He
+lvetica (at 90\%) + math package
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/t1enc.sty
+Package: t1enc 1994/06/01 Standard LaTeX package
+)
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 14.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmr/m/n --> OT1/ptmcm/m/n on input line 14.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/ptmcm/m/n on input line 14.
+LaTeX Font Info:    Redeclaring symbol font `letters' on input line 15.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `normal'
+(Font)                  OML/cmm/m/it --> OML/ptmcm/m/it on input line 15.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
+(Font)                  OML/cmm/b/it --> OML/ptmcm/m/it on input line 15.
+LaTeX Font Info:    Redeclaring symbol font `largesymbols' on input line 16.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
+(Font)                  OMX/cmex/m/n --> OMX/psycm/m/n on input line 16.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  OMX/cmex/m/n --> OMX/psycm/m/n on input line 16.
+\symbold=\mathgroup4
+\symitalic=\mathgroup5
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 19.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/cmr/bx/n --> OT1/ptm/bx/n on input line 19.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/ptm/bx/n on input line 19.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 20.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/cmr/m/it --> OT1/ptm/m/it on input line 20.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/cmr/bx/it --> OT1/ptm/m/it on input line 20.
+ (./dfT1ptm.fd
+File: dfT1ptm.fd 2000/03/05 DF - Fontinst v1.6 font definitions for T1/ptm.
+
+
+LaTeX Info: Font shape T1/ptm/mc/n has incorrect series value `mc'.
+            It should not contain an `m'! Please correct it.
+            Found on input line 59.
+
+
+LaTeX Info: Font shape T1/ptm/mc/sl has incorrect series value `mc'.
+            It should not contain an `m'! Please correct it.
+            Found on input line 60.
+
+
+LaTeX Info: Font shape T1/ptm/mc/it has incorrect series value `mc'.
+            It should not contain an `m'! Please correct it.
+            Found on input line 61.
+
+) (./dfT1phv.fd
+File: dfT1phv.fd 1997/12/02 Fontinst v1.6 font definitions for T1/phv scaled to
+ 90\%.
+
+
+LaTeX Info: Font shape T1/phv/mc/n has incorrect series value `mc'.
+            It should not contain an `m'! Please correct it.
+            Found on input line 65.
+
+
+LaTeX Info: Font shape T1/phv/mc/sc has incorrect series value `mc'.
+            It should not contain an `m'! Please correct it.
+            Found on input line 69.
+
+
+LaTeX Info: Font shape T1/phv/mc/sl has incorrect series value `mc'.
+            It should not contain an `m'! Please correct it.
+            Found on input line 73.
+
+
+LaTeX Info: Font shape T1/phv/mc/it has incorrect series value `mc'.
+            It should not contain an `m'! Please correct it.
+            Found on input line 83.
+
+) (./dfT1pcr.fd
+File: dfT1pcr.fd 2000/03/05 DF - Fontinst v1.6 font definitions for T1/pcr.
+
+
+LaTeX Info: Font shape T1/pcr/mc/n has incorrect series value `mc'.
+            It should not contain an `m'! Please correct it.
+            Found on input line 43.
+
+
+LaTeX Info: Font shape T1/pcr/mc/sl has incorrect series value `mc'.
+            It should not contain an `m'! Please correct it.
+            Found on input line 59.
+
+
+LaTeX Info: Font shape T1/pcr/mc/it has incorrect series value `mc'.
+            It should not contain an `m'! Please correct it.
+            Found on input line 60.
+
+)) (/usr/share/texlive/texmf-dist/tex/latex/cite/cite.sty
+LaTeX Info: Redefining \cite on input line 302.
+LaTeX Info: Redefining \nocite on input line 332.
+Package: cite 2015/02/27  v 5.5
+)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2021-06-07 v7.00m Hypertext links for LaTeX
+
+(/usr/share/texlive/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/usr/share/texlive/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks18
+)
+(/usr/share/texlive/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty
+Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/hycolor/hycolor.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/letltxmacro/letltxmacro.sty
+Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/auxhook/auxhook.sty
+Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2020-10-07 v3.14 Key value format for package options (HO)
+)
+\@linkdim=\dimen138
+\Hy@linkcounter=\count194
+\Hy@pagecounter=\count195
+
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2021-06-07 v7.00m Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref-langpatches.def
+File: hyperref-langpatches.def 2021-06-07 v7.00m Hyperref: patches for babel la
+nguages
+)
+(/usr/share/texlive/texmf-dist/tex/generic/intcalc/intcalc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/etexcmds/etexcmds.sty
+Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
+)
+\Hy@SavedSpaceFactor=\count196
+
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/puenc.def
+File: puenc.def 2021-06-07 v7.00m Hyperref: PDF Unicode definition (HO)
+Now handling font encoding PU ...
+... no UTF-8 mapping file for font encoding PU
+)
+Package hyperref Info: Option `colorlinks' set `true' on input line 4073.
+Package hyperref Info: Option `bookmarks' set `false' on input line 4073.
+Package hyperref Info: Hyper figures OFF on input line 4192.
+Package hyperref Info: Link nesting OFF on input line 4197.
+Package hyperref Info: Hyper index ON on input line 4200.
+Package hyperref Info: Plain pages OFF on input line 4207.
+Package hyperref Info: Backreferencing ON on input line 4210.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks OFF on input line 4451.
+
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/backref.sty
+Package: backref 2021/02/04 v1.41 Bibliographical back referencing
+
+(/usr/share/texlive/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+Package: rerunfilecheck 2019/12/05 v1.9 Rerun checks for auxiliary files (HO)
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/atveryend-ltx.sty
+Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend pac
+kage
+with kernel methods
+)
+(/usr/share/texlive/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
+)
+))
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+86.
+))
+\c@Hy@tempcnt=\count197
+
+(/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip16
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 4804.
+\XeTeXLinkMargin=\dimen139
+
+(/usr/share/texlive/texmf-dist/tex/generic/bitset/bitset.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+)
+\Fld@menulength=\count198
+\Field@Width=\dimen140
+\Fld@charsize=\dimen141
+Package hyperref Info: Hyper figures OFF on input line 6076.
+Package hyperref Info: Link nesting OFF on input line 6081.
+Package hyperref Info: Hyper index ON on input line 6084.
+Package hyperref Info: backreferencing ON on input line 6089.
+Package hyperref Info: Link coloring ON on input line 6094.
+Package hyperref Info: Link coloring with OCG OFF on input line 6101.
+Package hyperref Info: PDF/A mode OFF on input line 6106.
+LaTeX Info: Redefining \ref on input line 6146.
+LaTeX Info: Redefining \pageref on input line 6150.
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/atbegshi-ltx.sty
+Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
+package with kernel methods
+)
+\Hy@abspage=\count199
+\c@Item=\count266
+\c@Hfootnote=\count267
+)
+Package hyperref Info: Driver: hpdftex.
+
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2021-06-07 v7.00m Hyperref driver for pdfTeX
+\Fld@listcount=\count268
+\c@bookmark@seq@number=\count269
+\Hy@SectionHShift=\skip49
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2021/03/04 v1.4d Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 107.
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen142
+\Gin@req@width=\dimen143
+)
+   defining Unicode char U+202F (decimal 8239)
+
+(./egweblnk.sty
+Package: egweblnk 2004/10/29 v2.2 DF's support for http web links in class egpu
+bl
+) (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\@emptytoks=\toks19
+\symAMSa=\mathgroup6
+\symAMSb=\mathgroup7
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
+(/usr/share/texlive/texmf-dist/tex/latex/lineno/lineno.sty
+Package: lineno 2005/11/02 line numbers on paragraphs v4.41
+\linenopenalty=\count270
+\output=\toks20
+\linenoprevgraf=\count271
+\linenumbersep=\dimen144
+\linenumberwidth=\dimen145
+\c@linenumber=\count272
+\c@pagewiselinenumber=\count273
+\c@LN@truepage=\count274
+\c@internallinenumber=\count275
+\c@internallinenumbers=\count276
+\quotelinenumbersep=\dimen146
+\bframerule=\dimen147
+\bframesep=\dimen148
+\bframebox=\box50
+LaTeX Info: Redefining \\ on input line 3056.
+) (./body.tex
+(/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2022-01-12 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count277
+\l__pdf_internal_box=\box51
+)
+(./paper.aux
+
+LaTeX Warning: Label `fig:firstExample' multiply defined.
+
+
+LaTeX Warning: Label `fig:firstExample' multiply defined.
+
+
+LaTeX Warning: Label `fig:firstExample' multiply defined.
+
+)
+\openout1 = `paper.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+
+
+Package hyperref Warning: Height of page (\paperheight) is invalid (0.0pt),
+(hyperref)                using 11in.
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2021/12/07 v1.3c Standard LaTeX Color (DPC)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package color Info: Driver file: pdftex.def on input line 149.
+)
+Package hyperref Info: Link coloring ON on input line 31.
+
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
+
+(/usr/share/texlive/texmf-dist/tex/latex/refcount/refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+)
+\c@section@level=\count278
+)
+LaTeX Info: Redefining \ref on input line 31.
+LaTeX Info: Redefining \pageref on input line 31.
+LaTeX Info: Redefining \nameref on input line 31.
+
+(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count279
+\scratchdimen=\dimen149
+\scratchbox=\box52
+\nofMPsegments=\count280
+\nofMParguments=\count281
+\everyMPshowfont=\toks21
+\MPscratchCnt=\count282
+\MPscratchDim=\dimen150
+\MPnumerator=\count283
+\makeMPintoPDFobject=\count284
+\everyMPtoPDFconversion=\toks22
+) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+LaTeX Font Info:    Trying to load font information for OT1+ptmcm on input line
+ 36.
+
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ptmcm.fd
+File: ot1ptmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ptmcm.
+)
+LaTeX Font Info:    Trying to load font information for OML+ptmcm on input line
+ 36.
+
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/omlptmcm.fd
+File: omlptmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ptmcm.
+)
+LaTeX Font Info:    Trying to load font information for OMX+psycm on input line
+ 36.
+
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/omxpsycm.fd
+File: omxpsycm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/psycm.
+)
+LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 3
+6.
+
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ptm.fd
+File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
+)
+LaTeX Font Info:    Trying to load font information for U+msa on input line 36.
+
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 36.
+
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+Overfull \hbox (4.00002pt too wide) in paragraph at lines 36--36
+ [][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--37
+
+ []
+
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 5.39996pt on input line 41.
+
+LaTeX Warning: Citation `511' on page 1 undefined on input line 42.
+
+
+LaTeX Warning: Citation `10.1145/964965.808594' on page 1 undefined on input li
+ne 42.
+
+
+LaTeX Warning: Citation `511' on page 1 undefined on input line 42.
+
+<RayCasting1.png, id=4, 250.9375pt x 134.5025pt>
+File: RayCasting1.png Graphic file (type png)
+<use RayCasting1.png>
+Package pdftex.def Info: RayCasting1.png  used on input line 49.
+(pdftex.def)             Requested size: 192.00073pt x 102.91663pt.
+
+LaTeX Warning: Citation `Appa2015RayCF' on page 1 undefined on input line 50.
+
+
+Underfull \vbox (badness 3271) has occurred while \output is active []
+
+
+
+LaTeX Warning: Citation `10.1145/325165.325247' on page 1 undefined on input li
+ne 61.
+
+
+LaTeX Warning: Citation `haggstrom2018real' on page 1 undefined on input line 6
+1.
+
+
+LaTeX Warning: Citation `511' on page 1 undefined on input line 61.
+
+
+LaTeX Warning: Citation `10.1145/78964.78965' on page 1 undefined on input line
+ 67.
+
+
+Underfull \vbox (badness 1789) has occurred while \output is active []
+
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 8.99994pt on input line 71.
+LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 7
+1.
+
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1ptm.fd
+File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
+) [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
+
+
+ <./RayCasting1.png>]
+
+LaTeX Warning: Citation `729595' on page 2 undefined on input line 80.
+
+<weighted_interpolation.png, id=26, 870.25125pt x 411.78844pt>
+File: weighted_interpolation.png Graphic file (type png)
+<use weighted_interpolation.png>
+Package pdftex.def Info: weighted_interpolation.png  used on input line 86.
+(pdftex.def)             Requested size: 192.00073pt x 90.85135pt.
+
+LaTeX Warning: Citation `729595' on page 2 undefined on input line 90.
+
+
+LaTeX Warning: Citation `729595' on page 2 undefined on input line 90.
+
+
+LaTeX Warning: Citation `Sabella1988ARA' on page 2 undefined on input line 93.
+
+
+LaTeX Warning: Citation `Upson1988VbufferVV' on page 2 undefined on input line 
+93.
+
+
+LaTeX Warning: Citation `10.1145/378456.378484' on page 2 undefined on input li
+ne 93.
+
+
+LaTeX Warning: Citation `511' on page 2 undefined on input line 93.
+
+
+LaTeX Warning: Citation `10.1145/78964.78965' on page 2 undefined on input line
+ 93.
+
+
+LaTeX Warning: Citation `10.1145/147130.147155' on page 2 undefined on input li
+ne 102.
+
+
+LaTeX Warning: Citation `10.1145/78964.78965' on page 2 undefined on input line
+ 105.
+
+<wall.png, id=28, 819.8128pt x 523.9575pt>
+File: wall.png Graphic file (type png)
+<use wall.png>
+Package pdftex.def Info: wall.png  used on input line 111.
+(pdftex.def)             Requested size: 192.00073pt x 122.7063pt.
+
+LaTeX Warning: Citation `10.1145/97880.97886' on page 2 undefined on input line
+ 118.
+
+
+LaTeX Warning: Citation `10.1145/147130.147155' on page 2 undefined on input li
+ne 118.
+
+[2 <./weighted_interpolation.PNG> <./wall.PNG>]
+Overfull \hbox (253.62553pt too wide) detected at line 142
+[]
+ []
+
+<pyramide.png, id=47, 1128.46594pt x 606.76688pt>
+File: pyramide.png Graphic file (type png)
+<use pyramide.png>
+Package pdftex.def Info: pyramide.png  used on input line 149.
+(pdftex.def)             Requested size: 192.00073pt x 103.23233pt.
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+[]
+ []
+
+[3 <./pyramide.PNG>] (./paper.bbl
+No file paper.brf.
+\tf@brf=\write4
+\openout4 = `paper.brf'.
+
+
+Package lineno Warning: Linenumber reference failed, 
+(lineno)                rerun to get it right.
+
+
+Underfull \hbox (badness 1137) in paragraph at lines 20--20
+[]\T1/ptm/m/sc/8 Drebin R. A., Car-pen-ter L., Han-ra-han P.\T1/ptm/m/n/8 :  Vo
+l-
+ []
+
+
+Underfull \hbox (badness 1681) in paragraph at lines 20--20
+\T1/ptm/m/n/8 ume ren-der-ing.  \T1/ptm/m/it/8 SIG-GRAPH Com-put. Graph. 22\T1/
+ptm/m/n/8 , 4 (jun 1988),
+ []
+
+
+Underfull \hbox (badness 7168) in paragraph at lines 40--40
+\T1/ptm/m/n/8 URL: [][]$\T1/pcr/m/n/8 https : / / doi . org / 10 . 1145 / 96496
+5 . 808594$[][]\T1/ptm/m/n/8 , [][]$\T1/pcr/m/n/8 doi :
+ []
+
+)) [4] (./paper.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
+
+Package rerunfilecheck Warning: File `paper.brf' has changed.
+(rerunfilecheck)                Rerun to get bibliographical references right.
+
+Package rerunfilecheck Info: Checksums for `paper.brf':
+(rerunfilecheck)             Before: <no file>
+(rerunfilecheck)             After:  1ED35C4B330FA9BF56FF9CAD9D7E03C3;895.
+ ) 
+Here is how much of TeX's memory you used:
+ 10164 strings out of 478287
+ 157365 string characters out of 5849289
+ 465646 words of memory out of 5000000
+ 28129 multiletter control sequences out of 15000+600000
+ 533413 words of font info for 112 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 87i,12n,91p,1201b,387s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/texlive/texmf-dist/fonts/t
+ype1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/ty
+pe1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helve
+tic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/symbol/usyr.pfb><
+/usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/ur
+w/times/utmri8a.pfb>
+Output written on paper.pdf (4 pages, 197461 bytes).
+PDF statistics:
+ 168 PDF objects out of 1000 (max. 8388607)
+ 130 compressed objects within 2 object streams
+ 44 named destinations out of 1000 (max. 500000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
+
