@@ -54,10 +54,19 @@ In Computer Graphics, objects usually are represented as a set of geometric prim
 \end{figure}
 
 \section{Basic Volumetric Ray Tracing Algorithm}
+ \subsection{Terminology}
+ To enable a clear understanding in this section we will shortly define key terminology used in this paper. A voxel is an infinitesimally small point in 3D space with an associated vector value, that represents the color of that voxel. In this paper, these voxels are arranged in a regular cube lattice (although other arrangements are possible as well). A cell or area of influence of a voxel $v$ is defined as the region of space which is closer to $v$ than to any other voxel (meaning a cube in space with $v$ in the center). A voxel cube is defined as a group of 8 voxels that form a cube in space. The neighbourhood of a voxel $v$ is defined as the set that includes $v$ as well as its 26 neighboors in 3D space. Since different authors use different notations, these terminology might be used slightly different in other papers.
 \subsection{Underlying Volume Data}
 In this paper, we consider the topic of synthesizing a 2d image from a 3d volume.
 A volume can either be some continuous, ternary function (such as perlin or simplex noise\cite{10.1145/325165.325247}, which can be used to render volumetric clouds\cite{haggstrom2018real}), or a discrete 3d array\cite{511}.
-Similar to a 2d image that consists of pixels that can be addressed by a 2d vector $\vec{x} \in \mathbb{N}^2$, a 3d array consits of voxels that are adressed by a 3d vector $\vec{x} \in \mathbb{N}^3$. The color of a voxel at position $\vec{x}$ is called $c(\vec{x})$, the opacity $\alpha(\vec{x})$. The opacity is a scalar value, the color may also be a scalar value (for grayscale volumes) or a 3d vector (for colorful volumes). In the following, all values are assumed to be normalized to between 0 and 1. To project this volume to a image, for each pixel in the image a ray is cast through the volume and sampled at multiple, evenly spaced points on the ray (see figure 1)\cite{10.1145/78964.78965}.
+Similar to a 2d image that consists of pixels that can be addressed by a 2d vector $\vec{x} \in \mathbb{N}^2$, a 3d array consits of voxels that are adressed by a 3d vector $\vec{x} \in \mathbb{N}^3$. The color of a voxel at position $\vec{x}$ is called $c(\vec{x})$, the opacity $\alpha(\vec{x})$ and the complete vector $v(\vec{x})$. The opacity is a scalar value, the color may also be a scalar value (for grayscale volumes) or a 3d vector (for colorful volumes).
+To address the components of a vector $\vec{v}$, following notation is used:
+\begin{equation}
+	\vec{v}_{x}, x \in s{r, g, b, \alpha}
+\end{equation}
+ In the following, all values are assumed to be normalized to between 0 and 1. To project this volume to a image, for each pixel in the image a ray is cast through the volume and sampled at multiple, evenly spaced points on the ray (see figure 1)\cite{10.1145/78964.78965}.
+.
+\subsection{Volumetric Ray Tracing}
 \subsection{Interpolation}
 The sample points on the ray are in general part of $\mathbb{R}^3$. This is no problem if the volume is described by a continuous function, which is defined everywhere. However, if it is a discrete 3d array only defined for points in $\mathbb{N}^3$, the value of the volume at the sample point must be interpolated.
  This interpolation is done over the 8 closest voxels to the sample point (usually with a trilinear interpolation). The opacity values can be interpolated regularly, but the color values must be weighted with the respective opacity values before interpolation \cite{729595}. To see why this is necessary, consider figure 2, which presents a simplified 2d example of a completely  opaque, white object behind completely transparent empty space. Naively interpolating in this volume would result in two sample points, one completely white and opaque, the other gray and semitransparent. This gray point is not present in the original data and is an unwanted artifact. Weighting the colors with their opacity prevents this from happening.
@@ -101,8 +110,29 @@ When looking at the compositing process described above, it becomes apparent tha
 The above described termination after a certain threshold is reached creates a bias in the synthesized image\cite{10.1145/97880.97886}. One way to avoid this is to use Russian Roulette to decide when to terminate a ray\cite{10.1145/147130.147155}. Unlike the above described approach, Russian Roulette terminates a ray only with a certain likelihood once the accumulated opacity reaches the threshold. The weight of the surviving rays is increased proportionally to compensate for the terminated rays.
 
 \subsection{Pyramid Data Structures}
-The following optimizations require a data structure called a pyramid\cite{10.1145/147130.147155}. Similar to a set of mip-maps with decreasing resolutions, a pyramide is a set of 3d arrays with decreasing resolutions. The different volumes of which the pyramid consists are called the levels of the pyramid. The lowest level (called level 0) is equal to the original volume. In general, level $n + 1$ is half the size of level $n$, and each voxel in level $n+1$ contains some information about 8 voxels in the lower volume\cite{10.1145/78964.78965}. What information exactly is stored in the levels contains on what specific pyramid is used, of which there are multiple kinds. The first one is the so called average pyramid, which,as the name suggets, stores the average of the 8 lower voxels in each voxel of the higher level (see figure 4).
+The follwing optimizations require a data structure called a pyramid. Pyramids are created from 3d arrays, if the volume to be rendered is defined as a function an intermediate array representation must be created.
+Analogous to a mip-map which is a set of 2d arrays with decreasing resolution, a pyramid is a set of 3d arrays with decreasing resolution. The different volumes of which the pyramid consits are called the levels of the pyramid. The lowest level (called level 0) has the highest resolution, each succesive level has half the resolution than the preceeding one. To ensure that each level covers the same region in 3d space, the distance between the voxels are doubled each level.
 
+--FIGURE!
+In the follwing, we will make use several different kinds of pyramids, namely average, maximum and range pyramids.
+\subsection{Average Pyramid}
+The lowest level of the average pyramid is equal to the original 3d array, padded with zeros so that its size is a power of 2 in all dimensions.
+The next level is created by aggregating the average of a cube of 8 voxels in the lower level to one voxel in the higher level. This process is repeated until the last level, consisting of only one voxel, is reached. 
+Similarily to the original volume, the pyramid can be sampled by interpolating the 8 closest voxels to the sample point. Consider however, that the primary purpose of the average pyramid is to enamble an approximation of the original data that is computationally faster than to render the original data.
+The time complexity of rendering 3D data however does not depend on the number of voxels, but rather the number of samples along the ray (at first glance, this seems to imply that the average pyramid is superfluous and that the same could be accomplished by taking fewer sampling points in the original volume. This however would lead to a sample frequency significantly lower than the voxel frequency and thus to aliasing). If we therefore wish to cut the rendering time in half for each level we move up the pyramid, the amount of sampling points must be halfed and the distance between the sampling points must be doubled. This means that one sample in level $n+1$ should approximate two samples at level $n$. To achieve this, the sample at level $n+1$ must be blended with itself, since in level $n$ two samples are blended aswell.
+
+
+\subsection{Maximum And Minimum Pyramids}
+A maximum pyramid works similar to an average pyramid, but the construction of level $0$ is somewhat different. A voxel in level $0$ at position $\vec{x}$ is created by taking the maximum of the $27$ voxels in the original dataset, that form a 3 by 3 cube around $\vec{x}$. Once the lowest level is created the succeding levels are constructed llike in the average pyramid, only that the maximum is used as the aggregation method, and not the maximum. Sampling a maximum pyramid is different from sampling an average pyramid. Since the maximum pyramid stores maxima, interpolating between different maxima would lead to wrong results. Instead, nearest neighbour interpolation is used (unlike in the average pyramid, the sample does not need to be blended with itself).
+The minimum pyramid works analogously.
+In the following, the sample taken at location $\vec{x}$ in the maximum pyramid at level $n$ is called $pyr_{max}(\vec{x}, n)$, and the sample in the minimum pyramid is called $pyr_{min}(\vec{x}, n)$.
+
+\subsection{Range Pyramid}
+The range pyramid is calculated by taking the difference between the maximum and minimum pyramid. Both the maximum and minimum pyramid store vectors (2D or 4D, depending on wether the underlying data is grayscale or colorful). To express the difference in a scalar, the diffrence of the components is summed up and normalized to the range of 0  and 1:
+\begin{equation}
+pyr_{range}(\vec{x}, n) = 1 \over 4 ((pyr_{max}(\vec{x}, n)_{r} - pyr_{min}(\vec{x}, n)_{r}) + (pyr_{max}(\vec{x}, n)_{g} - pyr_{min}(\vec{x}, n)_{g}) +(pyr_{max}(\vec{x}, n)_{b} - pyr_{min}(\vec{x}, n)_{b}) + (pyr_{max}(\vec{x}, n)_{\alpha} - pyr_{min}(\vec{x}, n)_{\alpha}))
+\end{equation}
+The range pyramid is sampled like the maximum and minimum pyramids and provides a measure of the homogenety of the original data. If a voxel in the range pyramid has the value 0, this means that the region of space covered by this pixel is completly homogenous in the original data, if the voxel is 1, this means at least 2 voxels in the original data are completly different.
  \begin{figure}[htb]
   \centering
   % the following command controls the width of the embedded file
@@ -114,8 +144,19 @@ The following optimizations require a data structure called a pyramid\cite{10.11
   \caption{\label{fig:firstExample}
          Simplified 2 dimensional example of 2 levels of a pyramid. Each pixel in level n +1 contains 4 pixel of the lower level. In 3 dimensions, 8 voxels of the lower level are contained in one voxel of the upper level.}
 \end{figure}
+
+
+\subsection{Fixed Step Multiresolution}
+This optimization makes use of the above described average pyramid, and works by casting the rays through a level of the pyramid, instead of the original data. As previously mentioned, when casting a ray trhough level $n$, the distance between the sampling points is $2^n$ times larger than the normal distance. The level through which the rays are cast can be freely choosen. Similar to mip-maps, it is also possible to select a real number as a level, in this case, the levels above and below the chosen level are rendered, and the two results are interpolated together. Since this would require rendering the pyramid at two levels, this is slower than just choosing a natural number as a level and recommendable only if a smooth transition between two levels is needed, like in gaze directed rendering as desribed by Levoy(CITE!!). The higher the level the faster the algorithms works, but the lower the resolution becomes.
 ---END OF REVIEW---
 \subsection{Presence Acceleration}
+This algorithm uses an average and a maximum pyramid. The maximum pyramid is used to quickly find regions with low opacity, where the average pyramid is used to sample at a lower resolution. The idea behind this algorithm is that low opacity regions do not contribute much to the final result, and can be therefore be sampled more sparsely.
+More specifically, this algorithm works by letting the user select an opacity threshold $k \in [0,1]$.
+Then, the rays are cast through the maximum pyramid at the highest level. For each cell of the maximum pyramid that a ray intersects, the algorithm checks wether the opacity in that cell lies above or below k. If that value is larger than k, we move one level down. If the opacity is smaller than k it means that the region of space encompased by the cell is almost empty. Therefore, the entire region can be approximated by sampling the cell in the average pyramid that corresponds to the current cell in the maximum pyramid (meaining same position and level).
+
+\subsection{Homogenity Acceleration}
+
+\subsection{\beta Acceleration}
 %-------------------------------------------------------------------------
 
 
