@@ -48,6 +48,7 @@ To do this, we calculate $\vec{y}$, the closest intersection point of the ray wi
 Thus, we get the equation 
 \begin{equation}
 L(\vec{x},\omega ) = L_e(\vec{y}, \omega )
+\end{equation}
 However, this equation assumes that the light has no interactions between $\vec{x}$ and $\vec{y}$, which is only true if the ray travels through a vacuum. If the light travels through a medium that interacts with if (called a participating medium), the interactions change the light along the ray. In most cases, these interactions are small enough to be ignored, but in certain scenarios (e.g if there is fog, clouds or smoke present) they might have a noticeable effect. The types of interactions we need to consider are absorption, emission, in-scattering and out-scattering.
 
 Absorption and out-scattering attenuate the light intensity along the ray, in-scattering and emission add to it.

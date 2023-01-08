@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2022.12.4)  8 JAN 2023 19:56
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2022.12.4)  8 JAN 2023 20:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -463,101 +463,89 @@ Underfull \hbox (badness 10000) in paragraph at lines 36--37
 
  []
 
-! Display math should end with $$.
-<to be read again> 
-                   \protect 
-l.51 ...he light has no interactions between $\vec
-                                                  {x}$ and $\vec{y}$, which ...
-
-? #
-Type <return> to proceed, S to scroll future error messages,
-R to run without stopping, Q to run quietly,
-I to insert something, E to edit your file,
-1 or ... or 9 to ignore the next 1 to 9 tokens of input,
-H for help, X to quit.
-? 
-
-Overfull \hbox (74.82455pt too wide) detected at line 51
-[]\OML/ptmcm/m/it/9 L\OT1/ptmcm/m/n/9 ([]\OML/ptmcm/m/it/9 ; !\OT1/ptmcm/m/n/9 
-) = \OML/ptmcm/m/it/9 L[]\OT1/ptmcm/m/n/9 ([]\OML/ptmcm/m/it/9 ; !\OT1/ptmcm/m/
-n/9 )\OML/ptmcm/m/it/9 However; thisequationassumesthatthelighthasnointeraction
-sbetween
- []
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.51 ...he light has no interactions between $\vec
-                                                  {x}$ and $\vec{y}$, which ...
-
-? 
 ! Undefined control sequence.
-l.59 ... absorbing particles, defined as $n_s={\ro
+l.60 ... absorbing particles, defined as $n_s={\ro
                                                   }_sE{\delta}h$ and $n_a={\...
 
 ? 
 ! Undefined control sequence.
-l.59 ...d as $n_s={\ro}_sE{\delta}h$ and $n_a={\ro
+l.60 ...d as $n_s={\ro}_sE{\delta}h$ and $n_a={\ro
                                                   }_aE{\delta}h$ respectivel...
 
 ? 
 ! Undefined control sequence.
-l.59 ...ro}_aE{\delta}h$ respectively, where ${\ro
+l.60 ...ro}_aE{\delta}h$ respectively, where ${\ro
                                                   }_s$ and ${\ro}_a$ are the...
 
 ? 
 ! Undefined control sequence.
-l.59 ...h$ respectively, where ${\ro}_s$ and ${\ro
+l.60 ...h$ respectively, where ${\ro}_s$ and ${\ro
                                                   }_a$ are the densities of ...
 
 ? 
 ! Undefined control sequence.
-l.60 ...articles will occupy an area of $n_sA={\ro
+l.61 ...articles will occupy an area of $n_sA={\ro
                                                   }_sAE{\delta}h \over E$ an...
 
 ? 
 ! Undefined control sequence.
-l.60 ...ro}_sAE{\delta}h \over E$ and f $n_aA={\ro
+l.61 ...ro}_sAE{\delta}h \over E$ and f $n_aA={\ro
                                                   }_aAE{\delta}h \over E$, r...
 
 ? 
 ! Undefined control sequence.
-l.61 This can be simplified to ${\ro
+l.62 This can be simplified to ${\ro
                                     }_sA{\delta}h$ and ${\ro}_sA{\delta}h$, ...
 
 ? 
 ! Undefined control sequence.
-l.61 ...implified to ${\ro}_sA{\delta}h$ and ${\ro
+l.62 ...implified to ${\ro}_sA{\delta}h$ and ${\ro
                                                   }_sA{\delta}h$, which give...
 
 ? 
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.62 \end{equation}
+l.63 \end{equation}
                    
 ? 
 ! You can't use `\eqno' in math mode.
 \H@endequation ->\eqno 
                        \hbox {\@eqnnum }$$\@ignoretrue 
-l.62 \end{equation}
+l.63 \end{equation}
+                   
+? 
+
+! LaTeX Error: \begin{document} ended by \end{equation}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.63 \end{equation}
                    
 ? 
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.62 \end{equation}
+l.63 \end{equation}
+                   
+? 
+! Extra \endgroup.
+<recently read> \endgroup 
+                          
+l.63 \end{equation}
                    
 ? 
 <RayCasting1.png, id=7, 250.9375pt x 134.5025pt>
 File: RayCasting1.png Graphic file (type png)
 <use RayCasting1.png>
-Package pdftex.def Info: RayCasting1.png  used on input line 68.
+Package pdftex.def Info: RayCasting1.png  used on input line 69.
 (pdftex.def)             Requested size: 192.00073pt x 102.91663pt.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 8.99994pt on input line 78.
+(Font)              scaled to size 8.99994pt on input line 79.
 LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 7
-8.
+9.
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 ) [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
@@ -567,13 +555,13 @@ File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 <weighted_interpolation.png, id=34, 870.25125pt x 411.78844pt>
 File: weighted_interpolation.png Graphic file (type png)
 <use weighted_interpolation.png>
-Package pdftex.def Info: weighted_interpolation.png  used on input line 105.
+Package pdftex.def Info: weighted_interpolation.png  used on input line 106.
 (pdftex.def)             Requested size: 192.00073pt x 90.85135pt.
  [2 <./RayCasting1.png> <./weighted_interpolation.PNG>]
-<wall.png, id=69, 819.8128pt x 523.9575pt>
+<wall.png, id=68, 819.8128pt x 523.9575pt>
 File: wall.png Graphic file (type png)
 <use wall.png>
-Package pdftex.def Info: wall.png  used on input line 130.
+Package pdftex.def Info: wall.png  used on input line 131.
 (pdftex.def)             Requested size: 192.00073pt x 122.7063pt.
 
 Underfull \hbox (badness 10000) has occurred while \output is active
@@ -581,14 +569,14 @@ Underfull \hbox (badness 10000) has occurred while \output is active
  []
 
 [3 <./wall.PNG>]
-Overfull \hbox (253.62553pt too wide) detected at line 161
+Overfull \hbox (253.62553pt too wide) detected at line 162
 []
  []
 
 <pyramide.png, id=87, 1128.46594pt x 606.76688pt>
 File: pyramide.png Graphic file (type png)
 <use pyramide.png>
-Package pdftex.def Info: pyramide.png  used on input line 168.
+Package pdftex.def Info: pyramide.png  used on input line 169.
 (pdftex.def)             Requested size: 192.00073pt x 103.23233pt.
 (./paper.bbl (./paper.brf)
 \tf@brf=\write4
@@ -629,11 +617,11 @@ Package rerunfilecheck Info: File `paper.brf' has not changed.
 Here is how much of TeX's memory you used:
  10157 strings out of 478287
  157333 string characters out of 5849289
- 459728 words of memory out of 5000000
+ 458579 words of memory out of 5000000
  28117 multiletter control sequences out of 15000+600000
  529580 words of font info for 111 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 87i,12n,91p,1231b,433s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 87i,12n,91p,1231b,435s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/
@@ -644,7 +632,7 @@ tic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/symbol/usyr.pfb><
 /usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texl
 ive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/
 fonts/type1/urw/times/utmri8a.pfb>
-Output written on paper.pdf (5 pages, 196172 bytes).
+Output written on paper.pdf (5 pages, 196036 bytes).
 PDF statistics:
  195 PDF objects out of 1000 (max. 8388607)
  157 compressed objects within 2 object streams
