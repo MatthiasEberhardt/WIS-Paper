@@ -49,6 +49,16 @@ Thus, we recieve the equation
 \begin{equation}
 L(\vec{x},\omega ) = L_e(\vec{y}, \omega )
 However, this equation assumes that the light has no interactions between $\vec{x}$ and $\vec{y}$, which is only true if the ray travels through a vacuum. If the light travels through a medium that interacts with if (called a participating medium), the interactions change the light along the ray. In most cases, these interactions are small enough to be ignored, but in certain scenarios (e.g if there is fog, clouds or smoke present) they might have a noticeable effect. The types of interactions we need to consider are absorption, emission, in-scattering and out-scaterring.
+
+Absorption and out-scattering attenuate the light intensity along the ray, in-scattering and emission add to it.
+Firstly, let us consider only out-scattering and absorption, which occur due to tiny particles floating around in the volume (such as water droplets in clouds and fog, or dust particles in the air).
+Of course, these particles are far too numerous to be directly simulated, but their distribution in 3D space can be stochastically modeled (similar to how detailed surface structures can be modeled by micorfacets in classical ray tracing).
+
+To do so, consider a close-up look at a ray section traveling through the vloume [CITATION!].
+This section can be assumed to be a cylinder with a base area $E$ and a height $\delta h$, through which the ray travles from top to bottom.
+Within this cylinder, there exists a certain number of out-scattering and absorbing particles, defined as $n_s={\ro}_sE{\delta}h$ and $n_a={\ro}_aE{\delta}h$ respectively, where ${\ro}_s$ and ${\ro}_a$ are the densities of the particles.
+From the top-down view, the particles will occupy an area of $n_sA={\ro}_sAE{\delta}h \over E$ and f $n_aA={\ro}_aAE{\delta}h \over E$, respectively, if we assume that the particles do not overlap each other, which is reasonable if the densities and the height do not become too large.
+This can be simplified to ${\ro}_sA{\delta}h$ and ${\ro}_sA{\delta}h$, which gives us the fractions of light which are stopped in the cylinder, either through absorbtion or out-scattering.
 \end{equation}
 \begin{figure}[htb]
   \centering
