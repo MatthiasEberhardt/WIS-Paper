@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2022.12.4)  6 JAN 2023 09:42
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2022.12.4)  8 JAN 2023 19:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -463,135 +463,130 @@ Underfull \hbox (badness 10000) in paragraph at lines 36--37
 
  []
 
-LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 5.39996pt on input line 41.
+! Display math should end with $$.
+<to be read again> 
+                   \protect 
+l.51 ...he light has no interactions between $\vec
+                                                  {x}$ and $\vec{y}$, which ...
 
-LaTeX Warning: Citation `511' on page 1 undefined on input line 42.
+? 
 
+Overfull \hbox (74.82455pt too wide) detected at line 51
+[]\OML/ptmcm/m/it/9 L\OT1/ptmcm/m/n/9 ([]\OML/ptmcm/m/it/9 ; !\OT1/ptmcm/m/n/9 
+) = \OML/ptmcm/m/it/9 L[]\OT1/ptmcm/m/n/9 ([]\OML/ptmcm/m/it/9 ; !\OT1/ptmcm/m/
+n/9 )\OML/ptmcm/m/it/9 However; thisequationassumesthatthelighthasnointeraction
+sbetween
+ []
 
-LaTeX Warning: Citation `10.1145/964965.808594' on page 1 undefined on input li
-ne 42.
+! Missing $ inserted.
+<inserted text> 
+                $
+l.51 ...he light has no interactions between $\vec
+                                                  {x}$ and $\vec{y}$, which ...
 
+? 
+! Undefined control sequence.
+l.59 ... absorbing particles, defined as $n_s={\ro
+                                                  }_sE{\delta}h$ and $n_a={\...
 
-LaTeX Warning: Citation `511' on page 1 undefined on input line 42.
+? 
+! Undefined control sequence.
+l.59 ...d as $n_s={\ro}_sE{\delta}h$ and $n_a={\ro
+                                                  }_aE{\delta}h$ respectivel...
 
-<RayCasting1.png, id=4, 250.9375pt x 134.5025pt>
+? 
+! Undefined control sequence.
+l.59 ...ro}_aE{\delta}h$ respectively, where ${\ro
+                                                  }_s$ and ${\ro}_a$ are the...
+
+? 
+! Undefined control sequence.
+l.59 ...h$ respectively, where ${\ro}_s$ and ${\ro
+                                                  }_a$ are the densities of ...
+
+? 
+! Undefined control sequence.
+l.60 ...articles will occupy an area of $n_sA={\ro
+                                                  }_sAE{\delta}h \over E$ an...
+
+? 
+! Undefined control sequence.
+l.60 ...ro}_sAE{\delta}h \over E$ and f $n_aA={\ro
+                                                  }_aAE{\delta}h \over E$, r...
+
+? 
+! Undefined control sequence.
+l.61 This can be simplified to ${\ro
+                                    }_sA{\delta}h$ and ${\ro}_sA{\delta}h$, ...
+
+? 
+! Undefined control sequence.
+l.61 ...implified to ${\ro}_sA{\delta}h$ and ${\ro
+                                                  }_sA{\delta}h$, which give...
+
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.62 \end{equation}
+                   
+? 
+! You can't use `\eqno' in math mode.
+\H@endequation ->\eqno 
+                       \hbox {\@eqnnum }$$\@ignoretrue 
+l.62 \end{equation}
+                   
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.62 \end{equation}
+                   
+? 
+<RayCasting1.png, id=7, 250.9375pt x 134.5025pt>
 File: RayCasting1.png Graphic file (type png)
 <use RayCasting1.png>
-Package pdftex.def Info: RayCasting1.png  used on input line 49.
+Package pdftex.def Info: RayCasting1.png  used on input line 68.
 (pdftex.def)             Requested size: 192.00073pt x 102.91663pt.
-
-LaTeX Warning: Citation `Appa2015RayCF' on page 1 undefined on input line 50.
-
-
-Underfull \vbox (badness 3271) has occurred while \output is active []
-
-
-
-LaTeX Warning: Citation `10.1145/325165.325247' on page 1 undefined on input li
-ne 61.
-
-
-LaTeX Warning: Citation `haggstrom2018real' on page 1 undefined on input line 6
-1.
-
-
-LaTeX Warning: Citation `511' on page 1 undefined on input line 61.
-
-
-LaTeX Warning: Citation `10.1145/78964.78965' on page 1 undefined on input line
- 67.
-
-
-Underfull \vbox (badness 1789) has occurred while \output is active []
-
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 8.99994pt on input line 71.
+(Font)              scaled to size 8.99994pt on input line 78.
 LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 7
-1.
-
+8.
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 ) [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
 
- <./RayCasting1.png>]
-
-LaTeX Warning: Citation `729595' on page 2 undefined on input line 80.
-
-<weighted_interpolation.png, id=26, 870.25125pt x 411.78844pt>
+]
+<weighted_interpolation.png, id=34, 870.25125pt x 411.78844pt>
 File: weighted_interpolation.png Graphic file (type png)
 <use weighted_interpolation.png>
-Package pdftex.def Info: weighted_interpolation.png  used on input line 86.
+Package pdftex.def Info: weighted_interpolation.png  used on input line 105.
 (pdftex.def)             Requested size: 192.00073pt x 90.85135pt.
-
-LaTeX Warning: Citation `729595' on page 2 undefined on input line 90.
-
-
-LaTeX Warning: Citation `729595' on page 2 undefined on input line 90.
-
-
-LaTeX Warning: Citation `Sabella1988ARA' on page 2 undefined on input line 93.
-
-
-LaTeX Warning: Citation `Upson1988VbufferVV' on page 2 undefined on input line 
-93.
-
-
-LaTeX Warning: Citation `10.1145/378456.378484' on page 2 undefined on input li
-ne 93.
-
-
-LaTeX Warning: Citation `511' on page 2 undefined on input line 93.
-
-
-LaTeX Warning: Citation `10.1145/78964.78965' on page 2 undefined on input line
- 93.
-
-
-LaTeX Warning: Citation `10.1145/147130.147155' on page 2 undefined on input li
-ne 102.
-
-
-LaTeX Warning: Citation `10.1145/78964.78965' on page 2 undefined on input line
- 105.
-
-<wall.png, id=28, 819.8128pt x 523.9575pt>
+ [2 <./RayCasting1.png> <./weighted_interpolation.PNG>]
+<wall.png, id=69, 819.8128pt x 523.9575pt>
 File: wall.png Graphic file (type png)
 <use wall.png>
-Package pdftex.def Info: wall.png  used on input line 111.
+Package pdftex.def Info: wall.png  used on input line 130.
 (pdftex.def)             Requested size: 192.00073pt x 122.7063pt.
-
-LaTeX Warning: Citation `10.1145/97880.97886' on page 2 undefined on input line
- 118.
-
-
-LaTeX Warning: Citation `10.1145/147130.147155' on page 2 undefined on input li
-ne 118.
-
-[2 <./weighted_interpolation.PNG> <./wall.PNG>]
-Overfull \hbox (253.62553pt too wide) detected at line 142
-[]
- []
-
-<pyramide.png, id=47, 1128.46594pt x 606.76688pt>
-File: pyramide.png Graphic file (type png)
-<use pyramide.png>
-Package pdftex.def Info: pyramide.png  used on input line 149.
-(pdftex.def)             Requested size: 192.00073pt x 103.23233pt.
 
 Underfull \hbox (badness 10000) has occurred while \output is active
 []
  []
 
-[3 <./pyramide.PNG>] (./paper.bbl
-No file paper.brf.
+[3 <./wall.PNG>]
+Overfull \hbox (253.62553pt too wide) detected at line 161
+[]
+ []
+
+<pyramide.png, id=87, 1128.46594pt x 606.76688pt>
+File: pyramide.png Graphic file (type png)
+<use pyramide.png>
+Package pdftex.def Info: pyramide.png  used on input line 168.
+(pdftex.def)             Requested size: 192.00073pt x 103.23233pt.
+(./paper.bbl (./paper.brf)
 \tf@brf=\write4
 \openout4 = `paper.brf'.
-
-
-Package lineno Warning: Linenumber reference failed, 
-(lineno)                rerun to get it right.
 
 
 Underfull \hbox (badness 1137) in paragraph at lines 20--20
@@ -605,16 +600,20 @@ Underfull \hbox (badness 1681) in paragraph at lines 20--20
 ptm/m/n/8 , 4 (jun 1988),
  []
 
-
+[4 <./pyramide.PNG>]
 Underfull \hbox (badness 7168) in paragraph at lines 40--40
 \T1/ptm/m/n/8 URL: [][]$\T1/pcr/m/n/8 https : / / doi . org / 10 . 1145 / 96496
 5 . 808594$[][]\T1/ptm/m/n/8 , [][]$\T1/pcr/m/n/8 doi :
  []
 
-)) [4] (./paper.aux)
+))
+Underfull \hbox (badness 10000) has occurred while \output is active
+[]
+ []
 
-LaTeX Warning: There were undefined references.
+[5
 
+] (./paper.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
@@ -623,17 +622,17 @@ Package rerunfilecheck Warning: File `paper.brf' has changed.
 (rerunfilecheck)                Rerun to get bibliographical references right.
 
 Package rerunfilecheck Info: Checksums for `paper.brf':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  1ED35C4B330FA9BF56FF9CAD9D7E03C3;895.
+(rerunfilecheck)             Before: 1ED35C4B330FA9BF56FF9CAD9D7E03C3;895
+(rerunfilecheck)             After:  869B594A8E38848C29A45BA0030D3F76;898.
  ) 
 Here is how much of TeX's memory you used:
- 10164 strings out of 478287
- 157365 string characters out of 5849289
- 465646 words of memory out of 5000000
+ 10169 strings out of 478287
+ 157413 string characters out of 5849289
+ 460035 words of memory out of 5000000
  28129 multiletter control sequences out of 15000+600000
- 533413 words of font info for 112 fonts, out of 8000000 for 9000
+ 529580 words of font info for 111 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 87i,12n,91p,1201b,387s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 87i,12n,91p,1232b,433s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/
@@ -642,13 +641,12 @@ ype1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/ty
 pe1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helve
 tic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/symbol/usyr.pfb><
 /usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texl
-ive/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/ur
-w/times/utmri8a.pfb>
-Output written on paper.pdf (4 pages, 197461 bytes).
+ive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/
+fonts/type1/urw/times/utmri8a.pfb>
+Output written on paper.pdf (5 pages, 196208 bytes).
 PDF statistics:
- 168 PDF objects out of 1000 (max. 8388607)
- 130 compressed objects within 2 object streams
- 44 named destinations out of 1000 (max. 500000)
+ 196 PDF objects out of 1000 (max. 8388607)
+ 158 compressed objects within 2 object streams
+ 47 named destinations out of 1000 (max. 500000)
  21 words of extra memory for PDF output out of 10000 (max. 10000000)
 
