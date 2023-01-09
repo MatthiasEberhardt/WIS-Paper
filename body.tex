@@ -56,11 +56,57 @@ Firstly, let us consider only out-scattering and absorption, which occur due to 
 Of course, these particles are far too numerous to be directly simulated, but their distribution in 3D space can be stochastically modeled (similar to how detailed surface structures can be modeled by micorfacets in classical ray tracing).
 
 To do so, consider a close-up look at a ray section traveling through the vloume [CITATION!].
-This section can be assumed to be a cylinder with a base area $E$ and a height $\delta h$, through which the ray travels from top to bottom.
-Within this cylinder, there exists a certain number of out-scattering and absorbing particles, defined as $n_s={\ro}_sE{\delta}h$ and $n_a={\ro}_aE{\delta}h$ respectively, where ${\ro}_s$ and ${\ro}_a$ are the densities of the particles.
-From the top-down view, the particles will occupy an area of $n_sA={\ro}_sAE{\delta}h \over E$ and f $n_aA={\ro}_aAE{\delta}h \over E$, respectively, if we assume that the particles do not overlap each other, which is reasonable if the densities and the height do not become too large.
-This can be simplified to ${\ro}_sA{\delta}h$ and ${\ro}_sA{\delta}h$, which gives us the fractions of light which are stopped in the cylinder, either through absorbtion or out-scattering.
+This section can be assumed to be a cylinder with a base area $E$ and a height $\DELTA h$, through which the ray travels from top to bottom.
+Within this cylinder, there exists a certain number of out-scattering and absorbing particles, defined as $n_s={\ro}_sE{\DELTA}h$ and $n_a={\ro}_aE{\DELTA}h$ respectively, where ${\ro}_s$ and ${\ro}_a$ are the densities of the particles.
+From the top-down view, the particles will occupy an area of $n_sA={\rho}_sAE{\DELTA}h \over E$ and f $n_aA={\rho}_aAE{\DELTA}h \over E$, respectively, if we assume that the particles do not overlap each other, which is reasonable if the densities and the height do not become too large.
+This can be simplified to ${\rho}_sA{\DELTA}h$ and ${\rho}_sA{\DELTA}h$, which gives us the fractions of light which are stopped in the cylinder, either through absorbtion or out-scattering. By letting $\DELTA h$ approach 0, we see that for each infinitessimaly small cylinder slice with height $dh$, the change in intensity is proportionally to $-({\rho}_sA + {\rho}_aA)dh$.
+Formulated as a differential equation, this results in
+\begin{equation}
+dL = -(-({\rho}(h)_sA + {\rho}(h)_aA)L(h)dh
 \end{equation}
+At this point, we introduce the scattering coefficient ${\mu}_s ={\rho}(h)_sA $, the absorption coefficient ${\mu}_a = {\rho}(h)_aA$ and the extinction coeffcient ${\mu}_t = {\mu}_s +{\mu}_a$, which give a measure of how much light is lost due to scattering, to absorption, and in total. Thus, equation [REFERNCE] can be simplified to
+\begin{equation}
+dL = - {\mu}_t(h)L(h)dh
+\end{equation}
+which solution is
+\begin{equation}
+L(h) = L_0e^{-\int_{0}^{h} {\mu}_t(s)ds}
+\end{equation}
+Rearranging this equation gives
+\begin{equation}
+L(h) \over  L_0 = e^{-\int_{0]^{h} {\mu}_t(s)ds}
+\end{equation}
+meaning, that the calculated integral $e^{-\int_{0]^{h} {\mu}_t(s)ds}$ gives us the ratio of the light that travels through a cylinder of height $h$ unimpeded. In the following, we call this quantity the transmittance, and refer to it as $\tau(\vec{x), \vec{x'})$ (the ratio of light that arrives at $\vec{x}$ from $\vec{x'}$).
+Thus, going back to equation [REFERENCE], we can now specify how much $L_e$ gets attenuated, and get the equation
+\begin{equation}
+L(\vec{x},\omega ) =\tau(\vec{x), \vec{y}) L_e(\vec{y}, \omega )
+\end{equation}
+However, this is not correct either, since we still need to consider in-scattering and emission along the ray.
+For this purpose, let us consider any arbitrary point $\vec{u}$ on the ray from $\vec{x}$ to $\vec{y}).
+At $\vec{u}$, the particles of the medium emit some light towards $\omega$, which we call $\epsilon (\vec{u}, \omega )$. In our cylindrical model, the amount of absorbing particles at position $\vec{u}$ is ${\mu}_a(\vec{u})$. We assume that the particles responsible for absorbtion are also responsible for emission, meaning the amount of light emitted at $\vec{u}$ towards $\omega$ is ${\mu}_a(\vec{u})\epsilon (\vec{u}, \omega )$.
+In-scattered light can arrive at $\vec{u}$ from every direction, which means we need to integrate over the sphere:
+\begin{equation}
+\int_{\OMEGA} L(\vec{u}, \omega `)d\omega `
+\end{equation}
+However, not all light arriving at $\vec{u}$ is scattered towards $\omega $. The so called phase function $f_p(\vec{u}, \omega , \omega `)$ gives us the ratio light arriving at $\vec{u}$ from $\omega `$ being reflected towards $\omega$. In this sence, the phase function in analogous to the BDRF in classical ray tracing. Furthermore, the amount of light scattered towrds $\omega $ also depends on the number of in-scattering particles present at $\vec{u}$. We assume that in-scattering particles are equal to out-scattering particles and get the equation
+\begin{equation}
+L_e^s(\vec{u}, \omega ) = {\mu}_s(\vec{u})\int_{\OMEGA} f_p(\vec{u}, \omega , \omega `)L(\vec{u}, \omega `)d\omega `  + {\mu}_a(\vec{u})\epsilon (\vec{u}, \omega )
+\end{equation}
+describing the total amount of light being added to the ray at $\vec{u}$. We call this quantity $L_e^s$ and use the superscript $s$ to differentiate it from $L_e$.
+However, not all of $L_e^s(\vec{u}, \omega )$ arrives at $\vec{x}$, since the newly added light also needs to travel through the volume where it is attenuated by the transmittance $\tau (\vec{x}, \vec{u})$.
+To get the total amount of light added to the ray, we sum up the light contribution of all points along the ray by integrating over the ray:
+\begin{equation}
+\int_{\vec{x}^{\vec{y} \tau(\vec{x}, \vec{u})L_e^s(\vec{u}, \omega )d\vec{u}
+\end{equation}
+Adding this to the light arriving from $\vec{y}$ gives the total amount of light arriving at $\vec{x}$ from $\omega $.
+\begin{equation}
+L(\vec{x}, \omega ) = \int_{\vec{x}^{\vec{y} \tau(\vec{x}, \vec{u})L_e^s(\vec{u}, \omega )d\vec{u} + \tau(\vec{x), \vec{y}) L_e(\vec{y}, \omega )
+\end{equation}
+This integral is complicated to solve, especially since the expressin $L(\vec{x}, \omega )$ appears on both sides of the equation.
+In the following, we will discuss several methods approximating a solution.
+
+
+\section{Basic Volumetric Ray Tracing Algorithm}
 \begin{figure}[htb]
   \centering
   % the following command controls the width of the embedded file
@@ -72,8 +118,6 @@ This can be simplified to ${\ro}_sA{\delta}h$ and ${\ro}_sA{\delta}h$, which giv
   \caption{\label{fig:firstExample}
           Illustration of the ray casting process.}
 \end{figure}
-
-\section{Basic Volumetric Ray Tracing Algorithm}
 \subsection{Terminology}
 To enable a clear understanding in this section we will shortly define key terminology used in this paper. A voxel is an infinitesimally small point in 3D space with an associated vector value, that represents the color of that voxel. In this paper, these voxels are arranged in a regular cube lattice (although other arrangements are possible as well). A cell or area of influence of a voxel $v$ is defined as the region of space which is closer to $v$ than to any other voxel (meaning a cube in space with $v$ in the center). A voxel cube is defined as a group of 8 voxels that form a cube in space. The neighborhood of a voxel $v$ is defined as the set that includes $v$ as well as its 26 neighbors in 3D space. Since different authors use different notations, this terminology might be used slightly different in other papers.
 \subsection{Underlying Volume Data}
