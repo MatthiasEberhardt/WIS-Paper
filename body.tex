@@ -98,15 +98,15 @@ describing the total amount of light being added to the ray at $\vec{u}$. We cal
 However, not all of $L_e^s(\vec{u}, \omega )$ arrives at $\vec{x}$, since the newly added light also needs to travel through the volume where it is attenuated by the transmittance $\tau (\vec{x}, \vec{u})$.
 To get the total amount of light added to the ray, we sum up the light contribution of all points along the ray by integrating over the ray:
 \begin{equation}
-\int_{\vec{x}^{\vec{y} \tau(\vec{x}, \vec{u})L_e^s(\vec{u}, \omega )d\vec{u}
+\int_{\vec{x}}^{\vec{y} \tau(\vec{x}, \vec{u})L_e^s(\vec{u}, \omega )d\vec{u}
 \end{equation}
 \subsection{The rendering Equation}
 Adding this to the light arriving from $\vec{y}$ gives the total amount of light arriving at $\vec{x}$ from $\omega $.
 \begin{equation}
-L(\vec{x}, \omega ) = \int_{\vec{x}^{\vec{y} \tau(\vec{x}, \vec{u})L_e^s(\vec{u}, \omega )d\vec{u} + \tau(\vec{x), \vec{y}) L_e(\vec{y}, \omega )
+L(\vec{x}, \omega ) = \int_{\vec{x}}^{\vec{y} \tau(\vec{x}, \vec{u})L_e^s(\vec{u}, \omega )d\vec{u} + \tau(\vec{x), \vec{y}) L_e(\vec{y}, \omega )
 \end{equation}
 This integral is complicated to solve, especially since the expressin $L(\vec{x}, \omega )$ appears on both sides of the equation.
-In the following, we will discuss several methods approximating a solution.
+In the following, we will discuss several methods for approximating a solution.
 
 
 
@@ -118,11 +118,24 @@ In the following, we will ignore all scattering effects in the medium and assume
 Furthermore, we will also ignore all other geometry in the scene and only focus on the volume. Thus, the term $\tau(\vec{x), \vec{y}) L_e(\vec{y}, \omega )$, which desribes the light contribution from the nearest intersection with a piece of geometry, is omitted.
 Thus, we arrive at the equation
 \begin{equation}
-L(\vec{x}, \omega ) = \int_{\vec{x}^{\vec{y} \tau(\vec{x}, \vec{u}){\mu}_a(\vec{u})\epsilon (\vec{u}, \omega)d\vec{u}
+L(\vec{x}, \omega ) = \int_{\vec{x}}^{\vec{y} \tau(\vec{x}, \vec{u}){\mu}_a(\vec{u})\epsilon (\vec{u}, \omega)d\vec{u}
 \end{equation}
 For this chapter, we assume that the medium is contained within a cuboid boundary. Since there is no geometry, we can't cast the ray until it intersects with the geometry. Instead, the endpoint $\vec{y}$ of the ray will be the point where the ray leaves the cuboid boundary.
 
 \subsection{Algorithmic Approximation To The Simplified Equation}
+$L(\vec{x},\omega )$ is approximated by casting a ray in direction $-\omega$ and sampling it at evenly spaced points along the ray and summing up their contributions. The distance $d$ between the sampling points should be smaller than the volumes nyquist limit.
+We start sampling at the first point within the volume, which has a distance of $d_0$ to $\vec{x}$. The $i$-th sample point then is described by
+\begin{equation}
+p_i=\vec{x} + d_0(-\omega) + di(-\omega)
+\end{equation}
+The light contribution of a point $p_i$ is considered to be the light contribution of the ray segment between $p_{i-1}$ and $p_i$.
+\begin{equation}
+\int_{p_{i-1}}^{p_i} \tau (p_0,p_{i-1}) \tau(p_{i-1},p_{i'} \mu_a(p_{i'})\epsilon (p_{i'}, \omega)dp_{i'}
+\end{equation} 
+As a necessary simplification, we assume all variables to be piecewise constant on the ray segments. This yields
+\begin{equation}
+\int_{p_{i-1}}^{p_i} \product_{1\le j \le i}(\tau(p_{j-1}, p_j)) \mu_a(p_{i})\epsilon (p_{i}, \omega)dp_{i}
+\end{equation} 
 \begin{figure}[htb]
   \centering
   % the following command controls the width of the embedded file
