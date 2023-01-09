@@ -37,7 +37,7 @@
 
 \end{abstract}  
 %-------------------------------------------------------------------------
----START OF REVIEW---
+
 \section{Introduction}
 In Computer Graphics, objects usually are represented as a set of geometric primitives (e.g. triangles), displaying the surface of the object in question. However, this approach is not always suitable. For example, if the original data representation of the object is volumetric data (which might be produced by medical 3d scans\cite{511}), the traditional rendering technique would necessitate the creation of an intermediate surface representation that might introduce unwanted artifacts. Another issue arises if the object has no well-defined surfaces to which geometric primitives could be fitted, such as a cloud or fog\cite{10.1145/964965.808594}. In such cases, volumetric ray tracing might be used, a technique in which rays are cast through a volume which contains information about its optical properties(e.g color and opacity), sampled at various points within the volume, accumulated and projected on a 2d image (see figure 1)\cite{511}. A description of this algorithm is presented in this paper, alongside several strategies for improving computational speed, such as (probabilistic) early termination of a ray, and sampling at lower resolutions within the volume.
 
@@ -59,7 +59,7 @@ Of course, these particles are far too numerous to be directly simulated, but th
 To do so, consider a close-up look at a ray section traveling through the vloume [CITATION!].
 This section can be assumed to be a cylinder with a base area $E$ and a height $\Delta h$, through which the ray travels from top to bottom.
 Within this cylinder, there exists a certain number of out-scattering and absorbing particles, defined as $n_s={\rho}_sE{\Delta}h$ and $n_a={\rho}_aE{\Delta}h$ respectively, where ${\rho}_s$ and ${\rho}_a$ are the densities of the particles.
-From the top-down view, the particles will occupy an area of ${n_sA}=\frac{{\rho}_sAE{\Delta}h}{E}$ and f ${n_aA}=\frac{{\rho}_aAE{\Delta}h}{E}$, respectively, if we assume that the particles do not overlap each other, which is reasonable if the densities and the height do not become too large.
+From the top-down view, the particles will occupy an area of ${n_sA}=\frac{{\rho}_sAE{\Delta}h}{E}$ and ${n_aA}=\frac{{\rho}_aAE{\Delta}h}{E}$, respectively, if we assume that the particles do not overlap each other, which is reasonable if the densities and the height do not become too large.
 This can be simplified to ${\rho}_sA{\Delta}h$ and ${\rho}_sA{\Delta}h$, which gives us the fractions of light which are stopped in the cylinder, either through absorbtion or out-scattering. By letting $\Delta h$ approach 0, we see that for each infinitessimaly small cylinder slice with height $dh$, the change in intensity is proportionally to $-({\rho}_sA + {\rho}_aA)dh$.
 Formulated as a differential equation, this results in
 \begin{equation}
@@ -122,7 +122,7 @@ L(\vec{x}, \omega ) = \int_{\vec{x}}^{\vec{y}} \tau(\vec{x}, \vec{u}){\mu}_a(\ve
 \end{equation}
 For this chapter, we assume that the medium is contained within a cuboid boundary. Since there is no geometry, we can't cast the ray until it intersects with the geometry. Instead, the endpoint $\vec{y}$ of the ray will be the point where the ray leaves the cuboid boundary.
 
-\subsection{Algorithmic Approximation To The Simplified Equation}
+\subsection{Discrete Approximation To The Simplified Equation}
 $L(\vec{x},\omega )$ is approximated by casting a ray in direction $-\omega$ and sampling it at evenly spaced points along the ray and summing up their contributions. The distance $s$ between the sampling points should be smaller than the volumes nyquist limit.
 We start sampling at the first point within the volume, which has a distance of $s_0$ to $\vec{x}$. The $i$-th sample point then is described by
 \begin{equation}
@@ -134,8 +134,23 @@ The light contribution of a point $p_i$ is considered to be the light contributi
 \end{equation} 
 As a necessary simplification, we assume all variables to be piecewise constant on the ray segments. This yields
 \begin{equation}
- \prod_{1\le j \le i}(\tau(p_{j-1}, p_j)) \cdot \mu_a(p_{i})\epsilon (p_{i}, \omega)sp_{i}
+ \prod_{1\le j \le i}(\tau(p_{j-1}, p_j)) \cdot \mu_a(p_{i})\epsilon (p_{i}, \omega)s
 \end{equation} 
+The quantity $\mu_a(p_{i})\epsilon (p_{i}, \omega)s$ descirbes the emitted light from $p_i$ and will from now on be refered to as $c(i)$. The product is the total attenuation (or transperancy) from $\vec{x}$ to $p_i$, $\tau(p_{j-1}, p_j)$ is the attenuation from $p_{j-1}$ to $p_j$ and can be calculated by
+\begin{equation}
+\tau(p_{j-1}, p_j) = e^{-s\mu_t(j)}
+\end{equation}
+However, in computer graphics it is more common to use the opacity instead of the transperancy. Therefore, we will refer to $\tau(p_{j-1}, p_j)$ as $1 - \alpha(j)$ from now on. Inserting this in formula for $\tau{\vec{x}, p_i)$ yields $\prod_{1 \le j \le i} (1 - \alpha(j))$.
+
+Again, we can refer to this quantity in terms of opacity rather than transperancy be using the equality
+\begin{equation}
+1 - \beta(i) = \prod_{1 \le j \le i} (1 - \alpha(j))
+\end{equation}
+where $\beta(i)$ is the accumulated opacity between $\vec{x}$ and $\p_i$.
+Using these results, we can approximate the integral (REFERENCE!] as the sum
+\begin{equation}
+L(\vec{x},\omega) = \sum_{1 \le i \le n}(1 - \beta(i))c(i)
+\end{equation}
 \begin{figure}[htb]
   \centering
   % the following command controls the width of the embedded file
