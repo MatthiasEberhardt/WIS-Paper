@@ -52,6 +52,7 @@ L(\vec{x},\omega ) = L_e(\vec{y}, \omega )
 However, this equation assumes that the light has no interactions between $\vec{x}$ and $\vec{y}$, which is only true if the ray travels through a vacuum. If the light travels through a medium that interacts with if (called a participating medium), the interactions change the light along the ray. In most cases, these interactions are small enough to be ignored, but in certain scenarios (e.g if there is fog, clouds or smoke present) they might have a noticeable effect. The types of interactions we need to consider are absorption, emission, in-scattering and out-scattering.
 
 Absorption and out-scattering attenuate the light intensity along the ray, in-scattering and emission add to it.
+\subsection{Absorbtion And Out-Scattering}
 Firstly, let us consider only out-scattering and absorption, which occur due to tiny particles floating around in the volume (such as water droplets in clouds and fog, or dust particles in the air).
 Of course, these particles are far too numerous to be directly simulated, but their distribution in 3D space can be stochastically modeled (similar to how detailed surface structures can be modeled by micorfacets in classical ray tracing).
 
@@ -82,6 +83,7 @@ Thus, going back to equation [REFERENCE], we can now specify how much $L_e$ gets
 L(\vec{x},\omega ) =\tau(\vec{x), \vec{y}) L_e(\vec{y}, \omega )
 \end{equation}
 However, this is not correct either, since we still need to consider in-scattering and emission along the ray.
+\subsection{Emission And In-Scattering}
 For this purpose, let us consider any arbitrary point $\vec{u}$ on the ray from $\vec{x}$ to $\vec{y}).
 At $\vec{u}$, the particles of the medium emit some light towards $\omega$, which we call $\epsilon (\vec{u}, \omega )$. In our cylindrical model, the amount of absorbing particles at position $\vec{u}$ is ${\mu}_a(\vec{u})$. We assume that the particles responsible for absorbtion are also responsible for emission, meaning the amount of light emitted at $\vec{u}$ towards $\omega$ is ${\mu}_a(\vec{u})\epsilon (\vec{u}, \omega )$.
 In-scattered light can arrive at $\vec{u}$ from every direction, which means we need to integrate over the sphere:
@@ -98,6 +100,7 @@ To get the total amount of light added to the ray, we sum up the light contribut
 \begin{equation}
 \int_{\vec{x}^{\vec{y} \tau(\vec{x}, \vec{u})L_e^s(\vec{u}, \omega )d\vec{u}
 \end{equation}
+\subsection{The rendering Equation}
 Adding this to the light arriving from $\vec{y}$ gives the total amount of light arriving at $\vec{x}$ from $\omega $.
 \begin{equation}
 L(\vec{x}, \omega ) = \int_{\vec{x}^{\vec{y} \tau(\vec{x}, \vec{u})L_e^s(\vec{u}, \omega )d\vec{u} + \tau(\vec{x), \vec{y}) L_e(\vec{y}, \omega )
@@ -106,7 +109,20 @@ This integral is complicated to solve, especially since the expressin $L(\vec{x}
 In the following, we will discuss several methods approximating a solution.
 
 
+
+
 \section{Basic Volumetric Ray Tracing Algorithm}
+In this chapter we will discuss an algorithmic solution to a simplified version of the rendering equation we derived in the previous section.
+\subsection{Simplified Rendering Equation}
+In the following, we will ignore all scattering effects in the medium and assume that the medium only absorbs and emitts light, which can be understood as a scenario where all external light has been completly evenly scattered within the volume. This is analogous to only rendering ambient lighting in classical ray tracing, whic assumes that the light is evenly distributed in the scene.
+Furthermore, we will also ignore all other geometry in the scene and only focus on the volume. Thus, the term $\tau(\vec{x), \vec{y}) L_e(\vec{y}, \omega )$, which desribes the light contribution from the nearest intersection with a piece of geometry, is omitted.
+Thus, we arrive at the equation
+\begin{equation}
+L(\vec{x}, \omega ) = \int_{\vec{x}^{\vec{y} \tau(\vec{x}, \vec{u}){\mu}_a(\vec{u})\epsilon (\vec{u}, \omega)d\vec{u}
+\end{equation}
+For this chapter, we assume that the medium is contained within a cuboid boundary. Since there is no geometry, we can't cast the ray until it intersects with the geometry. Instead, the endpoint $\vec{y}$ of the ray will be the point where the ray leaves the cuboid boundary.
+
+\subsection{Algorithmic Approximation To The Simplified Equation}
 \begin{figure}[htb]
   \centering
   % the following command controls the width of the embedded file
