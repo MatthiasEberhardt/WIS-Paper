@@ -59,7 +59,7 @@ Of course, these particles are far too numerous to be directly simulated, but th
 To do so, consider a close-up look at a ray section traveling through the vloume [CITATION!].
 This section can be assumed to be a cylinder with a base area $E$ and a height $\Delta h$, through which the ray travels from top to bottom.
 Within this cylinder, there exists a certain number of out-scattering and absorbing particles, defined as $n_s={\rho}_sE{\Delta}h$ and $n_a={\rho}_aE{\Delta}h$ respectively, where ${\rho}_s$ and ${\rho}_a$ are the densities of the particles.
-From the top-down view, the particles will occupy an area of $n_sA={\rho}_sAE{\DELTA}h \over E$ and f $n_aA={\rho}_aAE{\Delta}h \over E$, respectively, if we assume that the particles do not overlap each other, which is reasonable if the densities and the height do not become too large.
+From the top-down view, the particles will occupy an area of $n_sA={\rho}_sAE{\Delta}h \over E$ and f $n_aA={\rho}_aAE{\Delta}h \over E$, respectively, if we assume that the particles do not overlap each other, which is reasonable if the densities and the height do not become too large.
 This can be simplified to ${\rho}_sA{\Delta}h$ and ${\rho}_sA{\Delta}h$, which gives us the fractions of light which are stopped in the cylinder, either through absorbtion or out-scattering. By letting $\Delta h$ approach 0, we see that for each infinitessimaly small cylinder slice with height $dh$, the change in intensity is proportionally to $-({\rho}_sA + {\rho}_aA)dh$.
 Formulated as a differential equation, this results in
 \begin{equation}
@@ -75,9 +75,9 @@ L(h) = L_0e^{-\int_{0}^{h} {\mu}_t(s)ds}
 \end{equation}
 Rearranging this equation gives
 \begin{equation}
-L(h) \over  L_0 = e^{-\int_{0]^{h} {\mu}_t(s)ds}
+L(h) \over{L_0} = e^{-\int_{0}^{h} {\mu}_t(s)ds}
 \end{equation}
-meaning, that the calculated integral $e^{-\int_{0]^{h} {\mu}_t(s)ds}$ gives us the ratio of the light that travels through a cylinder of height $h$ unimpeded. In the following, we call this quantity the transmittance, and refer to it as $\tau(\vec{x), \vec{x'})$ (the ratio of light that arrives at $\vec{x}$ from $\vec{x'}$).
+meaning, that the calculated integral $e^{-\int_{0}^{h} {\mu}_t(s)ds}$ gives us the ratio of the light that travels through a cylinder of height $h$ unimpeded. In the following, we call this quantity the transmittance, and refer to it as $\tau(\vec{x}), \vec{x'})$ (the ratio of light that arrives at $\vec{x}$ from $\vec{x'}$).
 Thus, going back to equation [REFERENCE], we can now specify how much $L_e$ gets attenuated, and get the equation
 \begin{equation}
 L(\vec{x},\omega ) =\tau(\vec{x}), \vec{y}) L_e(\vec{y}, \omega )
@@ -88,11 +88,11 @@ For this purpose, let us consider any arbitrary point $\vec{u}$ on the ray from 
 At $\vec{u}$, the particles of the medium emit some light towards $\omega$, which we call $\epsilon (\vec{u}, \omega )$. In our cylindrical model, the amount of absorbing particles at position $\vec{u}$ is ${\mu}_a(\vec{u})$. We assume that the particles responsible for absorbtion are also responsible for emission, meaning the amount of light emitted at $\vec{u}$ towards $\omega$ is ${\mu}_a(\vec{u})\epsilon (\vec{u}, \omega )$.
 In-scattered light can arrive at $\vec{u}$ from every direction, which means we need to integrate over the sphere:
 \begin{equation}
-\int_{\OMEGA} L(\vec{u}, \omega `)d\omega `
+\int_{\Omega} L(\vec{u}, \omega `)d\omega `
 \end{equation}
 However, not all light arriving at $\vec{u}$ is scattered towards $\omega $. The so called phase function $f_p(\vec{u}, \omega , \omega `)$ gives us the ratio light arriving at $\vec{u}$ from $\omega `$ being reflected towards $\omega$. In this sence, the phase function in analogous to the BDRF in classical ray tracing. Furthermore, the amount of light scattered towrds $\omega $ also depends on the number of in-scattering particles present at $\vec{u}$. We assume that in-scattering particles are equal to out-scattering particles and get the equation
 \begin{equation}
-L_e^s(\vec{u}, \omega ) = {\mu}_s(\vec{u})\int_{\OMEGA} f_p(\vec{u}, \omega , \omega `)L(\vec{u}, \omega `)d\omega `  + {\mu}_a(\vec{u})\epsilon (\vec{u}, \omega )
+L_e^s(\vec{u}, \omega ) = {\mu}_s(\vec{u})\int_{\Omega} f_p(\vec{u}, \omega , \omega `)L(\vec{u}, \omega `)d\omega `  + {\mu}_a(\vec{u})\epsilon (\vec{u}, \omega )
 \end{equation}
 describing the total amount of light being added to the ray at $\vec{u}$. We call this quantity $L_e^s$ and use the superscript $s$ to differentiate it from $L_e$.
 However, not all of $L_e^s(\vec{u}, \omega )$ arrives at $\vec{x}$, since the newly added light also needs to travel through the volume where it is attenuated by the transmittance $\tau (\vec{x}, \vec{u})$.
@@ -103,7 +103,7 @@ To get the total amount of light added to the ray, we sum up the light contribut
 \subsection{The rendering Equation}
 Adding this to the light arriving from $\vec{y}$ gives the total amount of light arriving at $\vec{x}$ from $\omega $.
 \begin{equation}
-L(\vec{x}, \omega ) = \int_{\vec{x}}^{\vec{y}} \tau(\vec{x}, \vec{u})L_e^s(\vec{u}, \omega )d\vec{u} + \tau(\vec{x), \vec{y}) L_e(\vec{y}, \omega )
+L(\vec{x}, \omega ) = \int_{\vec{x}}^{\vec{y}} \tau(\vec{x}, \vec{u})L_e^s(\vec{u}, \omega )d\vec{u} + \tau(\vec{x}, \vec{y}) L_e(\vec{y}, \omega )
 \end{equation}
 This integral is complicated to solve, especially since the expressin $L(\vec{x}, \omega )$ appears on both sides of the equation.
 In the following, we will discuss several methods for approximating a solution.
@@ -115,7 +115,7 @@ In the following, we will discuss several methods for approximating a solution.
 In this chapter we will discuss an algorithmic solution to a simplified version of the rendering equation we derived in the previous section.
 \subsection{Simplified Rendering Equation}
 In the following, we will ignore all scattering effects in the medium and assume that the medium only absorbs and emitts light, which can be understood as a scenario where all external light has been completly evenly scattered within the volume. This is analogous to only rendering ambient lighting in classical ray tracing, whic assumes that the light is evenly distributed in the scene.
-Furthermore, we will also ignore all other geometry in the scene and only focus on the volume. Thus, the term $\tau(\vec{x), \vec{y}) L_e(\vec{y}, \omega )$, which desribes the light contribution from the nearest intersection with a piece of geometry, is omitted.
+Furthermore, we will also ignore all other geometry in the scene and only focus on the volume. Thus, the term $\tau(\vec{x}, \vec{y}) L_e(\vec{y}, \omega )$, which desribes the light contribution from the nearest intersection with a piece of geometry, is omitted.
 Thus, we arrive at the equation
 \begin{equation}
 L(\vec{x}, \omega ) = \int_{\vec{x}}^{\vec{y}} \tau(\vec{x}, \vec{u}){\mu}_a(\vec{u})\epsilon (\vec{u}, \omega)d\vec{u}
