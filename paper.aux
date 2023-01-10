@@ -19,7 +19,6 @@
 \citation{511}
 \citation{10.1145/964965.808594}
 \citation{511}
-\citation{Appa2015RayCF}
 \@LN@col{1}
 \@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{1}{section.1}\protected@file@percent }
 \@writefile{brf}{\backcite{511}{{1}{1}{section.1}}}
@@ -27,8 +26,14 @@
 \@writefile{brf}{\backcite{511}{{1}{1}{section.1}}}
 \@writefile{toc}{\contentsline {section}{\numberline {2}Mathematical Theory Behind Volumetric Ray Tracing}{1}{section.2}\protected@file@percent }
 \@LN@col{2}
-\@writefile{toc}{\contentsline {section}{\numberline {3}Basic Volumetric Ray Tracing Algorithm}{1}{section.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Terminology}{1}{subsection.3.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1}Absorbtion And Out-Scattering}{1}{subsection.2.1}\protected@file@percent }
+\@LN@col{1}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}Emission And In-Scattering}{2}{subsection.2.2}\protected@file@percent }
+\@LN@col{2}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3}The rendering Equation}{2}{subsection.2.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {3}Basic Volumetric Ray Tracing Algorithm}{2}{section.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Simplified Rendering Equation}{2}{subsection.3.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Discrete Approximation To The Simplified Equation}{2}{subsection.3.2}\protected@file@percent }
 \citation{10.1145/325165.325247}
 \citation{haggstrom2018real}
 \citation{511}
@@ -36,63 +41,104 @@
 \citation{729595}
 \citation{729595}
 \citation{729595}
+\citation{10.1145/78964.78965}
+\citation{10.1145/97880.97886}
+\citation{10.1145/147130.147155}
+\@LN@col{1}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Underlying Volume Data}{3}{subsection.3.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4}Underlying Volume Data}{3}{subsection.3.4}\protected@file@percent }
+\@writefile{brf}{\backcite{10.1145/325165.325247}{{3}{3.4}{subsection.3.4}}}
+\@writefile{brf}{\backcite{haggstrom2018real}{{3}{3.4}{subsection.3.4}}}
+\@writefile{brf}{\backcite{511}{{3}{3.4}{subsection.3.4}}}
+\@writefile{brf}{\backcite{10.1145/78964.78965}{{3}{3.4}{equation.3.18}}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.5}Interpolation}{3}{subsection.3.5}\protected@file@percent }
+\@writefile{brf}{\backcite{729595}{{3}{3.5}{subsection.3.5}}}
+\@LN@col{2}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces  Simplified visualization of naive interpolation in 2 dimensions. The black dots represent the voxels, the red dots the sample points. Notice that the second sample point has a gray color, even though the original data only has white voxels and blck, transparent voxels, which shouldn't affect the final color. Adapted from Wittenbrink et al.\cite  {729595}}}{3}{figure.1}\protected@file@percent }
+\newlabel{fig:firstExample}{{1}{3}{Simplified visualization of naive interpolation in 2 dimensions. The black dots represent the voxels, the red dots the sample points. Notice that the second sample point has a gray color, even though the original data only has white voxels and blck, transparent voxels, which shouldn't affect the final color. Adapted from Wittenbrink et al.\cite {729595}}{figure.1}{}}
+\@writefile{brf}{\backcite{729595}{{3}{1}{figure.1}}}
+\@writefile{toc}{\contentsline {section}{\numberline {4}Optimization Strategies}{3}{section.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Adaptive Termination Of Ray Tracing}{3}{subsection.4.1}\protected@file@percent }
+\@writefile{brf}{\backcite{10.1145/78964.78965}{{3}{4.1}{subsection.4.1}}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Ray Termination With Russian Roulette}{3}{subsection.4.2}\protected@file@percent }
+\@writefile{brf}{\backcite{10.1145/97880.97886}{{3}{4.2}{subsection.4.2}}}
+\@writefile{brf}{\backcite{10.1145/147130.147155}{{3}{4.2}{subsection.4.2}}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Pyramid Data Structures}{3}{subsection.4.3}\protected@file@percent }
+\@LN@col{1}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces  The black, opaque object blocks parts of the volumes behind it. The samples behind the object (from the cameras perspective) are not visible and therefore irrelevant. }}{4}{figure.2}\protected@file@percent }
+\newlabel{fig:firstExample}{{2}{4}{The black, opaque object blocks parts of the volumes behind it. The samples behind the object (from the cameras perspective) are not visible and therefore irrelevant}{figure.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4}Fixed Step Multiresolution}{4}{subsection.4.4}\protected@file@percent }
+\@LN@col{2}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces  Simplified 2 dimensional example of 2 levels of a pyramid. Each pixel in level n +1 contains 4 pixel of the lower level. In 3 dimensions, 8 voxels of the lower level are contained in one voxel of the upper level.}}{4}{figure.3}\protected@file@percent }
+\newlabel{fig:firstExample}{{3}{4}{Simplified 2 dimensional example of 2 levels of a pyramid. Each pixel in level n +1 contains 4 pixel of the lower level. In 3 dimensions, 8 voxels of the lower level are contained in one voxel of the upper level}{figure.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.5}Presence And Homogenity Acceleration}{4}{subsection.4.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.6}Presence Acceleration}{4}{subsection.4.6}\protected@file@percent }
+\citation{Appa2015RayCF}
+\citation{10.1145/325165.325247}
+\citation{haggstrom2018real}
+\citation{511}
+\citation{10.1145/78964.78965}
+\citation{729595}
+\citation{729595}
+\citation{729595}
+\@LN@col{1}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.7}Homogenity Acceleration}{5}{subsection.4.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.8}$\beta $ Acceleration}{5}{subsection.4.8}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5}REPETITION}{5}{section.5}\protected@file@percent }
+\@writefile{brf}{\backcite{Appa2015RayCF}{{5}{5}{section.5}}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces  Illustration of the ray casting process.}}{5}{figure.4}\protected@file@percent }
+\newlabel{fig:firstExample}{{4}{5}{Illustration of the ray casting process}{figure.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}Terminology}{5}{subsection.5.1}\protected@file@percent }
+\@LN@col{2}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}Underlying Volume Data}{5}{subsection.5.2}\protected@file@percent }
+\@writefile{brf}{\backcite{10.1145/325165.325247}{{5}{5.2}{subsection.5.2}}}
+\@writefile{brf}{\backcite{haggstrom2018real}{{5}{5.2}{subsection.5.2}}}
+\@writefile{brf}{\backcite{511}{{5}{5.2}{subsection.5.2}}}
+\@writefile{brf}{\backcite{10.1145/78964.78965}{{5}{5.2}{equation.5.19}}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3}Volumetric Ray Tracing}{5}{subsection.5.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.4}Interpolation}{5}{subsection.5.4}\protected@file@percent }
+\@writefile{brf}{\backcite{729595}{{5}{5.4}{subsection.5.4}}}
 \citation{Sabella1988ARA,Upson1988VbufferVV}
 \citation{10.1145/378456.378484,511}
 \citation{10.1145/78964.78965}
-\@LN@col{1}
-\@writefile{brf}{\backcite{Appa2015RayCF}{{2}{2}{equation.2.1}}}
-\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces  Illustration of the ray casting process.}}{2}{figure.1}\protected@file@percent }
-\newlabel{fig:firstExample}{{1}{2}{Illustration of the ray casting process}{figure.1}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Underlying Volume Data}{2}{subsection.3.2}\protected@file@percent }
-\@writefile{brf}{\backcite{10.1145/325165.325247}{{2}{3.2}{subsection.3.2}}}
-\@writefile{brf}{\backcite{haggstrom2018real}{{2}{3.2}{subsection.3.2}}}
-\@writefile{brf}{\backcite{511}{{2}{3.2}{subsection.3.2}}}
-\@writefile{brf}{\backcite{10.1145/78964.78965}{{2}{3.2}{equation.3.2}}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Volumetric Ray Tracing}{2}{subsection.3.3}\protected@file@percent }
-\@LN@col{2}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.4}Interpolation}{2}{subsection.3.4}\protected@file@percent }
-\@writefile{brf}{\backcite{729595}{{2}{3.4}{subsection.3.4}}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces  Simplified visualization of naive interpolation in 2 dimensions. The black dots represent the voxels, the red dots the sample points. Notice that the second sample point has a gray color, even though the original data only has white voxels and blck, transparent voxels, which shouldn't affect the final color. Adapted from Wittenbrink et al.\cite  {729595}}}{2}{figure.2}\protected@file@percent }
-\newlabel{fig:firstExample}{{2}{2}{Simplified visualization of naive interpolation in 2 dimensions. The black dots represent the voxels, the red dots the sample points. Notice that the second sample point has a gray color, even though the original data only has white voxels and blck, transparent voxels, which shouldn't affect the final color. Adapted from Wittenbrink et al.\cite {729595}}{figure.2}{}}
-\@writefile{brf}{\backcite{729595}{{2}{2}{figure.2}}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.5}Compositing Of Multiple Sample Points}{2}{subsection.3.5}\protected@file@percent }
-\@writefile{brf}{\backcite{Sabella1988ARA, Upson1988VbufferVV }{{2}{3.5}{subsection.3.5}}}
-\@writefile{brf}{\backcite{10.1145/378456.378484, 511}{{2}{3.5}{subsection.3.5}}}
-\@writefile{brf}{\backcite{10.1145/78964.78965}{{2}{3.5}{subsection.3.5}}}
 \citation{10.1145/147130.147155}
 \citation{10.1145/78964.78965}
 \citation{10.1145/97880.97886}
 \citation{10.1145/147130.147155}
 \@LN@col{1}
-\@writefile{brf}{\backcite{10.1145/147130.147155}{{3}{3.5}{equation.3.5}}}
-\@writefile{toc}{\contentsline {section}{\numberline {4}Optimization Strategies}{3}{section.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Adaptive Termination Of Ray Tracing}{3}{subsection.4.1}\protected@file@percent }
-\@writefile{brf}{\backcite{10.1145/78964.78965}{{3}{4.1}{subsection.4.1}}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces  The black, opaque object blocks parts of the volumes behind it. The samples behind the object (from the cameras perspective) are not visible and therefore irrelevant. }}{3}{figure.3}\protected@file@percent }
-\newlabel{fig:firstExample}{{3}{3}{The black, opaque object blocks parts of the volumes behind it. The samples behind the object (from the cameras perspective) are not visible and therefore irrelevant}{figure.3}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Ray Termination With Russian Roulette}{3}{subsection.4.2}\protected@file@percent }
-\@writefile{brf}{\backcite{10.1145/97880.97886}{{3}{4.2}{subsection.4.2}}}
-\@writefile{brf}{\backcite{10.1145/147130.147155}{{3}{4.2}{subsection.4.2}}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces  Simplified visualization of naive interpolation in 2 dimensions. The black dots represent the voxels, the red dots the sample points. Notice that the second sample point has a gray color, even though the original data only has white voxels and blck, transparent voxels, which shouldn't affect the final color. Adapted from Wittenbrink et al.\cite  {729595}}}{6}{figure.5}\protected@file@percent }
+\newlabel{fig:firstExample}{{5}{6}{Simplified visualization of naive interpolation in 2 dimensions. The black dots represent the voxels, the red dots the sample points. Notice that the second sample point has a gray color, even though the original data only has white voxels and blck, transparent voxels, which shouldn't affect the final color. Adapted from Wittenbrink et al.\cite {729595}}{figure.5}{}}
+\@writefile{brf}{\backcite{729595}{{6}{5}{figure.5}}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.5}Compositing Of Multiple Sample Points}{6}{subsection.5.5}\protected@file@percent }
+\@writefile{brf}{\backcite{Sabella1988ARA, Upson1988VbufferVV }{{6}{5.5}{subsection.5.5}}}
+\@writefile{brf}{\backcite{10.1145/378456.378484, 511}{{6}{5.5}{subsection.5.5}}}
+\@writefile{brf}{\backcite{10.1145/78964.78965}{{6}{5.5}{subsection.5.5}}}
+\@writefile{brf}{\backcite{10.1145/147130.147155}{{6}{5.5}{equation.5.22}}}
+\@writefile{toc}{\contentsline {section}{\numberline {6}Optimization Strategies}{6}{section.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.1}Adaptive Termination Of Ray Tracing}{6}{subsection.6.1}\protected@file@percent }
+\@writefile{brf}{\backcite{10.1145/78964.78965}{{6}{6.1}{subsection.6.1}}}
 \@LN@col{2}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Pyramid Data Structures}{3}{subsection.4.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.4}Average Pyramid}{3}{subsection.4.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.5}Maximum And Minimum Pyramids}{3}{subsection.4.5}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces  The black, opaque object blocks parts of the volumes behind it. The samples behind the object (from the cameras perspective) are not visible and therefore irrelevant. }}{6}{figure.6}\protected@file@percent }
+\newlabel{fig:firstExample}{{6}{6}{The black, opaque object blocks parts of the volumes behind it. The samples behind the object (from the cameras perspective) are not visible and therefore irrelevant}{figure.6}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.2}Ray Termination With Russian Roulette}{6}{subsection.6.2}\protected@file@percent }
+\@writefile{brf}{\backcite{10.1145/97880.97886}{{6}{6.2}{subsection.6.2}}}
+\@writefile{brf}{\backcite{10.1145/147130.147155}{{6}{6.2}{subsection.6.2}}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.3}Pyramid Data Structures}{6}{subsection.6.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.4}Average Pyramid}{6}{subsection.6.4}\protected@file@percent }
+\@LN@col{1}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.5}Maximum And Minimum Pyramids}{7}{subsection.6.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.6}Range Pyramid}{7}{subsection.6.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.7}Fixed Step Multiresolution}{7}{subsection.6.7}\protected@file@percent }
+\@LN@col{2}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces  Simplified 2 dimensional example of 2 levels of a pyramid. Each pixel in level n +1 contains 4 pixel of the lower level. In 3 dimensions, 8 voxels of the lower level are contained in one voxel of the upper level.}}{7}{figure.7}\protected@file@percent }
+\newlabel{fig:firstExample}{{7}{7}{Simplified 2 dimensional example of 2 levels of a pyramid. Each pixel in level n +1 contains 4 pixel of the lower level. In 3 dimensions, 8 voxels of the lower level are contained in one voxel of the upper level}{figure.7}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.8}Presence Acceleration}{7}{subsection.6.8}\protected@file@percent }
 \bibstyle{eg-alpha-doi}
 \bibdata{bib}
 \bibcite{10.1145/97880.97886}{AK90}
 \bibcite{Appa2015RayCF}{App15}
 \bibcite{10.1145/378456.378484}{DCH88}
 \bibcite{10.1145/147130.147155}{DH92}
-\@LN@col{1}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.6}Range Pyramid}{4}{subsection.4.6}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces  Simplified 2 dimensional example of 2 levels of a pyramid. Each pixel in level n +1 contains 4 pixel of the lower level. In 3 dimensions, 8 voxels of the lower level are contained in one voxel of the upper level.}}{4}{figure.4}\protected@file@percent }
-\newlabel{fig:firstExample}{{4}{4}{Simplified 2 dimensional example of 2 levels of a pyramid. Each pixel in level n +1 contains 4 pixel of the lower level. In 3 dimensions, 8 voxels of the lower level are contained in one voxel of the upper level}{figure.4}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.7}Fixed Step Multiresolution}{4}{subsection.4.7}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.8}Presence Acceleration}{4}{subsection.4.8}\protected@file@percent }
-\@LN@col{2}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.9}Homogenity Acceleration}{4}{subsection.4.9}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.10}$\beta $ Acceleration}{4}{subsection.4.10}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{References}{4}{subsection.4.10}\protected@file@percent }
 \bibcite{haggstrom2018real}{H{\"a}g18}
 \bibcite{10.1145/964965.808594}{KVH84}
 \bibcite{511}{Lev88}
@@ -102,5 +148,8 @@
 \bibcite{Upson1988VbufferVV}{UK88}
 \bibcite{729595}{WMG98}
 \@LN@col{1}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.9}Homogenity Acceleration}{8}{subsection.6.9}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.10}$\beta $ Acceleration}{8}{subsection.6.10}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{References}{8}{subsection.6.10}\protected@file@percent }
 \@LN@col{2}
-\gdef \@abspage@last{5}
+\gdef \@abspage@last{8}
