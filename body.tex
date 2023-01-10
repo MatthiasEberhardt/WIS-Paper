@@ -41,7 +41,7 @@
 \section{Introduction}
 In Computer Graphics, objects usually are represented as a set of geometric primitives (e.g. triangles), displaying the surface of the object in question. However, this approach is not always suitable. For example, if the original data representation of the object is volumetric data (which might be produced by medical 3d scans\cite{511}), the traditional rendering technique would necessitate the creation of an intermediate surface representation that might introduce unwanted artifacts. Another issue arises if the object has no well-defined surfaces to which geometric primitives could be fitted, such as a cloud or fog\cite{10.1145/964965.808594}. In such cases, volumetric ray tracing might be used, a technique in which rays are cast through a volume which contains information about its optical properties(e.g color and opacity), sampled at various points within the volume, accumulated and projected on a 2d image (see figure 1)\cite{511}. A description of this algorithm is presented in this paper, alongside several strategies for improving computational speed, such as (probabilistic) early termination of a ray, and sampling at lower resolutions within the volume.
 
-\section{Mathematical Theory Behind Volumetric Ray Tracing}
+\section{Derivation Of The Rendering Equation}
 Volumetric ray tracing follows the same basic principle as classical ray tracing in which an image is rendered by spanning a pixel plane in front of the camera and casting one or multiple rays through each pixel.
 That means for a point $\vec{x}$ on the plane we cast a ray in direction $-\omega$ and calculate the amount of light $\vec{x}$ receives from direction $\omega$, called $L(\vec{x},\omega )$.
 To do this, we calculate $\vec{y}$, the closest intersection point of the ray with a piece of geometry. At $\vec{y}$, we calculate the amount of light transported from $\vec{y}$ in direction $\omega$ (either through reflection or emission), called $L_e(\vec{y},\omega )$ (The exact method for calculating $L_e$ is a topic of classical raytracing and will not be further evaluated in this paper. In the following, we assume $L_e$ to be a known quantity).
@@ -53,19 +53,19 @@ However, this equation assumes that the light has no interactions between $\vec{
 
 Absorption and out-scattering attenuate the light intensity along the ray, in-scattering and emission add to it.
 \subsection{Absorbtion And Out-Scattering}
-Firstly, let us consider only out-scattering and absorption, which occur due to tiny particles floating around in the volume (such as water droplets in clouds and fog, or dust particles in the air).
+At first, let us consider only out-scattering and absorption, which occur due to tiny particles floating around in the volume (such as water droplets in clouds and fog, or dust particles in the air).
 Of course, these particles are far too numerous to be directly simulated, but their distribution in 3D space can be stochastically modeled (similar to how detailed surface structures can be modeled by micorfacets in classical ray tracing).
 
-To do so, consider a close-up look at a ray section traveling through the vloume [CITATION!].
+To do so, consider a close-up look at a ray section traveling through the volume [CITATION!].
 This section can be assumed to be a cylinder with a base area $E$ and a height $\Delta h$, through which the ray travels from top to bottom.
 Within this cylinder, there exists a certain number of out-scattering and absorbing particles, defined as $n_s={\rho}_sE{\Delta}h$ and $n_a={\rho}_aE{\Delta}h$ respectively, where ${\rho}_s$ and ${\rho}_a$ are the densities of the particles.
 From the top-down view, the particles will occupy an area of ${n_sA}=\frac{{\rho}_sAE{\Delta}h}{E}$ and ${n_aA}=\frac{{\rho}_aAE{\Delta}h}{E}$, respectively, if we assume that the particles do not overlap each other, which is reasonable if the densities and the height do not become too large.
 This can be simplified to ${\rho}_sA{\Delta}h$ and ${\rho}_sA{\Delta}h$, which gives us the fractions of light which are stopped in the cylinder, either through absorbtion or out-scattering. By letting $\Delta h$ approach 0, we see that for each infinitessimaly small cylinder slice with height $dh$, the change in intensity is proportionally to $-({\rho}_sA + {\rho}_aA)dh$.
 Formulated as a differential equation, this results in
 \begin{equation}
-dL = -(({\rho}(h)_sA + {\rho}(h)_aA)L(h)dh
+dL = -({\rho}_s(h)A + {\rho}_a(h)A)L(h)dh
 \end{equation}
-At this point, we introduce the scattering coefficient ${\mu}_s ={\rho}(h)_sA $, the absorption coefficient ${\mu}_a = {\rho}(h)_aA$ and the extinction coeffcient ${\mu}_t = {\mu}_s +{\mu}_a$, which give a measure of how much light is lost due to scattering, to absorption, and in total. Thus, equation [REFERNCE] can be simplified to
+At this point, we define the scattering coefficient ${\mu}_s ={\rho}_s(h)A $, the absorption coefficient ${\mu}_a = {\rho}_a(h)A$ and the extinction coeffcient ${\mu}_t = {\mu}_s +{\mu}_a$, which give a measure of how much light is lost due to scattering, to absorption, and in total. Thus, equation [REFERNCE] can be simplified to
 \begin{equation}
 dL = - {\mu}_t(h)L(h)dh
 \end{equation}
@@ -77,36 +77,36 @@ Rearranging this equation gives
 \begin{equation}
 \frac{L(h)}{L_0} = e^{-\int_{0}^{h} {\mu}_t(s)ds}
 \end{equation}
-meaning, that the calculated integral $e^{-\int_{0}^{h} {\mu}_t(s)ds}$ gives us the ratio of the light that travels through a cylinder of height $h$ unimpeded. In the following, we call this quantity the transmittance, and refer to it as $\tau(\vec{x}), \vec{x'})$ (the ratio of light that arrives at $\vec{x}$ from $\vec{x'}$).
+meaning, that the calculated integral $e^{-\int_{0}^{h} {\mu}_t(s)ds}$ gives us the ratio of the light that travels through a cylinder of height $h$ unimpeded. In the following, we call this quantity the transmittance, and refer to it as $\tau(\vec{x}, \vec{x'})$ (the ratio of light that arrives at $\vec{x}$ from $\vec{x'}$).
 Thus, going back to equation [REFERENCE], we can now specify how much $L_e$ gets attenuated, and get the equation
 \begin{equation}
 L(\vec{x},\omega ) =\tau(\vec{x}), \vec{y}) L_e(\vec{y}, \omega )
 \end{equation}
-However, this is not correct either, since we still need to consider in-scattering and emission along the ray.
+This equation is still not acurate, since we also need to consider in-scattering and emission along the ray.
 \subsection{Emission And In-Scattering}
-For this purpose, let us consider any arbitrary point $\vec{u}$ on the ray from $\vec{x}$ to $\vec{y}).
-At $\vec{u}$, the particles of the medium emit some light towards $\omega$, which we call $\epsilon (\vec{u}, \omega )$. In our cylindrical model, the amount of absorbing particles at position $\vec{u}$ is ${\mu}_a(\vec{u})$. We assume that the particles responsible for absorbtion are also responsible for emission, meaning the amount of light emitted at $\vec{u}$ towards $\omega$ is ${\mu}_a(\vec{u})\epsilon (\vec{u}, \omega )$.
-In-scattered light can arrive at $\vec{u}$ from every direction, which means we need to integrate over the sphere:
+For this purpose, let us consider any arbitrary point $\vec{u}$ on the ray from $\vec{x}$ to $\vec{y}$.
+At $\vec{u}$, the particles of the medium emit some light towards $\omega$, which we call $\epsilon (\vec{u}, \omega )$. In our cylindrical model, the probability of absorbing particles at position $\vec{u}$ is ${\mu}_a(\vec{u})$. We assume that the particles responsible for absorbtion are also responsible for emission, meaning the amount of light emitted at $\vec{u}$ towards $\omega$ is ${\mu}_a(\vec{u})\epsilon (\vec{u}, \omega )$.
+In-scattered light can arrive at $\vec{u}$ from every direction, which means we need to integrate over the sphere $\Omega$ surrounding $\vec{u}$:
 \begin{equation}
 \int_{\Omega} L(\vec{u}, \omega `)d\omega `
 \end{equation}
-However, not all light arriving at $\vec{u}$ is scattered towards $\omega $. The so called phase function $f_p(\vec{u}, \omega , \omega `)$ gives us the ratio light arriving at $\vec{u}$ from $\omega `$ being reflected towards $\omega$. In this sence, the phase function in analogous to the BRDF in classical ray tracing. Furthermore, the amount of light scattered towrds $\omega $ also depends on the number of in-scattering particles present at $\vec{u}$. We assume that in-scattering particles are equal to out-scattering particles and get the equation
+However, not all light arriving at $\vec{u}$ is scattered towards $\omega $. The so called phase function $f_p(\vec{u}, \omega , \omega `)$ gives us the probality that light hitting a particle at $\vec{u}$ from $\omega `$ is reflected towards $\omega$. In this sense, it is analogous to the BRDF in classical ray tracing. Furthermore, the amount of light scattered towards $\omega $ also depends on the probability that in-scattering particles are present at $\vec{u}$. We assume that in-scattering particles are the same as out-scattering particles and get the equation
 \begin{equation}
 L_e^s(\vec{u}, \omega ) = {\mu}_s(\vec{u})\int_{\Omega} f_p(\vec{u}, \omega , \omega `)L(\vec{u}, \omega `)d\omega `  + {\mu}_a(\vec{u})\epsilon (\vec{u}, \omega )
 \end{equation}
 describing the total amount of light being added to the ray at $\vec{u}$. We call this quantity $L_e^s$ and use the superscript $s$ to differentiate it from $L_e$(which describes light reflection at solid surfaces).
-However, not all of $L_e^s(\vec{u}, \omega )$ arrives at $\vec{x}$, since the newly added light also needs to travel through the volume where it is attenuated by the transmittance $\tau (\vec{x}, \vec{u})$.
-To get the total amount of light added to the ray, we sum up the light contribution of all points along the ray by integrating over the ray:
+Not all of $L_e^s(\vec{u}, \omega )$ arrives at $\vec{x}$, since the newly added light also needs to travel through the volume where it is attenuated by the transmittance $\tau (\vec{x}, \vec{u})$.
+To get the total amount of light added to the ray, we sum up the light contribution of all points along the ray by integrating over it:
 \begin{equation}
 \int_{\vec{x}}^{\vec{y}} \tau(\vec{x}, \vec{u})L_e^s(\vec{u}, \omega )d\vec{u}
 \end{equation}
-\subsection{The rendering Equation}
+\subsection{The Rendering Equation}
 Adding this to the light arriving from $\vec{y}$ gives the total amount of light arriving at $\vec{x}$ from $\omega $.
 \begin{equation}
-L(\vec{x}, \omega ) = \int_{\vec{x}}^{\vec{y}} \tau(\vec{x}, \vec{u})L_e^s(\vec{u}, \omega )d\vec{u} + \tau(\vec{x}, \vec{y}) L_e(\vec{y}, \omega )
+L(\vec{x}, \omega ) = {\int_{\vec{x}}^{\vec{y}} \tau(\vec{x}, \vec{u})L_e^s(\vec{u}, \omega )d\vec{u}} + \tau(\vec{x}, \vec{y}) L_e(\vec{y}, \omega )
 \end{equation}
-This integral is complicated to solve, especially since the expressin $L(\vec{x}, \omega )$ appears on both sides of the equation.
-In the following, we will discuss several methods for approximating a solution.
+This integral is complicated to solve, especially since the expression $L(\vec{x}, \omega )$ appears on both sides of the equation.
+In the following, we will describe several methods for approximating a solution.
 
 
 
@@ -114,8 +114,8 @@ In the following, we will discuss several methods for approximating a solution.
 \section{Basic Volumetric Ray Tracing Algorithm}
 In this chapter we will discuss an algorithmic solution to a simplified version of the rendering equation we derived in the previous section.
 \subsection{Simplified Rendering Equation}
-In the following, we will ignore all scattering effects in the medium and assume that the medium only absorbs and emitts light, which can be understood as a scenario where all external light has been completly evenly scattered within the volume. This is analogous to only rendering ambient lighting in classical ray tracing, whic assumes that the light is evenly distributed in the scene.
-Furthermore, we will also ignore all other geometry in the scene and only focus on the volume. Thus, the term $\tau(\vec{x}, \vec{y}) L_e(\vec{y}, \omega )$, which desribes the light contribution from the nearest intersection with a piece of geometry, is omitted.
+In the following, we will ignore all scattering effects in the medium (meaning $\mu_s $ is 0) and assume that the medium only absorbs and emitts light, which can be understood as a scenario where all external light has been completly evenly scattered within the volume. This is analogous to only rendering ambient lighting in classical ray tracing, which assumes that the light is evenly distributed in the scene.
+Furthermore, we will also ignore all other geometry in the scene and only focus on the volume. The term $\tau(\vec{x}, \vec{y}) L_e(\vec{y}, \omega )$, which describes the light contribution from the nearest intersection with a piece of geometry, is omitted.
 Thus, we arrive at the equation
 \begin{equation}
 L(\vec{x}, \omega ) = \int_{\vec{x}}^{\vec{y}} \tau(\vec{x}, \vec{u}){\mu}_a(\vec{u})\epsilon (\vec{u}, \omega)d\vec{u}
@@ -134,8 +134,9 @@ The light contribution of a point $p_i$ is considered to be the light contributi
 \end{equation} 
 As a necessary simplification, we assume all variables to be piecewise constant on the ray segments. This yields
 \begin{equation}
- \prod_{1\le j \le i}(\tau(p_{j-1}, p_j)) \cdot \mu_a(p_{i})\epsilon (p_{i}, \omega)s
+{\prod_{1\le j \le i}{(\tau(p_{j-1}, p_j))} \cdot \mu_a(p_{i})\epsilon (p_{i}, \omega)s}
 \end{equation} 
+for one line segment at $i$.
 The quantity $\mu_a(p_{i})\epsilon (p_{i}, \omega)s$ descirbes the emitted light from $p_i$ and will from now on be refered to as $c(i)$. The product is the total attenuation (or transperancy) from $\vec{x}$ to $p_i$, $\tau(p_{j-1}, p_j)$ is the attenuation from $p_{j-1}$ to $p_j$ and can be calculated by
 \begin{equation}
 \tau(p_{j-1}, p_j) = e^{-s\mu_t(j)}
@@ -238,10 +239,10 @@ The range pyramid is sampled like the maximum pyramid and provides a measure of 
 
 \subsection{Fixed Step Multiresolution}
 This optimization uses the average pyramid, and works by casting the rays through a level of the pyramid, instead of the original data. The level through which the rays are cast can be freely choosen. Similar to mip-maps, it is also possible to select a real number as a level, in this case, the levels above and below the chosen level are rendered, and the two results are interpolated together. Since this would require rendering the pyramid at two levels, this is slower than just choosing a natural number as a level and recommendable only if a smooth transition between two levels is needed, like in gaze directed rendering as desribed by Levoy(CITE!!). The higher the level the faster the algorithms works, but the lower the resolution becomes.
-
 \subsection{Presence And Homogenity Acceleration}
 Presence acceleration uses an average and a maximum pyramid. The maximum pyramid is used to quickly find regions with opacity lower than a user provided threshold, where the average pyramid is used to sample at a lower resolution. The idea behind this algorithm is that low opacity regions do not contribute much to the final result, and can be therefore be sampled more sparsely.
 
+Homogenity acceleration works conceptually the same as presence acceleration. The difference is that homogenity acceleration takes fewer samples in regions with high homogenity and not in regions of low opacity. The idea behind the algorithm is that in a region where all voxels are very similar to each other, accumulating x different samples and accumulating the average of the region x times yields a very similar result.
 \subsection{Presence Acceleration}
 This algorithm uses an average and a maximum pyramid. The maximum pyramid is used to quickly find regions with opacity lower than a user provided threshold, where the average pyramid is used to sample at a lower resolution. The idea behind this algorithm is that low opacity regions do not contribute much to the final result, and can be therefore be sampled more sparsely.
 
