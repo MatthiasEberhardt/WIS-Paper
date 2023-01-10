@@ -111,7 +111,7 @@ In the following, we will describe several methods for approximating a solution.
 
 
 
-\section{Basic Volumetric Ray Tracing Algorithm}
+\section{Ray Marching Algorithm}
 In this chapter we will discuss an algorithmic solution to a simplified version of the rendering equation we derived in the previous section.
 \subsection{Simplified Rendering Equation}
 In the following, we will ignore all scattering effects in the medium (meaning $\mu_s $ is 0) and assume that the medium only absorbs and emitts light, which can be understood as a scenario where all external light has been completly evenly scattered within the volume. This is analogous to only rendering ambient lighting in classical ray tracing, which assumes that the light is evenly distributed in the scene.
@@ -137,7 +137,7 @@ As a necessary simplification, we assume all variables to be piecewise constant 
 {\prod_{1\le j \le i}{(\tau(p_{j-1}, p_j))} \cdot \mu_a(p_{i})\epsilon (p_{i}, \omega)s}
 \end{equation} 
 for one line segment at $i$.
-The quantity $\mu_a(p_{i})\epsilon (p_{i}, \omega)s$ descirbes the emitted light from $p_i$ and will from now on be refered to as $c(i)$. The product is the total attenuation (or transperancy) from $\vec{x}$ to $p_i$, $\tau(p_{j-1}, p_j)$ is the attenuation from $p_{j-1}$ to $p_j$ and can be calculated by
+The quantity $\mu_a(p_{i})\epsilon (p_{i}, \omega)s$ descirbes the emitted light from $p_i$ and will from now on be refered to as the color $c(i)$. The product is the total attenuation (or transperancy) from $\vec{x}$ to $p_i$, $\tau(p_{j-1}, p_j)$ is the attenuation from $p_{j-1}$ to $p_j$ and can be calculated by
 \begin{equation}
 \tau(p_{j-1}, p_j) = e^{-s\mu_t(j)}
 \end{equation}
@@ -154,14 +154,17 @@ L(\vec{x},\omega) = \sum_{1 \le i \le n}(1 - \beta(i))c(i)
 \end{equation}
 which can be calculated in a single for loop. Since $\beta(i)$ equals $\beta(i-1)(1-\alpha(i))$, it is not necessary to completly recalculate $\beta$ for every step.
 
+
 \subsection{Underlying Volume Data}
+Due to out assumption that the variables $\mu_s$, $\mu_a$, $\mu_t$ and $\epsilon$ are piecewise constant, the opacity and color can easily be computed, if the volume provides such information. Often though, the volume is already defined in terms of color and opacity, in which case $\alpha$ and $c$ can be sampled directly from it.
+In some cases, the volume might contain other information such as density (e.g. for medical 3D scans), in which case a preprocessing step must produce color and opacity.
+If the volume is defined as a ternary function, sampling a point $x$ works simply by calculating the value of the function at $x$. If the volume is defined as a 3D array of voxels, the value must be found through interpolation (usually through trilinear interpolation, but other methods such as monte carlo interpolation are possible as well).
 
 
+\subsection{Direct Illumination}
 
 
-
-
-
+\section{Monte Carlo Ray Tracing}
 
 \subsection{Underlying Volume Data}
 In this paper, we consider the topic of synthesizing a 2d image from a 3d volume.
