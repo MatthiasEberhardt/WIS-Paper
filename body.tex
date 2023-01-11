@@ -39,24 +39,25 @@
 %-------------------------------------------------------------------------
 
 \section{Introduction}
-In Computer Graphics, objects usually are represented as a set of geometric primitives (e.g. triangles), displaying the surface of the object in question. However, this approach is not always suitable. For example, if the original data representation of the object is volumetric data (which might be produced by medical 3d scans\cite{511}), the traditional rendering technique would necessitate the creation of an intermediate surface representation that might introduce unwanted artifacts. Another issue arises if the object has no well-defined surfaces to which geometric primitives could be fitted, such as a cloud or fog\cite{10.1145/964965.808594}. In such cases, volumetric ray tracing might be used, a technique in which rays are cast through a volume which contains information about its optical properties(e.g color and opacity), sampled at various points within the volume, accumulated and projected on a 2d image (see figure 1)\cite{511}. A description of this algorithm is presented in this paper, alongside several strategies for improving computational speed, such as (probabilistic) early termination of a ray, and sampling at lower resolutions within the volume.
+In Computer Graphics, objects usually are represented as a set of geometric primitives (e.g. triangles), displaying the surface of the object. However, this approach is not always suitable. For example, if the original data representation of the object is volumetric data (which might be produced by medical 3d scans\cite{511}), the traditional rendering technique would necessitate the creation of an intermediate surface representation that might introduce unwanted artifacts\cite{511}. Another issue arises if the object has no well-defined surfaces to which geometric primitives could be fitted, such as a cloud or fog\cite{10.1145/964965.808594}. In such cases, volumetric ray tracing might be used, a technique in which rays are cast through a volume which contains information about its optical properties(e.g color and opacity), sampled at various points within the volume, accumulated and projected on a 2d image (see figure 1)\cite{511}. A description of this algorithm is presented in this paper, alongside several strategies for improving computational speed, such as (probabilistic) early termination of a ray, and sampling at lower resolutions within the volume.
 
 \section{Derivation Of The Rendering Equation}
 Volumetric ray tracing follows the same basic principle as classical ray tracing in which an image is rendered by spanning a pixel plane in front of the camera and casting one or multiple rays through each pixel.
-That means for a point $\vec{x}$ on the plane we cast a ray in direction $-\omega$ and calculate the amount of light $\vec{x}$ receives from direction $\omega$, called $L(\vec{x},\omega )$.
-To do this, we calculate $\vec{y}$, the closest intersection point of the ray with a piece of geometry. At $\vec{y}$, we calculate the amount of light transported from $\vec{y}$ in direction $\omega$ (either through reflection or emission), called $L_e(\vec{y},\omega )$ (The exact method for calculating $L_e$ is a topic of classical raytracing and will not be further evaluated in this paper. In the following, we assume $L_e$ to be a known quantity).
+That means for a point $\vec{x}$ on the plane we cast a ray in direction $-\omega$ and calculate the amount of light $\vec{x}$ receives from direction $\omega$, called $L(\vec{x},\omega )\cite{10.5555/94788}$.
+To do this, we calculate $\vec{y}$, the closest intersection point of the ray with a piece of geometry. At $\vec{y}$, we calculate the amount of light transported from $\vec{y}$ in direction $\omega$ (either through reflection or emission), called $L_e(\vec{y},\omega )$ (The exact method for calculating $L_e$ is a topic of classical raytracing\cite{10.5555/94788} and will not be further evaluated in this paper. In the following, we assume $L_e$ to be a known quantity).
 Thus, we get the equation 
-\begin{equation}
+\begin{equation}\label{eq:no_attenuation}
 L(\vec{x},\omega ) = L_e(\vec{y}, \omega )
 \end{equation}
-However, this equation assumes that the light has no interactions between $\vec{x}$ and $\vec{y}$, which is only true if the ray travels through a vacuum. If the light travels through a medium that interacts with if (called a participating medium), the interactions change the light along the ray. In most cases, these interactions are small enough to be ignored, but in certain scenarios (e.g if there is fog, clouds or smoke present) they might have a noticeable effect. The types of interactions we need to consider are absorption, emission, in-scattering and out-scattering.
+However, this equation assumes that the light has no interactions between $\vec{x}$ and $\vec{y}$, which is only true if the ray travels through a vacuum. If the light travels through a medium that interacts with if (called a participating medium), the interactions change the light along the ray\cite{10.5555/275458.275468}. In most cases, these interactions are small enough to be ignored, but in certain scenarios (e.g if there is fog, clouds or smoke present) they might have a noticeable effect. The types of interactions we need to consider are absorption, emission, in-scattering and out-scattering\cite{468400}.
 
 Absorption and out-scattering attenuate the light intensity along the ray, in-scattering and emission add to it.
 \subsection{Absorbtion And Out-Scattering}
 At first, let us consider only out-scattering and absorption, which occur due to tiny particles floating around in the volume (such as water droplets in clouds and fog, or dust particles in the air).
 Of course, these particles are far too numerous to be directly simulated, but their distribution in 3D space can be stochastically modeled (similar to how detailed surface structures can be modeled by micorfacets in classical ray tracing).
-
-To do so, consider a close-up look at a ray section traveling through the volume [CITATION!].
+QUESTION!
+We will follow Max\cite{468400} in our development of the stochastical model.
+To do so, consider a close-up look at a ray section traveling through the volume.
 This section can be assumed to be a cylinder with a base area $E$ and a height $\Delta h$, through which the ray travels from top to bottom.
 Within this cylinder, there exists a certain number of out-scattering and absorbing particles, defined as $n_s={\rho}_sE{\Delta}h$ and $n_a={\rho}_aE{\Delta}h$ respectively, where ${\rho}_s$ and ${\rho}_a$ are the densities of the particles.
 From the top-down view, the particles will occupy an area of ${n_sA}=\frac{{\rho}_sAE{\Delta}h}{E}$ and ${n_aA}=\frac{{\rho}_aAE{\Delta}h}{E}$, respectively, if we assume that the particles do not overlap each other, which is reasonable if the densities and the height do not become too large.
@@ -78,25 +79,25 @@ Rearranging this equation gives
 \frac{L(h)}{L_0} = e^{-\int_{0}^{h} {\mu}_t(s)ds}
 \end{equation}
 meaning, that the calculated integral $e^{-\int_{0}^{h} {\mu}_t(s)ds}$ gives us the ratio of the light that travels through a cylinder of height $h$ unimpeded. In the following, we call this quantity the transmittance, and refer to it as $\tau(\vec{x}, \vec{x'})$ (the ratio of light that arrives at $\vec{x}$ from $\vec{x'}$).
-Thus, going back to equation [REFERENCE], we can now specify how much $L_e$ gets attenuated, and get the equation
+Thus, going back to equation \ref{l{eq:no_attenuation}}[REFERENCE], we can now specify how much $L_e$ gets attenuated, and get the equation
 \begin{equation}
 L(\vec{x},\omega ) =\tau(\vec{x}), \vec{y}) L_e(\vec{y}, \omega )
 \end{equation}
 This equation is still not acurate, since we also need to consider in-scattering and emission along the ray.
 \subsection{Emission And In-Scattering}
 For this purpose, let us consider any arbitrary point $\vec{u}$ on the ray from $\vec{x}$ to $\vec{y}$.
-At $\vec{u}$, the particles of the medium emit some light towards $\omega$, which we call $\varepsilon (\vec{u}, \omega )$. In our cylindrical model, the probability of absorbing particles at position $\vec{u}$ is ${\mu}_a(\vec{u})$. We assume that the particles responsible for absorbtion are also responsible for emission, meaning the amount of light emitted at $\vec{u}$ towards $\omega$ is ${\mu}_a(\vec{u})\epsilon (\vec{u}, \omega )$.
-In-scattered light can arrive at $\vec{u}$ from every direction, which means we need to integrate over the sphere $\Omega$ surrounding $\vec{u}$:
+At $\vec{u}$, the particles of the medium emit some light towards $\omega$\cite{468400}, which we call $\varepsilon (\vec{u}, \omega )$. In our cylindrical model, the probability of absorbing particles at position $\vec{u}$ is ${\mu}_a(\vec{u})$. We assume that the particles responsible for absorbtion are also responsible for emission\cite{468400}, meaning the amount of light emitted at $\vec{u}$ towards $\omega$ is ${\mu}_a(\vec{u})\epsilon (\vec{u}, \omega )$.
+In-scattered light can arrive at $\vec{u}$ from every direction, which means we need to integrate over the sphere $\Omega$ surrounding $\vec{u}$\cite{10.1145/280814.280925}:
 \begin{equation}
 \int_{\Omega} L(\vec{u}, \omega `)d\omega `
 \end{equation}
-However, not all light arriving at $\vec{u}$ is scattered towards $\omega $. The so called phase function $f_p(\vec{u}, \omega , \omega `)$ gives us the probality that light hitting a particle at $\vec{u}$ from $\omega `$ is reflected towards $\omega$. In this sense, it is analogous to the BRDF in classical ray tracing. Furthermore, the amount of light scattered towards $\omega $ also depends on the probability that in-scattering particles are present at $\vec{u}$. We assume that in-scattering particles are the same as out-scattering particles and get the equation
+However, not all light arriving at $\vec{u}$ is scattered towards $\omega $. The so called phase function $f_p(\vec{u}, \omega , \omega `)$ gives us the probality that light hitting a particle at $\vec{u}$ from $\omega `$ is reflected towards $\omega$\cite{10.1145/280814.280925}. In this sense, it is analogous to the BRDF in classical ray tracing. Furthermore, the amount of light scattered towards $\omega $ also depends on the probability that in-scattering particles are present at $\vec{u}$\cite{10.1145/280814.280925}. We assume that in-scattering particles are the same as out-scattering particles and get the equation
 \begin{equation}
 L_e^s(\vec{u}, \omega ) = {\mu}_s(\vec{u})\int_{\Omega} f_p(\vec{u}, \omega , \omega `)L(\vec{u}, \omega `)d\omega `  + {\mu}_a(\vec{u})\varepsilon (\vec{u}, \omega )
 \end{equation}
 describing the total amount of light being added to the ray at $\vec{u}$. We call this quantity $L_e^s$ and use the superscript $s$ to differentiate it from $L_e$(which describes light reflection at solid surfaces).
 Not all of $L_e^s(\vec{u}, \omega )$ arrives at $\vec{x}$, since the newly added light also needs to travel through the volume where it is attenuated by the transmittance $\tau (\vec{x}, \vec{u})$.
-To get the total amount of light added to the ray, we sum up the light contribution of all points along the ray by integrating over it:
+To get the total amount of light added to the ray, we sum up the light contribution of all points along the ray by integrating over it\cite{zhou2007real-time}:
 \begin{equation}
 \int_{\vec{x}}^{\vec{y}} \tau(\vec{x}, \vec{u})L_e^s(\vec{u}, \omega )d\vec{u}
 \end{equation}
@@ -112,18 +113,18 @@ In the following, we will describe several methods for approximating a solution.
 
 
 \section{Ray Marching Algorithm}
-In this chapter we will discuss an algorithmic solution to a simplified version of the rendering equation we derived in the previous section.
+In this chapter we will discuss an algorithmic solution\cite{511, 10.1145/147130.147155} to a simplified version of the rendering equation we derived in the previous section.
 \subsection{Simplified Rendering Equation}
-In the following, we will ignore all scattering effects in the medium (meaning $\mu_s $ is 0) and assume that the medium only absorbs and emitts light, which can be understood as a scenario where all external light has been completly evenly scattered within the volume. This is analogous to only rendering ambient lighting in classical ray tracing, which assumes that the light is evenly distributed in the scene.
+In the following, we will ignore all scattering effects in the medium (meaning $\mu_s $ is 0) and assume that the medium only absorbs and emitts light\cite{10.1145/147130.147155}, which can be understood as a scenario where all external light has been completly evenly scattered within the volume. This is analogous to only rendering ambient lighting in classical ray tracing, which assumes that the light is evenly distributed in the scene.
 Furthermore, we will also ignore all other geometry in the scene and only focus on the volume. The term $\tau(\vec{x}, \vec{y}) L_e(\vec{y}, \omega )$, which describes the light contribution from the nearest intersection with a piece of geometry, is omitted.
 Thus, we arrive at the equation
-\begin{equation}
+\begin{equation} \label{eq:simplified_req}
 L(\vec{x}, \omega ) = \int_{\vec{x}}^{\vec{y}} \tau(\vec{x}, \vec{u}){\mu}_a(\vec{u})\epsilon (\vec{u}, \omega)d\vec{u}
 \end{equation}
-For this chapter, we assume that the medium is contained within a cuboid boundary. Since there is no geometry, we can't cast the ray until it intersects with the geometry. Instead, the endpoint $\vec{y}$ of the ray will be the point where the ray leaves the cuboid boundary.
+For this chapter, we assume that the medium is contained within a cuboid boundary\cite{10.1145/147130.147155, 10.1145/78964.78965}. Since there is no geometry, we can't cast the ray until it intersects with the geometry. Instead, the endpoint $\vec{y}$ of the ray will be the point where the ray leaves the cuboid boundary.
 
 \subsection{Discrete Approximation To The Simplified Equation}
-$L(\vec{x},\omega )$ is approximated by casting a ray in direction $-\omega$ and sampling it at evenly spaced points along the ray and summing up their contributions. The distance $s$ between the sampling points should be smaller than the volumes nyquist limit.
+$L(\vec{x},\omega )$ is approximated by casting a ray in direction $-\omega$ and sampling it at evenly spaced points along the ray and summing up their contributions\cite{511}. The distance $s$ between the sampling points should be smaller than the volumes nyquist limit, otherwise important details are missed.
 We start sampling at the first point within the volume, which has a distance of $s_0$ to $\vec{x}$. The $i$-th sample point then is described by
 \begin{equation}
 p_i=\vec{x} + s_0(-\omega) + si(-\omega)
@@ -132,12 +133,12 @@ The light contribution of a point $p_i$ is considered to be the light contributi
 \begin{equation}
 \int_{p_{i-1}}^{p_i} \tau (p_0,p_{i-1}) \tau(p_{i-1},p_{i'} \mu_a(p_{i'})\epsilon (p_{i'}, \omega)dp_{i'}
 \end{equation} 
-As a necessary simplification, we assume all variables to be piecewise constant on the ray segments. This yields
+As a necessary simplification, we assume all variables to be piecewise constant\cite{10.1145/147130.147155} on the ray segments. This yields
 \begin{equation}
 {\prod_{1\le j \le i}{(\tau(p_{j-1}, p_j))} \cdot \mu_a(p_{i})\varepsilon (p_{i}, \omega)s}
 \end{equation} 
 for one line segment at $i$.
-The quantity $\mu_a(p_{i})\varepsilon (p_{i}, \omega)s$ descirbes the emitted light from $p_i$ and will from now on be refered to as the color $c(i)$. The product is the total attenuation (or transperancy) from $\vec{x}$ to $p_i$, $\tau(p_{j-1}, p_j)$ is the attenuation from $p_{j-1}$ to $p_j$ and can be calculated by
+The quantity $\mu_a(p_{i})\varepsilon (p_{i}, \omega)s$ describes the emitted light from $p_i$ and will from now on be refered to as the color $c(i)$. The product is the total attenuation (or transperancy) from $\vec{x}$ to $p_i$, $\tau(p_{j-1}, p_j)$ is the attenuation from $p_{j-1}$ to $p_j$ and can be calculated by
 \begin{equation}
 \tau(p_{j-1}, p_j) = e^{-s\mu_t(j)}
 \end{equation}
@@ -148,17 +149,17 @@ Again, we can refer to this quantity in terms of opacity rather than transperanc
 1 - \beta(i) = \prod_{1 \le j \le i} (1 - \alpha(j))
 \end{equation}
 where $\beta(i)$ is the accumulated opacity between $\vec{x}$ and $\p_i$.
-Using these results, we can approximate the integral (REFERENCE!] as the sum
+Using these results, we can approximate the integral \ref{eq:simplified_req}(REFERENCE!] as the sum
 \begin{equation}
 L(\vec{x},\omega) = \sum_{1 \le i \le n}(1 - \beta(i))c(i)
 \end{equation}
-which can be calculated in a single for loop. Since $\beta(i)$ equals $\beta(i-1)(1-\alpha(i))$, it is not necessary to completly recalculate $\beta$ for every step.
+which can be calculated in a single for loop. Since $\beta(i)$ equals $\beta(i-1)(1-\alpha(i))$, it is not necessary to completly recalculate $\beta$ for every step\cite{10.1145/147130.147155}.
 
 
 \subsection{Underlying Volume Data}
 Due to out assumption that the variables $\mu_s$, $\mu_a$, $\mu_t$ and $\epsilon$ are piecewise constant, the opacity and color can easily be computed, if the volume provides such information. Often though, the volume is already defined in terms of color and opacity, in which case $\alpha$ and $c$ can be sampled directly from it.
-In some cases, the volume might contain other information such as density (e.g. for medical 3D scans), in which case a preprocessing step must produce color and opacity.
-If the volume is defined as a ternary function, sampling a point $x$ works simply by calculating the value of the function at $x$. If the volume is defined as a 3D array of voxels, the value must be found through interpolation (usually through trilinear interpolation, but other methods such as monte carlo interpolation are possible as well).
+In some cases, the volume might contain other information such as density (e.g. for medical 3D scans), in which case a preprocessing step\cite{511} must produce color and opacity.
+If the volume is defined as a ternary function, sampling a point $x$ works simply by calculating the value of the function at $x$. If the volume is defined as a 3D array of voxels, the value must be found through interpolation (usually through trilinear interpolation\cite{511}, but other methods such as monte carlo interpolation\cite{10.1145/3451256} are possible as well).
 
 
 \subsection{Direct Illumination}
@@ -181,7 +182,7 @@ c(i) = \sum_{1 \le k \le m} f_p(\omega, \omega_k, p_i)c_k(p_i)
 with $\omega_k$ being the direction from $p_i$ to $l_k$ ($\omega_k$ is different for every light source, which is the reason why the different $c_k$'s have to be stored in different volumes).
 
 This approach could be generalized to calculate multi-scattering (that is light that need two or more scattering events to reach the camera), but this would very quickly become to costly. Therefore, when rendering images with global illumination, more sophisticted algorithms are necessary.
-\section{Monte Carlo Ray Tracing}
+\section{Monte Carlo Ray Tracing And Global Illumination}
 
 \section{REPETITION}
 \subsection{Underlying Volume Data}
