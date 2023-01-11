@@ -85,14 +85,14 @@ L(\vec{x},\omega ) =\tau(\vec{x}), \vec{y}) L_e(\vec{y}, \omega )
 This equation is still not acurate, since we also need to consider in-scattering and emission along the ray.
 \subsection{Emission And In-Scattering}
 For this purpose, let us consider any arbitrary point $\vec{u}$ on the ray from $\vec{x}$ to $\vec{y}$.
-At $\vec{u}$, the particles of the medium emit some light towards $\omega$, which we call $\epsilon (\vec{u}, \omega )$. In our cylindrical model, the probability of absorbing particles at position $\vec{u}$ is ${\mu}_a(\vec{u})$. We assume that the particles responsible for absorbtion are also responsible for emission, meaning the amount of light emitted at $\vec{u}$ towards $\omega$ is ${\mu}_a(\vec{u})\epsilon (\vec{u}, \omega )$.
+At $\vec{u}$, the particles of the medium emit some light towards $\omega$, which we call $\varepsilon (\vec{u}, \omega )$. In our cylindrical model, the probability of absorbing particles at position $\vec{u}$ is ${\mu}_a(\vec{u})$. We assume that the particles responsible for absorbtion are also responsible for emission, meaning the amount of light emitted at $\vec{u}$ towards $\omega$ is ${\mu}_a(\vec{u})\epsilon (\vec{u}, \omega )$.
 In-scattered light can arrive at $\vec{u}$ from every direction, which means we need to integrate over the sphere $\Omega$ surrounding $\vec{u}$:
 \begin{equation}
 \int_{\Omega} L(\vec{u}, \omega `)d\omega `
 \end{equation}
 However, not all light arriving at $\vec{u}$ is scattered towards $\omega $. The so called phase function $f_p(\vec{u}, \omega , \omega `)$ gives us the probality that light hitting a particle at $\vec{u}$ from $\omega `$ is reflected towards $\omega$. In this sense, it is analogous to the BRDF in classical ray tracing. Furthermore, the amount of light scattered towards $\omega $ also depends on the probability that in-scattering particles are present at $\vec{u}$. We assume that in-scattering particles are the same as out-scattering particles and get the equation
 \begin{equation}
-L_e^s(\vec{u}, \omega ) = {\mu}_s(\vec{u})\int_{\Omega} f_p(\vec{u}, \omega , \omega `)L(\vec{u}, \omega `)d\omega `  + {\mu}_a(\vec{u})\epsilon (\vec{u}, \omega )
+L_e^s(\vec{u}, \omega ) = {\mu}_s(\vec{u})\int_{\Omega} f_p(\vec{u}, \omega , \omega `)L(\vec{u}, \omega `)d\omega `  + {\mu}_a(\vec{u})\varepsilon (\vec{u}, \omega )
 \end{equation}
 describing the total amount of light being added to the ray at $\vec{u}$. We call this quantity $L_e^s$ and use the superscript $s$ to differentiate it from $L_e$(which describes light reflection at solid surfaces).
 Not all of $L_e^s(\vec{u}, \omega )$ arrives at $\vec{x}$, since the newly added light also needs to travel through the volume where it is attenuated by the transmittance $\tau (\vec{x}, \vec{u})$.
@@ -134,10 +134,10 @@ The light contribution of a point $p_i$ is considered to be the light contributi
 \end{equation} 
 As a necessary simplification, we assume all variables to be piecewise constant on the ray segments. This yields
 \begin{equation}
-{\prod_{1\le j \le i}{(\tau(p_{j-1}, p_j))} \cdot \mu_a(p_{i})\epsilon (p_{i}, \omega)s}
+{\prod_{1\le j \le i}{(\tau(p_{j-1}, p_j))} \cdot \mu_a(p_{i})\varepsilon (p_{i}, \omega)s}
 \end{equation} 
 for one line segment at $i$.
-The quantity $\mu_a(p_{i})\epsilon (p_{i}, \omega)s$ descirbes the emitted light from $p_i$ and will from now on be refered to as the color $c(i)$. The product is the total attenuation (or transperancy) from $\vec{x}$ to $p_i$, $\tau(p_{j-1}, p_j)$ is the attenuation from $p_{j-1}$ to $p_j$ and can be calculated by
+The quantity $\mu_a(p_{i})\varepsilon (p_{i}, \omega)s$ descirbes the emitted light from $p_i$ and will from now on be refered to as the color $c(i)$. The product is the total attenuation (or transperancy) from $\vec{x}$ to $p_i$, $\tau(p_{j-1}, p_j)$ is the attenuation from $p_{j-1}$ to $p_j$ and can be calculated by
 \begin{equation}
 \tau(p_{j-1}, p_j) = e^{-s\mu_t(j)}
 \end{equation}
@@ -164,15 +164,26 @@ If the volume is defined as a ternary function, sampling a point $x$ works simpl
 \subsection{Direct Illumination}
 Until now, we have ignored scattering in the ray marching algorithm. In the following, we describe an approach to simulate single scattering (that is all light rays that are scattered only once).
 This works as a two-step process.
-The first step is computed on a volume $\mathcal{V}$ containing opacity and albedo information and a set of light sources $\{l_1, \ldots, l_n\}$.
-Based on $\mathfrac{V}$, one voxelized volume $\mathfrac{V'}_i$ is created for every light source $l_i$ in the following manner:
-For a voxel $\vec{x}$ in $\mathfrac{V'}_i$ and light source $l_i$ the amount of light $\vec{x}$ receives from $l_i$ is calculated by attenuating the emmited light $\varepsilon{l_i}$ by the transmittance $\tau(\vec{x}, l_i) = \int_{\vec{x}}^{l_i}(1 - \alpha(\vec{x'}))d\vec{x'}$.
+The first step is computed on a volume $\mathcal{V}$ containing opacity and albedo information and a set of light sources $\{l_1, \ldots, l_m\}$.
+Based on $\mathcal{V}$, one voxelized volume $\mathcal{V'}_k$ is created for every light source $l_k$ in the following manner:
+For a voxel $\vec{x}$ in $\mathcal{V'}_k$ and light source $l_k$ the amount of light $\vec{x}$ receives from $l_k$ is calculated by attenuating the emmited light $\varepsilon{l_k}$ by the transmittance $\tau(\vec{x}, l_k) = \int_{\vec{x}}^{l_k}(1 - \alpha(\vec{x'}))d\vec{x'}$, which can be calculated as described above.
  The albedo $a(\vec{x})$ regulates how much of the arriving light is reflected at $\vec{x}$. Thus, the color of $\vec{x}$ is
 \begin{equation}
-c_i(\vec{x}) = a(\vec{x}) \tau(\vec{x}, l_i) \varepsilon(l_i)
+c_k(\vec{x}) = a(\vec{x}) \tau(\vec{x}, l_k) \varepsilon(l_k)
 \end{equation}
+Thus, the volume $\mathcal{V'}_i$ contains information about the amount of light, that is reflected from $l_i$ at every point in space.
+
+In the second step works very similar to ray marching as described by equation REFERENCE!, with the only difference being the calculation of $c(i)$. For this, the values of $c_k(p_i)$ needs to be known for all $k$, which can be calculated by sampling and interpolating in $\mathcal(V')_k$.
+$c_k(p_i)$ is the amount of light reflected at $p_i$, but only a portion is reflected towards $\omega$ (the direction to the camera). Thus, by scaling all $c_k$ by the phase function and summing up their contribution, we can define $c(i)$ as
+\begin{equation}
+c(i) = \sum_{1 \le k \le m} f_p(\omega, \omega_k, p_i)c_k(p_i)
+\end{equation}
+with $\omega_k$ being the direction from $p_i$ to $l_k$ ($\omega_k$ is different for every light source, which is the reason why the different $c_k$'s have to be stored in different volumes).
+
+This approach could be generalized to calculate multi-scattering (that is light that need two or more scattering events to reach the camera), but this would very quickly become to costly. Therefore, when rendering images with global illumination, more sophisticted algorithms are necessary.
 \section{Monte Carlo Ray Tracing}
 
+\section{REPETITION}
 \subsection{Underlying Volume Data}
 In this paper, we consider the topic of synthesizing a 2d image from a 3d volume.
 A volume can either be some continuous, ternary function (such as perlin or simplex noise\cite{10.1145/325165.325247}, which can be used to render volumetric clouds\cite{haggstrom2018real}), or a discrete 3d array\cite{511}.
