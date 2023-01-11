@@ -43,7 +43,7 @@ In Computer Graphics, objects usually are represented as a set of geometric prim
 
 \section{Derivation Of The Rendering Equation}
 Volumetric ray tracing follows the same basic principle as classical ray tracing in which an image is rendered by spanning a pixel plane in front of the camera and casting one or multiple rays through each pixel.
-That means for a point $\vec{x}$ on the plane we cast a ray in direction $-\omega$ and calculate the amount of light $\vec{x}$ receives from direction $\omega$, called $L(\vec{x},\omega )\cite{10.5555/94788}$.
+That means for a point $\vec{x}$ on the plane we cast a ray in direction $-\omega$ and calculate the amount of light $\vec{x}$ receives from direction $\omega$, called $L(\vec{x},\omega )$\cite{10.5555/94788}.
 To do this, we calculate $\vec{y}$, the closest intersection point of the ray with a piece of geometry. At $\vec{y}$, we calculate the amount of light transported from $\vec{y}$ in direction $\omega$ (either through reflection or emission), called $L_e(\vec{y},\omega )$ (The exact method for calculating $L_e$ is a topic of classical raytracing\cite{10.5555/94788} and will not be further evaluated in this paper. In the following, we assume $L_e$ to be a known quantity).
 Thus, we get the equation 
 \begin{equation}\label{eq:no_attenuation}
@@ -142,13 +142,13 @@ The quantity $\mu_a(p_{i})\varepsilon (p_{i}, \omega)s$ describes the emitted li
 \begin{equation}
 \tau(p_{j-1}, p_j) = e^{-s\mu_t(j)}
 \end{equation}
-However, in computer graphics it is more common to use the opacity instead of the transperancy. Therefore, we will refer to $\tau(p_{j-1}, p_j)$ as $1 - \alpha(j)$ from now on, where $\alpha(j)$ is the opacity. Inserting this in formula for $\tau({\vec{x}, p_i)$ yields $\prod_{1 \le j \le i} (1 - \alpha(j))$.
+However, in computer graphics it is more common to use the opacity instead of the transperancy. Therefore, we will refer to $\tau(p_{j-1}, p_j)$ as $1 - \alpha(j)$ from now on, where $\alpha(j)$ is the opacity. Inserting this in formula for $\tau(\vec{x}, p_i)$ yields $\prod_{1 \le j \le i} (1 - \alpha(j))$.
 
 Again, we can refer to this quantity in terms of opacity rather than transperancy be using the equality
 \begin{equation}
 1 - \beta(i) = \prod_{1 \le j \le i} (1 - \alpha(j))
 \end{equation}
-where $\beta(i)$ is the accumulated opacity between $\vec{x}$ and $\p_i$.
+where $\beta(i)$ is the accumulated opacity between $\vec{x}$ and $p_i$.
 Using these results, we can approximate the integral \ref{eq:simplified_req}(REFERENCE!] as the sum
 \begin{equation}
 L(\vec{x},\omega) = \sum_{1 \le i \le n}(1 - \beta(i))c(i)
