@@ -212,7 +212,14 @@ as the sampled distance to the next collision, which might be with a real of a f
 At position $p_i - \omega_i t_i$, the probability of hitting a real particle is $\frac{\mu_t(p_i - \omega_i t_i)}{\overline{\mu}}$. Thus, we can decide if a real particle has been hit by sampling another $\xi$ and comparing it  $\frac{\mu_t(p_i - \omega_i t_i)}{\overline{\mu}}$. If $\xi$ is smaller, a real particle has been hit, if not, there is a null collision.
 In this case, we repeat the process from the point $p_i - \omega_i t_i$ until a real collision is detected. The distance to this real coollision is then the sum of all distances previously computed.
 The position of the real collision is then assumed to be the path vertex $p_{i+1}$.
+
+Delta tracking can also be used to estimate the transmmittance $\tau$ between two points $p'$ and $p + \omega t$. This is done by using delta tracking to find a real collision on the ray from $p$ to $p'$. If this collision occurs before $p'$, $\tau$ is assumed to be 0, if the collision occurs after $p'$, $\tau$ is estimated as 1. However, there exists other, more sophisticated methods for etimating the transmittance, such as ratio tracking.
 \subsection{Ratio Tracking}
+Ratio tracking is used to estimate the transmittance between two already known points $p$ and $p'$. This is done by calculating various collision points between $p$ and $p'$, as described above, and stops once a collision point behind $p'$ is reached. At each collision point $p^i$, the value $\frac{\mu_f}{\overline{\mu}} = 1 - \frac{\mu_t}{\overline{mu}}$ is saved. This fraction between fictious particles and all particles describes the probability, that a light ray can pass $p^i$ without real collision. The transmittance $\tau$ can then be estimated as 
+\begin{equation}
+\tau{p,p'} = \prod_{1 \le i \le}(1 - \frac{\mu_t}{\overline{mu})
+\end{equation}
+where $n$ is the index of the last collision found before $p'$.
 \subsection{Metropolis Lighting}
 \subsection{Bidirectional Path Tracing}
 \section{Conclusion}
