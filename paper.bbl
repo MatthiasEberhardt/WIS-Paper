@@ -1,4 +1,5 @@
-\begin{thebibliography}{\uppercase{WMG98}}
+\newcommand{\etalchar}[1]{$^{#1}$}
+\begin{thebibliography}{\uppercase{HHCM21}}
 
 \bibitem[AK90]{10.1145/97880.97886}
 \textsc{Arvo J., Kirk D.}:
@@ -27,9 +28,31 @@
 \newblock URL: \url{https://doi.org/10.1145/147130.147155}, \href
   {https://doi.org/10.1145/147130.147155} {\path{doi:10.1145/147130.147155}}.
 
+\bibitem[Gla89]{10.5555/94788}
+\textsc{Glassner A.~S.} (Ed.):
+\newblock \emph{An Introduction to Ray Tracing}.
+\newblock Academic Press Ltd., GBR, 1989.
+
 \bibitem[H{\"a}g18]{haggstrom2018real}
 \textsc{H{\"a}ggstr{\"o}m F.}:
 \newblock Real-time rendering of volumetric clouds, 2018.
+
+\bibitem[HHCM21]{10.1145/3451256}
+\textsc{Hofmann N., Hasselgren J., Clarberg P., Munkberg J.}:
+\newblock Interactive path tracing and reconstruction of sparse volumes.
+\newblock \emph{Proc. ACM Comput. Graph. Interact. Tech. 4}, 1 (apr 2021).
+\newblock URL: \url{https://doi.org/10.1145/3451256}, \href
+  {https://doi.org/10.1145/3451256} {\path{doi:10.1145/3451256}}.
+
+\bibitem[JC98]{10.1145/280814.280925}
+\textsc{Jensen H.~W., Christensen P.~H.}:
+\newblock Efficient simulation of light transport in scenes with participating
+  media using photon maps.
+\newblock In \emph{Proceedings of the 25th Annual Conference on Computer
+  Graphics and Interactive Techniques} (New York, NY, USA, 1998), SIGGRAPH '98,
+  Association for Computing Machinery, p.~311–320.
+\newblock URL: \url{https://doi.org/10.1145/280814.280925}, \href
+  {https://doi.org/10.1145/280814.280925} {\path{doi:10.1145/280814.280925}}.
 
 \bibitem[KVH84]{10.1145/964965.808594}
 \textsc{Kajiya J.~T., Von~Herzen B.~P.}:
@@ -50,6 +73,20 @@
 \newblock \emph{ACM Trans. Graph. 9}, 3 (jul 1990), 245–261.
 \newblock URL: \url{https://doi.org/10.1145/78964.78965}, \href
   {https://doi.org/10.1145/78964.78965} {\path{doi:10.1145/78964.78965}}.
+
+\bibitem[LW96]{10.5555/275458.275468}
+\textsc{Lafortune E.~P., Willems Y.~D.}:
+\newblock Rendering participating media with bidirectional path tracing.
+\newblock In \emph{Proceedings of the Eurographics Workshop on Rendering
+  Techniques '96} (Berlin, Heidelberg, 1996), Springer-Verlag, p.~91–100.
+
+\bibitem[Max95]{468400}
+\textsc{Max N.}:
+\newblock Optical models for direct volume rendering.
+\newblock \emph{IEEE Transactions on Visualization and Computer Graphics 1}, 2
+  (1995), 99--108.
+\newblock \href {https://doi.org/10.1109/2945.468400}
+  {\path{doi:10.1109/2945.468400}}.
 
 \bibitem[Per85]{10.1145/325165.325247}
 \textsc{Perlin K.}:
@@ -77,5 +114,12 @@
   (1998), pp.~135--142.
 \newblock \href {https://doi.org/10.1109/SVV.1998.729595}
   {\path{doi:10.1109/SVV.1998.729595}}.
+
+\bibitem[ZRL{\etalchar{*}}07]{zhou2007real-time}
+\textsc{Zhou K., Ren Z., Lin S., Bao H., Guo B., Shum H.}:
+\newblock \emph{Real-Time Smoke Rendering Using Compensated Ray Marching}.
+\newblock Tech. Rep. MSR-TR-2007-142, September 2007.
+\newblock URL:
+  \url{https://www.microsoft.com/en-us/research/publication/real-time-smoke-rendering-using-compensated-ray-marching/}.
 
 \end{thebibliography}
