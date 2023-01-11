@@ -150,7 +150,7 @@ Again, we can refer to this quantity in terms of opacity rather than transperanc
 \end{equation}
 where $\beta(i)$ is the accumulated opacity between $\vec{x}$ and $p_i$.
 Using these results, we can approximate the integral \ref{eq:simplified_req}(REFERENCE!] as the sum
-\begin{equation}
+\begin{equation} \label{eq:discrete_approximation}
 L(\vec{x},\omega) = \sum_{1 \le i \le n}(1 - \beta(i))c(i)
 \end{equation}
 which can be calculated in a single for loop. Since $\beta(i)$ equals $\beta(i-1)(1-\alpha(i))$, it is not necessary to completly recalculate $\beta$ for every step\cite{10.1145/147130.147155}.
@@ -163,7 +163,7 @@ If the volume is defined as a ternary function, sampling a point $x$ works simpl
 
 
 \subsection{Direct Illumination}
-Until now, we have ignored scattering in the ray marching algorithm. In the following, we describe an approach to simulate single scattering (that is all light rays that are scattered only once).
+Until now, we have ignored scattering in the ray marching algorithm. In the following, we describe an approach to simulate single scattering (that is all light rays that are scattered only once) developed by Kajiya and Von Herzen\cite{10.1145/964965.808594} based on the work of Blinn\cite{10.1145/965145.801255}.
 This works as a two-step process.
 The first step is computed on a volume $\mathcal{V}$ containing opacity and albedo information and a set of light sources $\{l_1, \ldots, l_m\}$.
 Based on $\mathcal{V}$, one voxelized volume $\mathcal{V'}_k$ is created for every light source $l_k$ in the following manner:
@@ -174,14 +174,14 @@ c_k(\vec{x}) = a(\vec{x}) \tau(\vec{x}, l_k) \varepsilon(l_k)
 \end{equation}
 Thus, the volume $\mathcal{V'}_i$ contains information about the amount of light, that is reflected from $l_i$ at every point in space.
 
-In the second step works very similar to ray marching as described by equation REFERENCE!, with the only difference being the calculation of $c(i)$. For this, the values of $c_k(p_i)$ needs to be known for all $k$, which can be calculated by sampling and interpolating in $\mathcal(V')_k$.
+In the second step works very similar to ray marching as described by equation \ref{eq:discrete_approximation}, with the only difference being the calculation of $c(i)$. For this, the values of $c_k(p_i)$ needs to be known for all $k$, which can be calculated by sampling and interpolating in $\mathcal{V'}_k$.
 $c_k(p_i)$ is the amount of light reflected at $p_i$, but only a portion is reflected towards $\omega$ (the direction to the camera). Thus, by scaling all $c_k$ by the phase function and summing up their contribution, we can define $c(i)$ as
 \begin{equation}
 c(i) = \sum_{1 \le k \le m} f_p(\omega, \omega_k, p_i)c_k(p_i)
 \end{equation}
 with $\omega_k$ being the direction from $p_i$ to $l_k$ ($\omega_k$ is different for every light source, which is the reason why the different $c_k$'s have to be stored in different volumes).
 
-This approach could be generalized to calculate multi-scattering (that is light that need two or more scattering events to reach the camera), but this would very quickly become to costly. Therefore, when rendering images with global illumination, more sophisticted algorithms are necessary.
+This approach could be generalized to calculate multi-scattering (that is light that need two or more scattering events to reach the camera), but this would very quickly become to costly. Therefore, when rendering images with global illumination, more sophisticated algorithms are necessary.
 \section{Monte Carlo Ray Tracing And Global Illumination}
 
 \section{REPETITION}
