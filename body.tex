@@ -195,8 +195,23 @@ Thus, equation ??? is approximated by
 L(\vec{x},\omega_0) = 
 \end{equation}
 To compute this result, following quantities need to be known: The transmittance $\tau$ between the various path vertices and light sources, the directions $\omega_i$, and the locations of $l_i$ and $p_i$.
-The sampling of $\omega_i$ and $l_i$ works like in classical ray tracing, using multipe importance sampling[CITE] of the phase function and light distribution.
+The sampling of $\omega_i$ and $l_i$ works like in classical ray tracing, using multipe importance sampling[CITE] of the phase function and light distribution. Sampling $p_i$ and estimating the transmittance require novel approaches not used in normal ray tracing, two of which are described below. 
 \subsection{Delta Tracking}
+To calculate $p_{i+1} = p_i - \omega t_t$ from a given $p_i$ and $\omega_i$, the distance $t_i$ between those two points must be sampled. Recall that $\tau(p_i, p_{i+1})$ describes the ratio of light arriving from $p_{i+1}$ at $p_i$ without colliding with a particle. Therefore, the probability that a collision occurs between $p_i$ and $p_{i+1}$ is 
+\begin{equation} \label{eq:collision_p}
+1 - \tau{p_i, p_{i+1}}
+\end{equation}
+This can be used to importance sample the distance $t_i$ by inverting equation \ref{collision_p} and applyingthe resulting function to $\xi$ (a random variable uniformly sampled from $[0,1]$). However, $\tau$ is defined as $e^{\int_{0}^{t_i}\mu_t(s)ds}$, which can't be easily inverted if the medium is heterogenous (if $\mu_t$ is not constant).
+Delta tracking (alos known as woodcock tracking) solves this problem by introducing so called fictitious particles, which neither scatter nor absorb light rays. Their distribution $\mu_f$ is chosen so that the sum of $\mu_t$ and $\mu_f$ add up to a globaly constant value, the so called majorant $\overline{\mu}$.
+The orignal problem of finding a real collision is then reformulated to finding any collision (fictitious or real).
+Since $\overline{\mu}$ is a constant, equation \ref{eq:collision_p} can easily inverted and we get
+\begin{equation}
+t_i = - \frac{ln(1 - \xi)}{\overline{\mu}}
+\end{equation} 
+as the sampled distance to the next collision, which might be with a real of a fictitious particle (a so called null collision).
+At position $p_i - \omega_i t_i$, the probability of hitting a real particle is $\frac{\mu_t(p_i - \omega_i t_i)}{\overline{\mu}}$. Thus, we can decide if a real particle has been hit by sampling another $\xi$ and comparing it  $\frac{\mu_t(p_i - \omega_i t_i)}{\overline{\mu}}$. If $\xi$ is smaller, a real particle has been hit, if not, there is a null collision.
+In this case, we repeat the process from the point $p_i - \omega_i t_i$ until a real collision is detected. The distance to this real coollision is then the sum of all distances previously computed.
+The position of the real collision is then assumed to be the path vertex $p_{i+1}$.
 \subsection{Ratio Tracking}
 \subsection{Metropolis Lighting}
 \subsection{Bidirectional Path Tracing}
