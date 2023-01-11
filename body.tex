@@ -162,8 +162,15 @@ If the volume is defined as a ternary function, sampling a point $x$ works simpl
 
 
 \subsection{Direct Illumination}
-
-
+Until now, we have ignored scattering in the ray marching algorithm. In the following, we describe an approach to simulate single scattering (that is all light rays that are scattered only once).
+This works as a two-step process.
+The first step is computed on a volume $\mathcal{V}$ containing opacity and albedo information and a set of light sources $\{l_1, \ldots, l_n\}$.
+Based on $\mathfrac{V}$, one voxelized volume $\mathfrac{V'}_i$ is created for every light source $l_i$ in the following manner:
+For a voxel $\vec{x}$ in $\mathfrac{V'}_i$ and light source $l_i$ the amount of light $\vec{x}$ receives from $l_i$ is calculated by attenuating the emmited light $\varepsilon{l_i}$ by the transmittance $\tau(\vec{x}, l_i) = \int_{\vec{x}}^{l_i}(1 - \alpha(\vec{x'}))d\vec{x'}$.
+ The albedo $a(\vec{x})$ regulates how much of the arriving light is reflected at $\vec{x}$. Thus, the color of $\vec{x}$ is
+\begin{equation}
+c_i(\vec{x}) = a(\vec{x}) \tau(\vec{x}, l_i) \varepsilon(l_i)
+\end{equation}
 \section{Monte Carlo Ray Tracing}
 
 \subsection{Underlying Volume Data}
