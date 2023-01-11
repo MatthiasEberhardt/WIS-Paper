@@ -79,7 +79,7 @@ Rearranging this equation gives
 \frac{L(h)}{L_0} = e^{-\int_{0}^{h} {\mu}_t(s)ds}
 \end{equation}
 meaning, that the calculated integral $e^{-\int_{0}^{h} {\mu}_t(s)ds}$ gives us the ratio of the light that travels through a cylinder of height $h$ unimpeded. In the following, we call this quantity the transmittance, and refer to it as $\tau(\vec{x}, \vec{x'})$ (the ratio of light that arrives at $\vec{x}$ from $\vec{x'}$).
-Thus, going back to equation \ref{l{eq:no_attenuation}}[REFERENCE], we can now specify how much $L_e$ gets attenuated, and get the equation
+Thus, going back to equation \ref{eq:no_attenuation}[REFERENCE], we can now specify how much $L_e$ gets attenuated, and get the equation
 \begin{equation}
 L(\vec{x},\omega ) =\tau(\vec{x}), \vec{y}) L_e(\vec{y}, \omega )
 \end{equation}
@@ -223,7 +223,7 @@ When looking at the compositing process described above, it becomes apparent tha
   \includegraphics[width=.8\linewidth]{wall.png}
   \parbox[t]{.9\columnwidth}{\relax}
   %
-  \caption{\label{fig:firstExample}
+  \caption{\label{fig:img2}
          The black, opaque object blocks parts of the volumes behind it. The samples behind the object (from the cameras perspective) are not visible and therefore irrelevant. }
 \end{figure}
 \subsection{Ray Termination With Russian Roulette}
@@ -254,7 +254,7 @@ The range pyramid is sampled like the maximum pyramid and provides a measure of 
   \includegraphics[width=.8\linewidth]{pyramide.png}
   \parbox[t]{.9\columnwidth}{\relax}
   %
-  \caption{\label{fig:firstExample}
+  \caption{\label{fig:img3}
          Simplified 2 dimensional example of 2 levels of a pyramid. Each pixel in level n +1 contains 4 pixel of the lower level. In 3 dimensions, 8 voxels of the lower level are contained in one voxel of the upper level.}
 \end{figure}
 
@@ -304,7 +304,7 @@ This algorithm works conceptually the same as presence acceleration. The differe
   \includegraphics[width=.8\linewidth]{RayCasting1.png}
   \parbox[t]{.9\columnwidth}{\relax}~\cite{Appa2015RayCF}
   %
-  \caption{\label{fig:firstExample}
+  \caption{\label{fig:img4}
           Illustration of the ray casting process.}
 \end{figure}
 \subsection{Terminology}
@@ -339,7 +339,7 @@ The sample points on the ray are in general part of $\mathbb{R}^3$. This is no p
   \includegraphics[width=.8\linewidth]{weighted_interpolation.png}
   \parbox[t]{.9\columnwidth}{\relax}
   %
-  \caption{\label{fig:firstExample}
+  \caption{\label{fig:img5}
           Simplified visualization of naive interpolation in 2 dimensions. The black dots represent the voxels, the red dots the sample points. Notice that the second sample point has a gray color, even though the original data only has white voxels and blck, transparent voxels, which shouldn't affect the final color. Adapted from Wittenbrink et al.\cite{729595}}
 \end{figure}
  \subsection{Compositing Of Multiple Sample Points}
@@ -364,7 +364,7 @@ When looking at the compositing process described above, it becomes apparent tha
   \includegraphics[width=.8\linewidth]{wall.png}
   \parbox[t]{.9\columnwidth}{\relax}
   %
-  \caption{\label{fig:firstExample}
+  \caption{\label{fig:img6}
          The black, opaque object blocks parts of the volumes behind it. The samples behind the object (from the cameras perspective) are not visible and therefore irrelevant. }
 \end{figure}
 \subsection{Ray Termination With Russian Roulette}
@@ -402,7 +402,7 @@ The range pyramid is sampled like the maximum and minimum pyramids and provides 
   \includegraphics[width=.8\linewidth]{pyramide.png}
   \parbox[t]{.9\columnwidth}{\relax}
   %
-  \caption{\label{fig:firstExample}
+  \caption{\label{fig:img7}
          Simplified 2 dimensional example of 2 levels of a pyramid. Each pixel in level n +1 contains 4 pixel of the lower level. In 3 dimensions, 8 voxels of the lower level are contained in one voxel of the upper level.}
 \end{figure}
 
