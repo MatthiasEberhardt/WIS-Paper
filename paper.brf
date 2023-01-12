@@ -7,6 +7,7 @@
 \backcite {10.5555/275458.275468}{{1}{2}{equation.2.1}}
 \backcite {468400}{{1}{2}{equation.2.1}}
 \backcite {468400}{{1}{2.1}{subsection.2.1}}
+\backcite {729595}{{2}{1}{figure.1}}
 \backcite {468400}{{2}{2.2}{subsection.2.2}}
 \backcite {468400}{{2}{2.2}{subsection.2.2}}
 \backcite {10.1145/280814.280925}{{2}{2.2}{subsection.2.2}}
@@ -15,35 +16,35 @@
 \backcite {zhou2007real-time}{{2}{2.2}{equation.2.8}}
 \backcite {511, 10.1145/147130.147155}{{2}{3}{section.3}}
 \backcite {10.1145/147130.147155}{{2}{3.1}{subsection.3.1}}
-\backcite {10.1145/147130.147155, 10.1145/78964.78965}{{2}{3.1}{equation.3.11}}
-\backcite {511}{{2}{3.2}{subsection.3.2}}
-\backcite {10.1145/147130.147155}{{2}{3.2}{equation.3.13}}
+\backcite {10.1145/147130.147155, 10.1145/78964.78965}{{3}{3.1}{equation.3.11}}
+\backcite {511}{{3}{3.2}{subsection.3.2}}
+\backcite {10.1145/147130.147155}{{3}{3.2}{equation.3.13}}
 \backcite {10.1145/147130.147155}{{3}{3.2}{equation.3.17}}
 \backcite {511}{{3}{3.3}{subsection.3.3}}
 \backcite {511}{{3}{3.3}{subsection.3.3}}
 \backcite {10.1145/3451256}{{3}{3.3}{subsection.3.3}}
 \backcite {10.1145/964965.808594}{{3}{3.4}{subsection.3.4}}
 \backcite {10.1145/965145.801255}{{3}{3.4}{subsection.3.4}}
-\backcite {10.1145/325165.325247}{{4}{6.1}{subsection.6.1}}
-\backcite {haggstrom2018real}{{4}{6.1}{subsection.6.1}}
-\backcite {511}{{4}{6.1}{subsection.6.1}}
-\backcite {10.1145/78964.78965}{{4}{6.1}{equation.6.21}}
-\backcite {729595}{{4}{6.2}{subsection.6.2}}
-\backcite {729595}{{4}{1}{figure.1}}
-\backcite {10.1145/78964.78965}{{4}{7.1}{subsection.7.1}}
-\backcite {10.1145/97880.97886}{{4}{7.2}{subsection.7.2}}
-\backcite {10.1145/147130.147155}{{4}{7.2}{subsection.7.2}}
-\backcite {Appa2015RayCF}{{6}{8}{section.8}}
-\backcite {10.1145/325165.325247}{{6}{8.2}{subsection.8.2}}
-\backcite {haggstrom2018real}{{6}{8.2}{subsection.8.2}}
-\backcite {511}{{6}{8.2}{subsection.8.2}}
-\backcite {10.1145/78964.78965}{{6}{8.2}{equation.8.22}}
-\backcite {729595}{{6}{8.4}{subsection.8.4}}
-\backcite {729595}{{7}{5}{figure.5}}
-\backcite {Sabella1988ARA, Upson1988VbufferVV }{{7}{8.5}{subsection.8.5}}
-\backcite {10.1145/378456.378484, 511}{{7}{8.5}{subsection.8.5}}
-\backcite {10.1145/78964.78965}{{7}{8.5}{subsection.8.5}}
-\backcite {10.1145/147130.147155}{{7}{8.5}{equation.8.25}}
-\backcite {10.1145/78964.78965}{{7}{9.1}{subsection.9.1}}
-\backcite {10.1145/97880.97886}{{7}{9.2}{subsection.9.2}}
-\backcite {10.1145/147130.147155}{{7}{9.2}{subsection.9.2}}
+\backcite {10.1145/325165.325247}{{4}{7.1}{subsection.7.1}}
+\backcite {haggstrom2018real}{{4}{7.1}{subsection.7.1}}
+\backcite {511}{{4}{7.1}{subsection.7.1}}
+\backcite {10.1145/78964.78965}{{4}{7.1}{equation.7.24}}
+\backcite {729595}{{5}{7.2}{subsection.7.2}}
+\backcite {729595}{{5}{2}{figure.2}}
+\backcite {10.1145/78964.78965}{{5}{8.1}{subsection.8.1}}
+\backcite {10.1145/97880.97886}{{5}{8.2}{subsection.8.2}}
+\backcite {10.1145/147130.147155}{{5}{8.2}{subsection.8.2}}
+\backcite {Appa2015RayCF}{{7}{9}{section.9}}
+\backcite {10.1145/325165.325247}{{7}{9.2}{subsection.9.2}}
+\backcite {haggstrom2018real}{{7}{9.2}{subsection.9.2}}
+\backcite {511}{{7}{9.2}{subsection.9.2}}
+\backcite {10.1145/78964.78965}{{7}{9.2}{equation.9.25}}
+\backcite {729595}{{7}{9.4}{subsection.9.4}}
+\backcite {729595}{{7}{6}{figure.6}}
+\backcite {Sabella1988ARA, Upson1988VbufferVV }{{7}{9.5}{subsection.9.5}}
+\backcite {10.1145/378456.378484, 511}{{7}{9.5}{subsection.9.5}}
+\backcite {10.1145/78964.78965}{{7}{9.5}{subsection.9.5}}
+\backcite {10.1145/147130.147155}{{8}{9.5}{equation.9.28}}
+\backcite {10.1145/78964.78965}{{8}{10.1}{subsection.10.1}}
+\backcite {10.1145/97880.97886}{{8}{10.2}{subsection.10.2}}
+\backcite {10.1145/147130.147155}{{8}{10.2}{subsection.10.2}}

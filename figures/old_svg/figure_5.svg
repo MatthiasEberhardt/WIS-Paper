@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="200mm"
+   height="200mm"
+   viewBox="0 0 200 200"
+   version="1.1"
+   id="svg13808"
+   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
+   sodipodi:docname="figure_5.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview13810"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="0.54362802"
+     inkscape:cx="690.72967"
+     inkscape:cy="156.35692"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs13805">
+    <marker
+       style="overflow:visible"
+       id="TriangleStart"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="TriangleStart"
+       markerWidth="5.3244081"
+       markerHeight="6.155385"
+       viewBox="0 0 5.3244081 6.1553851"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path135" />
+    </marker>
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <circle
+       style="fill:#000000;stroke:#000000;stroke-width:0.264999;stroke-opacity:0.996491"
+       id="path16141"
+       cx="32.694088"
+       cy="171.73"
+       r="3.441483" />
+    <circle
+       style="fill:#ffffff;stroke:#000000;stroke-width:0.264999;stroke-opacity:0.996491;fill-opacity:1"
+       id="path16141-5"
+       cx="152.80186"
+       cy="19.272306"
+       r="3.441483" />
+    <circle
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.264999;stroke-opacity:0.996491"
+       id="path16141-5-7"
+       cx="7.5712643"
+       cy="16.949305"
+       r="3.441483" />
+    <text
+       xml:space="preserve"
+       style="font-size:10.5833px;line-height:1.25;font-family:'Bodoni MT';-inkscape-font-specification:'Bodoni MT';stroke-width:0.264583"
+       x="24.075056"
+       y="186.87253"
+       id="text16167"><tspan
+         sodipodi:role="line"
+         id="tspan16165"
+         style="stroke-width:0.264583"
+         x="24.075056"
+         y="186.87253">$p_i$</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:10.5833px;line-height:1.25;font-family:'Bodoni MT';-inkscape-font-specification:'Bodoni MT';stroke-width:0.264583"
+       x="106.48443"
+       y="9.2920036"
+       id="text16171"><tspan
+         sodipodi:role="line"
+         id="tspan16169"
+         style="stroke-width:0.264583"
+         x="106.48443"
+         y="9.2920036">$p_i^n = p_{i+1}$</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 32.694088,171.72999 152.80186,19.272306"
+       id="path17918" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.265;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#TriangleStart)"
+       d="M 29.620284,166.82475 46.089615,145.87682"
+       id="path17942" />
+    <text
+       xml:space="preserve"
+       style="font-size:10.5833px;line-height:1.25;font-family:'Bodoni MT';-inkscape-font-specification:'Bodoni MT';stroke-width:0.264583"
+       x="9.5514727"
+       y="159.88069"
+       id="text17998"><tspan
+         sodipodi:role="line"
+         id="tspan17996"
+         style="stroke-width:0.264583"
+         x="9.5514727"
+         y="159.88069">$\omega_i$</tspan></text>
+    <circle
+       style="fill:#ffffff;fill-opacity:0;stroke:#000000;stroke-width:0.264999;stroke-dasharray:0.264999, 0.794997;stroke-dashoffset:0;stroke-opacity:0.996491"
+       id="path16141-5-1-3"
+       cx="78.532455"
+       cy="113.3382"
+       r="3.441483" />
+    <circle
+       style="fill:#ffffff;fill-opacity:0;stroke:#000000;stroke-width:0.264999;stroke-dasharray:0.264999, 0.794997;stroke-dashoffset:0;stroke-opacity:0.996491"
+       id="path16141-5-1-3-8"
+       cx="132.12634"
+       cy="45.450268"
+       r="3.441483" />
+    <circle
+       style="fill:#ffffff;fill-opacity:0;stroke:#000000;stroke-width:0.264999;stroke-dasharray:0.264999, 0.794997;stroke-dashoffset:0;stroke-opacity:0.996491"
+       id="path16141-5-1-3-5"
+       cx="63.158459"
+       cy="132.95667"
+       r="3.441483" />
+    <circle
+       style="fill:#ffffff;fill-opacity:0;stroke:#000000;stroke-width:0.264999;stroke-dasharray:0.264999, 0.794997;stroke-dashoffset:0;stroke-opacity:0.996491"
+       id="path16141-5-1-3-2"
+       cx="116.15739"
+       cy="65.695511"
+       r="3.441483" />
+    <circle
+       style="fill:#ffffff;fill-opacity:0;stroke:#000000;stroke-width:0.264999;stroke-dasharray:0.264999, 0.794997;stroke-dashoffset:0;stroke-opacity:0.996491"
+       id="path16141-5-1-3-2-5"
+       cx="7.5713067"
+       cy="7.5705466"
+       r="3.441483" />
+    <text
+       xml:space="preserve"
+       style="font-size:10.5833px;line-height:1.25;font-family:'Bodoni MT';-inkscape-font-specification:'Bodoni MT';stroke-width:0.264583"
+       x="64.836189"
+       y="143.1657"
+       id="text18214"><tspan
+         sodipodi:role="line"
+         id="tspan18212"
+         style="stroke-width:0.264583"
+         x="64.836189"
+         y="143.1657">$p_i^1$</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:10.5833px;line-height:1.25;font-family:'Bodoni MT';-inkscape-font-specification:'Bodoni MT';stroke-width:0.264583"
+       x="40.890858"
+       y="110.25365"
+       id="text18214-9"><tspan
+         sodipodi:role="line"
+         id="tspan18212-4"
+         style="stroke-width:0.264583"
+         x="40.890858"
+         y="110.25365">$p_i^2$</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:10.5833px;line-height:1.25;font-family:'Bodoni MT';-inkscape-font-specification:'Bodoni MT';stroke-width:0.264583"
+       x="117.98008"
+       y="72.397331"
+       id="text18214-2"><tspan
+         sodipodi:role="line"
+         id="tspan18212-8"
+         style="stroke-width:0.264583"
+         x="117.98008"
+         y="72.397331">$p_i^3$</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:10.5833px;line-height:1.25;font-family:'Bodoni MT';-inkscape-font-specification:'Bodoni MT';stroke-width:0.264583"
+       x="94.48732"
+       y="46.316456"
+       id="text18214-99"><tspan
+         sodipodi:role="line"
+         id="tspan18212-6"
+         style="stroke-width:0.264583"
+         x="94.48732"
+         y="46.316456">$p_i^4$</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:10.5833px;line-height:1.25;font-family:'Bodoni MT';-inkscape-font-specification:'Bodoni MT';stroke-width:0.264583"
+       x="13.375829"
+       y="9.4633627"
+       id="text18309"><tspan
+         sodipodi:role="line"
+         id="tspan18307"
+         style="stroke-width:0.264583"
+         x="13.375829"
+         y="9.4633627">null collision</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:10.5833px;line-height:1.25;font-family:'Bodoni MT';-inkscape-font-specification:'Bodoni MT';stroke-width:0.264583"
+       x="13.375829"
+       y="20.388361"
+       id="text18309-9"><tspan
+         sodipodi:role="line"
+         id="tspan18307-2"
+         style="stroke-width:0.264583"
+         x="13.375829"
+         y="20.388361">real collision</tspan></text>
+  </g>
+</svg>

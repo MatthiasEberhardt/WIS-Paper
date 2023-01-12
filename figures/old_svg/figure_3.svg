@@ -9,6 +9,9 @@
    id="svg5"
    inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
    sodipodi:docname="figure_3.svg"
+   inkscape:export-filename="projected_cylinder.pdf"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -25,7 +28,7 @@
      inkscape:document-units="mm"
      showgrid="false"
      inkscape:zoom="0.76880612"
-     inkscape:cx="384.36219"
+     inkscape:cx="325.17951"
      inkscape:cy="352.49459"
      inkscape:window-width="1920"
      inkscape:window-height="1017"
@@ -46,34 +49,34 @@
        cy="111.1599"
        r="64.699883" />
     <circle
-       style="fill:#666666;stroke:#666678;stroke-width:0.499999;stroke-opacity:1"
-       id="path896"
-       cx="95.785912"
-       cy="66.420631"
-       r="6.1946697" />
-    <circle
-       style="fill:#666666;stroke:#666678;stroke-width:0.499999;stroke-opacity:1"
-       id="path896-0"
-       cx="13.421782"
-       cy="32.349945"
-       r="6.1946697" />
-    <circle
-       style="fill:#666666;stroke:#666678;stroke-width:0.499999;stroke-opacity:1"
+       style="fill:#c8c8c8;stroke:#c8c8c8;stroke-width:0.499999;stroke-opacity:1;fill-opacity:1"
        id="path896-7"
        cx="82.896576"
        cy="146.26305"
        r="6.1946697" />
     <circle
-       style="fill:#666666;stroke:#666678;stroke-width:0.499999;stroke-opacity:1"
-       id="path896-2"
-       cx="133.58054"
-       cy="142.47742"
+       style="fill:#c8c8c8;fill-opacity:1;stroke:#c8c8c8;stroke-width:0.499999;stroke-opacity:1"
+       id="path896-7-2"
+       cx="135.25029"
+       cy="81.907303"
        r="6.1946697" />
     <circle
-       style="fill:#666666;stroke:#666678;stroke-width:0.499999;stroke-opacity:1"
-       id="path896-6"
-       cx="140.02521"
-       cy="76.93338"
+       style="fill:#c8c8c8;fill-opacity:1;stroke:#c8c8c8;stroke-width:0.499999;stroke-opacity:1"
+       id="path896-7-0"
+       cx="131.09357"
+       cy="137.12689"
+       r="6.1946697" />
+    <circle
+       style="fill:#c8c8c8;fill-opacity:1;stroke:#c8c8c8;stroke-width:0.499999;stroke-opacity:1"
+       id="path896-7-6"
+       cx="101.52375"
+       cy="71.427002"
+       r="6.1946697" />
+    <circle
+       style="fill:#c8c8c8;fill-opacity:1;stroke:#c8c8c8;stroke-width:0.499999;stroke-opacity:1"
+       id="path896-7-8"
+       cx="13.421782"
+       cy="32.349945"
        r="6.1946697" />
     <circle
        style="fill:#000000;stroke:#000000;stroke-width:0.499999"

@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="210mm"
+   height="250mm"
+   viewBox="0 0 210 250"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
+   sodipodi:docname="figure_2.svg"
+   inkscape:export-filename="projected_cylinder.pdf"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="0.54362802"
+     inkscape:cx="468.151"
+     inkscape:cy="371.57761"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1"
+     showguides="true" />
+  <defs
+     id="defs2">
+    <marker
+       style="overflow:visible"
+       id="marker8524"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="TriangleStart"
+       markerWidth="5.3244081"
+       markerHeight="6.155385"
+       viewBox="0 0 5.3244081 6.1553851"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path8522" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="marker8524-1"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="TriangleStart"
+       markerWidth="5.3244081"
+       markerHeight="6.155385"
+       viewBox="0 0 5.3244081 6.1553851"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path8522-7" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="marker8524-4"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="TriangleStart"
+       markerWidth="5.3244081"
+       markerHeight="6.155385"
+       viewBox="0 0 5.3244081 6.1553851"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path8522-3" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="marker8524-7"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="TriangleStart"
+       markerWidth="5.3244081"
+       markerHeight="6.155385"
+       viewBox="0 0 5.3244081 6.1553851"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path8522-77" />
+    </marker>
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <circle
+       style="fill:#c8c8c8;fill-opacity:1;stroke:#c8c8c8;stroke-width:0.499999;stroke-opacity:1"
+       id="path896-7-8"
+       cx="13.421782"
+       cy="32.349945"
+       r="6.1946697" />
+    <circle
+       style="fill:#c8c8c8;fill-opacity:1;stroke:#c8c8c8;stroke-width:0.499999;stroke-opacity:1"
+       id="path896-7-8-2"
+       cx="86.381226"
+       cy="123.16458"
+       r="6.1946697" />
+    <circle
+       style="fill:#c8c8c8;fill-opacity:1;stroke:#c8c8c8;stroke-width:0.499999;stroke-opacity:0.996491"
+       id="path896-7-8-3"
+       cx="123.73753"
+       cy="201.97453"
+       r="6.1946697" />
+    <circle
+       style="fill:#c8c8c8;fill-opacity:1;stroke:#c8c8c8;stroke-width:0.499999;stroke-opacity:1"
+       id="path896-7-8-1"
+       cx="157.61993"
+       cy="146.91081"
+       r="6.1946697" />
+    <circle
+       style="fill:#c8c8c8;fill-opacity:1;stroke:#c8c8c8;stroke-width:0.499999;stroke-opacity:1"
+       id="path896-7-8-8"
+       cx="76.400925"
+       cy="157.23524"
+       r="6.1946697" />
+    <circle
+       style="fill:#000000;stroke:#000000;stroke-width:0.499999"
+       id="path896-5"
+       cx="13.421782"
+       cy="14.798375"
+       r="6.1946697" />
+    <text
+       xml:space="preserve"
+       style="font-size:10.5833px;line-height:1.25;font-family:'Bodoni MT';-inkscape-font-specification:'Bodoni MT';stroke-width:0.264583"
+       x="24.778675"
+       y="16.932606"
+       id="text1189"><tspan
+         sodipodi:role="line"
+         id="tspan1187"
+         style="stroke-width:0.264583"
+         x="24.778675"
+         y="16.932606">absorbing particle</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:10.5833px;line-height:1.25;font-family:'Bodoni MT';-inkscape-font-specification:'Bodoni MT';stroke-width:0.264583"
+       x="24.701162"
+       y="34.484177"
+       id="text1193"><tspan
+         sodipodi:role="line"
+         id="tspan1191"
+         style="stroke-width:0.264583"
+         x="24.701162"
+         y="34.484177">scattering particle</tspan></text>
+    <ellipse
+       style="fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:0.499999;stroke-opacity:1"
+       id="path5961"
+       cx="104.62109"
+       cy="97.181381"
+       rx="63.323292"
+       ry="14.282156" />
+    <ellipse
+       style="fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:0.499999;stroke-opacity:1"
+       id="path5961-7"
+       cx="105"
+       cy="207.48091"
+       rx="63.323292"
+       ry="14.282156" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 41.297801,97.181378 41.676708,207.48091"
+       id="path7443" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 167.94438,97.181378 0.37891,110.299532"
+       id="path7445" />
+    <circle
+       style="fill:#000000;stroke:#000000;stroke-width:0.499999"
+       id="path896-5-7"
+       cx="51.966396"
+       cy="120.75554"
+       r="6.1946697" />
+    <circle
+       style="fill:#000000;stroke:#000000;stroke-width:0.499999"
+       id="path896-5-8"
+       cx="128.02318"
+       cy="139.68372"
+       r="6.1946697" />
+    <circle
+       style="fill:#000000;stroke:#000000;stroke-width:0.499999"
+       id="path896-5-79"
+       cx="65.73233"
+       cy="187.17616"
+       r="6.1946697" />
+    <circle
+       style="fill:#000000;stroke:#000000;stroke-width:0.499999"
+       id="path896-5-3"
+       cx="121.57851"
+       cy="97.181381"
+       r="6.1946697" />
+    <text
+       xml:space="preserve"
+       style="font-size:10.5833px;line-height:1.25;font-family:'Bodoni MT';-inkscape-font-specification:'Bodoni MT';stroke-width:0.264583"
+       x="104.4264"
+       y="234.66864"
+       id="text8297"><tspan
+         sodipodi:role="line"
+         id="tspan8295"
+         style="stroke-width:0.264583"
+         x="104.4264"
+         y="234.66864">E</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:10.5833px;line-height:1.25;font-family:'Bodoni MT';-inkscape-font-specification:'Bodoni MT';stroke-width:0.264583"
+       x="171.72765"
+       y="159.46767"
+       id="text8301"><tspan
+         sodipodi:role="line"
+         id="tspan8299"
+         style="stroke-width:0.264583"
+         x="171.72765"
+         y="159.46767">${\Delta}h$</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.13899;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#marker8524)"
+       d="M 69.956256,90.570557 V 53.341367"
+       id="path8303"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.13899;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#marker8524-1)"
+       d="M 89.486427,90.570557 V 53.341367"
+       id="path8303-3"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.13899;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#marker8524-4)"
+       d="M 109.83432,90.570557 V 53.341367"
+       id="path8303-2"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.13899;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#marker8524-7)"
+       d="M 130.18221,90.570556 V 53.341367"
+       id="path8303-22"
+       sodipodi:nodetypes="cc" />
+    <text
+       xml:space="preserve"
+       style="font-size:10.5833px;line-height:1.25;font-family:'Bodoni MT';-inkscape-font-specification:'Bodoni MT';stroke-width:0.264583"
+       x="130.32906"
+       y="48.036797"
+       id="text8918"><tspan
+         sodipodi:role="line"
+         style="stroke-width:0.264583"
+         x="130.32906"
+         y="48.036797"
+         id="tspan8920">light rays</tspan></text>
+  </g>
+</svg>
