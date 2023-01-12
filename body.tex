@@ -61,15 +61,13 @@ To do so, consider a close-up look at a ray section traveling through the volume
 This section can be assumed to be a cylinder with a base area $E$ and a height $\Delta h$, through which the ray travels from top to bottom.
 Within this cylinder, there exists a certain number of out-scattering and absorbing particles, defined as $n_s={\rho}_sE{\Delta}h$ and $n_a={\rho}_aE{\Delta}h$ respectively, where ${\rho}_s$ and ${\rho}_a$ are the densities of the particles.
 From the top-down view, the particles will occupy an area of ${n_sA}=\frac{{\rho}_sAE{\Delta}h}{E}$ and ${n_aA}=\frac{{\rho}_aAE{\Delta}h}{E}$, respectively, if we assume that the particles do not overlap each other, which is reasonable if the densities and the height do not become too large.
- \begin{figure}[htb]
-  \centering
-  % the following command controls the width of the embedded file
-  % (relative to the width of the current column)
-  %\includegraphics[width=.8\linewidth,natwidth=250,natheight=134]{RayCasting1.png}
-  \includegraphics[width=.8\linewidth]{figure_3}
-  \parbox[t]{.9\columnwidth}{\relax}
-  %
-  \caption{\label{fig:projected_cylinder}
+
+\begin{figure}
+\centering
+\def\svgwidth{\columnwidth}
+\input{figure_3.pdf_tex}
+
+  \caption{\label{fig:projected_cylinder2}
           Simplified visualization of naive interpolation in 2 dimensions. The black dots represent the voxels, the red dots the sample points. Notice that the second sample point has a gray color, even though the original data only has white voxels and blck, transparent voxels, which shouldn't affect the final color. Adapted from Wittenbrink et al.\cite{729595}}
 \end{figure}
 This can be simplified to ${\rho}_sA{\Delta}h$ and ${\rho}_sA{\Delta}h$, which gives us the fractions of light which are stopped in the cylinder, either through absorbtion or out-scattering. By letting $\Delta h$ approach 0, we see that for each infinitessimaly small cylinder slice with height $dh$, the change in intensity is proportionally to $-({\rho}_sA + {\rho}_aA)dh$.
