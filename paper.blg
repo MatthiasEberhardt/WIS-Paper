@@ -1,47 +1,54 @@
-This is BibTeX, Version 0.99d (TeX Live 2022/dev/Debian)
+This is BibTeX, Version 0.99d (TeX Live 2022)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: paper.aux
-I found no \bibdata command---while reading file paper.aux
-I found no \bibstyle command---while reading file paper.aux
-You've used 3 entries,
-            0 wiz_defined-function locations,
-            86 strings with 521 characters,
-and the built_in function-call counts, 0 in all, are:
-= -- 0
-> -- 0
-< -- 0
-+ -- 0
-- -- 0
-* -- 0
-:= -- 0
-add.period$ -- 0
-call.type$ -- 0
-change.case$ -- 0
-chr.to.int$ -- 0
-cite$ -- 0
-duplicate$ -- 0
-empty$ -- 0
-format.name$ -- 0
-if$ -- 0
-int.to.chr$ -- 0
+The style file: eg-alpha-doi.bst
+Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
+Reallocated global_strs (elt_size=200001) to 20 items from 10.
+Reallocated glb_str_end (elt_size=4) to 20 items from 10.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Database file #1: bib.bib
+Warning--I didn't find a database entry for "10.1145/965145.801255"
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Warning--empty institution in zhou2007real-time
+You've used 11 entries,
+            3585 wiz_defined-function locations,
+            822 strings with 7856 characters,
+and the built_in function-call counts, 6236 in all, are:
+= -- 655
+> -- 209
+< -- 5
++ -- 69
+- -- 68
+* -- 439
+:= -- 861
+add.period$ -- 31
+call.type$ -- 11
+change.case$ -- 67
+chr.to.int$ -- 11
+cite$ -- 12
+duplicate$ -- 239
+empty$ -- 542
+format.name$ -- 82
+if$ -- 1550
+int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 0
-newline$ -- 0
-num.names$ -- 0
-pop$ -- 0
-preamble$ -- 0
-purify$ -- 0
+missing$ -- 10
+newline$ -- 68
+num.names$ -- 34
+pop$ -- 108
+preamble$ -- 1
+purify$ -- 80
 quote$ -- 0
-skip$ -- 0
+skip$ -- 428
 stack$ -- 0
-substring$ -- 0
-swap$ -- 0
-text.length$ -- 0
-text.prefix$ -- 0
+substring$ -- 241
+swap$ -- 95
+text.length$ -- 5
+text.prefix$ -- 4
 top$ -- 0
-type$ -- 0
-warning$ -- 0
-while$ -- 0
-width$ -- 0
-write$ -- 0
-(There were 2 error messages)
+type$ -- 94
+warning$ -- 1
+while$ -- 38
+width$ -- 14
+write$ -- 163
+(There were 2 warnings)

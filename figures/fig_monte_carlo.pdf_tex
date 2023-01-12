@@ -54,16 +54,16 @@
     \lineheight{1}%
     \setlength\tabcolsep{0pt}%
     \put(0,0){\includegraphics[width=\unitlength,page=1]{fig_monte_carlo.pdf}}%
-    \put(0.07524104,0.27853953){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$p_0$\end{tabular}}}}%
-    \put(0.30885831,0.3127936){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$p_1$\end{tabular}}}}%
+    \put(0.06087162,0.27331815){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$p_0$\end{tabular}}}}%
+    \put(0.29750699,0.31839579){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$p_1$\end{tabular}}}}%
     \put(0.33747561,0.17587616){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$p_2$\end{tabular}}}}%
-    \put(0.62879669,0.26188154){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$p_3$\end{tabular}}}}%
+    \put(0.61257339,0.26121579){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$p_3$\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=2]{fig_monte_carlo.pdf}}%
-    \put(0.10102329,0.32374901){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\omega_0$\end{tabular}}}}%
+    \put(0.09739124,0.33023834){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\omega_0$\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=3]{fig_monte_carlo.pdf}}%
-    \put(0.27666611,0.25676651){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\omega_1$\end{tabular}}}}%
+    \put(0.25495659,0.25595538){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\omega_1$\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=4]{fig_monte_carlo.pdf}}%
-    \put(0.40447673,0.23216891){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\omega_2$\end{tabular}}}}%
+    \put(0.40483727,0.23754852){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\omega_2$\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=5]{fig_monte_carlo.pdf}}%
     \put(0.36069209,0.52128206){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$l_1$\end{tabular}}}}%
     \put(0.73910334,0.09361908){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$l_2$\end{tabular}}}}%

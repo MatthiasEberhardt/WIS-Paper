@@ -54,16 +54,15 @@
     \lineheight{1}%
     \setlength\tabcolsep{0pt}%
     \put(0,0){\includegraphics[width=\unitlength,page=1]{fig_light_changes.pdf}}%
-    \put(0.07524104,0.21187286){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$x$\end{tabular}}}}%
-    \put(0.51775742,0.25528516){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$u$\end{tabular}}}}%
-    \put(0.88772125,0.25091108){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$y$\end{tabular}}}}%
+    \put(0.08766123,0.20746226){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$x$\end{tabular}}}}%
+    \put(0.51708059,0.218536){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$u$\end{tabular}}}}%
+    \put(0.92690196,0.21052508){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$y$\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=2]{fig_light_changes.pdf}}%
-    \put(0.10102329,0.26565158){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\omega$\end{tabular}}}}%
+    \put(0.12444867,0.29318591){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\omega$\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=3]{fig_light_changes.pdf}}%
-    \put(0.44717494,0.32677235){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}${\omega}'$\end{tabular}}}}%
+    \put(0.49354482,0.32711662){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}${\omega}'$\end{tabular}}}}%
+    \put(0.47202667,0.16655095){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\tau(x,y)$\end{tabular}}}}%
+    \put(0.27586507,0.28212715){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\tau(x,u)$\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=4]{fig_light_changes.pdf}}%
-    \put(0.56907923,0.20693614){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\tau(x,y)$\end{tabular}}}}%
-    \put(0,0){\includegraphics[width=\unitlength,page=5]{fig_light_changes.pdf}}%
-    \put(0.36546015,0.25226461){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\tau(x,u)$\end{tabular}}}}%
   \end{picture}%
 \endgroup%

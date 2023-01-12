@@ -38,7 +38,7 @@
   \newcommand*\fsize{\dimexpr\f@size pt\relax}%
   \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
   \ifx\svgwidth\undefined%
-    \setlength{\unitlength}{878.74015748bp}%
+    \setlength{\unitlength}{269.29133858bp}%
     \ifx\svgscale\undefined%
       \relax%
     \else%
@@ -50,15 +50,15 @@
   \global\let\svgwidth\undefined%
   \global\let\svgscale\undefined%
   \makeatother%
-  \begin{picture}(1,0.48387097)%
+  \begin{picture}(1,0.52631579)%
     \lineheight{1}%
     \setlength\tabcolsep{0pt}%
     \put(0,0){\includegraphics[width=\unitlength,page=1]{fig_interactions.pdf}}%
-    \put(0.36985992,0.26084094){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}1)\end{tabular}}}}%
-    \put(0.549037,0.21902582){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}2)\end{tabular}}}}%
-    \put(0.44751404,0.15444718){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}3)\end{tabular}}}}%
-    \put(0.52989644,0.15637106){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}4)\end{tabular}}}}%
-    \put(0.45613272,0.21467973){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}5)\end{tabular}}}}%
+    \put(0.36757087,0.3040282){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}1)\end{tabular}}}}%
+    \put(0.56576573,0.35517424){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}2)\end{tabular}}}}%
+    \put(0.44458863,0.19956229){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}3)\end{tabular}}}}%
+    \put(0.53486812,0.19956229){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}4)\end{tabular}}}}%
+    \put(0.44475618,0.25703602){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}5)\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=2]{fig_interactions.pdf}}%
   \end{picture}%
 \endgroup%

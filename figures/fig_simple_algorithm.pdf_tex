@@ -55,7 +55,7 @@
     \setlength\tabcolsep{0pt}%
     \put(0,0){\includegraphics[width=\unitlength,page=1]{fig_simple_algorithm.pdf}}%
     \put(0.30876736,0.35437659){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$p_0$\end{tabular}}}}%
-    \put(0.37640851,0.30489813){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$p_1$\end{tabular}}}}%
+    \put(0.38662918,0.30489813){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$p_1$\end{tabular}}}}%
     \put(0.82338568,0.33841119){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$p_n = y$\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=2]{fig_simple_algorithm.pdf}}%
   \end{picture}%
