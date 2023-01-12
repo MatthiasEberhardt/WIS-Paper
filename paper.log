@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2022.12.4)  12 JAN 2023 02:35
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2022.12.4)  12 JAN 2023 17:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -431,30 +431,69 @@ File: pgfsyssoftpath.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.
 tex
 File: pgfsysprotocol.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-)) (/usr/share/texlive/texmf-dist/tex/latex/lineno/lineno.sty
+)) (/usr/share/texlive/texmf-dist/tex/latex/caption/subcaption.sty
+Package: subcaption 2020/10/07 v1.3j Sub-captions (AR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2020/10/26 v3.5g Customizing captions (AR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2020/10/21 v2.2e caption3 kernel (AR)
+\captionmargin=\dimen156
+\captionmargin@=\dimen157
+\captionwidth=\dimen158
+\caption@tempdima=\dimen159
+\caption@indent=\dimen160
+\caption@parindent=\dimen161
+\caption@hangindent=\dimen162
+\abovecaptionskip=\skip50
+\belowcaptionskip=\skip51
+Package caption Info: Unknown document class (or package),
+(caption)             standard defaults will be used.
+Package caption Info: \@makecaption = \long macro:#1#2->\vskip 6pt \setbox \@te
+mpboxa \hbox {\textbf {#1:} \reset@font \textit {#2}} \ifdim \wd \@tempboxa >\h
+size \textbf {#1:} \reset@font \itshape #2\par \else \hbox to\hsize {\hfil \box
+ \@tempboxa \hfil } \fi \vskip 6pt  on input line 1139.
+)
+
+Package caption Warning: Unknown document class (or package),
+(caption)                standard defaults will be used.
+See the caption package documentation for explanation.
+
+\c@caption@flags=\count279
+\c@continuedfloat=\count280
+Package caption Info: hyperref package is loaded.
+)
+\c@subfigure=\count281
+\c@subtable=\count282
+) (/usr/share/texlive/texmf-dist/tex/latex/lineno/lineno.sty
 Package: lineno 2005/11/02 line numbers on paragraphs v4.41
-\linenopenalty=\count279
+\linenopenalty=\count283
 \output=\toks27
-\linenoprevgraf=\count280
-\linenumbersep=\dimen156
-\linenumberwidth=\dimen157
-\c@linenumber=\count281
-\c@pagewiselinenumber=\count282
-\c@LN@truepage=\count283
-\c@internallinenumber=\count284
-\c@internallinenumbers=\count285
-\quotelinenumbersep=\dimen158
-\bframerule=\dimen159
-\bframesep=\dimen160
+\linenoprevgraf=\count284
+\linenumbersep=\dimen163
+\linenumberwidth=\dimen164
+\c@linenumber=\count285
+\c@pagewiselinenumber=\count286
+\c@LN@truepage=\count287
+\c@internallinenumber=\count288
+\c@internallinenumbers=\count289
+\quotelinenumbersep=\dimen165
+\bframerule=\dimen166
+\bframesep=\dimen167
 \bframebox=\box52
 LaTeX Info: Redefining \\ on input line 3056.
 ) (./body.tex
 (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2022-01-12 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count286
+\l__color_backend_stack_int=\count290
 \l__pdf_internal_box=\box53
 )
-(./paper.aux)
+(./paper.aux
+
+LaTeX Warning: Label `fig:projected_cylinder2' multiply defined.
+
+)
 \openout1 = `paper.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 31.
@@ -490,7 +529,7 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 (/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count287
+\c@section@level=\count291
 )
 LaTeX Info: Redefining \ref on input line 31.
 LaTeX Info: Redefining \pageref on input line 31.
@@ -498,16 +537,16 @@ LaTeX Info: Redefining \nameref on input line 31.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count288
-\scratchdimen=\dimen161
+\scratchcounter=\count292
+\scratchdimen=\dimen168
 \scratchbox=\box54
-\nofMPsegments=\count289
-\nofMParguments=\count290
+\nofMPsegments=\count293
+\nofMParguments=\count294
 \everyMPshowfont=\toks28
-\MPscratchCnt=\count291
-\MPscratchDim=\dimen162
-\MPnumerator=\count292
-\makeMPintoPDFobject=\count293
+\MPscratchCnt=\count295
+\MPscratchDim=\dimen169
+\MPnumerator=\count296
+\makeMPintoPDFobject=\count297
 \everyMPtoPDFconversion=\toks29
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -518,6 +557,8 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
 LaTeX Font Info:    Trying to load font information for OT1+ptmcm on input line
  36.
 
@@ -563,119 +604,611 @@ Underfull \hbox (badness 10000) in paragraph at lines 36--37
 
  []
 
-(./figure_3.pdf_tex
-<figure_3.pdf, id=16, page=1, 597.50786pt x 597.50786pt>
-File: figure_3.pdf Graphic file (type pdf)
-<use figure_3.pdf, page 1>
-Package pdftex.def Info: figure_3.pdf , page1 used on input line 56.
-(pdftex.def)             Requested size: 240.0pt x 240.0018pt.
+
+LaTeX Warning: Citation `511' on page 1 undefined on input line 42.
+
+
+LaTeX Warning: Citation `511' on page 1 undefined on input line 42.
+
+
+LaTeX Warning: Citation `10.1145/964965.808594' on page 1 undefined on input li
+ne 42.
+
+
+LaTeX Warning: Citation `511' on page 1 undefined on input line 42.
+
+
+LaTeX Warning: Citation `10.5555/94788' on page 1 undefined on input line 46.
+
+
+LaTeX Warning: Citation `10.5555/94788' on page 1 undefined on input line 47.
+
+(./figures/fig_interactions.pdf_tex
+<fig_interactions.pdf, id=7, page=1, 882.03545pt x 426.79132pt>
+File: fig_interactions.pdf Graphic file (type pdf)
+<use fig_interactions.pdf, page 1>
+Package pdftex.def Info: fig_interactions.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 240.0pt x 116.12738pt.
+<fig_interactions.pdf, id=8, page=2, 882.03545pt x 426.79132pt>
+File: fig_interactions.pdf Graphic file (type pdf)
+<use fig_interactions.pdf, page 2>
+Package pdftex.def Info: fig_interactions.pdf , page2 used on input line 62.
+(pdftex.def)             Requested size: 240.0pt x 116.12738pt.
+)
+
+LaTeX Warning: Citation `10.5555/275458.275468' on page 1 undefined on input li
+ne 62.
+
+
+LaTeX Warning: Citation `468400' on page 1 undefined on input line 62.
+
+
+LaTeX Warning: Citation `468400' on page 1 undefined on input line 69.
+
+(./figures/fig_cylinder.pdf_tex
+<fig_cylinder.pdf, id=10, page=1, 597.50786pt x 711.31892pt>
+File: fig_cylinder.pdf Graphic file (type pdf)
+<use fig_cylinder.pdf, page 1>
+Package pdftex.def Info: fig_cylinder.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 240.0pt x 285.71645pt.
+<fig_cylinder.pdf, id=11, page=2, 597.50786pt x 711.31892pt>
+File: fig_cylinder.pdf Graphic file (type pdf)
+<use fig_cylinder.pdf, page 2>
+Package pdftex.def Info: fig_cylinder.pdf , page2 used on input line 59.
+(pdftex.def)             Requested size: 240.0pt x 285.71645pt.
+<fig_cylinder.pdf, id=12, page=3, 597.50786pt x 711.31892pt>
+File: fig_cylinder.pdf Graphic file (type pdf)
+<use fig_cylinder.pdf, page 3>
+Package pdftex.def Info: fig_cylinder.pdf , page3 used on input line 62.
+(pdftex.def)             Requested size: 240.0pt x 285.71645pt.
 )
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 8.99994pt on input line 79.
-LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 7
-9.
- (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1ptm.fd
+(Font)              scaled to size 8.99994pt on input line 82.
+LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 8
+2.
+
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 ) [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
 
-] [2 <./figure_3.pdf>]
+ <./fig_interactions.pdf> <./fig_interactions.pdf
 
-LaTeX Warning: Citation `10.1145/965145.801255' on page 3 undefined on input li
-ne 175.
+pdfTeX warning: pdflatex (file ./fig_interactions.pdf): PDF inclusion: multiple
+ pdfs with page group included in a single page
+>] (./figures/fig_projected_cylinder.pdf_tex
+<fig_projected_cylinder.pdf, id=34, page=1, 597.50786pt x 597.50786pt>
+File: fig_projected_cylinder.pdf Graphic file (type pdf)
+<use fig_projected_cylinder.pdf, page 1>
+Package pdftex.def Info: fig_projected_cylinder.pdf , page1 used on input line 
+56.
+(pdftex.def)             Requested size: 240.0pt x 240.0018pt.
+)
+(./figures/fig_light_changes.pdf_tex
+<fig_light_changes.pdf, id=36, page=1, 853.58266pt x 455.2441pt>
+File: fig_light_changes.pdf Graphic file (type pdf)
+<use fig_light_changes.pdf, page 1>
+Package pdftex.def Info: fig_light_changes.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 240.0pt x 127.9954pt.
+<fig_light_changes.pdf, id=37, page=2, 853.58266pt x 455.2441pt>
+File: fig_light_changes.pdf Graphic file (type pdf)
+<use fig_light_changes.pdf, page 2>
+Package pdftex.def Info: fig_light_changes.pdf , page2 used on input line 60.
+(pdftex.def)             Requested size: 240.0pt x 127.9954pt.
+<fig_light_changes.pdf, id=38, page=3, 853.58266pt x 455.2441pt>
+File: fig_light_changes.pdf Graphic file (type pdf)
+<use fig_light_changes.pdf, page 3>
+Package pdftex.def Info: fig_light_changes.pdf , page3 used on input line 62.
+(pdftex.def)             Requested size: 240.0pt x 127.9954pt.
+<fig_light_changes.pdf, id=39, page=4, 853.58266pt x 455.2441pt>
+File: fig_light_changes.pdf Graphic file (type pdf)
+<use fig_light_changes.pdf, page 4>
+Package pdftex.def Info: fig_light_changes.pdf , page4 used on input line 64.
+(pdftex.def)             Requested size: 240.0pt x 127.9954pt.
+<fig_light_changes.pdf, id=40, page=5, 853.58266pt x 455.2441pt>
+File: fig_light_changes.pdf Graphic file (type pdf)
+<use fig_light_changes.pdf, page 5>
+Package pdftex.def Info: fig_light_changes.pdf , page5 used on input line 66.
+(pdftex.def)             Requested size: 240.0pt x 127.9954pt.
+)
+
+LaTeX Warning: Citation `468400' on page 2 undefined on input line 124.
+
+
+LaTeX Warning: Citation `468400' on page 2 undefined on input line 124.
+
+
+LaTeX Warning: Citation `10.1145/280814.280925' on page 2 undefined on input li
+ne 125.
+
+[2 <./fig_cylinder.pdf> <./fig_cylinder.pdf
+
+pdfTeX warning: pdflatex (file ./fig_cylinder.pdf): PDF inclusion: multiple pdf
+s with page group included in a single page
+> <./fig_cylinder.pdf
+
+pdfTeX warning: pdflatex (file ./fig_cylinder.pdf): PDF inclusion: multiple pdf
+s with page group included in a single page
+> <./fig_projected_cylinder.pdf
+
+pdfTeX warning: pdflatex (file ./fig_projected_cylinder.pdf): PDF inclusion: mu
+ltiple pdfs with page group included in a single page
+> <./fig_light_changes.pdf
+
+pdfTeX warning: pdflatex (file ./fig_light_changes.pdf): PDF inclusion: multipl
+e pdfs with page group included in a single page
+> <./fig_light_changes.pdf
+
+pdfTeX warning: pdflatex (file ./fig_light_changes.pdf): PDF inclusion: multipl
+e pdfs with page group included in a single page
+> <./fig_light_changes.pdf
+
+pdfTeX warning: pdflatex (file ./fig_light_changes.pdf): PDF inclusion: multipl
+e pdfs with page group included in a single page
+> <./fig_light_changes.pdf
+
+pdfTeX warning: pdflatex (file ./fig_light_changes.pdf): PDF inclusion: multipl
+e pdfs with page group included in a single page
+> <./fig_light_changes.pdf
+
+pdfTeX warning: pdflatex (file ./fig_light_changes.pdf): PDF inclusion: multipl
+e pdfs with page group included in a single page
+>]
+
+LaTeX Warning: Citation `10.1145/280814.280925' on page 3 undefined on input li
+ne 129.
+
+
+LaTeX Warning: Citation `10.1145/280814.280925' on page 3 undefined on input li
+ne 129.
+
+
+LaTeX Warning: Citation `zhou2007real-time' on page 3 undefined on input line 1
+35.
+
+
+LaTeX Warning: Citation `511' on page 3 undefined on input line 151.
+
+
+LaTeX Warning: Citation `10.1145/147130.147155' on page 3 undefined on input li
+ne 151.
+
+
+LaTeX Warning: Citation `10.1145/147130.147155' on page 3 undefined on input li
+ne 153.
+
+
+LaTeX Warning: Citation `10.1145/147130.147155' on page 3 undefined on input li
+ne 159.
+
+
+LaTeX Warning: Citation `10.1145/78964.78965' on page 3 undefined on input line
+ 159.
+
+
+LaTeX Warning: Reference `fig:simple_algorithm' on page 3 undefined on input li
+ne 159.
+
+(./figures/fig_simple_algorithm.pdf_tex
+<fig_simple_algorithm.pdf, id=60, page=1, 711.31892pt x 569.05513pt>
+File: fig_simple_algorithm.pdf Graphic file (type pdf)
+<use fig_simple_algorithm.pdf, page 1>
+Package pdftex.def Info: fig_simple_algorithm.pdf , page1 used on input line 56
+.
+(pdftex.def)             Requested size: 240.0pt x 192.00006pt.
+<fig_simple_algorithm.pdf, id=61, page=2, 711.31892pt x 569.05513pt>
+File: fig_simple_algorithm.pdf Graphic file (type pdf)
+<use fig_simple_algorithm.pdf, page 2>
+Package pdftex.def Info: fig_simple_algorithm.pdf , page2 used on input line 60
+.
+(pdftex.def)             Requested size: 240.0pt x 192.00006pt.
+)
+
+LaTeX Warning: Reference `fig:simple_algorithm' on page 3 undefined on input li
+ne 170.
+
+
+LaTeX Warning: Citation `511' on page 3 undefined on input line 170.
+
+
+LaTeX Warning: Citation `10.1145/147130.147155' on page 3 undefined on input li
+ne 179.
+
+
+Underfull \hbox (badness 3343) in paragraph at lines 182--185
+\T1/ptm/m/n/9 for one line seg-ment be-tween $\OML/ptmcm/m/it/9 p[]$ \T1/ptm/m/
+n/9 and $\OML/ptmcm/m/it/9 p[]$\T1/ptm/m/n/9 . The quan-tity
+ []
 
 
 Underfull \hbox (badness 10000) has occurred while \output is active
 []
  []
 
-[3]
+[3 <./fig_simple_algorithm.pdf> <./fig_simple_algorithm.pdf
 
-LaTeX Warning: Reference `collision_p' on page 4 undefined on input line 213.
+pdfTeX warning: pdflatex (file ./fig_simple_algorithm.pdf): PDF inclusion: mult
+iple pdfs with page group included in a single page
+>]
 
-<weighted_interpolation.png, id=114, 870.25125pt x 411.78844pt>
-File: weighted_interpolation.png Graphic file (type png)
-<use weighted_interpolation.png>
-Package pdftex.def Info: weighted_interpolation.png  used on input line 256.
-(pdftex.def)             Requested size: 192.00073pt x 90.85135pt.
-[4]
-<wall.png, id=140, 819.8128pt x 523.9575pt>
-File: wall.png Graphic file (type png)
-<use wall.png>
-Package pdftex.def Info: wall.png  used on input line 272.
-(pdftex.def)             Requested size: 192.00073pt x 122.7063pt.
-<pyramide.png, id=143, 1128.46594pt x 606.76688pt>
-File: pyramide.png Graphic file (type png)
-<use pyramide.png>
-Package pdftex.def Info: pyramide.png  used on input line 303.
-(pdftex.def)             Requested size: 192.00073pt x 103.23233pt.
+LaTeX Warning: Citation `10.1145/147130.147155' on page 4 undefined on input li
+ne 199.
+
+
+LaTeX Warning: Citation `511' on page 4 undefined on input line 204.
+
+
+LaTeX Warning: Citation `511' on page 4 undefined on input line 205.
+
+
+LaTeX Warning: Citation `10.1145/3451256' on page 4 undefined on input line 205
+.
+
+
+LaTeX Warning: Citation `729595' on page 4 undefined on input line 206.
+
+
+LaTeX Warning: Citation `10.1145/964965.808594' on page 4 undefined on input li
+ne 209.
+
+
+LaTeX Warning: Citation `10.1145/965145.801255' on page 4 undefined on input li
+ne 209.
+
+
+LaTeX Warning: Reference `fig_monte_carlo' on page 4 undefined on input line 23
+6.
+
+(./figures/fig_monte_carlo.pdf_tex
+<fig_monte_carlo.pdf, id=85, page=1, 853.58266pt x 512.1496pt>
+File: fig_monte_carlo.pdf Graphic file (type pdf)
+<use fig_monte_carlo.pdf, page 1>
+Package pdftex.def Info: fig_monte_carlo.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 240.0pt x 143.99483pt.
+<fig_monte_carlo.pdf, id=86, page=2, 853.58266pt x 512.1496pt>
+File: fig_monte_carlo.pdf Graphic file (type pdf)
+<use fig_monte_carlo.pdf, page 2>
+Package pdftex.def Info: fig_monte_carlo.pdf , page2 used on input line 61.
+(pdftex.def)             Requested size: 240.0pt x 143.99483pt.
+<fig_monte_carlo.pdf, id=87, page=3, 853.58266pt x 512.1496pt>
+File: fig_monte_carlo.pdf Graphic file (type pdf)
+<use fig_monte_carlo.pdf, page 3>
+Package pdftex.def Info: fig_monte_carlo.pdf , page3 used on input line 63.
+(pdftex.def)             Requested size: 240.0pt x 143.99483pt.
+<fig_monte_carlo.pdf, id=88, page=4, 853.58266pt x 512.1496pt>
+File: fig_monte_carlo.pdf Graphic file (type pdf)
+<use fig_monte_carlo.pdf, page 4>
+Package pdftex.def Info: fig_monte_carlo.pdf , page4 used on input line 65.
+(pdftex.def)             Requested size: 240.0pt x 143.99483pt.
+<fig_monte_carlo.pdf, id=89, page=5, 853.58266pt x 512.1496pt>
+File: fig_monte_carlo.pdf Graphic file (type pdf)
+<use fig_monte_carlo.pdf, page 5>
+Package pdftex.def Info: fig_monte_carlo.pdf , page5 used on input line 67.
+(pdftex.def)             Requested size: 240.0pt x 143.99483pt.
+)
+
+LaTeX Warning: Reference `collision_p' on page 4 undefined on input line 256.
+
+[4] (./figures/fig_delta_tracking.pdf_tex
+<fig_delta_tracking.pdf, id=106, page=1, 569.05513pt x 569.05513pt>
+File: fig_delta_tracking.pdf Graphic file (type pdf)
+<use fig_delta_tracking.pdf, page 1>
+Package pdftex.def Info: fig_delta_tracking.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 240.0pt x 240.00008pt.
+<fig_delta_tracking.pdf, id=107, page=2, 569.05513pt x 569.05513pt>
+File: fig_delta_tracking.pdf Graphic file (type pdf)
+<use fig_delta_tracking.pdf, page 2>
+Package pdftex.def Info: fig_delta_tracking.pdf , page2 used on input line 59.
+(pdftex.def)             Requested size: 240.0pt x 240.00008pt.
+<fig_delta_tracking.pdf, id=108, page=3, 569.05513pt x 569.05513pt>
+File: fig_delta_tracking.pdf Graphic file (type pdf)
+<use fig_delta_tracking.pdf, page 3>
+Package pdftex.def Info: fig_delta_tracking.pdf , page3 used on input line 61.
+(pdftex.def)             Requested size: 240.0pt x 240.00008pt.
+)
+(./figures/fig_delta_tracking_distance_a.pdf_tex
+<fig_delta_tracking_distance_a.pdf, id=110, page=1, 569.05513pt x 569.05513pt>
+File: fig_delta_tracking_distance_a.pdf Graphic file (type pdf)
+<use fig_delta_tracking_distance_a.pdf, page 1>
+Package pdftex.def Info: fig_delta_tracking_distance_a.pdf , page1 used on inpu
+t line 56.
+(pdftex.def)             Requested size: 569.05511pt x 569.10583pt.
+<fig_delta_tracking_distance_a.pdf, id=111, page=2, 569.05513pt x 569.05513pt>
+File: fig_delta_tracking_distance_a.pdf Graphic file (type pdf)
+<use fig_delta_tracking_distance_a.pdf, page 2>
+Package pdftex.def Info: fig_delta_tracking_distance_a.pdf , page2 used on inpu
+t line 60.
+(pdftex.def)             Requested size: 569.05511pt x 569.10583pt.
+<fig_delta_tracking_distance_a.pdf, id=112, page=3, 569.05513pt x 569.05513pt>
+File: fig_delta_tracking_distance_a.pdf Graphic file (type pdf)
+<use fig_delta_tracking_distance_a.pdf, page 3>
+Package pdftex.def Info: fig_delta_tracking_distance_a.pdf , page3 used on inpu
+t line 62.
+(pdftex.def)             Requested size: 569.05511pt x 569.10583pt.
+)
+Overfull \hbox (322.09235pt too wide) in paragraph at lines 67--282
+[][] 
+ []
+
+(./figures/fig_delta_tracking_distance_b.pdf_tex
+<fig_delta_tracking_distance_b.pdf, id=113, page=1, 569.05513pt x 569.05513pt>
+File: fig_delta_tracking_distance_b.pdf Graphic file (type pdf)
+<use fig_delta_tracking_distance_b.pdf, page 1>
+Package pdftex.def Info: fig_delta_tracking_distance_b.pdf , page1 used on inpu
+t line 56.
+(pdftex.def)             Requested size: 569.05511pt x 569.10583pt.
+<fig_delta_tracking_distance_b.pdf, id=114, page=2, 569.05513pt x 569.05513pt>
+File: fig_delta_tracking_distance_b.pdf Graphic file (type pdf)
+<use fig_delta_tracking_distance_b.pdf, page 2>
+Package pdftex.def Info: fig_delta_tracking_distance_b.pdf , page2 used on inpu
+t line 60.
+(pdftex.def)             Requested size: 569.05511pt x 569.10583pt.
+<fig_delta_tracking_distance_b.pdf, id=115, page=3, 569.05513pt x 569.05513pt>
+File: fig_delta_tracking_distance_b.pdf Graphic file (type pdf)
+<use fig_delta_tracking_distance_b.pdf, page 3>
+Package pdftex.def Info: fig_delta_tracking_distance_b.pdf , page3 used on inpu
+t line 62.
+(pdftex.def)             Requested size: 569.05511pt x 569.10583pt.
+)
+Overfull \hbox (322.09235pt too wide) in paragraph at lines 65--286
+[][] 
+ []
+
+
+Overfull \hbox (255.63556pt too wide) in paragraph at lines 280--287
+[]$[]$|  $[]$ 
+ []
+
+(./figures/fig_bidirectional.pdf_tex
+<fig_bidirectional.pdf, id=116, page=1, 739.77165pt x 455.2441pt>
+File: fig_bidirectional.pdf Graphic file (type pdf)
+<use fig_bidirectional.pdf, page 1>
+Package pdftex.def Info: fig_bidirectional.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 240.0pt x 147.68861pt.
+<fig_bidirectional.pdf, id=117, page=2, 739.77165pt x 455.2441pt>
+File: fig_bidirectional.pdf Graphic file (type pdf)
+<use fig_bidirectional.pdf, page 2>
+Package pdftex.def Info: fig_bidirectional.pdf , page2 used on input line 60.
+(pdftex.def)             Requested size: 240.0pt x 147.68861pt.
+<fig_bidirectional.pdf, id=118, page=3, 739.77165pt x 455.2441pt>
+File: fig_bidirectional.pdf Graphic file (type pdf)
+<use fig_bidirectional.pdf, page 3>
+Package pdftex.def Info: fig_bidirectional.pdf , page3 used on input line 62.
+(pdftex.def)             Requested size: 240.0pt x 147.68861pt.
+<fig_bidirectional.pdf, id=119, page=4, 739.77165pt x 455.2441pt>
+File: fig_bidirectional.pdf Graphic file (type pdf)
+<use fig_bidirectional.pdf, page 4>
+Package pdftex.def Info: fig_bidirectional.pdf , page4 used on input line 64.
+(pdftex.def)             Requested size: 240.0pt x 147.68861pt.
+)
+
+LaTeX Warning: Citation `10.1145/325165.325247' on page 5 undefined on input li
+ne 312.
+
+
+LaTeX Warning: Citation `haggstrom2018real' on page 5 undefined on input line 3
+12.
+
+
+LaTeX Warning: Citation `511' on page 5 undefined on input line 312.
+
+
+LaTeX Warning: Citation `10.1145/78964.78965' on page 5 undefined on input line
+ 318.
+
 
 Underfull \hbox (badness 10000) has occurred while \output is active
 []
  []
 
-[5 <./weighted_interpolation.PNG> <./wall.PNG>]
-<RayCasting1.png, id=159, 250.9375pt x 134.5025pt>
-File: RayCasting1.png Graphic file (type png)
-<use RayCasting1.png>
-Package pdftex.def Info: RayCasting1.png  used on input line 353.
-(pdftex.def)             Requested size: 192.00073pt x 102.91663pt.
- [6 <./pyramide.PNG>]
-File: weighted_interpolation.png Graphic file (type png)
-<use weighted_interpolation.png>
-Package pdftex.def Info: weighted_interpolation.png  used on input line 388.
-(pdftex.def)             Requested size: 192.00073pt x 90.85135pt.
+[5 <./fig_monte_carlo.pdf> <./fig_monte_carlo.pdf
+
+pdfTeX warning: pdflatex (file ./fig_monte_carlo.pdf): PDF inclusion: multiple 
+pdfs with page group included in a single page
+> <./fig_monte_carlo.pdf
+
+pdfTeX warning: pdflatex (file ./fig_monte_carlo.pdf): PDF inclusion: multiple 
+pdfs with page group included in a single page
+> <./fig_monte_carlo.pdf
+
+pdfTeX warning: pdflatex (file ./fig_monte_carlo.pdf): PDF inclusion: multiple 
+pdfs with page group included in a single page
+> <./fig_monte_carlo.pdf
+
+pdfTeX warning: pdflatex (file ./fig_monte_carlo.pdf): PDF inclusion: multiple 
+pdfs with page group included in a single page
+> <./fig_delta_tracking.pdf
+
+pdfTeX warning: pdflatex (file ./fig_delta_tracking.pdf): PDF inclusion: multip
+le pdfs with page group included in a single page
+> <./fig_delta_tracking.pdf
+
+pdfTeX warning: pdflatex (file ./fig_delta_tracking.pdf): PDF inclusion: multip
+le pdfs with page group included in a single page
+> <./fig_delta_tracking.pdf
+
+pdfTeX warning: pdflatex (file ./fig_delta_tracking.pdf): PDF inclusion: multip
+le pdfs with page group included in a single page
+>]
+
+LaTeX Warning: Citation `729595' on page 6 undefined on input line 323.
+
+
+LaTeX Warning: File `weighted_interpolation.png' not found on input line 329.
+
+
+! Package pdftex.def Error: File `weighted_interpolation.png' not found: using 
+draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.329 ....8\linewidth]{weighted_interpolation.png}
+                                                  
+? 
+
+LaTeX Warning: Citation `729595' on page 6 undefined on input line 333.
+
+
+LaTeX Warning: Citation `729595' on page 6 undefined on input line 333.
+
+
+LaTeX Warning: Citation `10.1145/78964.78965' on page 6 undefined on input line
+ 339.
+
+
+LaTeX Warning: File `wall.png' not found on input line 345.
+
+
+! Package pdftex.def Error: File `wall.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.345 ...udegraphics[width=.8\linewidth]{wall.png}
+                                                  
+? 
+
+LaTeX Warning: Citation `10.1145/97880.97886' on page 6 undefined on input line
+ 352.
+
+
+LaTeX Warning: Citation `10.1145/147130.147155' on page 6 undefined on input li
+ne 352.
+
+[6 <./fig_delta_tracking_distance_a.pdf> <./fig_delta_tracking_distance_a.pdf
+
+pdfTeX warning: pdflatex (file ./fig_delta_tracking_distance_a.pdf): PDF inclus
+ion: multiple pdfs with page group included in a single page
+> <./fig_delta_tracking_distance_a.pdf
+
+pdfTeX warning: pdflatex (file ./fig_delta_tracking_distance_a.pdf): PDF inclus
+ion: multiple pdfs with page group included in a single page
+> <./fig_delta_tracking_distance_b.pdf
+
+pdfTeX warning: pdflatex (file ./fig_delta_tracking_distance_b.pdf): PDF inclus
+ion: multiple pdfs with page group included in a single page
+> <./fig_delta_tracking_distance_b.pdf
+
+pdfTeX warning: pdflatex (file ./fig_delta_tracking_distance_b.pdf): PDF inclus
+ion: multiple pdfs with page group included in a single page
+> <./fig_delta_tracking_distance_b.pdf
+
+pdfTeX warning: pdflatex (file ./fig_delta_tracking_distance_b.pdf): PDF inclus
+ion: multiple pdfs with page group included in a single page
+> <./fig_bidirectional.pdf
+
+pdfTeX warning: pdflatex (file ./fig_bidirectional.pdf): PDF inclusion: multipl
+e pdfs with page group included in a single page
+> <./fig_bidirectional.pdf
+
+pdfTeX warning: pdflatex (file ./fig_bidirectional.pdf): PDF inclusion: multipl
+e pdfs with page group included in a single page
+> <./fig_bidirectional.pdf
+
+pdfTeX warning: pdflatex (file ./fig_bidirectional.pdf): PDF inclusion: multipl
+e pdfs with page group included in a single page
+> <./fig_bidirectional.pdf
+
+pdfTeX warning: pdflatex (file ./fig_bidirectional.pdf): PDF inclusion: multipl
+e pdfs with page group included in a single page
+>]
+
+LaTeX Warning: File `pyramide.png' not found on input line 376.
+
+
+! Package pdftex.def Error: File `pyramide.png' not found: using draft setting.
+
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.376 ...raphics[width=.8\linewidth]{pyramide.png}
+                                                  
+? 
 
 Underfull \hbox (badness 10000) has occurred while \output is active
 []
  []
 
-[7 <./RayCasting1.png>]
-File: wall.png Graphic file (type png)
-<use wall.png>
-Package pdftex.def Info: wall.png  used on input line 413.
-(pdftex.def)             Requested size: 192.00073pt x 122.7063pt.
- [8]
-Overfull \hbox (253.62553pt too wide) detected at line 444
-[]
- []
+[7]
 
-File: pyramide.png Graphic file (type png)
-<use pyramide.png>
-Package pdftex.def Info: pyramide.png  used on input line 451.
-(pdftex.def)             Requested size: 192.00073pt x 103.23233pt.
-(./paper.bbl (./paper.brf)
-\tf@brf=\write5
-\openout5 = `paper.brf'.
+LaTeX Warning: File `RayCasting1.png' not found on input line 426.
 
 
-Underfull \hbox (badness 1137) in paragraph at lines 21--21
-[]\T1/ptm/m/sc/8 Drebin R. A., Car-pen-ter L., Han-ra-han P.\T1/ptm/m/n/8 :  Vo
-l-
- []
+! Package pdftex.def Error: File `RayCasting1.png' not found: using draft setti
+ng.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.426 ...hics[width=.8\linewidth]{RayCasting1.png}
+                                                  
+? 
+
+LaTeX Warning: Citation `Appa2015RayCF' on page 8 undefined on input line 427.
+
+[8]
+
+LaTeX Warning: Citation `10.1145/325165.325247' on page 9 undefined on input li
+ne 436.
 
 
-Underfull \hbox (badness 1681) in paragraph at lines 21--21
-\T1/ptm/m/n/8 ume ren-der-ing.  \T1/ptm/m/it/8 SIG-GRAPH Com-put. Graph. 22\T1/
-ptm/m/n/8 , 4 (jun 1988),
- []
+LaTeX Warning: Citation `haggstrom2018real' on page 9 undefined on input line 4
+36.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 46--46
-[]\T1/ptm/m/sc/8 Hofmann N., Has-sel-gren J., Clar-berg P.,
- []
+LaTeX Warning: Citation `511' on page 9 undefined on input line 436.
 
 
-Underfull \hbox (badness 2644) in paragraph at lines 46--46
-\T1/ptm/m/sc/8 Munkberg J.\T1/ptm/m/n/8 :  In-ter-ac-tive path trac-ing and re-
-con-struc-tion of
- []
+LaTeX Warning: Citation `10.1145/78964.78965' on page 9 undefined on input line
+ 442.
 
 
-Underfull \hbox (badness 4108) in paragraph at lines 46--46
-\T1/ptm/m/n/8 (apr 2021).  URL: [][]$\T1/pcr/m/n/8 https : / / doi . org / 10 .
- 1145 / 3451256$[][]\T1/ptm/m/n/8 ,
- []
+LaTeX Warning: Citation `729595' on page 9 undefined on input line 455.
+
+
+LaTeX Warning: File `weighted_interpolation.png' not found on input line 461.
+
+
+! Package pdftex.def Error: File `weighted_interpolation.png' not found: using 
+draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.461 ....8\linewidth]{weighted_interpolation.png}
+                                                  
+? 
+
+LaTeX Warning: Citation `729595' on page 9 undefined on input line 465.
+
+
+LaTeX Warning: Citation `729595' on page 9 undefined on input line 465.
+
+
+LaTeX Warning: Citation `Sabella1988ARA' on page 9 undefined on input line 468.
+
+
+
+LaTeX Warning: Citation `Upson1988VbufferVV' on page 9 undefined on input line 
+468.
+
+
+LaTeX Warning: Citation `10.1145/378456.378484' on page 9 undefined on input li
+ne 468.
+
+
+LaTeX Warning: Citation `511' on page 9 undefined on input line 468.
+
+
+LaTeX Warning: Citation `10.1145/78964.78965' on page 9 undefined on input line
+ 468.
 
 
 Underfull \hbox (badness 10000) has occurred while \output is active
@@ -683,86 +1216,101 @@ Underfull \hbox (badness 10000) has occurred while \output is active
  []
 
 [9]
-Underfull \hbox (badness 2205) in paragraph at lines 56--56
-[]\T1/ptm/m/sc/8 Jensen H. W., Chris-tensen P. H.\T1/ptm/m/n/8 :  Ef-fi-cient s
-im-u-la-
+
+LaTeX Warning: Citation `10.1145/147130.147155' on page 10 undefined on input l
+ine 477.
+
+
+LaTeX Warning: Citation `10.1145/78964.78965' on page 10 undefined on input lin
+e 480.
+
+
+LaTeX Warning: File `wall.png' not found on input line 486.
+
+
+! Package pdftex.def Error: File `wall.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.486 ...udegraphics[width=.8\linewidth]{wall.png}
+                                                  
+? 
+
+LaTeX Warning: Citation `10.1145/97880.97886' on page 10 undefined on input lin
+e 493.
+
+
+LaTeX Warning: Citation `10.1145/147130.147155' on page 10 undefined on input l
+ine 493.
+
+[10]
+Overfull \hbox (253.62553pt too wide) detected at line 517
+[]
  []
 
 
-Underfull \hbox (badness 2401) in paragraph at lines 56--56
-\T1/ptm/m/n/8 ton maps.  In \T1/ptm/m/it/8 Pro-ceed-ings of the 25th An-nual Co
-n-fer-ence on
+LaTeX Warning: File `pyramide.png' not found on input line 524.
+
+
+! Package pdftex.def Error: File `pyramide.png' not found: using draft setting.
+
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.524 ...raphics[width=.8\linewidth]{pyramide.png}
+                                                  
+? 
+(./paper.bbl))
+Underfull \hbox (badness 10000) has occurred while \output is active
+[]
  []
 
-
-Underfull \hbox (badness 2818) in paragraph at lines 56--56
-\T1/ptm/m/it/8 Com-puter Graph-ics and In-ter-ac-tive Tech-niques \T1/ptm/m/n/8
- (New York, NY,
- []
-
-
-Underfull \hbox (badness 7168) in paragraph at lines 63--63
-\T1/ptm/m/n/8 URL: [][]$\T1/pcr/m/n/8 https : / / doi . org / 10 . 1145 / 96496
-5 . 808594$[][]\T1/ptm/m/n/8 , [][]$\T1/pcr/m/n/8 doi :
- []
-
-
-Underfull \hbox (badness 1024) in paragraph at lines 124--124
-[]\T1/ptm/m/sc/8 Zhou K., Ren Z., Lin S., Bao H., Guo B., Shum
- []
-
-
-Underfull \hbox (badness 1033) in paragraph at lines 124--124
-\T1/ptm/m/n/8 Tech. Rep. MSR-TR-2007-142, Septem-ber 2007.  URL: [][]$\T1/pcr/m
-/n/8 https :
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 124--124
-\T1/pcr/m/n/8 / / www . microsoft . com / en-[]us / research / publication /
- []
-
-
-Overfull \hbox (48.10017pt too wide) in paragraph at lines 124--124
-\T1/pcr/m/n/8 real-[]time-[]smoke-[]rendering-[]using-[]compensated-[]ray-[]mar
-ching/$[][]\T1/ptm/m/n/8 .
- []
-
-)) [10
-
-] (./paper.aux)
+[11] (./paper.aux)
 
 LaTeX Warning: There were undefined references.
 
-Package rerunfilecheck Info: File `paper.brf' has not changed.
-(rerunfilecheck)             Checksum: D5071B3731E13B6E1D60DDDC2572CD9D;2616.
+
+LaTeX Warning: There were multiply-defined labels.
+
  ) 
 Here is how much of TeX's memory you used:
- 12730 strings out of 478287
- 211390 string characters out of 5849289
- 540559 words of memory out of 5000000
- 30534 multiletter control sequences out of 15000+600000
- 531737 words of font info for 116 fonts, out of 8000000 for 9000
+ 14246 strings out of 478287
+ 244860 string characters out of 5849289
+ 566782 words of memory out of 5000000
+ 32013 multiletter control sequences out of 15000+600000
+ 526521 words of font info for 114 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 94i,13n,92p,1229b,435s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
-e/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex9.pfb></usr/share/texlive/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fo
-nts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texlive/texmf-dist/fonts/typ
-e1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmsy9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/sy
-mbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.
-pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/sh
-are/texlive/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/ty
-pe1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/u
-tmri8a.pfb>
-Output written on paper.pdf (10 pages, 273708 bytes).
+ 94i,17n,92p,1233b,504s stack positions out of 5000i,500n,10000p,200000b,80000s
+pdfTeX warning (dest): name{figure.8} has been referenced but does not exist,
+ replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.7} has been referenced but does not exist, r
+eplaced by a fixed one
+
+pdfTeX warning (dest): name{figure.1} has been referenced but does not exist, r
+eplaced by a fixed one
+
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/
+texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex9.pfb></usr/share/texlive/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/font
+s/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texlive/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmsy9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
+ts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/uc
+rr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></u
+sr/share/texlive/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/share/texlive
+/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fon
+ts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/ti
+mes/utmri8a.pfb>
+Output written on paper.pdf (11 pages, 209283 bytes).
 PDF statistics:
- 390 PDF objects out of 1000 (max. 8388607)
- 334 compressed objects within 4 object streams
- 113 named destinations out of 1000 (max. 500000)
- 38 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 294 PDF objects out of 1000 (max. 8388607)
+ 221 compressed objects within 3 object streams
+ 106 named destinations out of 1000 (max. 500000)
+ 168 words of extra memory for PDF output out of 10000 (max. 10000000)
 
