@@ -49,14 +49,30 @@ Thus, we get the equation
 \begin{equation}\label{eq:no_attenuation}
 L(\vec{x},\omega ) = L_e(\vec{y}, \omega )
 \end{equation}
-However, this equation assumes that the light has no interactions between $\vec{x}$ and $\vec{y}$, which is only true if the ray travels through a vacuum. If the light travels through a medium that interacts with it (called a participating medium), the interactions change the light along the ray\cite{10.5555/275458.275468}. In most cases, these interactions are small enough to be ignored, but in certain scenarios (e.g if there is fog, clouds or smoke present) they might have a noticeable effect. The types of interactions we need to consider are absorption, emission, in-scattering and out-scattering\cite{468400}.
+\begin{figure}
+\centering
+\def\svgwidth{\columnwidth}
+\input{figures/interactions.pdf_tex}
+
+  \caption{\label{fig:light_interactions}
+         Projected cylinder.
+\end{figure}
+However, this equation assumes that the light has no interactions between $\vec{x}$ and $\vec{y}$, which is only true if the ray travels through a vacuum. If the light travels through a medium that interacts with it (called a participating medium), the interactions change the light along the ray\cite{10.5555/275458.275468}(see figure \ref{fig:light_interactions}). In most cases, these interactions are small enough to be ignored, but in certain scenarios (e.g if there is fog, clouds or smoke present) they might have a noticeable effect. The types of interactions we need to consider are absorption, emission, in-scattering and out-scattering\cite{468400}.
 
 Absorption and out-scattering attenuate the light intensity along the ray, in-scattering and emission add to it.
 \subsection{Absorbtion And Out-Scattering}
 At first, let us consider only out-scattering and absorption, which occur due to tiny particles floating around in the volume (such as water droplets in clouds and fog, or dust particles in the air).
 Of course, these particles are far too numerous to be directly simulated, but their distribution in 3D space can be stochastically modeled (similar to how detailed surface structures can be modeled by micorfacets in classical ray tracing).
 QUESTION!
-We will follow Max\cite{468400} in our development of the stochastical model.
+We follow Max\cite{468400} in our development of the stochastical model.
+\begin{figure}
+\centering
+\def\svgwidth{\columnwidth}
+\input{figures/cylinder.pdf_tex}
+
+  \caption{\label{fig:cylinder}
+         Projected cylinder.
+\end{figure}
 To do so, consider a close-up look at a ray section traveling through the volume.
 This section can be assumed to be a cylinder with a base area $E$ and a height $\Delta h$, through which the ray travels from top to bottom.
 Within this cylinder, there exists a certain number of out-scattering and absorbing particles, defined as $n_s={\rho}_sE{\Delta}h$ and $n_a={\rho}_aE{\Delta}h$ respectively, where ${\rho}_s$ and ${\rho}_a$ are the densities of the particles.
@@ -65,10 +81,10 @@ From the top-down view, the particles will occupy an area of ${n_sA}=\frac{{\rho
 \begin{figure}
 \centering
 \def\svgwidth{\columnwidth}
-\input{figure_3.pdf_tex}
+\input{figures/fig_projected_cylinder.pdf_tex}
 
   \caption{\label{fig:projected_cylinder2}
-          Simplified visualization of naive interpolation in 2 dimensions. The black dots represent the voxels, the red dots the sample points. Notice that the second sample point has a gray color, even though the original data only has white voxels and blck, transparent voxels, which shouldn't affect the final color. Adapted from Wittenbrink et al.\cite{729595}}
+         Projected cylinder.
 \end{figure}
 This can be simplified to ${\rho}_sA{\Delta}h$ and ${\rho}_sA{\Delta}h$, which gives us the fractions of light which are stopped in the cylinder, either through absorbtion or out-scattering. By letting $\Delta h$ approach 0, we see that for each infinitessimaly small cylinder slice with height $dh$, the change in intensity is proportionally to $-({\rho}_sA + {\rho}_aA)dh$.
 Formulated as a differential equation, this results in
@@ -94,6 +110,14 @@ L(\vec{x},\omega ) =\tau(\vec{x}, \vec{y}) L_e(\vec{y}, \omega )
 \end{equation}
 This equation is still not accurate, since we also need to consider in-scattering and emission along the ray.
 \subsection{Emission And In-Scattering}
+\begin{figure}
+\centering
+\def\svgwidth{\columnwidth}
+\input{figures/fig_light_changes.pdf_tex}
+
+  \caption{\label{fig:light_changes}
+         Projected cylinder.
+\end{figure}
 For this purpose, let us consider any arbitrary point $\vec{u}$ on the ray from $\vec{x}$ to $\vec{y}$.
 At $\vec{u}$, the particles of the medium emit some light towards $\omega$\cite{468400}, which we call $\varepsilon (\vec{u}, \omega )$. In the cylindrical model, the probability of finding an absorbing particle at position $\vec{u}$ is ${\mu}_a(\vec{u})$. We assume that the particles responsible for absorbtion are also responsible for emission\cite{468400}, meaning the amount of light emitted at $\vec{u}$ towards $\omega$ is ${\mu}_a(\vec{u})\epsilon (\vec{u}, \omega )$.
 In-scattered light can arrive at $\vec{u}$ from every direction, which means we need to integrate over the sphere $\Omega$ surrounding $\vec{u}$\cite{10.1145/280814.280925}:
@@ -130,10 +154,18 @@ Thus, we arrive at the equation
 \begin{equation} \label{eq:simplified_req}
 L(\vec{x}, \omega ) = \int_{\vec{x}}^{\vec{y}} \tau(\vec{x}, \vec{u}){\mu}_a(\vec{u})\epsilon (\vec{u}, \omega)d\vec{u}
 \end{equation}
-For this chapter, we assume that the medium is contained within a cuboid boundary\cite{10.1145/147130.147155, 10.1145/78964.78965}. Since there is no geometry, we can't cast the ray until it intersects with the geometry. Instead, the endpoint $\vec{y}$ of the ray will be the point where the ray leaves the cuboid boundary.
+For this chapter, we assume that the medium is contained within a cuboid boundary\cite{10.1145/147130.147155, 10.1145/78964.78965}. Since there is no geometry, we can't cast the ray until it intersects with the geometry. Instead, the endpoint $\vec{y}$ of the ray will be the point where the ray leaves the cuboid boundary(see figure \ref{fig:simple_algorithm}).
 
 \subsection{Discrete Approximation To The Simplified Equation}
-$L(\vec{x},\omega )$ is approximated by casting a ray in direction $-\omega$ and sampling it at evenly spaced points along the ray and summing up their contributions\cite{511}. The distance $s$ between the sampling points should be smaller than the volumes nyquist limit[CITE], otherwise important details are missed[CITE].
+\begin{figure}
+\centering
+\def\svgwidth{\columnwidth}
+\input{figures/fig_simple_algorithm.pdf_tex}
+
+  \caption{\label{fig:projected_cylinder2}
+         Projected cylinder.
+\end{figure}
+$L(\vec{x},\omega )$ is approximated by casting a ray in direction $-\omega$ and sampling it at evenly spaced points along the ray (see figure \ref{fig:simple_algorithm}) and summing up their contributions\cite{511}. The distance $s$ between the sampling points should be smaller than the volumes nyquist limit[CITE], otherwise important details are missed[CITE].
 We start sampling at the first point within the volume, which has a distance of $s_0$ to $\vec{x}$. The $i$-th sample point then is described by
 \begin{equation}
 p_i=\vec{x} + s_0(-\omega) + si(-\omega)
@@ -199,7 +231,15 @@ In this chapter, we describe a typical MCRT, explain certain techniques necessar
 \subsection{General Monte Carlo Algorithm}
 We describe a typical MCRT such as used by Hofman et al. [CITE!].
 The algorithm starts like[simiilar to?] the already mentioned bycasting a ray from the camera $p_0$ in direction $-\omega_0$. Then, a distance $d_0$ is sampled stochastically and a so called path vertex $p_1$ is created.From $p_1$, a new direction $\omega_1$ is sampled. This process is repeated until a light source is hit or until the path gets terminated (ususally by Russian roulette). Furthermore, at every path vertex $p_i$, next event estimation is done by casting a shadow ray towards a randomly sampled point on a light source, called $l_i$.[ADD: Then, the light contributions along the path are properly weighted and summed up to compute the final result.]
-An illustration of the process can be seen in figure ???.
+An illustration of the process can be seen in figure \ref{fig_monte_carlo}.
+\begin{figure}
+\centering
+\def\svgwidth{\columnwidth}
+\input{figures/fig_monte_carlo.pdf_tex}
+
+  \caption{\label{fig:monte_carlo}
+         Projected cylinder.
+\end{figure}
 %Thus, equation ??? is approximated by
 %\begin{equation}
 %L(\vec{x},\omega_0) = 
@@ -214,16 +254,38 @@ To calculate $p_{i+1} = p_i - \omega t_t$ from a given $p_i$ and $\omega_i$, the
 This can be used to importance sample the distance $t_i$ by inverting equation \ref{collision_p} and applyingthe resulting function to $\xi$ (a random variable uniformly sampled from $[0,1]$). However, $\tau$ is defined as $e^{\int_{0}^{t_i}\mu_t(s)ds}$, which can't be easily inverted if the medium is heterogenous (if $\mu_t$ is not constant).
 Delta tracking (alos known as woodcock tracking) solves this problem by introducing so called fictitious particles, which neither scatter nor absorb light rays. Their distribution $\mu_f$ is chosen so that the sum of $\mu_t$ and $\mu_f$ add up to a globaly constant value, the so called majorant $\overline{\mu}$.
 The orignal problem of finding a real collision is then reformulated to finding any collision (fictitious or real).
-Since $\overline{\mu}$ is a constant, equation \ref{eq:collision_p} can easily inverted and we get
+Since $\overline{\mu}$ is a constant, equation \ref{eq:collision_p} can easily be inverted and we get
 \begin{equation}
 t_i = - \frac{ln(1 - \xi)}{\overline{\mu}}
 \end{equation} 
 as the sampled distance to the next collision, which might be with a real of a fictitious particle (a so called null collision).
 At position $p_i - \omega_i t_i$, the probability of hitting a real particle is $\frac{\mu_t(p_i - \omega_i t_i)}{\overline{\mu}}$. Thus, we can decide if a real particle has been hit by sampling another $\xi$ and comparing it  $\frac{\mu_t(p_i - \omega_i t_i)}{\overline{\mu}}$. If $\xi$ is smaller, a real particle has been hit, if not, there is a null collision.
-In this case, we repeat the process from the point $p_i - \omega_i t_i$ until a real collision is detected. The distance to this real coollision is then the sum of all distances previously computed.
+In this case, we repeat the process (illustrated in figure \ref{fig:delta_tracking}) from the point $p_i - \omega_i t_i$ until a real collision is detected. The distance to this real collision is then the sum of all distances previously computed.
 The position of the real collision is then assumed to be the path vertex $p_{i+1}$.
+\begin{figure}
+\centering
+\def\svgwidth{\columnwidth}
+\input{figures/fig_delta_tracking.pdf_tex}
 
-Delta tracking can also be used to estimate the transmmittance $\tau$ between two points $p'$ and $p + \omega t$. This is done by using delta tracking to find a real collision on the ray from $p$ to $p'$. If this collision occurs before $p'$, $\tau$ is assumed to be 0, if the collision occurs after $p'$, $\tau$ is estimated as 1. However, there exists other, more sophisticated methods for etimating the transmittance, such as ratio tracking.
+  \caption{\label{fig:delta_tracking}
+         Projected cylinder.
+\end{figure}
+
+Delta tracking can also be used to estimate the transmmittance $\tau$ between two points $p'$ and $p + \omega t$. This is done by using delta tracking to find a real collision on the ray from $p$ to $p'$. If this collision occurs before $p'$, $\tau$ is assumed to be 0, if the collision occurs after $p'$, $\tau$ is estimated as 1 (see figure \ref{fig:delta_tracking_distance}). However, there exists other, more sophisticated methods for etimating the transmittance, such as ratio tracking.
+
+%https://tex.stackexchange.com/questions/165728/latex-figure-numbering-as-part-a-b-c
+\begin{figure}
+  \begin{subfigure}
+    \input{figures/fig_delta_tracking_distance_a.pdf_tex}
+  \end{subfigure}%
+  \hspace*{\fill}   % maximize separation between the subfigures
+  \begin{subfigure}
+   \input{figures/fig_delta_tracking_distance_b.pdf_tex}
+  \end{subfigure}%
+
+\caption{A figure that contains three subfigures} \label{fig:delta_tracking_distance}
+\end{figure}
+
 \subsection{Ratio Tracking}
 Ratio tracking is used to estimate the transmittance between two already known points $p$ and $p'$. This is done by calculating various collision points between $p$ and $p'$, as described above, and stops once a collision point behind $p'$ is reached. At each collision point $p^i$, the value $\frac{\mu_f}{\overline{\mu}} = 1 - \frac{\mu_t}{\overline{mu}}$ is saved. This fraction between fictious particles and all particles describes the probability, that a light ray can pass $p^i$ without real collision. The transmittance $\tau$ can then be estimated as 
 \begin{equation}
@@ -233,6 +295,14 @@ where $n$ is the index of the last collision found before $p'$.
 \section{Selection of Various Monte Carlo Ray Tracing Algorithms}
 \subsection{Metropolis Lighting}
 \subsection{Bidirectional Path Tracing}
+\begin{figure}
+\centering
+\def\svgwidth{\columnwidth}
+\input{figures/fig_bidirectional.pdf_tex}
+
+  \caption{\label{fig:bidirectional}
+         Projected cylinder.
+\end{figure}
 \section{Conclusion}
 \section{REPETITION}
 \subsection{Underlying Volume Data}
