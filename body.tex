@@ -50,12 +50,13 @@
 
 \section{Introduction}
 In Computer Graphics, objects usually are represented as a set of geometric primitives \cite{KOBBELT2004801} (e.g. triangles), displaying the surface of the object. However, this approach is not always suitable. For example, if the original data representation of the object is volumetric, the traditional rendering technique would necessitate the creation of an intermediate surface representation that might introduce unwanted artifacts\cite{511}. Another issue arises if the object has no well-defined surfaces to which geometric primitives could be fitted, such as a cloud or fog\cite{10.1145/964965.808594}. In such cases, volumetric ray tracing might be used, a technique in which rays are cast through a volume that contains information about its optical properties (e.g color and opacity), sampled at various points within the volume, accumulated, and projected on a 2D image (see figure \ref{fig:simple_algorithm})\cite{511}.
-
+We begin our paper by introducing the reader to the mathematical formalisms of volumetric ray tracing in chapter \ref{sec:math}. In chapter \ref{sec:ray_marching}, we make certain assumptions about the mathematical model that allow us to describe simple volume rendering algorithms by foregoing global illumination. Afterwards, we introduce the monte carlo ray tracer, capable of rendering global illlumation, as well as mathematical methods necessary for its formulation. We then present a selection of specialized variants of the monte carlo ray tracer in chapter \ref{sec:mc_algorithms}. In the final chapter \ref{sec:conclusion}, we draw a comparison and provide the reader with references to further work. 
 
 
 
 
 \section{Derivation of the Rendering Equation}
+\label{sec:math}
 Volumetric ray tracing follows the same principle as classical ray tracing in which an image is rendered by spanning a pixel plane in front of the camera and casting one or multiple rays through each pixel\cite{10.5555/94788}.
 That means for a point ${x}$ on the plane we cast a ray in direction $-\omega$ and calculate the amount of light ${x}$ receives from direction $\omega$, called $L({x},\omega )$.
 To do this, we find the closest intersection point of the ray with a piece of geometry,  ${y}$,  from where a certain light intensity $L_e({y},\omega )$ is transported in direction $\omega$, either through reflection or emission (The method for calculating $L_e$ is a topic of classical raytracing\cite{10.5555/94788} and will not be further evaluated in this paper, and we assume $L_e$ to be known).
@@ -188,7 +189,7 @@ L({x}, \omega ) = \int_{{x}}^{{y}} \tau({x}, {u}){\mu}_a({u})\epsilon ({u}, \ome
 For this chapter, we assume that the medium is contained within a cuboid boundary\cite{10.1145/147130.147155, 10.1145/78964.78965}. Since there is no geometry, the endpoint $y$ is located where the ray leaves the boundary (see figure \ref{fig:simple_algorithm}).
 
 \subsection{Discrete Approximation to the Simplified Equation}
-
+\label{subsec:discrete_marching}
 \begin{figure}
 \centering
 \def\svgwidth{\columnwidth}
@@ -275,9 +276,8 @@ c(i) = \sum_{1 \le k \le m} f_p(\omega, -\omega_k, p_i)c_k(p_i)
 with $\omega_k$ being the direction from $l_k$ to $p_i$ ($\omega_k$ is different for every $l_k$, which is why the different $c_k$ are stored seperately).
 
 
+This algorithm is an improvment to the one described in chapter \ref{subsec:discrete_marching}, but still suffers from problems such as increased computational complexity, inability to render volumes with high albedo \cite{10.1145/964965.808594} and its bias\cite{10.1145/3451256}. While certain optimizations with respect to computational speed have been developed\cite{10.1145/78964.78965, 10.1145/147130.147155}, rendering photrealistic images requires more sophisticated techniques.
 
-This approach could be generalized to calculate multi-scattering (light that needs two or more scattering events to reach the camera), but this would very quickly become too costly. Therefore, when rendering images with global illumination, more sophisticated algorithms are necessary[REFORMULATE! + SOURCES].
-[-expensive, mention optimization algorithms, transition to mcrt, mention bias]
 
 
 
@@ -288,6 +288,7 @@ This approach could be generalized to calculate multi-scattering (light that nee
 
 
 \section{Monte Carlo Ray Tracing and Global Illumination}
+\label{sec:mc}
 A common technique in classical ray tracing to generate unbiased images with global illumination so-called monte carlo ray tracing (MCRT) approach \cite{mc_siggraph} which estimates the rendering equation by stochastically sampling it.
 
 In this chapter, we describe a typical MCRT and explain certain techniques necessary for its formulation.
@@ -368,6 +369,7 @@ Ratio tracking \cite{10.1145/2661229.2661292} is used to estimate the transmitta
 \end{equation}
 where $n$ is the index of the last collision found before $p'$.
 \section{Selection of Various Monte Carlo Ray Tracing Algorithms}
+\label{sec:mc_algorithms}
 In this chapter, we present a brief overview of several modified MCRT algorithms. For more details, we refer the reader to the original sources.
 \subsection{Metropolis Light Transport}
 Metropolis light transport\cite{metropolis} works[REPLACE] by creating multiple paths from one initial path $\mathcal{P}_0$ consisting of several path vertices, by consecutively mutating path $\mathcal{P}_i$ to get $\mathcal{P}_{i+1}$. The mutations (such as adding or deleting vertices) might be rejected, if the new path does not contribute much light to the final image \cite{metropolis}. An extension to this algorithm for handling participating media has been proposed by Pauly et al. \cite{10.1007/978-3-7091-6303-0_2}.
@@ -388,10 +390,22 @@ Jensen and Christensen \cite{10.1145/280814.280925} extended this method to part
 This algorithm, developed by Zhou et al. \cite{zhou2007real-time} follows the same idea as photon mapping, but computes its photon distribution on an approximation of the original volume.
 In a preprocessing step, the original volume $\mathcal{V}$ is split into a volume $\widetilde{\mathcal{V}}$ and a residual volume $\mathcal{R} = \mathcal{V} - \widetilde{\mathcal{V}}$. $\widetilde{\mathcal{V}}$ is a low frequency approximation to $\mathcal{V}$ and $\mathcal{R}$ is its error. The global lighting is calculated on $\widetilde{\mathcal{V}}$ and is afterwards rendered using ray marching (similarily as in \ref{sec:ray_marching}). During the ray marching $\mathcal{R}$ is used to compensate for errors in $\widetilde{\mathcal{V}}$.
 \section{Conclusion and Further Works}
-Volume rendering is an extensive topic which comprises several different approaches, which on the most basic level can be divided into direct and indirect rendering. Indirect rendering requires a pre-processing step to create intermediate surface data, which then is rendered in a second step.
-Direct algorithms (which includes all algorithms presented in this paper) work directly on the volume data and can be further subdivided into feed forward and feed backward methods. Feed forward methods work by starting with data and determining how much each data point contributes to the final result (e.g. by tracing paths from the light towards the camera).
+\label{sec:conclusion}
+In this chapter, we provide the reader with an overview of various other approaches to volume rendering and classify the herre presented algorithms within that context. Furthermore, we draw a comparison between the presented algorithms and briefly discuss their strength and weaknesses.
+\subsection{Classification and Further Work}
+On the most basic level volume rendering can be divided into direct and indirect rendering\cite{Westover1991SplattingAP, 4384237}. Indirect rendering requires a pre-processing step to create intermediate surface data, which then is rendered in a second step.
+Direct algorithms (which includes all algorithms presented in this paper) work directly on the volume data and can be further subdivided into feed forward and feed backward methods. Feed forward methods work by starting with data and determining how much each data point contributes to the final image \cite{10.5555/94788} (e.g. by tracing paths from the light towards the camera).
 Feed backwards algorithms work the opposite way. Of the algorithms presented in this paper photon mapping and bidirectional path tracing are hybrid methods while the others are feed backwards.
-Another possibility to classify rendering algorithms is between stochastic and deterministic ones. Of the presented examples, the ray marching  and the compensated ray marching are deterministic, the others are stochastic.
+Another possibility to classify rendering algorithms is between stochastic and deterministic ones. Of the presented examples, the ray marching  and the compensated ray marching are deterministic, the others stochastic. 
+\subsection{Comparison}
+
+
+
+In this chapter, we provide the reader with some context by 
+Volume rendering is an extensive topic which comprises several approaches, which on the most basic level can be divided into direct and indirect rendering\cite{Westover1991SplattingAP, 4384237}. Indirect rendering requires a pre-processing step to create intermediate surface data, which then is rendered in a second step.
+Direct algorithms (which includes all algorithms presented in this paper) work directly on the volume data and can be further subdivided into feed forward and feed backward methods. Feed forward methods work by starting with data and determining how much each data point contributes to the final image \cite{10.5555/94788} (e.g. by tracing paths from the light towards the camera).
+Feed backwards algorithms work the opposite way. Of the algorithms presented in this paper photon mapping and bidirectional path tracing are hybrid methods while the others are feed backwards.
+Another possibility to classify rendering algorithms is between stochastic and deterministic ones. Of the presented examples, the ray marching  and the compensated ray marching are deterministic, the others are stochastic. 
 
 
 
