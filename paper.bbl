@@ -72,6 +72,14 @@
 \newblock URL: \url{https://doi.org/10.1145/3451256}, \href
   {https://doi.org/10.1145/3451256} {\path{doi:10.1145/3451256}}.
 
+\bibitem[HMC{\etalchar{*}}00]{4384237}
+\textsc{Huang J., Mueller K., Crawfis R., Bartz D., Meissner M.}:
+\newblock A practical evaluation of popular volume rendering algorithms.
+\newblock In \emph{2000 IEEE Symposium on Volume Visualization (VV 2000)}
+  (2000), pp.~81--90.
+\newblock \href {https://doi.org/10.1109/VV.2000.10009}
+  {\path{doi:10.1109/VV.2000.10009}}.
+
 \bibitem[JC98]{10.1145/280814.280925}
 \textsc{Jensen H.~W., Christensen P.~H.}:
 \newblock Efficient simulation of light transport in scenes with participating
@@ -87,6 +95,11 @@
 \newblock Global illumination using photon maps.
 \newblock In \emph{Proceedings of the Eurographics Workshop on Rendering
   Techniques '96} (Berlin, Heidelberg, 1996), Springer-Verlag, p.~21–30.
+
+\bibitem[JLA{\etalchar{*}}03]{mc_siggraph}
+\textsc{Jensen H., Lecturers J., Arvo, Dutre P., Keller A., Owen A., Pharr M.,
+  Shirley P.}:
+\newblock Monte carlo ray tracing siggraph 2003 course 44, 07 2003.
 
 \bibitem[Kah55]{P-766}
 \textsc{Kahn H.}:
@@ -142,6 +155,23 @@
 \newblock \href {https://doi.org/10.1109/2945.468400}
   {\path{doi:10.1109/2945.468400}}.
 
+\bibitem[MK15]{morgan-delta-tracking}
+\textsc{Morgan L., Kotlyar D.}:
+\newblock Weighted-delta-tracking for monte carlo particle transport.
+\newblock \emph{Annals of Nuclear Energy 85} (08 2015).
+\newblock \href {https://doi.org/10.1016/j.anucene.2015.07.038}
+  {\path{doi:10.1016/j.anucene.2015.07.038}}.
+
+\bibitem[NGD{\etalchar{*}}06]{10.1145/1179352.1141986}
+\textsc{Narasimhan S.~G., Gupta M., Donner C., Ramamoorthi R., Nayar S.~K.,
+  Jensen H.~W.}:
+\newblock Acquiring scattering properties of participating media by dilution.
+\newblock In \emph{ACM SIGGRAPH 2006 Papers} (New York, NY, USA, 2006),
+  SIGGRAPH '06, Association for Computing Machinery, p.~1003–1012.
+\newblock URL: \url{https://doi.org/10.1145/1179352.1141986}, \href
+  {https://doi.org/10.1145/1179352.1141986}
+  {\path{doi:10.1145/1179352.1141986}}.
+
 \bibitem[NSJ14]{10.1145/2661229.2661292}
 \textsc{Nov\'{a}k J., Selle A., Jarosz W.}:
 \newblock Residual ratio tracking for estimating attenuation in participating
@@ -179,6 +209,19 @@
   Association for Computing Machinery, p.~419–428.
 \newblock URL: \url{https://doi.org/10.1145/218380.218498}, \href
   {https://doi.org/10.1145/218380.218498} {\path{doi:10.1145/218380.218498}}.
+
+\bibitem[Wes91]{Westover1991SplattingAP}
+\textsc{Westover L.}:
+\newblock Splatting: a parallel, feed-forward volume rendering algorithm.
+
+\bibitem[Wik23]{wiki:Probability_density_function}
+\textsc{Wikipedia}:
+\newblock {Probability density function} --- {W}ikipedia{,} the free
+  encyclopedia.
+\newblock
+  \url{http://en.wikipedia.org/w/index.php?title=Probability\%20density\%20function&oldid=1130726352},
+  2023.
+\newblock [Online; accessed 13-January-2023].
 
 \bibitem[WMG98]{729595}
 \textsc{Wittenbrink C., Malzbender T., Goss M.}:

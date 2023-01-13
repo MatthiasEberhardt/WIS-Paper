@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.10.23)  13 JAN 2023 15:56
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.10.23)  13 JAN 2023 18:30
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -593,48 +593,24 @@ Overfull \hbox (4.00002pt too wide) in paragraph at lines 36--36
  [][] 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 36--37
-
- []
-
 (./figures/fig_interactions.pdf_tex
-<figures//fig_interactions.pdf, id=14, page=1, 270.3012pt x 142.26378pt>
+<figures//fig_interactions.pdf, id=18, page=1, 270.3012pt x 142.26378pt>
 File: figures//fig_interactions.pdf Graphic file (type pdf)
 <use figures//fig_interactions.pdf, page 1>
 Package pdftex.def Info: figures//fig_interactions.pdf , page1 used on input li
 ne 56.
 (pdftex.def)             Requested size: 240.0pt x 126.31696pt.
-<figures//fig_interactions.pdf, id=15, page=2, 270.3012pt x 142.26378pt>
+<figures//fig_interactions.pdf, id=19, page=2, 270.3012pt x 142.26378pt>
 File: figures//fig_interactions.pdf Graphic file (type pdf)
 <use figures//fig_interactions.pdf, page 2>
 Package pdftex.def Info: figures//fig_interactions.pdf , page2 used on input li
 ne 62.
 (pdftex.def)             Requested size: 240.0pt x 126.31696pt.
-) (./figures/fig_cylinder.pdf_tex
-<figures//fig_cylinder.pdf, id=20, page=1, 597.50786pt x 711.31892pt>
-File: figures//fig_cylinder.pdf Graphic file (type pdf)
-<use figures//fig_cylinder.pdf, page 1>
-Package pdftex.def Info: figures//fig_cylinder.pdf , page1 used on input line 5
-6.
-(pdftex.def)             Requested size: 240.0pt x 285.71645pt.
-<figures//fig_cylinder.pdf, id=21, page=2, 597.50786pt x 711.31892pt>
-File: figures//fig_cylinder.pdf Graphic file (type pdf)
-<use figures//fig_cylinder.pdf, page 2>
-Package pdftex.def Info: figures//fig_cylinder.pdf , page2 used on input line 5
-9.
-(pdftex.def)             Requested size: 240.0pt x 285.71645pt.
-<figures//fig_cylinder.pdf, id=22, page=3, 597.50786pt x 711.31892pt>
-File: figures//fig_cylinder.pdf Graphic file (type pdf)
-<use figures//fig_cylinder.pdf, page 3>
-Package pdftex.def Info: figures//fig_cylinder.pdf , page3 used on input line 6
-2.
-(pdftex.def)             Requested size: 240.0pt x 285.71645pt.
 )
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 8.99994pt on input line 94.
-LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 9
-4.
+(Font)              scaled to size 8.99994pt on input line 82.
+LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 8
+2.
 
 (c:/texlive/2022/texmf-dist/tex/latex/psnfss/ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
@@ -645,8 +621,27 @@ File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 
 pdfTeX warning: pdflatex.exe (file ./figures//fig_interactions.pdf): PDF inclus
 ion: multiple pdfs with page group included in a single page
->] (./figures/fig_projected_cylinder.pdf_tex
-<figures//fig_projected_cylinder.pdf, id=57, page=1, 597.50786pt x 597.50786pt>
+>] (./figures/fig_cylinder.pdf_tex
+<figures//fig_cylinder.pdf, id=55, page=1, 597.50786pt x 711.31892pt>
+File: figures//fig_cylinder.pdf Graphic file (type pdf)
+<use figures//fig_cylinder.pdf, page 1>
+Package pdftex.def Info: figures//fig_cylinder.pdf , page1 used on input line 5
+6.
+(pdftex.def)             Requested size: 240.0pt x 285.71645pt.
+<figures//fig_cylinder.pdf, id=56, page=2, 597.50786pt x 711.31892pt>
+File: figures//fig_cylinder.pdf Graphic file (type pdf)
+<use figures//fig_cylinder.pdf, page 2>
+Package pdftex.def Info: figures//fig_cylinder.pdf , page2 used on input line 5
+9.
+(pdftex.def)             Requested size: 240.0pt x 285.71645pt.
+<figures//fig_cylinder.pdf, id=57, page=3, 597.50786pt x 711.31892pt>
+File: figures//fig_cylinder.pdf Graphic file (type pdf)
+<use figures//fig_cylinder.pdf, page 3>
+Package pdftex.def Info: figures//fig_cylinder.pdf , page3 used on input line 6
+2.
+(pdftex.def)             Requested size: 240.0pt x 285.71645pt.
+) (./figures/fig_projected_cylinder.pdf_tex
+<figures//fig_projected_cylinder.pdf, id=63, page=1, 597.50786pt x 597.50786pt>
 
 File: figures//fig_projected_cylinder.pdf Graphic file (type pdf)
 <use figures//fig_projected_cylinder.pdf, page 1>
@@ -655,25 +650,25 @@ put line 56.
 (pdftex.def)             Requested size: 240.0pt x 240.0018pt.
 )
 (./figures/fig_light_changes.pdf_tex
-<figures//fig_light_changes.pdf, id=61, page=1, 853.58266pt x 455.2441pt>
+<figures//fig_light_changes.pdf, id=67, page=1, 853.58266pt x 455.2441pt>
 File: figures//fig_light_changes.pdf Graphic file (type pdf)
 <use figures//fig_light_changes.pdf, page 1>
 Package pdftex.def Info: figures//fig_light_changes.pdf , page1 used on input l
 ine 56.
 (pdftex.def)             Requested size: 240.0pt x 127.9954pt.
-<figures//fig_light_changes.pdf, id=62, page=2, 853.58266pt x 455.2441pt>
+<figures//fig_light_changes.pdf, id=68, page=2, 853.58266pt x 455.2441pt>
 File: figures//fig_light_changes.pdf Graphic file (type pdf)
 <use figures//fig_light_changes.pdf, page 2>
 Package pdftex.def Info: figures//fig_light_changes.pdf , page2 used on input l
 ine 60.
 (pdftex.def)             Requested size: 240.0pt x 127.9954pt.
-<figures//fig_light_changes.pdf, id=63, page=3, 853.58266pt x 455.2441pt>
+<figures//fig_light_changes.pdf, id=69, page=3, 853.58266pt x 455.2441pt>
 File: figures//fig_light_changes.pdf Graphic file (type pdf)
 <use figures//fig_light_changes.pdf, page 3>
 Package pdftex.def Info: figures//fig_light_changes.pdf , page3 used on input l
 ine 62.
 (pdftex.def)             Requested size: 240.0pt x 127.9954pt.
-<figures//fig_light_changes.pdf, id=64, page=4, 853.58266pt x 455.2441pt>
+<figures//fig_light_changes.pdf, id=70, page=4, 853.58266pt x 455.2441pt>
 File: figures//fig_light_changes.pdf Graphic file (type pdf)
 <use figures//fig_light_changes.pdf, page 4>
 Package pdftex.def Info: figures//fig_light_changes.pdf , page4 used on input l
@@ -691,36 +686,20 @@ pdfTeX warning: pdflatex.exe (file ./figures//fig_cylinder.pdf): PDF inclusion:
 
 pdfTeX warning: pdflatex.exe (file ./figures//fig_projected_cylinder.pdf): PDF 
 inclusion: multiple pdfs with page group included in a single page
-> <./figures//fig_light_changes.pdf
-
-pdfTeX warning: pdflatex.exe (file ./figures//fig_light_changes.pdf): PDF inclu
-sion: multiple pdfs with page group included in a single page
-> <./figures//fig_light_changes.pdf
-
-pdfTeX warning: pdflatex.exe (file ./figures//fig_light_changes.pdf): PDF inclu
-sion: multiple pdfs with page group included in a single page
-> <./figures//fig_light_changes.pdf
-
-pdfTeX warning: pdflatex.exe (file ./figures//fig_light_changes.pdf): PDF inclu
-sion: multiple pdfs with page group included in a single page
-> <./figures//fig_light_changes.pdf
-
-pdfTeX warning: pdflatex.exe (file ./figures//fig_light_changes.pdf): PDF inclu
-sion: multiple pdfs with page group included in a single page
 >]
-Underfull \hbox (badness 2573) in paragraph at lines 164--167
+Underfull \hbox (badness 2573) in paragraph at lines 165--168
 \T1/ptm/m/n/9 This in-te-gral is an-a-lyt-i-cally un-solv-able in the gen-eral 
 case
  []
 
 (./figures/fig_simple_algorithm.pdf_tex
-<figures//fig_simple_algorithm.pdf, id=102, page=1, 711.31892pt x 569.05513pt>
+<figures//fig_simple_algorithm.pdf, id=110, page=1, 711.31892pt x 569.05513pt>
 File: figures//fig_simple_algorithm.pdf Graphic file (type pdf)
 <use figures//fig_simple_algorithm.pdf, page 1>
 Package pdftex.def Info: figures//fig_simple_algorithm.pdf , page1 used on inpu
 t line 56.
 (pdftex.def)             Requested size: 240.0pt x 192.00006pt.
-<figures//fig_simple_algorithm.pdf, id=103, page=2, 711.31892pt x 569.05513pt>
+<figures//fig_simple_algorithm.pdf, id=111, page=2, 711.31892pt x 569.05513pt>
 File: figures//fig_simple_algorithm.pdf Graphic file (type pdf)
 <use figures//fig_simple_algorithm.pdf, page 2>
 Package pdftex.def Info: figures//fig_simple_algorithm.pdf , page2 used on inpu
@@ -731,42 +710,58 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 []
  []
 
-[3 <./figures//fig_simple_algorithm.pdf> <./figures//fig_simple_algorithm.pdf
+[3 <./figures//fig_light_changes.pdf> <./figures//fig_light_changes.pdf
+
+pdfTeX warning: pdflatex.exe (file ./figures//fig_light_changes.pdf): PDF inclu
+sion: multiple pdfs with page group included in a single page
+> <./figures//fig_light_changes.pdf
+
+pdfTeX warning: pdflatex.exe (file ./figures//fig_light_changes.pdf): PDF inclu
+sion: multiple pdfs with page group included in a single page
+> <./figures//fig_light_changes.pdf
+
+pdfTeX warning: pdflatex.exe (file ./figures//fig_light_changes.pdf): PDF inclu
+sion: multiple pdfs with page group included in a single page
+> <./figures//fig_simple_algorithm.pdf
 
 pdfTeX warning: pdflatex.exe (file ./figures//fig_simple_algorithm.pdf): PDF in
 clusion: multiple pdfs with page group included in a single page
->] (./figures/fig_monte_carlo.pdf_tex
-<figures//fig_monte_carlo.pdf, id=154, page=1, 853.58266pt x 512.1496pt>
+> <./figures//fig_simple_algorithm.pdf
+
+pdfTeX warning: pdflatex.exe (file ./figures//fig_simple_algorithm.pdf): PDF in
+clusion: multiple pdfs with page group included in a single page
+>] [4] (./figures/fig_monte_carlo.pdf_tex
+<figures//fig_monte_carlo.pdf, id=188, page=1, 853.58266pt x 512.1496pt>
 File: figures//fig_monte_carlo.pdf Graphic file (type pdf)
 <use figures//fig_monte_carlo.pdf, page 1>
 Package pdftex.def Info: figures//fig_monte_carlo.pdf , page1 used on input lin
 e 56.
 (pdftex.def)             Requested size: 240.0pt x 143.99483pt.
-<figures//fig_monte_carlo.pdf, id=155, page=2, 853.58266pt x 512.1496pt>
+<figures//fig_monte_carlo.pdf, id=189, page=2, 853.58266pt x 512.1496pt>
 File: figures//fig_monte_carlo.pdf Graphic file (type pdf)
 <use figures//fig_monte_carlo.pdf, page 2>
 Package pdftex.def Info: figures//fig_monte_carlo.pdf , page2 used on input lin
 e 61.
 (pdftex.def)             Requested size: 240.0pt x 143.99483pt.
-<figures//fig_monte_carlo.pdf, id=156, page=3, 853.58266pt x 512.1496pt>
+<figures//fig_monte_carlo.pdf, id=190, page=3, 853.58266pt x 512.1496pt>
 File: figures//fig_monte_carlo.pdf Graphic file (type pdf)
 <use figures//fig_monte_carlo.pdf, page 3>
 Package pdftex.def Info: figures//fig_monte_carlo.pdf , page3 used on input lin
 e 63.
 (pdftex.def)             Requested size: 240.0pt x 143.99483pt.
-<figures//fig_monte_carlo.pdf, id=157, page=4, 853.58266pt x 512.1496pt>
+<figures//fig_monte_carlo.pdf, id=191, page=4, 853.58266pt x 512.1496pt>
 File: figures//fig_monte_carlo.pdf Graphic file (type pdf)
 <use figures//fig_monte_carlo.pdf, page 4>
 Package pdftex.def Info: figures//fig_monte_carlo.pdf , page4 used on input lin
 e 65.
 (pdftex.def)             Requested size: 240.0pt x 143.99483pt.
-<figures//fig_monte_carlo.pdf, id=158, page=5, 853.58266pt x 512.1496pt>
+<figures//fig_monte_carlo.pdf, id=192, page=5, 853.58266pt x 512.1496pt>
 File: figures//fig_monte_carlo.pdf Graphic file (type pdf)
 <use figures//fig_monte_carlo.pdf, page 5>
 Package pdftex.def Info: figures//fig_monte_carlo.pdf , page5 used on input lin
 e 67.
 (pdftex.def)             Requested size: 240.0pt x 143.99483pt.
-) [4]
+)
 LaTeX Font Info:    Trying to load font information for U+dsrom on input line 3
 29.
 
@@ -774,76 +769,30 @@ LaTeX Font Info:    Trying to load font information for U+dsrom on input line 3
 File: Udsrom.fd 1995/08/01 v0.1 Double stroke roman font definitions
 )
 (./figures/fig_delta_tracking.pdf_tex
-<figures//fig_delta_tracking.pdf, id=192, page=1, 569.05513pt x 569.05513pt>
+<figures//fig_delta_tracking.pdf, id=206, page=1, 569.05513pt x 569.05513pt>
 File: figures//fig_delta_tracking.pdf Graphic file (type pdf)
 <use figures//fig_delta_tracking.pdf, page 1>
 Package pdftex.def Info: figures//fig_delta_tracking.pdf , page1 used on input 
 line 56.
 (pdftex.def)             Requested size: 240.0pt x 240.00008pt.
-<figures//fig_delta_tracking.pdf, id=193, page=2, 569.05513pt x 569.05513pt>
+<figures//fig_delta_tracking.pdf, id=207, page=2, 569.05513pt x 569.05513pt>
 File: figures//fig_delta_tracking.pdf Graphic file (type pdf)
 <use figures//fig_delta_tracking.pdf, page 2>
 Package pdftex.def Info: figures//fig_delta_tracking.pdf , page2 used on input 
 line 59.
 (pdftex.def)             Requested size: 240.0pt x 240.00008pt.
-<figures//fig_delta_tracking.pdf, id=194, page=3, 569.05513pt x 569.05513pt>
+<figures//fig_delta_tracking.pdf, id=208, page=3, 569.05513pt x 569.05513pt>
 File: figures//fig_delta_tracking.pdf Graphic file (type pdf)
 <use figures//fig_delta_tracking.pdf, page 3>
 Package pdftex.def Info: figures//fig_delta_tracking.pdf , page3 used on input 
 line 61.
 (pdftex.def)             Requested size: 240.0pt x 240.00008pt.
-<figures//fig_delta_tracking.pdf, id=195, page=4, 569.05513pt x 569.05513pt>
+<figures//fig_delta_tracking.pdf, id=209, page=4, 569.05513pt x 569.05513pt>
 File: figures//fig_delta_tracking.pdf Graphic file (type pdf)
 <use figures//fig_delta_tracking.pdf, page 4>
 Package pdftex.def Info: figures//fig_delta_tracking.pdf , page4 used on input 
 line 68.
 (pdftex.def)             Requested size: 240.0pt x 240.00008pt.
-)
-(./figures/fig_delta_tracking_distance_a.pdf_tex
-<figures//fig_delta_tracking_distance_a.pdf, id=201, page=1, 569.05513pt x 569.
-05513pt>
-File: figures//fig_delta_tracking_distance_a.pdf Graphic file (type pdf)
-<use figures//fig_delta_tracking_distance_a.pdf, page 1>
-Package pdftex.def Info: figures//fig_delta_tracking_distance_a.pdf , page1 use
-d on input line 56.
-(pdftex.def)             Requested size: 115.19897pt x 115.19829pt.
-<figures//fig_delta_tracking_distance_a.pdf, id=202, page=2, 569.05513pt x 569.
-05513pt>
-File: figures//fig_delta_tracking_distance_a.pdf Graphic file (type pdf)
-<use figures//fig_delta_tracking_distance_a.pdf, page 2>
-Package pdftex.def Info: figures//fig_delta_tracking_distance_a.pdf , page2 use
-d on input line 60.
-(pdftex.def)             Requested size: 115.19897pt x 115.19829pt.
-<figures//fig_delta_tracking_distance_a.pdf, id=203, page=3, 569.05513pt x 569.
-05513pt>
-File: figures//fig_delta_tracking_distance_a.pdf Graphic file (type pdf)
-<use figures//fig_delta_tracking_distance_a.pdf, page 3>
-Package pdftex.def Info: figures//fig_delta_tracking_distance_a.pdf , page3 use
-d on input line 62.
-(pdftex.def)             Requested size: 115.19897pt x 115.19829pt.
-)
-(./figures/fig_delta_tracking_distance_b.pdf_tex
-<figures//fig_delta_tracking_distance_b.pdf, id=204, page=1, 569.05513pt x 569.
-05513pt>
-File: figures//fig_delta_tracking_distance_b.pdf Graphic file (type pdf)
-<use figures//fig_delta_tracking_distance_b.pdf, page 1>
-Package pdftex.def Info: figures//fig_delta_tracking_distance_b.pdf , page1 use
-d on input line 56.
-(pdftex.def)             Requested size: 115.19897pt x 115.19829pt.
-<figures//fig_delta_tracking_distance_b.pdf, id=205, page=2, 569.05513pt x 569.
-05513pt>
-File: figures//fig_delta_tracking_distance_b.pdf Graphic file (type pdf)
-<use figures//fig_delta_tracking_distance_b.pdf, page 2>
-Package pdftex.def Info: figures//fig_delta_tracking_distance_b.pdf , page2 use
-d on input line 60.
-(pdftex.def)             Requested size: 115.19897pt x 115.19829pt.
-<figures//fig_delta_tracking_distance_b.pdf, id=206, page=3, 569.05513pt x 569.
-05513pt>
-File: figures//fig_delta_tracking_distance_b.pdf Graphic file (type pdf)
-<use figures//fig_delta_tracking_distance_b.pdf, page 3>
-Package pdftex.def Info: figures//fig_delta_tracking_distance_b.pdf , page3 use
-d on input line 62.
-(pdftex.def)             Requested size: 115.19897pt x 115.19829pt.
 )
 Underfull \hbox (badness 10000) has occurred while \output is active
 []
@@ -881,56 +830,44 @@ usion: multiple pdfs with page group included in a single page
 
 pdfTeX warning: pdflatex.exe (file ./figures//fig_delta_tracking.pdf): PDF incl
 usion: multiple pdfs with page group included in a single page
-> <./figures//fig_delta_tracking_distance_a.pdf
-
-pdfTeX warning: pdflatex.exe (file ./figures//fig_delta_tracking_distance_a.pdf
-): PDF inclusion: multiple pdfs with page group included in a single page
-> <./figures//fig_delta_tracking_distance_a.pdf
-
-pdfTeX warning: pdflatex.exe (file ./figures//fig_delta_tracking_distance_a.pdf
-): PDF inclusion: multiple pdfs with page group included in a single page
-> <./figures//fig_delta_tracking_distance_a.pdf
-
-pdfTeX warning: pdflatex.exe (file ./figures//fig_delta_tracking_distance_a.pdf
-): PDF inclusion: multiple pdfs with page group included in a single page
-> <./figures//fig_delta_tracking_distance_b.pdf
-
-pdfTeX warning: pdflatex.exe (file ./figures//fig_delta_tracking_distance_b.pdf
-): PDF inclusion: multiple pdfs with page group included in a single page
-> <./figures//fig_delta_tracking_distance_b.pdf
-
-pdfTeX warning: pdflatex.exe (file ./figures//fig_delta_tracking_distance_b.pdf
-): PDF inclusion: multiple pdfs with page group included in a single page
-> <./figures//fig_delta_tracking_distance_b.pdf
-
-pdfTeX warning: pdflatex.exe (file ./figures//fig_delta_tracking_distance_b.pdf
-): PDF inclusion: multiple pdfs with page group included in a single page
 >] (./figures/fig_bidirectional.pdf_tex
-<figures//fig_bidirectional.pdf, id=237, page=1, 739.77165pt x 455.2441pt>
+<figures//fig_bidirectional.pdf, id=244, page=1, 739.77165pt x 455.2441pt>
 File: figures//fig_bidirectional.pdf Graphic file (type pdf)
 <use figures//fig_bidirectional.pdf, page 1>
 Package pdftex.def Info: figures//fig_bidirectional.pdf , page1 used on input l
 ine 56.
 (pdftex.def)             Requested size: 240.0pt x 147.68861pt.
-<figures//fig_bidirectional.pdf, id=238, page=2, 739.77165pt x 455.2441pt>
+<figures//fig_bidirectional.pdf, id=245, page=2, 739.77165pt x 455.2441pt>
 File: figures//fig_bidirectional.pdf Graphic file (type pdf)
 <use figures//fig_bidirectional.pdf, page 2>
 Package pdftex.def Info: figures//fig_bidirectional.pdf , page2 used on input l
 ine 60.
 (pdftex.def)             Requested size: 240.0pt x 147.68861pt.
-<figures//fig_bidirectional.pdf, id=239, page=3, 739.77165pt x 455.2441pt>
+<figures//fig_bidirectional.pdf, id=246, page=3, 739.77165pt x 455.2441pt>
 File: figures//fig_bidirectional.pdf Graphic file (type pdf)
 <use figures//fig_bidirectional.pdf, page 3>
 Package pdftex.def Info: figures//fig_bidirectional.pdf , page3 used on input l
 ine 62.
 (pdftex.def)             Requested size: 240.0pt x 147.68861pt.
-<figures//fig_bidirectional.pdf, id=240, page=4, 739.77165pt x 455.2441pt>
+<figures//fig_bidirectional.pdf, id=247, page=4, 739.77165pt x 455.2441pt>
 File: figures//fig_bidirectional.pdf Graphic file (type pdf)
 <use figures//fig_bidirectional.pdf, page 4>
 Package pdftex.def Info: figures//fig_bidirectional.pdf , page4 used on input l
 ine 64.
 (pdftex.def)             Requested size: 240.0pt x 147.68861pt.
-) (./paper.bbl (./paper.brf)
+) [6 <./figures//fig_bidirectional.pdf> <./figures//fig_bidirectional.pdf
+
+pdfTeX warning: pdflatex.exe (file ./figures//fig_bidirectional.pdf): PDF inclu
+sion: multiple pdfs with page group included in a single page
+> <./figures//fig_bidirectional.pdf
+
+pdfTeX warning: pdflatex.exe (file ./figures//fig_bidirectional.pdf): PDF inclu
+sion: multiple pdfs with page group included in a single page
+> <./figures//fig_bidirectional.pdf
+
+pdfTeX warning: pdflatex.exe (file ./figures//fig_bidirectional.pdf): PDF inclu
+sion: multiple pdfs with page group included in a single page
+>] (./paper.bbl (./paper.brf)
 \tf@brf=\write5
 \openout5 = `paper.brf'.
 
@@ -946,19 +883,7 @@ Underfull \hbox (badness 3942) in paragraph at lines 10--10
 . 11\T1/ptm/m/n/8 , 2 (jul
  []
 
-[6 <./figures//fig_bidirectional.pdf> <./figures//fig_bidirectional.pdf
 
-pdfTeX warning: pdflatex.exe (file ./figures//fig_bidirectional.pdf): PDF inclu
-sion: multiple pdfs with page group included in a single page
-> <./figures//fig_bidirectional.pdf
-
-pdfTeX warning: pdflatex.exe (file ./figures//fig_bidirectional.pdf): PDF inclu
-sion: multiple pdfs with page group included in a single page
-> <./figures//fig_bidirectional.pdf
-
-pdfTeX warning: pdflatex.exe (file ./figures//fig_bidirectional.pdf): PDF inclu
-sion: multiple pdfs with page group included in a single page
->]
 Underfull \hbox (badness 1048) in paragraph at lines 32--32
 []\T1/ptm/m/sc/8 Cerezo E., Pérez F., Pueyo X., Seron F. J., Sil-
  []
@@ -1027,97 +952,122 @@ Underfull \hbox (badness 4108) in paragraph at lines 74--74
  []
 
 
-Underfull \hbox (badness 2205) in paragraph at lines 84--84
+Underfull \hbox (badness 2205) in paragraph at lines 92--92
 []\T1/ptm/m/sc/8 Jensen H. W., Chris-tensen P. H.\T1/ptm/m/n/8 :  Ef-fi-cient s
 im-u-la-
  []
 
 
-Underfull \hbox (badness 2401) in paragraph at lines 84--84
+Underfull \hbox (badness 2401) in paragraph at lines 92--92
 \T1/ptm/m/n/8 ton maps.  In \T1/ptm/m/it/8 Pro-ceed-ings of the 25th An-nual Co
 n-fer-ence on
  []
 
 
-Underfull \hbox (badness 2818) in paragraph at lines 84--84
+Underfull \hbox (badness 2818) in paragraph at lines 92--92
 \T1/ptm/m/it/8 Com-puter Graph-ics and In-ter-ac-tive Tech-niques \T1/ptm/m/n/8
  (New York, NY,
  []
 
 
-Underfull \hbox (badness 4254) in paragraph at lines 104--104
+Underfull \hbox (badness 4254) in paragraph at lines 117--117
 \T1/ptm/m/n/8 niques in com-puter graph-ics.  \T1/ptm/m/it/8 Com-put-ers & Grap
 h-ics 28\T1/ptm/m/n/8 , 6
  []
 
 
-Underfull \hbox (badness 7168) in paragraph at lines 111--111
+Underfull \hbox (badness 7168) in paragraph at lines 124--124
 \T1/ptm/m/n/8 URL: [][]$\T1/pcr/m/n/8 https : / / doi . org / 10 . 1145 / 96496
 5 . 808594$[][]\T1/ptm/m/n/8 , [][]$\T1/pcr/m/n/8 doi :
  []
 
 
-Underfull \hbox (badness 1024) in paragraph at lines 197--197
+Underfull \hbox (badness 2772) in paragraph at lines 174--174
+[]\T1/ptm/m/sc/8 Narasimhan S. G., Gupta M., Don-ner C., Ra-
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+[]
+ []
+
+[7]
+Underfull \hbox (badness 2495) in paragraph at lines 225--225
+\T1/ptm/m/n/8 en-cy-clo-pe-dia.  [][]$\T1/pcr/m/n/8 http : / / en . wikipedia .
+ org / w / index . php ?
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 225--225
+\T1/pcr/m/n/8 title = Probability % 20density % 20function & oldid =
+ []
+
+
+Underfull \hbox (badness 1024) in paragraph at lines 240--240
 []\T1/ptm/m/sc/8 Zhou K., Ren Z., Lin S., Bao H., Guo B., Shum
  []
 
 
-Underfull \hbox (badness 1033) in paragraph at lines 197--197
+Underfull \hbox (badness 1033) in paragraph at lines 240--240
 \T1/ptm/m/n/8 Tech. Rep. MSR-TR-2007-142, Septem-ber 2007.  URL: [][]$\T1/pcr/m
 /n/8 https :
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 197--197
+Underfull \hbox (badness 10000) in paragraph at lines 240--240
 \T1/pcr/m/n/8 / / www . microsoft . com / en-[]us / research / publication /
  []
 
 
-Overfull \hbox (48.10017pt too wide) in paragraph at lines 197--197
+Overfull \hbox (48.10017pt too wide) in paragraph at lines 240--240
 \T1/pcr/m/n/8 real-[]time-[]smoke-[]rendering-[]using-[]compensated-[]ray-[]mar
 ching/$[][]\T1/ptm/m/n/8 .
  []
 
-))
-Underfull \hbox (badness 10000) has occurred while \output is active
-[]
- []
+)) [8
 
-[7] (./paper.aux)
+] (./paper.aux)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 
 Package rerunfilecheck Warning: File `paper.brf' has changed.
 (rerunfilecheck)                Rerun to get bibliographical references right.
 
 Package rerunfilecheck Info: Checksums for `paper.brf':
-(rerunfilecheck)             Before: 9FAB23DACCB9C53ECE4F1A36A44306D3;3538
-(rerunfilecheck)             After:  9B9A1AAB902745A559494CF73724B06B;3538.
+(rerunfilecheck)             Before: B4A2683227E8FF429FED4E0E6F332A0F;4274
+(rerunfilecheck)             After:  1329841B227541DB2AB83682E31ACC5F;4094.
  ) 
 Here is how much of TeX's memory you used:
- 14385 strings out of 475071
- 249075 string characters out of 5782907
- 624829 words of memory out of 5000000
- 35371 multiletter control sequences out of 15000+600000
- 531013 words of font info for 120 fonts, out of 8000000 for 9000
+ 14384 strings out of 475071
+ 247926 string characters out of 5782907
+ 630463 words of memory out of 5000000
+ 35367 multiletter control sequences out of 15000+600000
+ 529369 words of font info for 119 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 94i,16n,92p,983b,550s stack positions out of 10000i,1000n,20000p,200000b,200000s
-{c:/texlive/2022/texmf-dist/fonts/enc/dvips/base/8r.enc}<c:/texlive/2022/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2022/texmf-dist/fo
-nts/type1/public/amsfonts/cmextra/cmex9.pfb><c:/texlive/2022/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmr10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmsy5.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6
-.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/t
-exlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb><c:/texlive/202
-2/texmf-dist/fonts/type1/public/doublestroke/dsrom8.pfb><c:/texlive/2022/texmf-
-dist/fonts/type1/urw/courier/ucrr8a.pfb><c:/texlive/2022/texmf-dist/fonts/type1
-/urw/helvetic/uhvr8a.pfb><c:/texlive/2022/texmf-dist/fonts/type1/urw/symbol/usy
-r.pfb><c:/texlive/2022/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/
-2022/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/texlive/2022/texmf-dist/fo
-nts/type1/urw/times/utmri8a.pfb>
-Output written on paper.pdf (7 pages, 222464 bytes).
+ 94i,15n,92p,983b,546s stack positions out of 10000i,1000n,20000p,200000b,200000s
+
+pdfTeX warning (dest): name{figure.caption.9} has been referenced but does not 
+exist, replaced by a fixed one
+
+{c:/texlive/2022/texmf-dist/fonts/enc/dvips/base/8r.enc}<c:/texlive/2022/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2022/texmf-dist/font
+s/type1/public/amsfonts/cmextra/cmex9.pfb><c:/texlive/2022/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmr10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmsy5.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.p
+fb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/tex
+live/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb><c:/texlive/2022/
+texmf-dist/fonts/type1/public/doublestroke/dsrom8.pfb><c:/texlive/2022/texmf-di
+st/fonts/type1/urw/courier/ucrr8a.pfb><c:/texlive/2022/texmf-dist/fonts/type1/u
+rw/helvetic/uhvr8a.pfb><c:/texlive/2022/texmf-dist/fonts/type1/urw/symbol/usyr.
+pfb><c:/texlive/2022/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/20
+22/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/texlive/2022/texmf-dist/font
+s/type1/urw/times/utmri8a.pfb>
+Output written on paper.pdf (8 pages, 224472 bytes).
 PDF statistics:
- 457 PDF objects out of 1000 (max. 8388607)
- 374 compressed objects within 4 object streams
- 89 named destinations out of 1000 (max. 500000)
- 168 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 499 PDF objects out of 1000 (max. 8388607)
+ 421 compressed objects within 5 object streams
+ 98 named destinations out of 1000 (max. 500000)
+ 138 words of extra memory for PDF output out of 10000 (max. 10000000)
 

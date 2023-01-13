@@ -7,56 +7,65 @@ Reallocated global_strs (elt_size=200001) to 20 items from 10.
 Reallocated glb_str_end (elt_size=4) to 20 items from 10.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: bib.bib
-Repeated entry---line 777 of file bib.bib
+Warning--entry type for "mc_siggraph" isn't style-file defined
+--line 561 of file bib.bib
+Repeated entry---line 871 of file bib.bib
  : @article{10.1145/2661229.2661292
  :                                 ,
 I'm skipping whatever remains of this entry
-You're missing a field part---line 929 of file bib.bib
+You're missing a field part---line 1023 of file bib.bib
  : number = 
  :          ,
 I'm skipping whatever remains of this entry
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Name 3 in "Jensen, Henrik and Lecturers, James and Arvo, and Dutre, Phil and Keller, Alexander and Owen, Art and Pharr, Matt and Shirley, Peter" has a comma at the end for entry mc_siggraph
+while executing---line 3437 of file eg-alpha-doi.bst
+Name 3 in "Jensen, Henrik and Lecturers, James and Arvo, and Dutre, Phil and Keller, Alexander and Owen, Art and Pharr, Matt and Shirley, Peter" has a comma at the end for entry mc_siggraph
+while executing---line 3437 of file eg-alpha-doi.bst
 Warning--empty journal in osti_4167844
+Name 3 in "Jensen, Henrik and Lecturers, James and Arvo, and Dutre, Phil and Keller, Alexander and Owen, Art and Pharr, Matt and Shirley, Peter" has a comma at the end for entry mc_siggraph
+while executing---line 3595 of file eg-alpha-doi.bst
+Warning--empty booktitle in Westover1991SplattingAP
 Warning--empty institution in zhou2007real-time
-You've used 26 entries,
+You've used 32 entries,
             3585 wiz_defined-function locations,
-            931 strings with 10844 characters,
-and the built_in function-call counts, 14477 in all, are:
-= -- 1503
-> -- 551
-< -- 10
-+ -- 186
-- -- 183
-* -- 1074
-:= -- 2016
-add.period$ -- 71
-call.type$ -- 26
-change.case$ -- 170
-chr.to.int$ -- 26
-cite$ -- 28
-duplicate$ -- 511
-empty$ -- 1235
-format.name$ -- 214
-if$ -- 3557
+            970 strings with 12153 characters,
+and the built_in function-call counts, 17813 in all, are:
+= -- 1827
+> -- 713
+< -- 12
++ -- 244
+- -- 240
+* -- 1297
+:= -- 2486
+add.period$ -- 85
+call.type$ -- 32
+change.case$ -- 217
+chr.to.int$ -- 32
+cite$ -- 35
+duplicate$ -- 632
+empty$ -- 1503
+format.name$ -- 276
+if$ -- 4365
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 26
-newline$ -- 153
-num.names$ -- 81
-pop$ -- 261
+missing$ -- 30
+newline$ -- 185
+num.names$ -- 99
+pop$ -- 346
 preamble$ -- 1
-purify$ -- 199
+purify$ -- 252
 quote$ -- 0
-skip$ -- 941
+skip$ -- 1157
 stack$ -- 0
-substring$ -- 530
-swap$ -- 184
-text.length$ -- 10
-text.prefix$ -- 9
+substring$ -- 615
+swap$ -- 229
+text.length$ -- 12
+text.prefix$ -- 11
 top$ -- 0
-type$ -- 224
-warning$ -- 2
-while$ -- 90
-width$ -- 29
-write$ -- 375
-(There were 2 error messages)
+type$ -- 278
+warning$ -- 3
+while$ -- 109
+width$ -- 37
+write$ -- 452
+(There were 5 error messages)

@@ -34,7 +34,7 @@
 \maketitle
 %-------------------------------------------------------------------------
 \begin{abstract}
-Volumetric ray tracing comprises different techniques to visualize volumetric data by sending rays within the volume and sampling it at various points. In this paper, we aim to introduce the reader to the mathematical theory of volumetric ray tracing, as well as to provide a detailed description of three basic algorithms that are used to render ambient, direct and global lighting respectively. Furthermore, we also provide a short description of some more speciliazed monte carlo ray tracer. At last, we provide the reader with a summary and refernces to related topics.
+Volumetric ray tracing comprises different techniques to visualize volumetric data by sending rays within the volume and sampling it at various points. In this paper, we aim to introduce the reader to the mathematical theory of volumetric ray tracing, as well as to provide a detailed description of three basic algorithms that are used to render ambient, direct and global lighting respectively. Furthermore, we also provide a short description of some more speciliazed monte carlo ray tracer. At last, we provide the reader with a summary and references to related topics.
 \end{abstract}  
 %-------------------------------------------------------------------------
 
@@ -50,7 +50,7 @@ Volumetric ray tracing comprises different techniques to visualize volumetric da
 
 \section{Introduction}
 In Computer Graphics, objects usually are represented as a set of geometric primitives \cite{KOBBELT2004801} (e.g. triangles), displaying the surface of the object. However, this approach is not always suitable. For example, if the original data representation of the object is volumetric, the traditional rendering technique would necessitate the creation of an intermediate surface representation that might introduce unwanted artifacts\cite{511}. Another issue arises if the object has no well-defined surfaces to which geometric primitives could be fitted, such as a cloud or fog\cite{10.1145/964965.808594}. In such cases, volumetric ray tracing might be used, a technique in which rays are cast through a volume that contains information about its optical properties (e.g color and opacity), sampled at various points within the volume, accumulated, and projected on a 2D image (see figure \ref{fig:simple_algorithm})\cite{511}.
-We begin our paper by introducing the reader to the mathematical formalisms of volumetric ray tracing in chapter \ref{sec:math}. In chapter \ref{sec:ray_marching}, we make certain assumptions about the mathematical model that allow us to describe simple volume rendering algorithms by foregoing global illumination. Afterwards, we introduce the monte carlo ray tracer, capable of rendering global illlumation, as well as mathematical methods necessary for its formulation. We then present a selection of specialized variants of the monte carlo ray tracer in chapter \ref{sec:mc_algorithms}. In the final chapter \ref{sec:conclusion}, we draw a comparison and provide the reader with references to further work. 
+We begin our paper by introducing the reader to the mathematical formalisms of volumetric ray tracing in chapter \ref{sec:math}. In chapter \ref{sec:ray_marching}, we make certain assumptions about the mathematical model that allow us to describe simple volume rendering algorithms by foregoing global illumination. Afterwards, we introduce a monte carlo ray tracer, capable of rendering global illlumation, as well as mathematical methods necessary for its formulation. We then present a selection of specialized variants of the monte carlo ray tracer in chapter \ref{sec:mc_algorithms}. In the final chapter \ref{sec:conclusion}, we draw a comparison and provide the reader with references to further work. 
 
 
 
@@ -219,7 +219,7 @@ As a simplification, we assume all variables to be piecewise constant\cite{10.11
 \end{equation} 
 
 
-for one line segment between $p_{i-1}$ and $p_i$ with $\tau(p_0, p_i)$.
+for one line segment between $p_{i-1}$ and $p_i$ with $\tau(p_0, p_i)$ equal to
 
 
 \begin{equation}
@@ -315,8 +315,8 @@ To calculate $p_{i+1} = p_i - \,\omega t_i$ from a given $p_i$ and $\omega_i$, t
 \begin{equation} \label{eq:collision_p}
 1 - \tau({p_i, p_{i+1}})
 \end{equation}
-which is also the probability density of t_i.
-This can be used to importance sample \cite{osti_4167844} the distance $t_i$ by inverting equation \ref{eq:collision_p} and applying the resulting function to $\xi$  (a random variable uniformly sampled from $[0,1]$). However, $\tau$ is defined as $e^{-\int_{0}^{t_i}\mu_t(s)ds}$, which can't be easily inverted if the medium is heterogenous (if $\mu_t$ is not constant).
+which is also the probability density of $t_i$.
+This can be used to importance sample \cite{osti_4167844} the distance $t_i$ by inverting equation \ref{eq:collision_p} and applying the resulting function to $\xi$  (a random variable uniformly sampled from $[0,1]$). However, $\tau$ is defined as $e^{-\int_{0}^{t_i}\mu_t(s)ds}$, which can't be easily inverted if the medium is heterogenous.
 Delta tracking (also known as woodcock tracking) solves this problem by introducing so-called fictitious particles, which neither scatter nor absorb light rays \cite{10.1145/2661229.2661292}. Their distribution $\mu_f$ is chosen so that the sum of $\mu_t$ and $\mu_f$ add up to a globally constant value, the so-called majorant $\overline{\mu}$.
 The original problem of finding a real collision is then reformulated to finding any collision (fictitious or real).
 Since $\overline{\mu}$ is homogenous, equation \ref{eq:collision_p} can easily be inverted \cite{morgan-delta-tracking} and we get
@@ -345,7 +345,7 @@ The real collision is then selected as the path vertex $p_{i+1}$.
 \label{fig:delta_tracking}
 \end{figure}
 
-
+\begin{comment}
 Delta tracking can also be used to estimate the transmittance $\tau$ between two points $p'$ and $p - \omega t$\cite{10.1145/2661229.2661292} \cite{10.1145/2661229.2661292}. This is done by using delta tracking to find a real collision on the ray from $p$ to $p'$. If this collision occurs before $p'$, $\tau$ is assumed to be 0, if the collision occurs after $p'$, $\tau$ is estimated as 1 (see figure \ref{fig:delta_tracking_distance}). However, there exist other, more sophisticated methods for estimating transmittance, such as ratio tracking.
 
 \begin{figure}
@@ -360,7 +360,7 @@ Delta tracking can also be used to estimate the transmittance $\tau$ between two
 
 \caption{Estimation of transmittance by delta tracking. On the left, the first real collision takes place after $p'$. Thus, $\tau$ is estimated as 1. On the right, a real collision happens before $p'$, and $\tau$ is estimated as 0. Image inspired by Galtier et al. \cite{GALTIER201357}.} \label{fig:delta_tracking_distance}
 \end{figure}
-
+\end{comment}
 
 \subsection{Ratio Tracking}
 Ratio tracking \cite{10.1145/2661229.2661292} is used to estimate the transmittance between two already known points $p$ and $p'$. This is done by calculating various collision points between $p$ and $p'$, as described above, and stops once a collision point behind $p'$ is found. At each collision point $p^i$, the value $1 - \frac{\mu_t}(p^i){\overline{\mu}}$ is saved. This fraction between fictitious particles and all particles describes the probability, that a light ray can pass $p^i$ without real collision \cite{10.1145/2661229.2661292}. The transmittance $\tau$ can then be estimated as 
@@ -394,18 +394,12 @@ In a preprocessing step, the original volume $\mathcal{V}$ is split into a volum
 In this chapter, we provide the reader with an overview of various other approaches to volume rendering and classify the herre presented algorithms within that context. Furthermore, we draw a comparison between the presented algorithms and briefly discuss their strength and weaknesses.
 \subsection{Classification and Further Work}
 On the most basic level volume rendering can be divided into direct and indirect rendering\cite{Westover1991SplattingAP, 4384237}. Indirect rendering requires a pre-processing step to create intermediate surface data, which then is rendered in a second step.
-Direct algorithms (which includes all algorithms presented in this paper) work directly on the volume data and can be further subdivided into feed forward and feed backward methods. Feed forward methods work by starting with data and determining how much each data point contributes to the final image \cite{10.5555/94788} (e.g. by tracing paths from the light towards the camera).
-Feed backwards algorithms work the opposite way. Of the algorithms presented in this paper photon mapping and bidirectional path tracing are hybrid methods while the others are feed backwards.
+Direct algorithms (which includes all algorithms presented in this paper) work directly on the volume data and can be further subdivided into feed forward and feed backward methods. Feed forward methods work by starting with data and determining how much each data point contributes to the final image \cite{10.5555/94788} (e.g. by tracing paths from the light towards the camera), feed backwards algorithms work the opposite way. Of the algorithms presented in this paper photon mapping and bidirectional path tracing are hybrid methods while the others are feed backwards.
 Another possibility to classify rendering algorithms is between stochastic and deterministic ones. Of the presented examples, the ray marching  and the compensated ray marching are deterministic, the others stochastic. 
+An overview of the various methods is provided by Marmitt et al. \cite{Marmitt2006InteractiveVR}, Huang et al. \cite{4384237} and Raab et al. \cite{10.1007/978-3-540-74496-2_35}.
 \subsection{Comparison}
 
 
-
-In this chapter, we provide the reader with some context by 
-Volume rendering is an extensive topic which comprises several approaches, which on the most basic level can be divided into direct and indirect rendering\cite{Westover1991SplattingAP, 4384237}. Indirect rendering requires a pre-processing step to create intermediate surface data, which then is rendered in a second step.
-Direct algorithms (which includes all algorithms presented in this paper) work directly on the volume data and can be further subdivided into feed forward and feed backward methods. Feed forward methods work by starting with data and determining how much each data point contributes to the final image \cite{10.5555/94788} (e.g. by tracing paths from the light towards the camera).
-Feed backwards algorithms work the opposite way. Of the algorithms presented in this paper photon mapping and bidirectional path tracing are hybrid methods while the others are feed backwards.
-Another possibility to classify rendering algorithms is between stochastic and deterministic ones. Of the presented examples, the ray marching  and the compensated ray marching are deterministic, the others are stochastic. 
 
 
 
