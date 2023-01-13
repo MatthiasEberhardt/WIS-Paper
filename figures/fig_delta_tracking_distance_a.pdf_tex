@@ -54,14 +54,14 @@
     \lineheight{1}%
     \setlength\tabcolsep{0pt}%
     \put(0,0){\includegraphics[width=\unitlength,page=1]{fig_delta_tracking_distance_a.pdf}}%
-    \put(0.12037528,0.06563736){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$p_i$\end{tabular}}}}%
-    \put(0.697882,0.7782538){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$p_{i+1}$\end{tabular}}}}%
-    \put(0.53242214,0.95353998){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$p_i^3$\end{tabular}}}}%
+    \put(0.16800032,0.12913651){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$p$\end{tabular}}}}%
+    \put(0.69259041,0.7782538){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$p'$\end{tabular}}}}%
+    \put(0.76128075,0.92213933){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$p^3$\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=2]{fig_delta_tracking_distance_a.pdf}}%
-    \put(0.04775736,0.20059654){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\omega_i$\end{tabular}}}}%
+    \put(0.04775736,0.20059654){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\omega$\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=3]{fig_delta_tracking_distance_a.pdf}}%
-    \put(0.42833164,0.42319389){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$p_i^1$\end{tabular}}}}%
-    \put(0.33158169,0.61048149){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$p_i^2$\end{tabular}}}}%
+    \put(0.39922745,0.42319389){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$p^1$\end{tabular}}}}%
+    \put(0.53378792,0.60783566){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$p^2$\end{tabular}}}}%
     \put(0.06687914,0.95268319){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}null collision\end{tabular}}}}%
     \put(0.06687914,0.8980582){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}real collision\end{tabular}}}}%
   \end{picture}%

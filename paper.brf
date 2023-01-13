@@ -14,8 +14,8 @@
 \backcite {468400}{{2}{2.2}{figure.caption.4}}
 \backcite {10.1145/280814.280925}{{2}{2.2}{figure.caption.4}}
 \backcite {10.1145/280814.280925, Cerezo2005}{{2}{2.2}{equation.2.7}}
+\backcite {10.1145/965141.563893}{{2}{2.2}{equation.2.7}}
 \backcite {zhou2007real-time}{{3}{4}{figure.caption.4}}
-\backcite {10.1145/965141.563893}{{3}{2.2}{equation.2.7}}
 \backcite {10.1145/280814.280925}{{3}{2.2}{equation.2.7}}
 \backcite {zhou2007real-time}{{3}{2.2}{equation.2.8}}
 \backcite {10.1145/964965.808594}{{3}{2.3}{equation.2.10}}
@@ -50,14 +50,15 @@
 \backcite {10.1145/2661229.2661292}{{5}{4.2}{figure.caption.7}}
 \backcite {10.1145/2661229.2661292}{{5}{4.3}{subsection.4.3}}
 \backcite {GALTIER201357}{{6}{8}{figure.caption.8}}
+\backcite {10.1145/2661229.2661292}{{6}{4.3}{subsection.4.3}}
 \backcite {metropolis}{{6}{5.1}{subsection.5.1}}
 \backcite {metropolis}{{6}{5.1}{subsection.5.1}}
 \backcite {10.1007/978-3-7091-6303-0_2}{{6}{5.1}{subsection.5.1}}
 \backcite {bidirectional-ray-tracing}{{6}{5.2}{subsection.5.2}}
 \backcite {10.5555/275458.275468}{{6}{5.2}{subsection.5.2}}
 \backcite {10.1145/280814.280925}{{6}{5.3}{subsection.5.3}}
+\backcite {10.5555/275458.275468}{{6}{9}{figure.caption.9}}
 \backcite {10.5555/275458.275461}{{6}{5.3}{subsection.5.3}}
 \backcite {10.1145/280814.280925}{{6}{5.3}{subsection.5.3}}
-\backcite {10.5555/275458.275468}{{6}{9}{figure.caption.9}}
 \backcite {10.1145/280814.280925}{{6}{5.3}{subsection.5.3}}
 \backcite {zhou2007real-time}{{6}{5.4}{subsection.5.4}}

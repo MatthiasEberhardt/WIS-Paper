@@ -54,13 +54,13 @@
     \lineheight{1}%
     \setlength\tabcolsep{0pt}%
     \put(0,0){\includegraphics[width=\unitlength,page=1]{fig_delta_tracking_distance_b.pdf}}%
-    \put(0.12037528,0.06563736){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$p_i$\end{tabular}}}}%
-    \put(0.74428185,0.9354569){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$p_{i+1}$\end{tabular}}}}%
-    \put(0.69920395,0.77162916){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$p_i^3$\end{tabular}}}}%
+    \put(0.17836912,0.11187378){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$p$\end{tabular}}}}%
+    \put(0.74428185,0.9354569){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$p'$\end{tabular}}}}%
+    \put(0.67010017,0.77162916){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$p^3$\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=2]{fig_delta_tracking_distance_b.pdf}}%
-    \put(0.04775736,0.20059654){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\omega_i$\end{tabular}}}}%
+    \put(0.04775736,0.20059654){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\omega$\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=3]{fig_delta_tracking_distance_b.pdf}}%
-    \put(0.42833164,0.42319389){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$p_i^1$\end{tabular}}}}%
-    \put(0.33158169,0.61048149){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$p_i^2$\end{tabular}}}}%
+    \put(0.40716496,0.42319389){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$p^1$\end{tabular}}}}%
+    \put(0.53842884,0.61048149){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$p^2$\end{tabular}}}}%
   \end{picture}%
 \endgroup%

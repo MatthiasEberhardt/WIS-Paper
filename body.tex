@@ -49,16 +49,16 @@
 
 
 \section{Introduction}
-In Computer Graphics, objects usually are represented as a set of geometric primitives \cite{KOBBELT2004801} (e.g. triangles), displaying the surface of the object. However, this approach is not always suitable. For example, if the original data representation of the object is volumetric, the traditional rendering technique would necessitate the creation of an intermediate surface representation that might introduce unwanted artifacts\cite{511}. Another issue arises if the object has no well-defined surfaces to which geometric primitives could be fitted, such as a cloud or fog\cite{10.1145/964965.808594}. In such cases, volumetric ray tracing might be used, a technique in which rays are cast through a volume that contains information about its optical properties(e.g color and opacity), sampled at various points within the volume, accumulated, and projected on a 2D image (see figure 1)\cite{511}.
+In Computer Graphics, objects usually are represented as a set of geometric primitives \cite{KOBBELT2004801} (e.g. triangles), displaying the surface of the object. However, this approach is not always suitable. For example, if the original data representation of the object is volumetric, the traditional rendering technique would necessitate the creation of an intermediate surface representation that might introduce unwanted artifacts\cite{511}. Another issue arises if the object has no well-defined surfaces to which geometric primitives could be fitted, such as a cloud or fog\cite{10.1145/964965.808594}. In such cases, volumetric ray tracing might be used, a technique in which rays are cast through a volume that contains information about its optical properties (e.g color and opacity), sampled at various points within the volume, accumulated, and projected on a 2D image (see figure \ref{fig:light_interactions})\cite{511}.
 
 
 
 
 
-\section{Derivation Of The Rendering Equation}
+\section{Derivation of the Rendering Equation}
 Volumetric ray tracing follows the same principle as classical ray tracing in which an image is rendered by spanning a pixel plane in front of the camera and casting one or multiple rays through each pixel.
 That means for a point ${x}$ on the plane we cast a ray in direction $-\omega$ and calculate the amount of light ${x}$ receives from direction $\omega$, called $L({x},\omega )$\cite{10.5555/94788}.
-To do this, we calculate ${y}$, the closest intersection point of the ray with a piece of geometry. At ${y}$, some amount of light is transported from ${y}$ in direction $\omega$ (either through reflection or emission), called $L_e({y},\omega )$ (The method for calculating $L_e$ is a topic of classical raytracing\cite{10.5555/94788} and will not be further evaluated in this paper. In the following, we assume $L_e$ to be known).
+To do this, we find ${y}$, the closest intersection point of the ray with a piece of geometry. At ${y}$, some amount of light is transported from ${y}$ in direction $\omega$ (either through reflection or emission), called $L_e({y},\omega )$ (The method for calculating $L_e$ is a topic of classical raytracing\cite{10.5555/94788} and will not be further evaluated in this paper. In the following, we assume $L_e$ to be known).
 Thus, we get the equation 
 
 \begin{equation}\label{eq:no_attenuation}
@@ -70,7 +70,7 @@ L({x},\omega ) = L_e({y}, \omega )
 \def\svgwidth{\columnwidth}
 \import{figures/}{fig_interactions.pdf_tex}
 
-\caption{An overview of the possible interactions a light ray can experience in a participating medium. The light might travel through the medium unimpeded (1, e.g. in a clear atmosphere), might be out- or in-scattered (2 and 3, e.g. in clouds), or absorbed (4, e.g. in smoke). Additionally, light might be emitted from inside the medium (5, e.g. in a fire).}
+\caption{An overview of the possible interactions a light ray can experience in a participating medium. The light might travel through the medium unimpeded (1, e.g. in a clear atmosphere), might be out or in-scattered (2 and 3, e.g. in clouds), or absorbed (4, e.g. in smoke). Additionally, light might be emitted from inside the medium (5, e.g. in a fire).}
 \label{fig:light_interactions}
 \end{figure}
 
@@ -78,7 +78,7 @@ L({x},\omega ) = L_e({y}, \omega )
 However, this equation assumes that the light has no interactions between ${x}$ and ${y}$, which is only true if the ray travels through a vacuum. If it travels through a medium that interacts with it (called a participating medium), the interactions change the light along the ray\cite{10.5555/275458.275468} (see figure \ref{fig:light_interactions}). The types of interactions we need to consider are absorption, emission, in-scattering, and out-scattering\cite{468400}.
 
 Absorption and out-scattering attenuate the light intensity along the ray, in-scattering and emission add to it.
-\subsection{Absorbtion And Out-Scattering}
+\subsection{Absorption And Out-Scattering}
 At first, let us consider only out-scattering and absorption, which occur due to tiny particles floating around in the volume (such as water droplets in clouds and fog).
 Of course, these particles are far too numerous to be directly simulated, but their distribution in 3D space can be stochastically modeled (similar to how detailed surface structures can be modeled by microfacets \cite{10.1145/965141.563893} in surface ray tracing).
 
@@ -146,7 +146,7 @@ In-scattered light can arrive at ${u}$ from every direction, therefore we need t
 \begin{equation}
 \int_{\Omega} L({u}, \omega `)d\omega `
 \end{equation}
-However, not all light arriving at ${u}$ is scattered towards $\omega $. The so called phase function $f_p({u}, \omega , -\omega `)$ describes the probality that light hitting a particle at ${u}$ from $\omega `$ is reflected towards $\omega$ \cite{10.1145/280814.280925, Cerezo2005} [CHECK FIRST CITATION]. In this sense, it is analogous to the BRDF \cite{10.1145/965141.563893} in surface ray tracing. Furthermore, the amount of light scattered towards $\omega $ also depends on the probability that in-scattering particles are present at ${u}$\cite{10.1145/280814.280925}. We assume that in-scattering particles are the same as out-scattering particles and get the equation
+However, not all light arriving at ${u}$ is scattered towards $\omega $. The so called phase function $f_p({u}, \omega , -\omega `)$ describes the probality that light hitting a particle at ${u}$ from $\omega `$ is reflected towards $\omega$ \cite{10.1145/280814.280925, Cerezo2005}. In this sense, it is analogous to the BRDF \cite{10.1145/965141.563893} in surface ray tracing. Furthermore, the amount of light scattered towards $\omega $ also depends on the probability that in-scattering particles are present at ${u}$\cite{10.1145/280814.280925}. Assuming that in and out-scattering particles are the same results in the equation
 \begin{equation}
 L_e^s({u}, \omega ) = {\mu}_s({u})\int_{\Omega} f_p({u}, \omega , -\omega `)L({u}, \omega `)d\omega `  + {\mu}_a({u})\varepsilon ({u}, \omega )
 \end{equation}
@@ -342,7 +342,7 @@ Delta tracking can also be used to estimate the transmittance $\tau$ between two
     \import{figures/}{fig_delta_tracking_distance_b.pdf_tex}
 
 
-\caption{Image inspired by Galtier et al. \cite{GALTIER201357}.} \label{fig:delta_tracking_distance}
+\caption{Estimation of transmittance by delta tracking. On the left, the first real collision takes place after $p'$. Thus, $\tau$ is estimated as 1. On the right, a real collision happens before $p'$ is reached, and $\tau$ is estimated as 0. Image inspired by Galtier et al. \cite{GALTIER201357}.} \label{fig:delta_tracking_distance}
 \end{figure}
 
 
@@ -372,8 +372,11 @@ Jensen and Christensen \cite{10.1145/280814.280925} extended this method to part
 \subsection{Compensated Ray Marching}
 This algorithm, developed by Zhou et al. \cite{zhou2007real-time} follows the same idea as photon mapping, but computes its photon distribution on an approximation of the original volume.
 In a preprocessing step, the original volume $\mathcal{V}$ is split into a volume $\widetilde{\mathcal{V}}$ and a residual volume $\mathcal{R} = \mathcal{V} - \widetilde{\mathcal{V}}$. $\widetilde{\mathcal{V}}$ is a low frequency approximation to $\mathcal{V}$ and $\mathcal{R}$ is its error. The global lighting is calculated on $\widetilde{\mathcal{V}}$ and is afterwards rendered using ray marching (similarily as in \ref{sec:ray_marching}). During the ray marching $\mathcal{R}$ is used to compensate for errors in $\widetilde{\mathcal{V}}$.
-\section{Conclusion}
-
+\section{Conclusion and Further Works}
+Volume rendering is an extensive topic which comprises several different approaches, which on the most basic level can be divided into direct and indirect rendering. Indirect rendering requires a pre-processing step to create intermediate surface data, which then is rendered in a second step.
+Direct algorithms (which includes all algorithms presented in this paper) work directly on the volume data and can be further subdivided into feed forward and feed backward methods. Feed forward methods work by starting with data and determining how much each data point contributes to the final result (e.g. by tracing paths from the light towards the camera).
+Feed backwards algorithms work the opposite way. Of the algorithms presented in this paper photon mapping and bidirectional path tracing are hybrid methods while the others are feed backwards.
+Another possibility to classify rendering algorithms is between stochastic and deterministic ones. Of the presented examples, the ray marching  and the compensated ray marching are deterministic, the others are stochastic.
 
 
 
