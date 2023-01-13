@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.10.23)  13 JAN 2023 05:00
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.10.23)  13 JAN 2023 05:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -742,31 +742,31 @@ n/9 and $\OML/ptmcm/m/it/9 p[]$\T1/ptm/m/n/9 . The quan-tity
  []
 
 (./figures/fig_monte_carlo.pdf_tex
-<figures//fig_monte_carlo.pdf, id=149, page=1, 853.58266pt x 512.1496pt>
+<figures//fig_monte_carlo.pdf, id=152, page=1, 853.58266pt x 512.1496pt>
 File: figures//fig_monte_carlo.pdf Graphic file (type pdf)
 <use figures//fig_monte_carlo.pdf, page 1>
 Package pdftex.def Info: figures//fig_monte_carlo.pdf , page1 used on input lin
 e 56.
 (pdftex.def)             Requested size: 240.0pt x 143.99483pt.
-<figures//fig_monte_carlo.pdf, id=150, page=2, 853.58266pt x 512.1496pt>
+<figures//fig_monte_carlo.pdf, id=153, page=2, 853.58266pt x 512.1496pt>
 File: figures//fig_monte_carlo.pdf Graphic file (type pdf)
 <use figures//fig_monte_carlo.pdf, page 2>
 Package pdftex.def Info: figures//fig_monte_carlo.pdf , page2 used on input lin
 e 61.
 (pdftex.def)             Requested size: 240.0pt x 143.99483pt.
-<figures//fig_monte_carlo.pdf, id=151, page=3, 853.58266pt x 512.1496pt>
+<figures//fig_monte_carlo.pdf, id=154, page=3, 853.58266pt x 512.1496pt>
 File: figures//fig_monte_carlo.pdf Graphic file (type pdf)
 <use figures//fig_monte_carlo.pdf, page 3>
 Package pdftex.def Info: figures//fig_monte_carlo.pdf , page3 used on input lin
 e 63.
 (pdftex.def)             Requested size: 240.0pt x 143.99483pt.
-<figures//fig_monte_carlo.pdf, id=152, page=4, 853.58266pt x 512.1496pt>
+<figures//fig_monte_carlo.pdf, id=155, page=4, 853.58266pt x 512.1496pt>
 File: figures//fig_monte_carlo.pdf Graphic file (type pdf)
 <use figures//fig_monte_carlo.pdf, page 4>
 Package pdftex.def Info: figures//fig_monte_carlo.pdf , page4 used on input lin
 e 65.
 (pdftex.def)             Requested size: 240.0pt x 143.99483pt.
-<figures//fig_monte_carlo.pdf, id=153, page=5, 853.58266pt x 512.1496pt>
+<figures//fig_monte_carlo.pdf, id=156, page=5, 853.58266pt x 512.1496pt>
 File: figures//fig_monte_carlo.pdf Graphic file (type pdf)
 <use figures//fig_monte_carlo.pdf, page 5>
 Package pdftex.def Info: figures//fig_monte_carlo.pdf , page5 used on input lin
@@ -774,31 +774,31 @@ e 67.
 (pdftex.def)             Requested size: 240.0pt x 143.99483pt.
 ) [4]
 LaTeX Font Info:    Trying to load font information for U+dsrom on input line 3
-11.
+13.
 
 (c:/texlive/2022/texmf-dist/tex/latex/doublestroke/Udsrom.fd
 File: Udsrom.fd 1995/08/01 v0.1 Double stroke roman font definitions
 )
 (./figures/fig_delta_tracking.pdf_tex
-<figures//fig_delta_tracking.pdf, id=187, page=1, 569.05513pt x 569.05513pt>
+<figures//fig_delta_tracking.pdf, id=189, page=1, 569.05513pt x 569.05513pt>
 File: figures//fig_delta_tracking.pdf Graphic file (type pdf)
 <use figures//fig_delta_tracking.pdf, page 1>
 Package pdftex.def Info: figures//fig_delta_tracking.pdf , page1 used on input 
 line 56.
 (pdftex.def)             Requested size: 240.0pt x 240.00008pt.
-<figures//fig_delta_tracking.pdf, id=188, page=2, 569.05513pt x 569.05513pt>
+<figures//fig_delta_tracking.pdf, id=190, page=2, 569.05513pt x 569.05513pt>
 File: figures//fig_delta_tracking.pdf Graphic file (type pdf)
 <use figures//fig_delta_tracking.pdf, page 2>
 Package pdftex.def Info: figures//fig_delta_tracking.pdf , page2 used on input 
 line 59.
 (pdftex.def)             Requested size: 240.0pt x 240.00008pt.
-<figures//fig_delta_tracking.pdf, id=189, page=3, 569.05513pt x 569.05513pt>
+<figures//fig_delta_tracking.pdf, id=191, page=3, 569.05513pt x 569.05513pt>
 File: figures//fig_delta_tracking.pdf Graphic file (type pdf)
 <use figures//fig_delta_tracking.pdf, page 3>
 Package pdftex.def Info: figures//fig_delta_tracking.pdf , page3 used on input 
 line 61.
 (pdftex.def)             Requested size: 240.0pt x 240.00008pt.
-<figures//fig_delta_tracking.pdf, id=190, page=4, 569.05513pt x 569.05513pt>
+<figures//fig_delta_tracking.pdf, id=192, page=4, 569.05513pt x 569.05513pt>
 File: figures//fig_delta_tracking.pdf Graphic file (type pdf)
 <use figures//fig_delta_tracking.pdf, page 4>
 Package pdftex.def Info: figures//fig_delta_tracking.pdf , page4 used on input 
@@ -806,21 +806,21 @@ line 68.
 (pdftex.def)             Requested size: 240.0pt x 240.00008pt.
 )
 (./figures/fig_delta_tracking_distance_a.pdf_tex
-<figures//fig_delta_tracking_distance_a.pdf, id=195, page=1, 569.05513pt x 569.
+<figures//fig_delta_tracking_distance_a.pdf, id=197, page=1, 569.05513pt x 569.
 05513pt>
 File: figures//fig_delta_tracking_distance_a.pdf Graphic file (type pdf)
 <use figures//fig_delta_tracking_distance_a.pdf, page 1>
 Package pdftex.def Info: figures//fig_delta_tracking_distance_a.pdf , page1 use
 d on input line 56.
 (pdftex.def)             Requested size: 115.19897pt x 115.19829pt.
-<figures//fig_delta_tracking_distance_a.pdf, id=196, page=2, 569.05513pt x 569.
+<figures//fig_delta_tracking_distance_a.pdf, id=198, page=2, 569.05513pt x 569.
 05513pt>
 File: figures//fig_delta_tracking_distance_a.pdf Graphic file (type pdf)
 <use figures//fig_delta_tracking_distance_a.pdf, page 2>
 Package pdftex.def Info: figures//fig_delta_tracking_distance_a.pdf , page2 use
 d on input line 60.
 (pdftex.def)             Requested size: 115.19897pt x 115.19829pt.
-<figures//fig_delta_tracking_distance_a.pdf, id=197, page=3, 569.05513pt x 569.
+<figures//fig_delta_tracking_distance_a.pdf, id=199, page=3, 569.05513pt x 569.
 05513pt>
 File: figures//fig_delta_tracking_distance_a.pdf Graphic file (type pdf)
 <use figures//fig_delta_tracking_distance_a.pdf, page 3>
@@ -829,21 +829,21 @@ d on input line 62.
 (pdftex.def)             Requested size: 115.19897pt x 115.19829pt.
 )
 (./figures/fig_delta_tracking_distance_b.pdf_tex
-<figures//fig_delta_tracking_distance_b.pdf, id=198, page=1, 569.05513pt x 569.
+<figures//fig_delta_tracking_distance_b.pdf, id=200, page=1, 569.05513pt x 569.
 05513pt>
 File: figures//fig_delta_tracking_distance_b.pdf Graphic file (type pdf)
 <use figures//fig_delta_tracking_distance_b.pdf, page 1>
 Package pdftex.def Info: figures//fig_delta_tracking_distance_b.pdf , page1 use
 d on input line 56.
 (pdftex.def)             Requested size: 115.19897pt x 115.19829pt.
-<figures//fig_delta_tracking_distance_b.pdf, id=199, page=2, 569.05513pt x 569.
+<figures//fig_delta_tracking_distance_b.pdf, id=201, page=2, 569.05513pt x 569.
 05513pt>
 File: figures//fig_delta_tracking_distance_b.pdf Graphic file (type pdf)
 <use figures//fig_delta_tracking_distance_b.pdf, page 2>
 Package pdftex.def Info: figures//fig_delta_tracking_distance_b.pdf , page2 use
 d on input line 60.
 (pdftex.def)             Requested size: 115.19897pt x 115.19829pt.
-<figures//fig_delta_tracking_distance_b.pdf, id=200, page=3, 569.05513pt x 569.
+<figures//fig_delta_tracking_distance_b.pdf, id=202, page=3, 569.05513pt x 569.
 05513pt>
 File: figures//fig_delta_tracking_distance_b.pdf Graphic file (type pdf)
 <use figures//fig_delta_tracking_distance_b.pdf, page 3>
@@ -887,50 +887,26 @@ usion: multiple pdfs with page group included in a single page
 
 pdfTeX warning: pdflatex.exe (file ./figures//fig_delta_tracking.pdf): PDF incl
 usion: multiple pdfs with page group included in a single page
-> <./figures//fig_delta_tracking_distance_a.pdf
-
-pdfTeX warning: pdflatex.exe (file ./figures//fig_delta_tracking_distance_a.pdf
-): PDF inclusion: multiple pdfs with page group included in a single page
-> <./figures//fig_delta_tracking_distance_a.pdf
-
-pdfTeX warning: pdflatex.exe (file ./figures//fig_delta_tracking_distance_a.pdf
-): PDF inclusion: multiple pdfs with page group included in a single page
-> <./figures//fig_delta_tracking_distance_a.pdf
-
-pdfTeX warning: pdflatex.exe (file ./figures//fig_delta_tracking_distance_a.pdf
-): PDF inclusion: multiple pdfs with page group included in a single page
-> <./figures//fig_delta_tracking_distance_b.pdf
-
-pdfTeX warning: pdflatex.exe (file ./figures//fig_delta_tracking_distance_b.pdf
-): PDF inclusion: multiple pdfs with page group included in a single page
-> <./figures//fig_delta_tracking_distance_b.pdf
-
-pdfTeX warning: pdflatex.exe (file ./figures//fig_delta_tracking_distance_b.pdf
-): PDF inclusion: multiple pdfs with page group included in a single page
-> <./figures//fig_delta_tracking_distance_b.pdf
-
-pdfTeX warning: pdflatex.exe (file ./figures//fig_delta_tracking_distance_b.pdf
-): PDF inclusion: multiple pdfs with page group included in a single page
 >] (./figures/fig_bidirectional.pdf_tex
-<figures//fig_bidirectional.pdf, id=230, page=1, 739.77165pt x 455.2441pt>
+<figures//fig_bidirectional.pdf, id=233, page=1, 739.77165pt x 455.2441pt>
 File: figures//fig_bidirectional.pdf Graphic file (type pdf)
 <use figures//fig_bidirectional.pdf, page 1>
 Package pdftex.def Info: figures//fig_bidirectional.pdf , page1 used on input l
 ine 56.
 (pdftex.def)             Requested size: 240.0pt x 147.68861pt.
-<figures//fig_bidirectional.pdf, id=231, page=2, 739.77165pt x 455.2441pt>
+<figures//fig_bidirectional.pdf, id=234, page=2, 739.77165pt x 455.2441pt>
 File: figures//fig_bidirectional.pdf Graphic file (type pdf)
 <use figures//fig_bidirectional.pdf, page 2>
 Package pdftex.def Info: figures//fig_bidirectional.pdf , page2 used on input l
 ine 60.
 (pdftex.def)             Requested size: 240.0pt x 147.68861pt.
-<figures//fig_bidirectional.pdf, id=232, page=3, 739.77165pt x 455.2441pt>
+<figures//fig_bidirectional.pdf, id=235, page=3, 739.77165pt x 455.2441pt>
 File: figures//fig_bidirectional.pdf Graphic file (type pdf)
 <use figures//fig_bidirectional.pdf, page 3>
 Package pdftex.def Info: figures//fig_bidirectional.pdf , page3 used on input l
 ine 62.
 (pdftex.def)             Requested size: 240.0pt x 147.68861pt.
-<figures//fig_bidirectional.pdf, id=233, page=4, 739.77165pt x 455.2441pt>
+<figures//fig_bidirectional.pdf, id=236, page=4, 739.77165pt x 455.2441pt>
 File: figures//fig_bidirectional.pdf Graphic file (type pdf)
 <use figures//fig_bidirectional.pdf, page 4>
 Package pdftex.def Info: figures//fig_bidirectional.pdf , page4 used on input l
@@ -957,7 +933,44 @@ Underfull \hbox (badness 1048) in paragraph at lines 32--32
 []\T1/ptm/m/sc/8 Cerezo E., Pérez F., Pueyo X., Seron F. J., Sil-
  []
 
+[6 <./figures//fig_delta_tracking_distance_a.pdf> <./figures//fig_delta_trackin
+g_distance_a.pdf
 
+pdfTeX warning: pdflatex.exe (file ./figures//fig_delta_tracking_distance_a.pdf
+): PDF inclusion: multiple pdfs with page group included in a single page
+> <./figures//fig_delta_tracking_distance_a.pdf
+
+pdfTeX warning: pdflatex.exe (file ./figures//fig_delta_tracking_distance_a.pdf
+): PDF inclusion: multiple pdfs with page group included in a single page
+> <./figures//fig_delta_tracking_distance_b.pdf
+
+pdfTeX warning: pdflatex.exe (file ./figures//fig_delta_tracking_distance_b.pdf
+): PDF inclusion: multiple pdfs with page group included in a single page
+> <./figures//fig_delta_tracking_distance_b.pdf
+
+pdfTeX warning: pdflatex.exe (file ./figures//fig_delta_tracking_distance_b.pdf
+): PDF inclusion: multiple pdfs with page group included in a single page
+> <./figures//fig_delta_tracking_distance_b.pdf
+
+pdfTeX warning: pdflatex.exe (file ./figures//fig_delta_tracking_distance_b.pdf
+): PDF inclusion: multiple pdfs with page group included in a single page
+> <./figures//fig_bidirectional.pdf
+
+pdfTeX warning: pdflatex.exe (file ./figures//fig_bidirectional.pdf): PDF inclu
+sion: multiple pdfs with page group included in a single page
+> <./figures//fig_bidirectional.pdf
+
+pdfTeX warning: pdflatex.exe (file ./figures//fig_bidirectional.pdf): PDF inclu
+sion: multiple pdfs with page group included in a single page
+> <./figures//fig_bidirectional.pdf
+
+pdfTeX warning: pdflatex.exe (file ./figures//fig_bidirectional.pdf): PDF inclu
+sion: multiple pdfs with page group included in a single page
+> <./figures//fig_bidirectional.pdf
+
+pdfTeX warning: pdflatex.exe (file ./figures//fig_bidirectional.pdf): PDF inclu
+sion: multiple pdfs with page group included in a single page
+>]
 Underfull \hbox (badness 10000) in paragraph at lines 62--62
 []\T1/ptm/m/sc/8 Galtier M., Blanco S., Caliot C., Coustet
  []
@@ -1003,19 +1016,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 62--62
  04 . 001$[][]\T1/ptm/m/n/8 .
  []
 
-[6 <./figures//fig_bidirectional.pdf> <./figures//fig_bidirectional.pdf
 
-pdfTeX warning: pdflatex.exe (file ./figures//fig_bidirectional.pdf): PDF inclu
-sion: multiple pdfs with page group included in a single page
-> <./figures//fig_bidirectional.pdf
-
-pdfTeX warning: pdflatex.exe (file ./figures//fig_bidirectional.pdf): PDF inclu
-sion: multiple pdfs with page group included in a single page
-> <./figures//fig_bidirectional.pdf
-
-pdfTeX warning: pdflatex.exe (file ./figures//fig_bidirectional.pdf): PDF inclu
-sion: multiple pdfs with page group included in a single page
->]
 Underfull \hbox (badness 10000) in paragraph at lines 74--74
 []\T1/ptm/m/sc/8 Hofmann N., Has-sel-gren J., Clar-berg P.,
  []
@@ -1090,14 +1091,19 @@ Underfull \hbox (badness 10000) has occurred while \output is active
  []
 
 [7] (./paper.aux)
-Package rerunfilecheck Info: File `paper.brf' has not changed.
-(rerunfilecheck)             Checksum: A95538564B00E94DEC868F52DADB05C1;3348.
+
+Package rerunfilecheck Warning: File `paper.brf' has changed.
+(rerunfilecheck)                Rerun to get bibliographical references right.
+
+Package rerunfilecheck Info: Checksums for `paper.brf':
+(rerunfilecheck)             Before: 4B675FAA4430932534F6028130C07973;3348
+(rerunfilecheck)             After:  C61340F2AA83698D27AA75FBC32925ED;3466.
  ) 
 Here is how much of TeX's memory you used:
- 14381 strings out of 475071
- 249003 string characters out of 5782907
- 625461 words of memory out of 5000000
- 35369 multiletter control sequences out of 15000+600000
+ 14383 strings out of 475071
+ 249043 string characters out of 5782907
+ 622538 words of memory out of 5000000
+ 35370 multiletter control sequences out of 15000+600000
  531013 words of font info for 120 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  94i,16n,92p,957b,550s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1115,10 +1121,10 @@ dist/fonts/type1/urw/courier/ucrr8a.pfb><c:/texlive/2022/texmf-dist/fonts/type1
 r.pfb><c:/texlive/2022/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/
 2022/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/texlive/2022/texmf-dist/fo
 nts/type1/urw/times/utmri8a.pfb>
-Output written on paper.pdf (7 pages, 222885 bytes).
+Output written on paper.pdf (7 pages, 222501 bytes).
 PDF statistics:
- 450 PDF objects out of 1000 (max. 8388607)
- 367 compressed objects within 4 object streams
- 87 named destinations out of 1000 (max. 500000)
+ 454 PDF objects out of 1000 (max. 8388607)
+ 371 compressed objects within 4 object streams
+ 88 named destinations out of 1000 (max. 500000)
  168 words of extra memory for PDF output out of 10000 (max. 10000000)
 

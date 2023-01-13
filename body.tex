@@ -215,15 +215,17 @@ As a simplification, we assume all variables to be piecewise constant\cite{10.11
 for one line segment between $p_{i-1}$ and $p_i$.
 The quantity $\mu_a(p_{i})\varepsilon (p_{i}, \omega)s$ describes the emitted light from $p_i$ and will from now on be referred to as the color $c(i)$. The product is the total attenuation (transparency) from ${x}$ to $p_i$, $\tau(p_{j-1}, p_j)$ is the attenuation from $p_{j-1}$ to $p_j$ and can be calculated by
 \begin{equation}
-\tau(p_{j-1}, p_j) = e^{-s\mu_t(j)}
+\tau(p_{j-1}, p_j) = e^{-s\mu_t(p_j)}
 \end{equation}
-However, in computer graphics, it is more common to use opacity instead of transparency. Therefore, we refer to $\tau(p_{j-1}, p_j)$ as $1 - \alpha(j)$ from now on, where $\alpha(j)$ is the opacity. Inserting this in formula for $\tau({x}, p_i)$ yields $\prod_{1 \le j \le i} (1 - \alpha(j))$.
-
+However, in computer graphics, it is more common to use opacity instead of transparency. Therefore, we refer to $\tau(p_{j-1}, p_j)$ as $1 - \alpha(j)$ from now on, where $\alpha(j)$ is the opacity \cite{10.1145/147130.147155}. Inserting this in formula for $\tau({x}, p_i)$ yields 
+\begin{equation} \label{eq:discrete_transmittance}
+\prod_{1 \le j \le i} (1 - \alpha(j))
+\end{equation}
 Again, we can refer to this quantity in terms of opacity rather than transparency by using the equality
 \begin{equation}
 1 - \beta(i) = \prod_{1 \le j \le i} (1 - \alpha(j))
 \end{equation}
-where $\beta(i)$ is the accumulated opacity between ${x}$ and $p_i$.
+where $\beta(i)$ is the accumulated opacity \cite{10.1145/147130.147155} between ${x}$ and $p_i$.
 Using these results, we can approximate the integral in equation \ref{eq:simplified_req} as the sum
 \begin{equation} \label{eq:discrete_approximation}
 L({x},\omega) = \sum_{1 \le i \le n}(1 - \beta(i))c(i)
@@ -241,8 +243,8 @@ When interpolating color, $c$ must be weighted with its associated opacity\cite{
 Until now, we have ignored scattering in the ray marching algorithm. In the following, we describe an approach to simulate single scattering (that is all light rays that are scattered only once) developed by Kajiya and Von Herzen\cite{10.1145/964965.808594} based on the work of Blinn\cite{10.1145/965145.801255}.
 This works as a two-step process.
 The first step is computed on a volume $\mathcal{V}$ containing opacity and albedo information and on a set of light sources $\{l_1, \ldots, l_m\}$.
-Based on $\mathcal{V}$, one voxelized volume $\mathcal{V}'_k$ is created for every light source $l_k$ in the following manner:
-For a voxel ${x}$ in $\mathcal{V}'_k$ and light source $l_k$ the amount of light ${x}$ receives from $l_k$ is calculated by attenuating the emmited light $\varepsilon(l_k)$ by the transmittance $\tau(\vec{x}, l_k) = \int_{{x}}^{l_k}(1 - \alpha({x'}))d{x'}$, which can be computed as described above.
+Based on $\mathcal{V}$, one discrete volume $\mathcal{V}'_k$ is created for every light source $l_k$ in the following manner:
+For a voxel ${x}$ in $\mathcal{V}'_k$ and light source $l_k$ the amount of light ${x}$ receives from $l_k$ is calculated by attenuating the emmited light $\varepsilon(l_k)$ by the transmittance $\tau(\vec{x}, l_k) = \int_{{x}}^{l_k}(1 - \alpha({x'}))d{x'}$, which can be computed as described above in equation \ref{eq:discrete_transmittance}.
  The albedo $a({x})$ regulates how much of the arriving light is reflected at ${x}$. Thus, the color of ${x}$ is
 \begin{equation}
 c_k({x}) = a({x}) \tau({x}, l_k) \varepsilon(l_k)
@@ -345,7 +347,7 @@ Delta tracking can also be used to estimate the transmittance $\tau$ between two
 
 
 \subsection{Ratio Tracking}
-Ratio tracking \cite{10.1145/2661229.2661292} is used to estimate the transmittance between two already known points $p$ and $p'$. This is done by calculating various collision points between $p$ and $p'$, as described above, and stops once a collision point behind $p'$ is reached. At each collision point $p^i$, the value $\frac{\mu_f}{\overline{\mu}} = 1 - \frac{\mu_t}{\overline{\mu}}$ is saved. This fraction between fictitious particles and all particles describes the probability, that a light ray can pass $p^i$ without real collision. The transmittance $\tau$ can then be estimated as 
+Ratio tracking \cite{10.1145/2661229.2661292} is used to estimate the transmittance between two already known points $p$ and $p'$. This is done by calculating various collision points between $p$ and $p'$, as described above, and stops once a collision point behind $p'$ is reached. At each collision point $p^i$, the value $\frac{\mu_f}{\overline{\mu}} = 1 - \frac{\mu_t}{\overline{\mu}}$ is saved. This fraction between fictitious particles and all particles describes the probability, that a light ray can pass $p^i$ without real collision \cite{10.1145/2661229.2661292}. The transmittance $\tau$ can then be estimated as 
 \begin{equation}
 \tau(p,p') = \prod_{1 \le i \le n}(1 - \frac{\mu_t(p^i)}{\overline{\mu}})
 \end{equation}
