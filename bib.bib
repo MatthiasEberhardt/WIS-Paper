@@ -277,7 +277,43 @@ numpages = {11},
 keywords = {delta tracking, transmittance, participating media}
 }
 
-@article{article,
+
+@unknown{mc_siggraph,
+author = {Jensen, Henrik and Lecturers, James and Arvo, and Dutre, Phil and Keller, Alexander and Owen, Art and Pharr, Matt and Shirley, Peter},
+year = {2003},
+month = {07},
+pages = {},
+title = {Monte Carlo Ray Tracing Siggraph 2003 Course 44}
+}
+
+@inproceedings{10.1145/1179352.1141986,
+author = {Narasimhan, Srinivasa G. and Gupta, Mohit and Donner, Craig and Ramamoorthi, Ravi and Nayar, Shree K. and Jensen, Henrik Wann},
+title = {Acquiring Scattering Properties of Participating Media by Dilution},
+year = {2006},
+isbn = {1595933646},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/1179352.1141986},
+doi = {10.1145/1179352.1141986},
+abstract = {The visual world around us displays a rich set of volumetric effects due to participating media. The appearance of these media is governed by several physical properties such as particle densities, shapes and sizes, which must be input (directly or indirectly) to a rendering algorithm to generate realistic images. While there has been significant progress in developing rendering techniques (for instance, volumetric Monte Carlo methods and analytic approximations), there are very few methods that measure or estimate these properties for media that are of relevance to computer graphics. In this paper, we present a simple device and technique for robustly estimating the properties of a broad class of participating media that can be either (a) diluted in water such as juices, beverages, paints and cleaning supplies, or (b) dissolved in water such as powders and sugar/salt crystals, or (c) suspended in water such as impurities. The key idea is to dilute the concentrations of the media so that single scattering effects dominate and multiple scattering becomes negligible, leading to a simple and robust estimation algorithm. Furthermore, unlike previous approaches that require complicated or separate measurement setups for different types or properties of media, our method and setup can be used to measure media with a complete range of absorption and scattering properties from a single HDR photograph. Once the parameters of the diluted medium are estimated, a volumetric Monte Carlo technique may be used to create renderings of any medium concentration and with multiple scattering. We have measured the scattering parameters of forty commonly found materials, that can be immediately used by the computer graphics community. We can also create realistic images of combinations or mixtures of the original measured materials, thus giving the user a wide flexibility in making realistic images of participating media.},
+booktitle = {ACM SIGGRAPH 2006 Papers},
+pages = {1003–1012},
+numpages = {10},
+location = {Boston, Massachusetts},
+series = {SIGGRAPH '06}
+}
+
+
+
+@misc{wiki:Probability_density_function,
+   author = "Wikipedia",
+   title = "{Probability density function} --- {W}ikipedia{,} The Free Encyclopedia",
+   year = "2023",
+   howpublished = {\url{http://en.wikipedia.org/w/index.php?title=Probability\%20density\%20function&oldid=1130726352}},
+   note = "[Online; accessed 13-January-2023]"
+ }
+
+@article{morgan-delta-tracking,
 author = {Morgan, Lee and Kotlyar, Dan},
 year = {2015},
 month = {08},

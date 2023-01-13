@@ -79,8 +79,8 @@ However, this equation assumes that the light has no interactions between ${x}$ 
 
 Absorption and out-scattering attenuate the light intensity along the ray, in-scattering and emission add to it.
 \subsection{Absorption and Out-Scattering}
-At first, let us consider only out-scattering and absorption, which occur due to tiny particles floating around in the volume (such as water droplets in clouds and fog).
-Of course, these particles are far too numerous to be directly simulated, but their distribution in 3D space can be stochastically modeled (similar to how detailed surface structures can be modeled by microfacets \cite{10.1145/965141.563893} in surface ray tracing).
+At first, let us consider only out-scattering and absorption, which (like in-scattering and emission) occur due to tiny particles suspended in the volume\cite{10.1145/1179352.1141986} (such as water droplets in clouds and fog).
+Of course, these particles are far too numerous to be directly simulated, but their distribution in 3D space can be stochastically modeled\cite{10.1145/1179352.1141986} (similar to how detailed surface structures can be modeled by microfacets \cite{10.1145/965141.563893} in surface ray tracing).
 
 \begin{figure}
 \centering
@@ -90,7 +90,7 @@ Of course, these particles are far too numerous to be directly simulated, but th
 \caption{Image adapted from Max \cite{468400}.}
 \label{fig:cylinder}
 \end{figure}
-We follow Max\cite{468400} in our development of the stochastical model: Consider a close-up look at a ray section traveling through the volume. This section is assumed as a cylinder with a base area $E$ and a height $\Delta h$ (see figure \ref{fig:cylinder}). Within it, there exists a certain number of out-scattering and absorbing particles, defined as $n_s={\rho}_sE{\Delta}h$ and $n_a={\rho}_aE{\Delta}h$ respectively, where ${\rho}_s$ and ${\rho}_a$ are the densities of the particles. From the top-down view (see figure \ref{fig:projected_cylinder}), the particles occupy an area of ${n_sA}=\frac{{\rho}_sAE{\Delta}h}{E}$ and ${n_aA}=\frac{{\rho}_aAE{\Delta}h}{E}$, respectively, if we assume that the particles do not overlap each other, which is reasonable if the densities and the height do not become too large.
+We closely follow Max\cite{468400} in the derivation of the stochastical model: Consider a close-up look at a ray section traveling through the volume. This section is assumed as a cylinder with a base area $E$ and a height $\Delta h$ (see figure \ref{fig:cylinder}). Within it, there exists a certain number of out-scattering and absorbing particles, defined as $n_s={\rho}_sE{\Delta}h$ and $n_a={\rho}_aE{\Delta}h$ respectively, where ${\rho}_s$ and ${\rho}_a$ are the densities of the particles. From the top-down view (see figure \ref{fig:projected_cylinder}), the particles occupy an area of ${n_sA}=\frac{{\rho}_sAE{\Delta}h}{E}$ and ${n_aA}=\frac{{\rho}_aAE{\Delta}h}{E}$, respectively, if we assume that the particles do not overlap each other, which is reasonable if the densities and the height do not become too large.
 
 
 
@@ -274,6 +274,8 @@ c(i) = \sum_{1 \le k \le m} f_p(\omega, -\omega_k, p_i)c_k(p_i)
 \end{equation}
 with $\omega_k$ being the direction from $l_k$ to $p_i$ ($\omega_k$ is different for every $l_k$, which is why the different $c_k$ are stored seperately).
 
+
+
 This approach could be generalized to calculate multi-scattering (light that needs two or more scattering events to reach the camera), but this would very quickly become too costly. Therefore, when rendering images with global illumination, more sophisticated algorithms are necessary[REFORMULATE! + SOURCES].
 [-expensive, mention optimization algorithms, transition to mcrt, mention bias]
 
@@ -286,7 +288,7 @@ This approach could be generalized to calculate multi-scattering (light that nee
 
 
 \section{Monte Carlo Ray Tracing and Global Illumination}
-A common technique in classical ray tracing to generate unbiased images with global illumination so-called monte carlo ray tracing (MCRT) approach which estimates the rendering equation by stochastically sampling it (as opposed to uniform sampling used by the ray marching algorithm described above).
+A common technique in classical ray tracing to generate unbiased images with global illumination so-called monte carlo ray tracing (MCRT) approach \cite{mc_siggraph} which estimates the rendering equation by stochastically sampling it.
 
 In this chapter, we describe a typical MCRT and explain certain techniques necessary for its formulation.
 \subsection{General Monte Carlo Algorithm}
@@ -305,17 +307,14 @@ An illustration of the process can be seen in figure \ref{fig:monte_carlo}.
 \end{figure}
 
 
-%Thus, equation ??? is approximated by
-%\begin{equation}
-%L(\vec{x},\omega_0) = 
-%\end{equation}
 For the algorithm, the following quantities need to be known: The transmittance $\tau$ between the various path vertices and light sources, the directions $\omega_i$, and the locations of $l_i$ and $p_i$.
 The sampling of $\omega_i$ and $l_i$ works like in classical ray tracing, using multiple importance sampling\cite{10.1145/218380.218498} of the phase function and light distribution. Sampling $p_i$ and estimating the transmittance require novel approaches not used in normal ray tracing, two of which are described below. 
 \subsection{Delta Tracking}
-To calculate $p_{i+1} = p_i - \omega t_t$ from a given $p_i$ and $\omega_i$, the distance $t_i$ between those two points must be sampled. Recall that $\tau(p_i, p_{i+1})$ describes the ratio of light arriving from $p_{i+1}$ at $p_i$ without colliding with a particle. Therefore, the probability that a collision occurs between $p_i$ and $p_{i+1}$ is 
+To calculate $p_{i+1} = p_i - \,\omega t_i$ from a given $p_i$ and $\omega_i$, the distance $t_i$ between those two points must be sampled. Recall that $\tau(p_i, p_{i+1})$ describes the ratio of light arriving from $p_{i+1}$ at $p_i$ without colliding with a particle. Therefore, the probability density \cite{wiki:Probability_density_function} that a collision occurs between $p_i$ and $p_{i+1}$ is 
 \begin{equation} \label{eq:collision_p}
 1 - \tau({p_i, p_{i+1}})
 \end{equation}
+which is also the probability density of t_i.
 This can be used to importance sample \cite{osti_4167844} the distance $t_i$ by inverting equation \ref{eq:collision_p} and applying the resulting function to $\xi$  (a random variable uniformly sampled from $[0,1]$). However, $\tau$ is defined as $e^{-\int_{0}^{t_i}\mu_t(s)ds}$, which can't be easily inverted if the medium is heterogenous (if $\mu_t$ is not constant).
 Delta tracking (also known as woodcock tracking) solves this problem by introducing so-called fictitious particles, which neither scatter nor absorb light rays \cite{10.1145/2661229.2661292}. Their distribution $\mu_f$ is chosen so that the sum of $\mu_t$ and $\mu_f$ add up to a globally constant value, the so-called majorant $\overline{\mu}$.
 The original problem of finding a real collision is then reformulated to finding any collision (fictitious or real).
