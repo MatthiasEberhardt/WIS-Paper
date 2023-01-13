@@ -34,7 +34,7 @@
 \maketitle
 %-------------------------------------------------------------------------
 \begin{abstract}
-Volumetric ray tracing comprises different techniques to visualize volumetric data by sending rays within the volume and sampling it at various points. In this paper, we aim to introduce the reader to the mathematical theory of volumetric ray tracing, as well as to provide a detailed description of three basic algorithms that are used to render ambient, direct and global lighting respectively. Furthermore, we also provide a short description of some more specialized monte carlo ray tracers. At last, we provide the reader with a summary and references to related topics.
+Volumetric ray tracing comprises different techniques to visualize volumetric data by sending rays within the volume and sampling it at various points. In this paper, we aim to introduce the reader to the mathematical theory of volumetric ray tracing, as well as to provide a detailed description of three basic algorithms that are used to render ambient, direct, and global lighting respectively. Furthermore, we also provide a short description of some more specialized monte carlo ray tracers. At last, we provide the reader with a summary and references to related topics.
 \end{abstract}  
 %-------------------------------------------------------------------------
 
@@ -49,7 +49,7 @@ Volumetric ray tracing comprises different techniques to visualize volumetric da
 
 
 \section{Introduction}
-In Computer Graphics, objects usually are represented as a set of geometric primitives \cite{KOBBELT2004801} (e.g. triangles), displaying the surface of the object. However, this approach is not always suitable. For example, if the original data representation of the object is volumetric, the traditional rendering technique would necessitate the creation of an intermediate surface representation that might introduce unwanted artifacts\cite{511}. Another issue arises if the object has no well-defined surfaces to which geometric primitives could be fitted, such as a cloud or fog\cite{10.1145/964965.808594}. In such cases, volumetric ray tracing might be used, a technique in which rays are cast through a volume that contains information about its optical properties (e.g color and opacity), sampled at various points within the volume, accumulated and projected on a 2D image (see figure \ref{fig:simple_algorithm})\cite{511}.
+In Computer Graphics, objects usually are represented as a set of geometric primitives \cite{KOBBELT2004801} (e.g. triangles), displaying the surface of the object. However, this approach is not always suitable. For example, if the original data representation of the object is volumetric, the traditional rendering technique would necessitate the creation of an intermediate surface representation that might introduce unwanted artifacts\cite{511}. Another issue arises if the object has no well-defined surfaces to which geometric primitives could be fitted, such as a cloud or fog\cite{10.1145/964965.808594}. In such cases, volumetric ray tracing might be used, a technique in which rays are cast through a volume that contains information about its optical properties (e.g color and opacity), sampled at various points within the volume, accumulated, and projected on a 2D image (see figure \ref{fig:simple_algorithm})\cite{511}.
 We begin our paper by introducing the reader to the mathematical formalisms of volumetric ray tracing in chapter \ref{sec:math}. In chapter \ref{sec:ray_marching}, we make certain assumptions about the mathematical model that allow us to describe simple volume rendering algorithms by foregoing global illumination. Afterward, we introduce a monte carlo ray tracer, capable of rendering global illumination, as well as the mathematical methods necessary for its formulation. We then present a selection of specialized variants of the monte carlo ray tracer in chapter \ref{sec:mc_algorithms}. In the final chapter \ref{sec:conclusion}, we draw a comparison and provide the reader with references to further work. 
 
 
@@ -110,13 +110,13 @@ Formulated as a differential equation, this results in
 dL = -({\rho}_s(h)A + {\rho}_a(h)A)L(h)dh
 \end{equation}
 As a shorthand, we define the scattering coefficient ${\mu}_s ={\rho}_s(h)A $, the absorption coefficient ${\mu}_a = {\rho}_a(h)A$ and the extinction coefficient ${\mu}_t = {\mu}_s +{\mu}_a$, which give a measure of how much light is lost due to scattering, to absorption, and in total. Thus, equation \ref{eq:differential} simplifies to
-\begin{equation}
+\begin{align*}
 dL = - {\mu}_t(h)L(h)dh
-\end{equation}
+\end{align*}
 which solution is
-\begin{equation}
+\begin{align*}
 L(h) = L(0)e^{-\int_{0}^{h} {\mu}_t(s)ds}
-\end{equation}
+\end{align*}
 Rearranging this results in the equation
 \begin{equation} \label{eq:tau_definition}
 \frac{L(h)}{L(0)} = e^{-\int_{0}^{h} {\mu}_t(s)ds}
@@ -124,9 +124,9 @@ Rearranging this results in the equation
 describing the ratio of the light traveling a distance $h$ unimpeded, the so-called transmittance $\tau$ .
 %remove going back to?%
 Thus, we can now specify how much $L_e$ gets attenuated:
-\begin{equation}
+\begin{align*}
 L({x},\omega ) =\tau({x}, {y}) L_e({y}, \omega )
-\end{equation}
+\end{align*}
 This equation is still not accurate since we also need to consider in-scattering and emission.
 \subsection{Emission and In-Scattering}
 
@@ -145,24 +145,24 @@ Consider any arbitrary point ${u}$ on the ray from ${x}$ to ${y}$ (see figure \r
 At ${u}$, the particles of the medium emit some light towards $\omega$\cite{468400}, which we call $\varepsilon ({u}, \omega )$. In the cylindrical model, the probability of finding an absorbing particle at position ${u}$ is ${\mu}_a({u})$. We assume that the particles responsible for absorption are also responsible for emission\cite{468400}, meaning the amount of light emitted at ${u}$ towards $\omega$ is ${\mu}_a({u})\epsilon ({u}, \omega )$.
 
 In-scattered light can arrive at ${u}$ from every direction, therefore we need to integrate over the unit sphere $\Omega$ surrounding ${u}$\cite{10.1145/280814.280925}:
-\begin{equation}
+\begin{align*}
 \int_{\Omega} L({u}, \omega `)d\omega `
-\end{equation}
+\end{align*}
 However, not all light arriving at ${u}$ is scattered towards $\omega $. The phase function $f_p({u}, \omega , -\omega `)$ describes the probality that light hitting a particle at ${u}$ from $\omega `$ is reflected towards $\omega$ \cite{10.1145/280814.280925, Cerezo2005}, analogous to the BRDF \cite{10.1145/965141.563893} in surface ray tracing. Furthermore, the amount of light scattered towards $\omega $ also depends on the probability that in-scattering particles are present at ${u}$\cite{10.1145/280814.280925}. Assuming that in and out-scattering particles are the same results in the equation
-\begin{equation}
+\begin{align*}
 L_e^s({u}, \omega ) = {\mu}_s({u})\int_{\Omega} f_p({u}, \omega , -\omega `)L({u}, \omega `)d\omega `  + {\mu}_a({u})\varepsilon ({u}, \omega )
-\end{equation}
+\end{align*}
 describing the total amount of light being added to the ray at ${u}$.
 Not all of $L_e^s({u}, \omega )$ arrives at ${x}$ since the newly added light also needs to travel through the volume where it is attenuated by the transmittance $\tau ({x}, {u})$.
 To get the total light intensity added to the ray, we sum up the light contribution of all points along the ray by integrating over it\cite{zhou2007real-time}:
-\begin{equation}
+\begin{align*}
 \int_{{x}}^{{y}} \tau({x}, {u})L_e^s({u}, \omega )d{u}
-\end{equation}
+\end{align*}
 \subsection{The Rendering Equation}
 Adding this to the light arriving from ${y}$ gives the total amount of light arriving at ${x}$ from $\omega $.
-\begin{equation}
+\begin{align*}
 L({x}, \omega ) = {\int_{{x}}^{{y}} \tau({x}, {u})L_e^s({u}, \omega )d{u}} + \tau({x}, {y}) L_e({y}, \omega )
-\end{equation}
+\end{align*}
 This integral is analytically unsolvable in the general case \cite{10.1145/964965.808594}.
 In the following, we describe several methods for approximating a solution.
 
@@ -203,45 +203,45 @@ For this chapter, we assume that the medium is contained within a cuboid boundar
 
 $L({x},\omega )$ is approximated by casting a ray in direction $-\omega$ and sampling it at evenly spaced points along the ray (see figure \ref{fig:simple_algorithm}) and summing up their contributions\cite{511}. The distance $s$ between the sampling points should be smaller than the volumes Nyquist limit \cite{659497}, otherwise details are missed \cite{10.1145/2661229.2661292}.
 Sampling starts at the first point within the volume, which has a distance of $s_0$ to ${x}$. The $i$-th sample point is described by
-\begin{equation}
+\begin{align*}
 p_i={x} + s_0(-\omega) + si(-\omega)
-\end{equation}
+\end{align*}
 The light contribution of $p_i$ is considered to be the light contribution of the ray segment between $p_{i-1}$ and $p_i$.
-\begin{equation}
+\begin{align*}
 \int_{p_{i-1}}^{p_i} \tau (p_0,p_{i-1}) \tau(p_{i-1},p_{i}') \mu_a(p_{i}')\varepsilon (p_{i}', \omega)dp_{i}'
-\end{equation} 
+\end{align*} 
 
 
 
 As a simplification, we assume all variables to be piecewise constant\cite{10.1145/147130.147155} on the ray segments. This yields
-\begin{equation}
+\begin{align*}
 \tau(p_0, p_i) \mu_a(p_{i})\varepsilon (p_{i}, \omega)s
-\end{equation} 
+\end{align*} 
 
 
 for one line segment between $p_{i-1}$ and $p_i$ with $\tau(p_0, p_i)$ equal to
 
 
-\begin{equation}
+\begin{align*}
 \tau(p_0, p_i)=\prod_{1\le j \le i}{(\tau(p_{j-1}, p_j)}
-\end{equation} 
+\end{align*} 
 
 
 
 The quantity $\mu_a(p_{i})\varepsilon (p_{i}, \omega)s$ describes the emitted light from $p_i$ and will from now on be referred to as the color $c(i)$. $\tau(p_0, p_i)$ is the total attenuation (transparency) from $p_0$ to $p_i$, $\tau(p_{j-1}, p_j)$ is the attenuation from $p_{j-1}$ to $p_j$ and can be calculated under the assumption $\mu_t$ is constant between $p_{j-1}$ and $p_j$ by applying equation \ref{eq:tau_definition}: 
 
 
-\begin{equation}
+\begin{align*}
 \tau(p_{j-1}, p_j) = e^{-s\mu_t(p_j)}
-\end{equation}
+\end{align*}
 However, in computer graphics, it is more common to use opacity instead of transparency. Therefore, we refer to $\tau(p_{j-1}, p_j)$ as $1 - \alpha(j)$ from now on, where $\alpha(j)$ is the opacity \cite{10.1145/147130.147155}. Inserting this in formula for $\tau({x}, p_i)$ yields 
 \begin{equation} \label{eq:discrete_transmittance}
 \prod_{1 \le j \le i} (1 - \alpha(j))
 \end{equation}
 Again, we can refer to this quantity in terms of opacity rather than transparency by using the equality
-\begin{equation}
+\begin{align*}
 1 - \beta(i) = \prod_{1 \le j \le i} (1 - \alpha(j))
-\end{equation}
+\end{align*}
 where $\beta(i)$ is the accumulated opacity \cite{10.1145/147130.147155} between ${x}$ and $p_i$.
 Using these results, we approximate the integral in equation \ref{eq:simplified_req} as the sum
 \begin{equation} \label{eq:discrete_approximation}
@@ -263,16 +263,16 @@ The first step is computed on a volume $\mathcal{V}$ containing opacity and albe
 Based on $\mathcal{V}$, one discrete volume $\mathcal{V}'_k$ is created for every light source $l_k$ in the following manner:
 For a voxel ${x}$ in $\mathcal{V}'_k$ and light source $l_k$ the amount of light ${x}$ receives from $l_k$ is calculated by attenuating the emmited light $\varepsilon(l_k)$ by the transmittance $\tau({x}, l_k) = \int_{{x}}^{l_k}(1 - \alpha({x'}))d{x'}$, which can be computed as described above in equation \ref{eq:discrete_transmittance}.
  The albedo $a({x})$ regulates how much of the arriving light is reflected at ${x}$. Thus, the color of ${x}$ is
-\begin{equation}
+\begin{align*}
 c_k({x}) = a({x}) \tau({x}, l_k) \varepsilon(l_k)
-\end{equation}
+\end{align*}
 In other words, the volume $\mathcal{V}'_k$ contains the light that is reflected from $l_k$ at every voxel.
 
 The second step works very similar to ray marching as described by equation \ref{eq:discrete_approximation}, with the only difference being the calculation of $c(i)$. For this, the values of $c_k(p_i)$ needs to be known for all $k$, which can be calculated by sampling and interpolating in $\mathcal{V}'_k$.
 $c_k(p_i)$ is the light intensity reflected at $p_i$, but only a portion is reflected towards $\omega$. By scaling all $c_k$ by the phase function and summing up their contribution, we define $c(i)$ as
-\begin{equation}
+\begin{align*}
 c(i) = \sum_{1 \le k \le m} f_p(\omega, -\omega_k, p_i)c_k(p_i)
-\end{equation}
+\end{align*}
 with $\omega_k$ being the direction from $l_k$ to $p_i$ ($\omega_k$ is different for every $l_k$, which is why the different $c_k$ are stored seperately).
 
 
@@ -320,19 +320,19 @@ This can be used to importance sample \cite{osti_4167844} the distance $t_i$ by 
 Delta tracking (also known as woodcock tracking) solves this problem by introducing so-called fictitious particles, which neither scatter nor absorb light rays \cite{10.1145/2661229.2661292}. Their distribution $\mu_f$ is chosen so that the sum of $\mu_t$ and $\mu_f$ add up to a globally constant value, the so-called majorant $\overline{\mu}$.
 The original problem of finding a real collision is then reformulated to finding any collision (fictitious or real).
 Since $\overline{\mu}$ is homogenous, equation \ref{eq:collision_p} can easily be inverted \cite{morgan-delta-tracking} and we get
-\begin{equation}
+\begin{align*}
 t_i^1 = - \frac{ln(1 - \xi)}{\overline{\mu}}
-\end{equation} 
+\end{align*} 
 as the sampled distance to the next collision, which might be with a real or a fictitious particle (a so-called null collision).
 At position $p_i^1 = p_i - \omega_i t_i^1$, the probability of hitting a real particle is 
-\begin{equation}
-\mathds{P}(``real \:collision``) = \frac{\mu_t(p_i^1)}{\overline{\mu}}
-\end{equation}
-We decide if a real particle has been hit by sampling another $\xi$ and comparing it to $\mathds{P}(``real \:collision``)$. If $\xi$ is smaller, a real particle has been hit, if not, there is a null collision \cite{10.1145/2661229.2661292}.
+\begin{align*}
+\mathds{P}(``\text{real collision}``) = \frac{\mu_t(p_i^1)}{\overline{\mu}}
+\end{align*}
+We decide if a real particle has been hit by sampling another $\xi$ and comparing it to $\mathds{P}(``\text{real collision}``)$. If $\xi$ is smaller, a real particle has been hit, if not, there is a null collision \cite{10.1145/2661229.2661292}.
 In this case, we repeat the process and continue to sample distances $t_i^j$ (illustrated in figure \ref{fig:delta_tracking}) from the point $p_i ^{j-1}$ until a real collision at $p_i^n$ is detected. Its distance to $p_i$ is then the sum of all distances previously computed:
-\begin{equation}
+\begin{align*}
 t_i = \sum_{1 \le j \le n} t_i^j
-\end{equation}
+\end{align*}
 The real collision is then selected as the path vertex $p_{i+1}$.
 
 
@@ -363,10 +363,10 @@ Delta tracking can also be used to estimate the transmittance $\tau$ between two
 \end{comment}
 
 \subsection{Ratio Tracking}
-Ratio tracking \cite{10.1145/2661229.2661292} is used to estimate the transmittance between two already known points $p$ and $p'$. This is done by calculating various collision points between $p$ and $p'$, as described above, and stops once a collision point behind $p'$ is found. At each collision point $p^i$, the value $1 - \frac{\mu_t}(p^i){\overline{\mu}}$ is saved. This fraction between fictitious particles and all particles describes the probability, that a light ray can pass $p^i$ without real collision \cite{10.1145/2661229.2661292}. The transmittance $\tau$ can then be estimated as 
-\begin{equation}
+Ratio tracking \cite{10.1145/2661229.2661292} is used to estimate the transmittance between two already known points $p$ and $p'$. This is done by calculating various collision points between $p$ and $p'$, as described above, and stops once a collision point behind $p'$ is found. At each collision point $p^i$, the value $1 - \frac{\mu_t(p^i)}{\overline{\mu}}$ is saved. This fraction between fictitious particles and all particles describes the probability, that a light ray can pass $p^i$ without real collision \cite{10.1145/2661229.2661292}. The transmittance $\tau$ can then be estimated as 
+\begin{align*}
 \tau(p,p') = \prod_{1 \le i \le n}(1 - \frac{\mu_t(p^i)}{\overline{\mu}})
-\end{equation}
+\end{align*}
 where $n$ is the index of the last collision found before $p'$.
 \section{Selection of Various Monte Carlo Ray Tracing Algorithms}
 \label{sec:mc_algorithms}
@@ -394,271 +394,11 @@ In a preprocessing step, the original volume $\mathcal{V}$ is split into a volum
 In this chapter, we provide the reader with an overview of various other approaches to volume rendering and classify the here presented algorithms within that context. Furthermore, we draw a comparison between the presented algorithms and briefly discuss their strength and weaknesses.
 \subsection{Classification and Further Work}
 On the most basic level volume rendering can be divided into direct and indirect rendering\cite{Westover1991SplattingAP, 4384237}. Indirect rendering requires a pre-processing step to create intermediate surface data, which then is rendered in a second step.
-Direct algorithms (which include all algorithms presented in this paper) work directly on the volume data and can be further subdivided into feed-forward and feed-backward methods. Feed-forward methods work by starting with data and determining how much each data point contributes to the final image \cite{10.5555/94788} (e.g. by tracing paths from the light towards the camera), whereas feed-backward algorithms work the opposite way. Of the algorithms presented in this paper photon mapping and bi-directional path tracing are hybrid methods while the others are feed-backward.
+Direct algorithms (which include all algorithms presented in this paper) work directly on the volume data and can be further subdivided into feed-forward and feed-backward methods. Feed-forward methods work by starting with data and determining how much each data point contributes to the final image \cite{10.5555/94788} (e.g. by tracing paths from the light towards the camera), whereas feed-backward algorithms work the opposite way. Photon mapping and bi-directional path tracing are hybrid methods of the algorithms presented in this paper while the others are feed-backward.
 Another possibility to classify rendering algorithms is between stochastic and deterministic ones. Of the presented examples, the ray marching and the compensated ray marching are deterministic, the others stochastic. 
 An overview of the various methods is provided by Marmitt et al. \cite{Marmitt2006InteractiveVR}, Huang et al. \cite{4384237} and Raab et al. \cite{10.1007/978-3-540-74496-2_35}.
 \subsection{Comparison}
-The ray marching algorithms described in chapter \ref{sec:raymarching} are conceptionally simpler but are incapable of supporting global illumination. In certain use cases, they might be preferable to more advanced algorithms, such when visualizing technical data (e.g a medical 3D scan), where sophisticated lighting is unnecessary, or when rendering objects with low albedo, where global illumination does not contribute much \cite{10.1145/964965.808594}. Of the algorithms described in chapter \ref{sec:mc_algorithms}, Metropolis light transport and bi-directional path tracing are particularly suited for scenes with much indirect lighting \cite{metropolis, bidirectional-ray-tracing}. Photon maps are very efficient in their memory usage \cite{10.1145/280814.280925}.
-
-
-
-
-
-
-%____END OF TEXT
-
-
-
-
-\begin{comment}
-
-
-
-
-\subsection{Underlying Volume Data}
-In this paper, we consider the topic of synthesizing a 2D image from a 3D volume.
-A volume can either be some continuous, ternary function (such as perlin or simplex noise\cite{10.1145/325165.325247}, which can be used to render volumetric clouds\cite{haggstrom2018real}), or a discrete 3D array\cite{511}.
-Similar to a 2D image that consists of pixels that can be addressed by a 2D vector $\vec{x} \in \mathbb{N}^2$, a 3D array consists of voxels that are addressed by a 3D vector $\vec{x} \in \mathbb{N}^3$. [REFORMULATE?]The color of a voxel at position $\vec{x}$ is called $c(\vec{x})$, the opacity $\alpha(\vec{x})$ and the complete vector $v(\vec{x})$. The opacity is a scalar value, the color may also be a scalar value (for grayscale volumes) or a 3D vector (for colorful volumes).
-To address the components of a vector $\vec{v}$, following notation is used:
-\begin{equation}
-	\vec{v}_{x}, x \in s{r, g, b, \alpha}
-\end{equation}
- In the following, all values are assumed to be normalized to between 0 and 1. To project this volume to a image, for each pixel in the image a ray is cast through the volume and sampled at multiple, evenly spaced points on the ray (see figure 1)\cite{10.1145/78964.78965}.
-
-
-\subsection{Interpolation}
-The sample points on the ray are in general part of $\mathbb{R}^3$. This is no problem if the volume is described by a continuous function, which is defined everywhere. However, if it is a discrete 3D array only defined for points in $\mathbb{N}^3$, the value of the volume at the sample point must be interpolated.
- This interpolation is done over the 8 closest voxels to the sample point (usually with a trilinear interpolation). The opacity values can be interpolated regularly, but the color values must be weighted with the respective opacity values before interpolation \cite{729595}. To see why this is necessary, consider figure 2, which presents a simplified 2D example of a completely  opaque, white object behind completely transparent empty space. Naively interpolating in this volume would result in two sample points, one completely white and opaque, the other gray and semitransparent. This gray point is not present in the original data and is an unwanted artifact. Weighting the colors with their opacity prevents this from happening.
- \begin{figure}[htb]
-  \centering
-  % the following command controls the width of the embedded file
-  % (relative to the width of the current column)
-  %\includegraphics[width=.8\linewidth,natwidth=250,natheight=134]{RayCasting1.png}
-  \includegraphics[width=.8\linewidth]{weighted_interpolation.png}
-  \parbox[t]{.9\columnwidth}{\relax}
-  %
-  \caption{\label{fig:firstExample}
-          Simplified visualization of naive interpolation in 2 dimensions. The black dots represent the voxels, the red dots the sample points. Notice that the second sample point has a gray color, even though the original data only has white voxels and blck, transparent voxels, which shouldn't affect the final color. Adapted from Wittenbrink et al.\cite{729595}}
-\end{figure}
-
-\section{Optimization Strategies}
-In this chapter, we will shortly desribe several optimizations for the basic ray tracing algorithm.
-\subsection{Adaptive Termination Of Ray Tracing}
-When looking at the compositing process described above, it becomes apparent that the contribution of a sample point to the final result decreases, the more other opaque sample points lie before it\cite{10.1145/78964.78965}. For an extreme example, consider figure 3. Here, all sample points behind the fully opaque black wall contribute nothing to the final value and can therefore be ignored. In other words, going back to equation (2)[CHANGE REFERENCE], the ray casting can be terminated after the accumulated opacity reaches 1, without changing the image quality. If some errors are acceptable, the threshold value might be chosen to be somewhat lower.
- \begin{figure}[htb]
-  \centering
-  % the following command controls the width of the embedded file
-  % (relative to the width of the current column)
-  %\includegraphics[width=.8\linewidth,natwidth=250,natheight=134]{RayCasting1.png}
-  \includegraphics[width=.8\linewidth]{wall.png}
-  \parbox[t]{.9\columnwidth}{\relax}
-  %
-  \caption{\label{fig:img2}
-         The black, opaque object blocks parts of the volumes behind it. The samples behind the object (from the cameras perspective) are not visible and therefore irrelevant. }
-\end{figure}
-\subsection{Ray Termination With Russian Roulette}
-The above described termination creates a bias in the image\cite{10.1145/97880.97886}. One way to avoid this is to use Russian Roulette to decide when to terminate a ray\cite{10.1145/147130.147155}. Unlike the above described approach, Russian Roulette terminates a ray only with a certain likelihood once the accumulated opacity reaches the threshold. The weight of the surviving rays is increased proportionally to compensate for the terminated rays.
-
-\subsection{Pyramid Data Structures}
-The following optimizations use data structures called pyramids, which are created from 3D arrays containig color and opacity, if the original volume is defined differently, an intermediate representation must be created first.
-Analogous to a mip-map which is a set of 2D arrays with decreasing resolution, a pyramid is a set of 3D arrays with decreasing resolution. The different volumes of which the pyramid consits are called the levels of the pyramid. The lowest level has the highest resolution, each succesive level has half the resolution than the preceeding one. To ensure that each level covers the same region, the distance between the voxels are doubled each level.
-
-In the following, we will use average, maximum and range pyramids.
-
-Each voxel $v$ in the average pyramid stores the average value of the original volume within its area of influence (that is the region of space closer to $v$ than any other voxel).
-The pyramid can be sampled at every level $n$ similarly to original volume  by interpolation, but the distance between the sample points is $2^n$ times greater than in the original volume, speeding up the sampling.
-Since 1 sample point in the average pyramid needs to approximate $2^n$ original sample points, the sampled value is blended with itself $2^n$ times.
-
-
-Each voxel $v$ in the maximum pyramid stores the maximum value of the original volume within its area of influence.
-The maximum pyramid is sanpled with nearest neighbor interpolation (unlike in the average pyramid, the sample does not need to be blended with itself).
-The minimum pyramid works analogously.
-
-The range pyramid is calculated by taking the difference between the maximum and minimum pyramid. If those pyramids store vector values, the average of the difference vector is stored in the range pyramid instead.
-The range pyramid is sampled like the maximum pyramid and provides a measure of the homogenety of the original data.
- \begin{figure}[htb]
-  \centering
-  % the following command controls the width of the embedded file
-  % (relative to the width of the current column)
-  %\includegraphics[width=.8\linewidth,natwidth=250,natheight=134]{RayCasting1.png}
-  \includegraphics[width=.8\linewidth]{pyramide.png}
-  \parbox[t]{.9\columnwidth}{\relax}
-  %
-  \caption{\label{fig:img3}
-         Simplified 2 dimensional example of 2 levels of a pyramid. Each pixel in level n +1 contains 4 pixel of the lower level. In 3 dimensions, 8 voxels of the lower level are contained in one voxel of the upper level.}
-\end{figure}
-
-
-\subsection{Fixed Step Multiresolution}
-This optimization uses the average pyramid, and works by casting the rays through a level of the pyramid, instead of the original data. The level through which the rays are cast can be freely choosen. Similar to mip-maps, it is also possible to select a real number as a level, in this case, the levels above and below the chosen level are rendered, and the two results are interpolated together. Since this would require rendering the pyramid at two levels, this is slower than just choosing a natural number as a level and recommendable only if a smooth transition between two levels is needed, like in gaze directed rendering as desribed by Levoy(CITE!!). The higher the level the faster the algorithms works, but the lower the resolution becomes.
-\subsection{Presence And Homogenity Acceleration}
-Presence acceleration uses an average and a maximum pyramid. The maximum pyramid is used to quickly find regions with opacity lower than a user provided threshold, where the average pyramid is used to sample at a lower resolution. The idea behind this algorithm is that low opacity regions do not contribute much to the final result, and can be therefore be sampled more sparsely.
-
-Homogenity acceleration works conceptually the same as presence acceleration. The difference is that homogenity acceleration takes fewer samples in regions with high homogenity and not in regions of low opacity. The idea behind the algorithm is that in a region where all voxels are very similar to each other, accumulating x different samples and accumulating the average of the region x times yields a very similar result.
-\subsection{Presence Acceleration}
-This algorithm uses an average and a maximum pyramid. The maximum pyramid is used to quickly find regions with opacity lower than a user provided threshold, where the average pyramid is used to sample at a lower resolution. The idea behind this algorithm is that low opacity regions do not contribute much to the final result, and can be therefore be sampled more sparsely.
-
-This algorithm uses an average and a maximum pyramid. The maximum pyramid is used to quickly find regions with low opacity, where the average pyramid is used to sample at a lower resolution. The idea behind this algorithm is that low opacity regions do not contribute much to the final result, and can be therefore be sampled more sparsely.
-The algorithm works by casting each ray through the maximum pyramid at the highest level. For each cell that is intersected, it checks if the opacity value of that cell is larger than some user provided treshold $k \in [0, 1]$.
-If so, that means that the average opacity in that region is not small enough, and we move down one level in the pyramid in the hope of finding such a region at a lower resolution.
-However, if the opacity is smaller the average pyramid is used to approximate that cell. [MORE DETAILS?]
-Once a cell in the maximum pyramid has been checked, the algorithm advances to the next cell and checks if the new cell has the same parent as the old one. If not, we move up one level in the pyramid. This is done to ensure that the algorithm always advances with the largest possible step size.
-After that, the same procedure is repeated until the ray has moved through the entire pyramid.
-Further improvements to this algorithm can be madeby considering two observations:
-Firstly, it is very rare for the cell in the highest level of the maximum pyramid to have a $\alpha$ lower than $k$ (this would mean that the entire volume is almost completly transparent). It is therefore preferable not to start at the highest level but samewhat lower. XXX suggests in [CITE] to start two levels lower.
-Secondly, finding the cells that the ray intersects is a computationally relatively expensive operation that might not amortize itself at lower levels. Therefore, it might be more effiecient to start sampling at the lowest level of the average pyramid before the lowest level of the maximum pyramid is reached. XXX suggests in [] to sample level 0  of the average pyramid once level 2 of the maximum pyramid is reached. [REFORMULATE?]
-
-
-
-\subsection{Homogenity Acceleration}
-This algorithm works conceptually the same as presence acceleration. The difference is that homogenity acceleration takes fewer samples in regions with high homogenity and not in regions of low opacity. The idea behind the algorithm is that in a region where all voxels are very similar to each other, accumulating x different samples and accumulating the average of the region x times yields a very similar result. The algorithm works in the same way as presence acceleration, only the maximum pyramid is replaced with the range pyramid.
-\subsection{$\beta$  Acceleration}
-%-------------------------------------------------------------------------
-
-
-
-
-
-
-
-
-
-\section{REPETITION}
-
-
-\begin{figure}[htb]
-  \centering
-  % the following command controls the width of the embedded file
-  % (relative to the width of the current column)
-  %\includegraphics[width=.8\linewidth,natwidth=250,natheight=134]{RayCasting1.png}
-  \includegraphics[width=.8\linewidth]{RayCasting1.png}
-  \parbox[t]{.9\columnwidth}{\relax}~\cite{Appa2015RayCF}
-  %
-  \caption{\label{fig:img4}
-          Illustration of the ray casting process.}
-\end{figure}
-\subsection{Terminology}
-To enable a clear understanding in this section we will shortly define key terminology used in this paper. A voxel is an infinitesimally small point in 3D space with an associated vector value, that represents the color of that voxel. In this paper, these voxels are arranged in a regular cube lattice (although other arrangements are possible as well). A cell or area of influence of a voxel $v$ is defined as the region of space which is closer to $v$ than to any other voxel (meaning a cube in space with $v$ in the center). A voxel cube is defined as a group of 8 voxels that form a cube in space. The neighborhood of a voxel $v$ is defined as the set that includes $v$ as well as its 26 neighbors in 3D space. Since different authors use different notations, this terminology might be used slightly different in other papers.
-\subsection{Underlying Volume Data}
-In this paper, we consider the topic of synthesizing a 2D image from a 3D volume.
-A volume can either be some continuous, ternary function (such as perlin or simplex noise\cite{10.1145/325165.325247}, which can be used to render volumetric clouds\cite{haggstrom2018real}), or a discrete 3D array\cite{511}.
-Similar to a 2D image that consists of pixels that can be addressed by a 2D vector $\vec{x} \in \mathbb{N}^2$, a 3D array consists of voxels that are addressed by a 3D vector $\vec{x} \in \mathbb{N}^3$. [REFORMULATE?]The color of a voxel at position $\vec{x}$ is called $c(\vec{x})$, the opacity $\alpha(\vec{x})$ and the complete vector $v(\vec{x})$. The opacity is a scalar value, the color may also be a scalar value (for grayscale volumes) or a 3D vector (for colorful volumes).
-To address the components of a vector $\vec{v}$, following notation is used:
-\begin{equation}
-	\vec{v}_{x}, x \in s{r, g, b, \alpha}
-\end{equation}
- In the following, all values are assumed to be normalized to between 0 and 1. To project this volume to a image, for each pixel in the image a ray is cast through the volume and sampled at multiple, evenly spaced points on the ray (see figure 1)\cite{10.1145/78964.78965}.
-
-\subsection{Volumetric Ray Tracing}
-Like in the classical ray tracing algorithm, volumetric ray tracing works by casting a ray (or multiple rays if multisampling is used) for each pixel in the image that is to be created.
-
-These rays are described by the equation $\vec{o} + t \cdot \vec{d}$, where $\vec{o}$ is the origin of the ray and $\vec{d}$ the direction. On each ray evenly spaced sample points are placed whose position is described by 
-\begin{equation}
-\vec{o} + n \cdot s \cdot \vec{d}
-\end{equation}
-for the n-th sample point. $s$ is a scale factor, determining how far apart the sample points are. $s$ should be roughly equal to the distance between voxels (this distance is assumed to be 1 in the volume model, but depending on the volumes world matrix this might be different in world coordinates), since a too great mismatch between sampling and voxel frequency woul lead to aliasing.
-In the follwing, only sample points within the volume are considered. Those sample points then are sampled and composited together, resulting in a final color value for the image pixel.
-\subsection{Interpolation}
-The sample points on the ray are in general part of $\mathbb{R}^3$. This is no problem if the volume is described by a continuous function, which is defined everywhere. However, if it is a discrete 3D array only defined for points in $\mathbb{N}^3$, the value of the volume at the sample point must be interpolated.
- This interpolation is done over the 8 closest voxels to the sample point (usually with a trilinear interpolation). The opacity values can be interpolated regularly, but the color values must be weighted with the respective opacity values before interpolation \cite{729595}. To see why this is necessary, consider figure 2, which presents a simplified 2D example of a completely  opaque, white object behind completely transparent empty space. Naively interpolating in this volume would result in two sample points, one completely white and opaque, the other gray and semitransparent. This gray point is not present in the original data and is an unwanted artifact. Weighting the colors with their opacity prevents this from happening.
- \begin{figure}[htb]
-  \centering
-  % the following command controls the width of the embedded file
-  % (relative to the width of the current column)
-  %\includegraphics[width=.8\linewidth,natwidth=250,natheight=134]{RayCasting1.png}
-  \includegraphics[width=.8\linewidth]{weighted_interpolation.png}
-  \parbox[t]{.9\columnwidth}{\relax}
-  %
-  \caption{\label{fig:img5}
-          Simplified visualization of naive interpolation in 2 dimensions. The black dots represent the voxels, the red dots the sample points. Notice that the second sample point has a gray color, even though the original data only has white voxels and blck, transparent voxels, which shouldn't affect the final color. Adapted from Wittenbrink et al.\cite{729595}}
-\end{figure}
- \subsection{Compositing Of Multiple Sample Points}
-To compose the various sampled points on the ray to a single pixel, the points one after the other are alpha blended together. This compositing can be done front to back\cite{Sabella1988ARA, Upson1988VbufferVV } (starting with the sample point closest to the camera, blending it with the second, then the third, and so on), or back to front\cite{10.1145/378456.378484, 511} (vice versa).  Usually, the back to front approach is chosen since it allows to optimize the computation\cite{10.1145/78964.78965} (see below).
- In the following, $c(i)$ is the color of the i-th sample point, and $\alpha(i)$ the opacity. The accumulated opacity 
- \begin{equation}
- \beta(i) = 1 - \prod_{j=1}^{i}(1 - \alpha(j))
- \end{equation}
- is the fraction of light absorbed between the first and i-th sample point. The final color $c_f$, which is displayed in the projected image, is then
- \begin{equation}
- c_f = \sum_{i=1}^n((1-\beta(i)) * c(i))
- \end{equation}
- if the ray has n sample points\cite{10.1145/147130.147155}.
-\section{Optimization Strategies}
-\subsection{Adaptive Termination Of Ray Tracing}
-When looking at the compositing process described above, it becomes apparent that the contribution of a sample point to the final result decreases, the more other opaque sample points lie before it\cite{10.1145/78964.78965}. For an extreme example, consider figure 3. Here, all sample points behind the fully opaque black wall contribute nothing to the final value and can therefore be ignored. In other words, going back to equation (2), the ray casting can be terminated after the accumulated opacity reaches 1, without changing the image quality. If some errors in the image are acceptable, the threshold value for terminating the ray tracing might be chosen to be somewhat lower.
- \begin{figure}[htb]
-  \centering
-  % the following command controls the width of the embedded file
-  % (relative to the width of the current column)
-  %\includegraphics[width=.8\linewidth,natwidth=250,natheight=134]{RayCasting1.png}
-  \includegraphics[width=.8\linewidth]{wall.png}
-  \parbox[t]{.9\columnwidth}{\relax}
-  %
-  \caption{\label{fig:img6}
-         The black, opaque object blocks parts of the volumes behind it. The samples behind the object (from the cameras perspective) are not visible and therefore irrelevant. }
-\end{figure}
-\subsection{Ray Termination With Russian Roulette}
-The above described termination after a certain threshold is reached creates a bias in the synthesized image\cite{10.1145/97880.97886}. One way to avoid this is to use Russian Roulette to decide when to terminate a ray\cite{10.1145/147130.147155}. Unlike the above described approach, Russian Roulette terminates a ray only with a certain likelihood once the accumulated opacity reaches the threshold. The weight of the surviving rays is increased proportionally to compensate for the terminated rays.
-
-\subsection{Pyramid Data Structures}
-The follwing optimizations require a data structure called a pyramid. Pyramids are created from 3D arrays, if the volume to be rendered is defined as a function an intermediate array representation must be created.
-Analogous to a mip-map which is a set of 2D arrays with decreasing resolution, a pyramid is a set of 3D arrays with decreasing resolution. The different volumes of which the pyramid consits are called the levels of the pyramid. The lowest level (called level 0) has the highest resolution, each succesive level has half the resolution than the preceeding one. To ensure that each level covers the same region in 3D space, the distance between the voxels are doubled each level.
-
---FIGURE!
-In the follwing, we will make use several different kinds of pyramids, namely average, maximum and range pyramids.
-\subsection{Average Pyramid}
-The lowest level of the average pyramid is equal to the original 3D array, padded with zeros so that its size is a power of 2 in all dimensions.
-The next level is created by aggregating the average of a cube of 8 voxels in the lower level to one voxel in the higher level. The voxel in the higher level is called the parent, the 8 lower voxels are called the children. This process is repeated until the last level, consisting of only one voxel, is reached. 
-Similarily to the original volume, the pyramid can be sampled by interpolating the 8 closest voxels to the sample point. Consider however, that the primary purpose of the average pyramid is to enamble an approximation of the original data that is computationally faster than to render the original data.
-The time complexity of rendering 3D data however does not depend on the number of voxels, but rather the number of samples along the ray (at first glance, this seems to imply that the average pyramid is superfluous and that the same could be accomplished by taking fewer sampling points in the original volume. This however would lead to a sample frequency significantly lower than the voxel frequency and thus to aliasing). If we therefore wish to cut the rendering time in half for each level we move up the pyramid, the amount of sampling points must be halfed and the distance between the sampling points must be doubled. This means that one sample in level $n+1$ should approximate two samples at level $n$. To achieve this, the sample at level $n+1$ must be blended with itself, since in level $n$ two samples are blended as well.
-
-
-\subsection{Maximum And Minimum Pyramids}
-A maximum pyramid works similar to an average pyramid, but the construction of level $0$ is somewhat different. A voxel in level $0$ at position $\vec{x}$ is created by taking the maximum of the $27$ voxels in the original dataset, that form a 3 by 3 cube around $\vec{x}$. Once the lowest level is created the succeding levels are constructed llike in the average pyramid, only that the maximum is used as the aggregation method, and not the maximum. Sampling a maximum pyramid is different from sampling an average pyramid. Since the maximum pyramid stores maxima, interpolating between different maxima would lead to wrong results. Instead, nearest neighbor interpolation is used (unlike in the average pyramid, the sample does not need to be blended with itself).
-The minimum pyramid works analogously.
-In the following, the sample taken at location $\vec{x}$ in the maximum pyramid at level $n$ is called $pyr_{max}(\vec{x}, n)$, and the sample in the minimum pyramid is called $pyr_{min}(\vec{x}, n)$.
-
-\subsection{Range Pyramid}
-The range pyramid is calculated by taking the difference between the maximum and minimum pyramid. Both the maximum and minimum pyramid store vectors (2D or 4D, depending on wether the underlying data is grayscale or colorful). To express the difference in a scalar, the diffrence of the components is summed up and normalized to the range of 0  and 1:
-\begin{equation}
-pyr_{range}(\vec{x}, n) = 1 \over 4 \cdot ((pyr_{max}(\vec{x}, n)_{r} - pyr_{min}(\vec{x}, n)_{r}) + (pyr_{max}(\vec{x}, n)_{g} - pyr_{min}(\vec{x}, n)_{g}) +(pyr_{max}(\vec{x}, n)_{b} - pyr_{min}(\vec{x}, n)_{b}) + (pyr_{max}(\vec{x}, n)_{\alpha} - pyr_{min}(\vec{x}, n)_{\alpha}))
-\end{equation}
-The range pyramid is sampled like the maximum and minimum pyramids and provides a measure of the homogenety of the original data. If a voxel in the range pyramid has the value 0, this means that the region of space covered by this pixel is completly homogenous in the original data, if the voxel is 1, this means at least 2 voxels in the original data are completly different.
- \begin{figure}[htb]
-  \centering
-  % the following command controls the width of the embedded file
-  % (relative to the width of the current column)
-  %\includegraphics[width=.8\linewidth,natwidth=250,natheight=134]{RayCasting1.png}
-  \includegraphics[width=.8\linewidth]{pyramide.png}
-  \parbox[t]{.9\columnwidth}{\relax}
-  %
-  \caption{\label{fig:img7}
-         Simplified 2 dimensional example of 2 levels of a pyramid. Each pixel in level n +1 contains 4 pixel of the lower level. In 3 dimensions, 8 voxels of the lower level are contained in one voxel of the upper level.}
-\end{figure}
-
-
-\subsection{Fixed Step Multiresolution}
-This optimization makes use of the above described average pyramid, and works by casting the rays through a level of the pyramid, instead of the original data. As previously mentioned, when casting a ray trhough level $n$, the distance between the sampling points is $2^n$ times larger than the normal distance. The level through which the rays are cast can be freely choosen. Similar to mip-maps, it is also possible to select a real number as a level, in this case, the levels above and below the chosen level are rendered, and the two results are interpolated together. Since this would require rendering the pyramid at two levels, this is slower than just choosing a natural number as a level and recommendable only if a smooth transition between two levels is needed, like in gaze directed rendering as desribed by Levoy(CITE!!). The higher the level the faster the algorithms works, but the lower the resolution becomes.
-
-\subsection{Presence Acceleration}
-This algorithm uses an average and a maximum pyramid. The maximum pyramid is used to quickly find regions with low opacity, where the average pyramid is used to sample at a lower resolution. The idea behind this algorithm is that low opacity regions do not contribute much to the final result, and can be therefore be sampled more sparsely.
-The algorithm works by casting each ray through the maximum pyramid at the highest level. For each cell that is intersected, it checks if the opacity value of that cell is larger than some user provided treshold $k \in [0, 1]$.
-If so, that means that the average opacity in that region is not small enough, and we move down one level in the pyramid in the hope of finding such a region at a lower resolution.
-However, if the opacity is smaller the average pyramid is used to approximate that cell. [MORE DETAILS?]
-Once a cell in the maximum pyramid has been checked, the algorithm advances to the next cell and checks if the new cell has the same parent as the old one. If not, we move up one level in the pyramid. This is done to ensure that the algorithm always advances with the largest possible step size.
-After that, the same procedure is repeated until the ray has moved through the entire pyramid.
-Further improvements to this algorithm can be madeby considering two observations:
-Firstly, it is very rare for the cell in the highest level of the maximum pyramid to have a $\alpha$ lower than $k$ (this would mean that the entire volume is almost completly transparent). It is therefore preferable not to start at the highest level but samewhat lower. XXX suggests in [CITE] to start two levels lower.
-Secondly, finding the cells that the ray intersects is a computationally relatively expensive operation that might not amortize itself at lower levels. Therefore, it might be more effiecient to start sampling at the lowest level of the average pyramid before the lowest level of the maximum pyramid is reached. XXX suggests in [] to sample level 0  of the average pyramid once level 2 of the maximum pyramid is reached. [REFORMULATE?]
-
-
-
-\subsection{Homogenity Acceleration}
-This algorithm works conceptually the same as presence acceleration. The difference is that homogenity acceleration takes fewer samples in regions with high homogenity and not in regions of low opacity. The idea behind the algorithm is that in a region where all voxels are very similar to each other, accumulating x different samples and accumulating the average of the region x times yields a very similar result. The algorithm works in the same way as presence acceleration, only the maximum pyramid is replaced with the range pyramid.
-\subsection{$\beta$  Acceleration}
-\end{comment}
-%-------------------------------------------------------------------------
-
+The ray marching algorithms described in chapter \ref{sec:ray_marching} are conceptionally simpler but are incapable of supporting global illumination. In certain use cases, they might be preferable to more advanced algorithms, such when visualizing technical data (e.g a medical 3D scan), where sophisticated lighting is unnecessary, or when rendering objects with low albedo, where global illumination does not contribute much \cite{10.1145/964965.808594}. Of the algorithms described in chapter \ref{sec:mc_algorithms}, Metropolis light transport and bi-directional path tracing are particularly suited for scenes with much indirect lighting \cite{metropolis, bidirectional-ray-tracing}. Photon maps are very efficient in their memory usage \cite{10.1145/280814.280925}.
 
 
 

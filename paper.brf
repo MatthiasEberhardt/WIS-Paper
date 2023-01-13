@@ -16,30 +16,30 @@
 \backcite {468400}{{3}{2.2}{figure.caption.4}}
 \backcite {468400}{{3}{2.2}{figure.caption.4}}
 \backcite {10.1145/280814.280925}{{3}{2.2}{figure.caption.4}}
-\backcite {10.1145/280814.280925, Cerezo2005}{{3}{2.2}{equation.2.7}}
-\backcite {10.1145/965141.563893}{{3}{2.2}{equation.2.7}}
-\backcite {10.1145/280814.280925}{{3}{2.2}{equation.2.7}}
-\backcite {zhou2007real-time}{{3}{2.2}{equation.2.8}}
+\backcite {10.1145/280814.280925, Cerezo2005}{{3}{2.2}{figure.caption.4}}
+\backcite {10.1145/965141.563893}{{3}{2.2}{figure.caption.4}}
+\backcite {10.1145/280814.280925}{{3}{2.2}{figure.caption.4}}
+\backcite {zhou2007real-time}{{3}{2.2}{figure.caption.4}}
 \backcite {10.1145/78964.78965}{{3}{5}{figure.caption.5}}
-\backcite {10.1145/964965.808594}{{3}{2.3}{equation.2.10}}
+\backcite {10.1145/964965.808594}{{3}{2.3}{subsection.2.3}}
 \backcite {511, 10.1145/147130.147155}{{3}{3}{section.3}}
 \backcite {10.1145/147130.147155}{{3}{3.1}{subsection.3.1}}
-\backcite {10.1145/147130.147155, 10.1145/78964.78965}{{3}{3.1}{equation.3.11}}
+\backcite {10.1145/147130.147155, 10.1145/78964.78965}{{3}{3.1}{equation.3.4}}
 \backcite {511}{{3}{3.2}{figure.caption.5}}
 \backcite {659497}{{3}{3.2}{figure.caption.5}}
 \backcite {10.1145/2661229.2661292}{{3}{3.2}{figure.caption.5}}
-\backcite {10.1145/147130.147155}{{4}{3.2}{equation.3.13}}
-\backcite {10.1145/147130.147155}{{4}{3.2}{equation.3.16}}
-\backcite {10.1145/147130.147155}{{4}{3.2}{equation.3.18}}
-\backcite {10.1145/147130.147155}{{4}{3.2}{equation.3.19}}
+\backcite {10.1145/147130.147155}{{4}{3.2}{figure.caption.5}}
+\backcite {10.1145/147130.147155}{{4}{3.2}{figure.caption.5}}
+\backcite {10.1145/147130.147155}{{4}{3.2}{equation.3.5}}
+\backcite {10.1145/147130.147155}{{4}{3.2}{equation.3.6}}
 \backcite {511}{{4}{3.3}{subsection.3.3}}
 \backcite {511}{{4}{3.3}{subsection.3.3}}
 \backcite {729595}{{4}{3.3}{subsection.3.3}}
 \backcite {10.1145/964965.808594}{{4}{3.4}{subsection.3.4}}
 \backcite {10.1145/965145.801255}{{4}{3.4}{subsection.3.4}}
-\backcite {10.1145/964965.808594}{{4}{3.4}{equation.3.21}}
-\backcite {10.1145/3451256}{{4}{3.4}{equation.3.21}}
-\backcite {10.1145/78964.78965, 10.1145/147130.147155}{{4}{3.4}{equation.3.21}}
+\backcite {10.1145/964965.808594}{{4}{3.4}{subsection.3.4}}
+\backcite {10.1145/3451256}{{4}{3.4}{subsection.3.4}}
+\backcite {10.1145/78964.78965, 10.1145/147130.147155}{{4}{3.4}{subsection.3.4}}
 \backcite {mc_siggraph}{{4}{4}{section.4}}
 \backcite {10.1145/3451256}{{4}{4.1}{subsection.4.1}}
 \backcite {GALTIER201357}{{5}{6}{figure.caption.6}}
@@ -49,11 +49,11 @@
 \backcite {10.1145/218380.218498}{{5}{4.1}{subsection.4.1}}
 \backcite {10.1145/218380.218498}{{5}{4.1}{figure.caption.6}}
 \backcite {wiki:Probability_density_function}{{5}{4.2}{subsection.4.2}}
-\backcite {osti_4167844}{{5}{4.2}{equation.4.22}}
-\backcite {10.1145/2661229.2661292}{{5}{4.2}{equation.4.22}}
-\backcite {morgan-delta-tracking}{{5}{4.2}{equation.4.22}}
+\backcite {osti_4167844}{{5}{4.2}{equation.4.7}}
+\backcite {10.1145/2661229.2661292}{{5}{4.2}{equation.4.7}}
 \backcite {GALTIER201357}{{5}{7}{figure.caption.7}}
-\backcite {10.1145/2661229.2661292}{{5}{4.2}{equation.4.24}}
+\backcite {morgan-delta-tracking}{{5}{4.2}{equation.4.7}}
+\backcite {10.1145/2661229.2661292}{{5}{4.2}{equation.4.7}}
 \backcite {10.1145/2661229.2661292}{{5}{4.3}{subsection.4.3}}
 \backcite {10.5555/275458.275468}{{6}{8}{figure.caption.8}}
 \backcite {10.1145/2661229.2661292}{{6}{4.3}{subsection.4.3}}
