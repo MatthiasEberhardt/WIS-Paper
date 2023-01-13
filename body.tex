@@ -11,7 +11,7 @@
         }
         \\
 % For Computer Graphics Forum: Please use the abbreviation of your first name.
-{\parbox{\textwidth}{\centering $^1$OTH Regensburg, Germany
+{\parbox{\textwidth}{\centering $^1$Ostbayerische Technische Hoschschule Regensburg, Germany
 %        $^2$ Another Department to illustrate the use in papers from authors
 %             with different affiliations
        }
@@ -49,7 +49,7 @@
 
 
 \section{Introduction}
-In Computer Graphics, objects usually are represented as a set of geometric primitives (e.g. triangles), displaying the surface of the object. However, this approach is not always suitable. For example, if the original data representation of the object is volumetric, the traditional rendering technique would necessitate the creation of an intermediate surface representation that might introduce unwanted artifacts\cite{511}. Another issue arises if the object has no well-defined surfaces to which geometric primitives could be fitted, such as a cloud or fog\cite{10.1145/964965.808594}. In such cases, volumetric ray tracing might be used, a technique in which rays are cast through a volume that contains information about its optical properties(e.g color and opacity), sampled at various points within the volume, accumulated, and projected on a 2D image (see figure 1)\cite{511}.
+In Computer Graphics, objects usually are represented as a set of geometric primitives \cite{KOBBELT2004801} (e.g. triangles), displaying the surface of the object. However, this approach is not always suitable. For example, if the original data representation of the object is volumetric, the traditional rendering technique would necessitate the creation of an intermediate surface representation that might introduce unwanted artifacts\cite{511}. Another issue arises if the object has no well-defined surfaces to which geometric primitives could be fitted, such as a cloud or fog\cite{10.1145/964965.808594}. In such cases, volumetric ray tracing might be used, a technique in which rays are cast through a volume that contains information about its optical properties(e.g color and opacity), sampled at various points within the volume, accumulated, and projected on a 2D image (see figure 1)\cite{511}.
 
 
 
@@ -80,22 +80,17 @@ However, this equation assumes that the light has no interactions between $\vec{
 Absorption and out-scattering attenuate the light intensity along the ray, in-scattering and emission add to it.
 \subsection{Absorbtion And Out-Scattering}
 At first, let us consider only out-scattering and absorption, which occur due to tiny particles floating around in the volume (such as water droplets in clouds and fog).
-Of course, these particles are far too numerous to be directly simulated, but their distribution in 3D space can be stochastically modeled (similar to how detailed surface structures can be modeled by microfacets in surface ray tracing [CITE!]).
-
-We follow Max\cite{468400} in our development of the stochastical model.
+Of course, these particles are far too numerous to be directly simulated, but their distribution in 3D space can be stochastically modeled (similar to how detailed surface structures can be modeled by microfacets \cite{10.1145/965141.563893} in surface ray tracing).
 
 \begin{figure}
 \centering
 \def\svgwidth{\columnwidth}
 \import{figures/}{fig_cylinder.pdf_tex}
 
-\caption{Image adapted from XXX.}
+\caption{Image adapted from Max \cite{468400}.}
 \label{fig:cylinder}
 \end{figure}
-To do so, consider a close-up look at a ray section traveling through the volume.
-This section can be assumed to be a cylinder with a base area $E$ and a height $\Delta h$ (see figure \ref{fig:cylinder}), through which the ray travels.
-Within this cylinder, there exists a certain number of out-scattering and absorbing particles, defined as $n_s={\rho}_sE{\Delta}h$ and $n_a={\rho}_aE{\Delta}h$ respectively, where ${\rho}_s$ and ${\rho}_a$ are the densities of the particles.
-From the top-down view (see figure \ref{fig:projected_cylinder}), the particles occupy an area of ${n_sA}=\frac{{\rho}_sAE{\Delta}h}{E}$ and ${n_aA}=\frac{{\rho}_aAE{\Delta}h}{E}$, respectively, if we assume that the particles do not overlap each other, which is reasonable if the densities and the height do not become too large.
+We follow Max\cite{468400} in our development of the stochastical model: Consider a close-up look at a ray section traveling through the volume. This section can be assumed to be a cylinder with a base area $E$ and a height $\Delta h$ (see figure \ref{fig:cylinder}), through which the ray travels. Within this cylinder, there exists a certain number of out-scattering and absorbing particles, defined as $n_s={\rho}_sE{\Delta}h$ and $n_a={\rho}_aE{\Delta}h$ respectively, where ${\rho}_s$ and ${\rho}_a$ are the densities of the particles. From the top-down view (see figure \ref{fig:projected_cylinder}), the particles occupy an area of ${n_sA}=\frac{{\rho}_sAE{\Delta}h}{E}$ and ${n_aA}=\frac{{\rho}_aAE{\Delta}h}{E}$, respectively, if we assume that the particles do not overlap each other, which is reasonable if the densities and the height do not become too large.
 
 
 
@@ -104,7 +99,7 @@ From the top-down view (see figure \ref{fig:projected_cylinder}), the particles 
 \def\svgwidth{\columnwidth}
 \import{figures/}{fig_projected_cylinder.pdf_tex}
 
-\caption{Top-down view of the cylinder. The cylinder has the base area $E$, a fraction of which is occluded by absorbing and scattering particles. Image inspired by XXX.}
+\caption{Top-down view of the cylinder. The cylinder has the base area $E$, a fraction of which is occluded by absorbing and scattering particles. Image inspired by Max \cite{468400}.}
 \label{fig:projected_cylinder}
 \end{figure}
 
@@ -151,7 +146,7 @@ In-scattered light can arrive at $\vec{u}$ from every direction, therefore we ne
 \begin{equation}
 \int_{\Omega} L(\vec{u}, \omega `)d\omega `
 \end{equation}
-However, not all light arriving at $\vec{u}$ is scattered towards $\omega $. The so called phase function $f_p(\vec{u}, \omega , -\omega `)$ describes the probality that light hitting a particle at $\vec{u}$ from $\omega `$ is reflected towards $\omega$\cite{10.1145/280814.280925}. In this sense, it is analogous to the BRDF in surface ray tracing. Furthermore, the amount of light scattered towards $\omega $ also depends on the probability that in-scattering particles are present at $\vec{u}$\cite{10.1145/280814.280925}. We assume that in-scattering particles are the same as out-scattering particles and get the equation
+However, not all light arriving at $\vec{u}$ is scattered towards $\omega $. The so called phase function $f_p(\vec{u}, \omega , -\omega `)$ describes the probality that light hitting a particle at $\vec{u}$ from $\omega `$ is reflected towards $\omega$\cite{10.1145/280814.280925, Cerezo2005} [CHECK FIRST CITATION]. In this sense, it is analogous to the BRDF \cite{10.1145/965141.563893} in surface ray tracing. Furthermore, the amount of light scattered towards $\omega $ also depends on the probability that in-scattering particles are present at $\vec{u}$\cite{10.1145/280814.280925}. We assume that in-scattering particles are the same as out-scattering particles and get the equation
 \begin{equation}
 L_e^s(\vec{u}, \omega ) = {\mu}_s(\vec{u})\int_{\Omega} f_p(\vec{u}, \omega , -\omega `)L(\vec{u}, \omega `)d\omega `  + {\mu}_a(\vec{u})\varepsilon (\vec{u}, \omega )
 \end{equation}
@@ -166,7 +161,7 @@ Adding this to the light arriving from $\vec{y}$ gives the total amount of light
 \begin{equation}
 L(\vec{x}, \omega ) = {\int_{\vec{x}}^{\vec{y}} \tau(\vec{x}, \vec{u})L_e^s(\vec{u}, \omega )d\vec{u}} + \tau(\vec{x}, \vec{y}) L_e(\vec{y}, \omega )
 \end{equation}
-This integral is difficult to solve, especially since the expression $L(\vec{x}, \omega )$ appears on both sides of the equation.
+This integral is analytically unsolvable in the general case \cite{10.1145/964965.808594}.
 In the following, we describe several methods for approximating a solution.
 
 
@@ -198,13 +193,13 @@ For this chapter, we assume that the medium is contained within a cuboid boundar
 \def\svgwidth{\columnwidth}
 \import{figures/}{fig_simple_algorithm.pdf_tex}
 
-\caption{Illustration of the ray marching process. Image adapted from XXX(Compensated ray marching).}
+\caption{Illustration of the ray marching process. Image adapted from Levoy \cite{10.1145/78964.78965}.}
 \label{fig:simple_algorithm}
 \end{figure}
 
 
 
-$L(\vec{x},\omega )$ is approximated by casting a ray in direction $-\omega$ and sampling it at evenly spaced points along the ray (see figure \ref{fig:simple_algorithm}) and summing up their contributions\cite{511}. The distance $s$ between the sampling points should be smaller than the volumes Nyquist limit[CITE], otherwise important details are missed[CITE].
+$L(\vec{x},\omega )$ is approximated by casting a ray in direction $-\omega$ and sampling it at evenly spaced points along the ray (see figure \ref{fig:simple_algorithm}) and summing up their contributions\cite{511}. The distance $s$ between the sampling points should be smaller than the volumes Nyquist limit \cite{659497}, otherwise important details are missed \cite{10.1145/2661229.2661292}.
 We start sampling at the first point within the volume, which has a distance of $s_0$ to $\vec{x}$. The $i$-th sample point then is described by
 \begin{equation}
 p_i=\vec{x} + s_0(-\omega) + si(-\omega)
@@ -275,10 +270,10 @@ This approach could be generalized to calculate multi-scattering (that is light 
 \section{Monte Carlo Ray Tracing and Global Illumination}
 A common technique in classical ray tracing to generate unbiased images with global illumination is the so-called monte carlo ray tracing (MCRT) approach which solves the rendering equation by stochastically sampling it (as opposed to uniform sampling used by the ray marching algorithm described above).
 
-In this chapter, we describe a typical MCRT, explain certain techniques necessary for its formulation, and describe further improvements to the MCRT. 
+In this chapter, we describe a typical MCRT, explain certain techniques necessary for its formulation, and describe further improvements to it. 
 \subsection{General Monte Carlo Algorithm}
-We describe a typical MCRT such as that used by Hofman et al. [CITE!].
-The algorithm starts like[simiilar to?] the already mentioned by casting a ray from the camera $p_0$ in direction $-\omega_0$. Then, a distance $d_0$ is sampled stochastically and so-called path vertex $p_1$ is created. From $p_1$, a new direction $\omega_1$ is sampled. This process is repeated until a light source is hit or until the path gets terminated(usually by Russian roulette). Furthermore, at every path vertex $p_i$, next event estimation is done by casting a shadow ray towards a randomly sampled point on a light source, called $l_i$.[ADD: Then, the light contributions along the path are properly weighted and summed up to compute the final result.]
+We describe a typical MCRT such as that used by Hofman et al. \cite{10.1145/3451256}.
+The algorithm starts like[simiilar to?] the already mentioned by casting a ray from the camera $p_0$ in direction $-\omega_0$. Then, a distance $d_0$ is sampled stochastically and so-called path vertex $p_1$ is created. From $p_1$, a new direction $\omega_1$ is sampled. This process is repeated until a light source is hit or until the path gets terminated (usually by Russian roulette \cite{P-766}). Furthermore, at every path vertex $p_i$, a so-called next event estimation \cite{10.1145/3305366.3328079} is done by casting a shadow ray towards a randomly sampled point on a light source, called $l_i$. Then, the light contributions along the path are properly weighted \cite{10.1145/218380.218498} and summed up to compute the final result.
 An illustration of the process can be seen in figure \ref{fig:monte_carlo}.
 
 
@@ -287,7 +282,7 @@ An illustration of the process can be seen in figure \ref{fig:monte_carlo}.
 \def\svgwidth{\columnwidth}
 \import{figures/}{fig_monte_carlo.pdf_tex}
 
-\caption{Image adapted from XXX(Compensated ray marching).}
+\caption{Image inspired by Galtier at al. \cite{GALTIER201357} and Lafortune and Willems \cite{bidirectional-ray-tracing}}
 \label{fig:monte_carlo}
 \end{figure}
 
@@ -297,14 +292,14 @@ An illustration of the process can be seen in figure \ref{fig:monte_carlo}.
 %L(\vec{x},\omega_0) = 
 %\end{equation}
 For the algorithm, the following quantities need to be known: The transmittance $\tau$ between the various path vertices and light sources, the directions $\omega_i$, and the locations of $l_i$ and $p_i$.
-The sampling of $\omega_i$ and $l_i$ works like in classical ray tracing, using multiple importance sampling[CITE] of the phase function and light distribution. Sampling $p_i$ and estimating the transmittance require novel approaches not used in normal ray tracing, two of which are described below. 
+The sampling of $\omega_i$ and $l_i$ works like in classical ray tracing, using multiple importance sampling\cite{10.1145/218380.218498} of the phase function and light distribution. Sampling $p_i$ and estimating the transmittance require novel approaches not used in normal ray tracing, two of which are described below. 
 \subsection{Delta Tracking}
 To calculate $p_{i+1} = p_i - \omega t_t$ from a given $p_i$ and $\omega_i$, the distance $t_i$ between those two points must be sampled. Recall that $\tau(p_i, p_{i+1})$ describes the ratio of light arriving from $p_{i+1}$ at $p_i$ without colliding with a particle. Therefore, the probability that a collision occurs between $p_i$ and $p_{i+1}$ is 
 \begin{equation} \label{eq:collision_p}
 1 - \tau({p_i, p_{i+1}})
 \end{equation}
-This can be used to importance sample the distance $t_i$ by inverting equation \ref{eq:collision_p} and applying the resulting function to $\xi$ (a random variable uniformly sampled from $[0,1]$). However, $\tau$ is defined as $e^{\int_{0}^{t_i}\mu_t(s)ds}$, which can't be easily inverted if the medium is heterogenous (if $\mu_t$ is not constant).
-Delta tracking (also known as woodcock tracking) solves this problem by introducing so-called fictitious particles, which neither scatter nor absorb light rays. Their distribution $\mu_f$ is chosen so that the sum of $\mu_t$ and $\mu_f$ add up to a globally constant value, the so-called majorant $\overline{\mu}$.
+This can be used to importance sample \cite{osti_4167844} the distance $t_i$ by inverting equation \ref{eq:collision_p} and applying the resulting function to $\xi$ (a random variable uniformly sampled from $[0,1]$). However, $\tau$ is defined as $e^{-\int_{0}^{t_i}\mu_t(s)ds}$, which can't be easily inverted if the medium is heterogenous (if $\mu_t$ is not constant).
+Delta tracking (also known as woodcock tracking) solves this problem by introducing so-called fictitious particles, which neither scatter nor absorb light rays \cite{10.1145/2661229.2661292}. Their distribution $\mu_f$ is chosen so that the sum of $\mu_t$ and $\mu_f$ add up to a globally constant value, the so-called majorant $\overline{\mu}$.
 The original problem of finding a real collision is then reformulated to finding any collision (fictitious or real).
 Since $\overline{\mu}$ is a constant, equation \ref{eq:collision_p} can easily be inverted and we get
 \begin{equation}
@@ -313,9 +308,9 @@ t_i^1 = - \frac{ln(1 - \xi)}{\overline{\mu}}
 as the sampled distance to the next collision, which might be with a real or a fictitious particle (a so-called null collision).
 At position $p_i^1 = p_i - \omega_i t_i^1$, the probability of hitting a real particle is 
 \begin{equation}
-p_{real\: collision} = \frac{\mu_t(p_i^1)}{\overline{\mu}}
+\mathds{P}(``real \:collision``) = \frac{\mu_t(p_i^1)}{\overline{\mu}}
 \end{equation}
- Thus, we can decide if a real particle has been hit by sampling another $\xi$ and comparing it to $p_{real\: collision}$. If $\xi$ is smaller, a real particle has been hit, if not, there is a null collision.
+ Thus, we can decide if a real particle has been hit by sampling another $\xi$ and comparing it to $\mathds{P}(``real \:collision``)$. If $\xi$ is smaller, a real particle has been hit, if not, there is a null collision \cite{10.1145/2661229.2661292}.
 In this case, we repeat the process and continue to sample distances $t_i^j$ (illustrated in figure \ref{fig:delta_tracking}) from the point $p_i ^{j-1}$ until a real collision at $p_i^n$ is detected. The distance to the real collision is then the sum of all distances previously computed:
 \begin{equation}
 t_i = \sum_{1 \le j \le n} t_i^j
@@ -328,12 +323,12 @@ The position of the real collision is then assumed to be the path vertex $p_{i+1
 \def\svgwidth{\columnwidth}
 \import{figures/}{fig_delta_tracking.pdf_tex}
 
-\caption{Delta tracking follows the ray in direction $-\omega_i$ and samples collision points. The first real collision is the position of the next path vertex. Image adapted from XXX(Compensated ray marching).}
+\caption{Delta tracking follows the ray in direction $-\omega_i$ and samples collision points. The first real collision is the position of the next path vertex. Image adapted from Galtier et al. \cite{GALTIER201357}.}
 \label{fig:delta_tracking}
 \end{figure}
 
 
-Delta tracking can also be used to estimate the transmittance $\tau$ between two points $p'$ and $p + \omega t$. This is done by using delta tracking to find a real collision on the ray from $p$ to $p'$. If this collision occurs before $p'$, $\tau$ is assumed to be 0, if the collision occurs after $p'$, $\tau$ is estimated as 1 (see figure \ref{fig:delta_tracking_distance}). However, there exist other, more sophisticated methods for estimating transmittance, such as ratio tracking.
+Delta tracking can also be used to estimate the transmittance $\tau$ between two points $p'$ and $p + \omega t$\cite{10.1145/2661229.2661292}. This is done by using delta tracking to find a real collision on the ray from $p$ to $p'$. If this collision occurs before $p'$, $\tau$ is assumed to be 0, if the collision occurs after $p'$, $\tau$ is estimated as 1 (see figure \ref{fig:delta_tracking_distance}). However, there exist other, more sophisticated methods for estimating transmittance, such as ratio tracking.
 
 \begin{figure}
 
@@ -345,12 +340,12 @@ Delta tracking can also be used to estimate the transmittance $\tau$ between two
     \import{figures/}{fig_delta_tracking_distance_b.pdf_tex}
 
 
-\caption{A figure that contains two subfigures} \label{fig:delta_tracking_distance}
+\caption{Image inspired by Galtier et al. \cite{GALTIER201357}.} \label{fig:delta_tracking_distance}
 \end{figure}
 
 
 \subsection{Ratio Tracking}
-Ratio tracking is used to estimate the transmittance between two already known points $p$ and $p'$. This is done by calculating various collision points between $p$ and $p'$, as described above, and stops once a collision point behind $p'$ is reached. At each collision point $p^i$, the value $\frac{\mu_f}{\overline{\mu}} = 1 - \frac{\mu_t}{\overline{\mu}}$ is saved. This fraction between fictitious particles and all particles describes the probability, that a light ray can pass $p^i$ without real collision. The transmittance $\tau$ can then be estimated as 
+Ratio tracking \cite{10.1145/2661229.2661292} is used to estimate the transmittance between two already known points $p$ and $p'$. This is done by calculating various collision points between $p$ and $p'$, as described above, and stops once a collision point behind $p'$ is reached. At each collision point $p^i$, the value $\frac{\mu_f}{\overline{\mu}} = 1 - \frac{\mu_t}{\overline{\mu}}$ is saved. This fraction between fictitious particles and all particles describes the probability, that a light ray can pass $p^i$ without real collision. The transmittance $\tau$ can then be estimated as 
 \begin{equation}
 \tau(p,p') = \prod_{1 \le i \le n}(1 - \frac{\mu_t(p^i)}{\overline{\mu}})
 \end{equation}
@@ -374,7 +369,7 @@ Photon mapping is a two pass process \cite{10.1145/280814.280925}, conceptionall
 Jensen and Christensen \cite{10.1145/280814.280925} extended this method to participating media by introducing volumetric photon maps (which differ from the volumes $\mathcal{V}'_k$ described in \ref{subsec:direct_illumination}, as they are not discrete and consider global illumination). These photon maps are computed by tracing rays from the light sources and storing the positions of interactions of those rays with the participating medium.
 \subsection{Compensated Ray Marching}
 This algorithm, developed by Zhou et al. \cite{zhou2007real-time} follows the same idea as photon mapping, but computes its photon distribution on an approximation of the original volume.
-In a preprocessing step, the original volume $\mathfrac{V}$ is split into a volume $\widetile{mathcal{V}}$ and a residual volume $\mathcal{R} = \mathcal{V} - \widetilde{\mathcal{V}}$. $\widetile{mathcal{V}}$ is a low frequency approximation to $\mathcal{V}$ and $\mathcal{R}$ is its error. The global lighting is calculated on $\widetilde{V}$ and is afterwards rendered using ray marching (similarily as in \ref{sec:ray_marching}). During the ray marching $\mathcal{R}$ is used to compensate for errors in $\widetilde{\mathcal{V}}$
+In a preprocessing step, the original volume $\mathcal{V}$ is split into a volume $\widetilde{\mathcal{V}}$ and a residual volume $\mathcal{R} = \mathcal{V} - \widetilde{\mathcal{V}}$. $\widetilde{\mathcal{V}}$ is a low frequency approximation to $\mathcal{V}$ and $\mathcal{R}$ is its error. The global lighting is calculated on $\widetilde{\mathcal{V}}$ and is afterwards rendered using ray marching (similarily as in \ref{sec:ray_marching}). During the ray marching $\mathcal{R}$ is used to compensate for errors in $\widetilde{\mathcal{V}}$.
 \section{Conclusion}
 
 

@@ -41,7 +41,22 @@ numpages = {10},
 location = {Porto, Portugal}
 }
 
-
+@inproceedings{10.1145/3305366.3328079,
+author = {Fascione, Luca and Hanika, Johannes and Heckenberg, Daniel and Kulla, Christopher and Droske, Marc and Schwarzhaupt, Jorge},
+title = {Path Tracing in Production: Part 1: Modern Path Tracing},
+year = {2019},
+isbn = {9781450363075},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3305366.3328079},
+doi = {10.1145/3305366.3328079},
+abstract = {In the past few years the movie industry has switched over from stochastic rasterisation approaches to using physically based light transport simulation: path tracing in production has become ubiquitous across studios. The new approach came with undisputed advantages such as consistent lighting, progressive previews, and fresh code bases. But also abandoning 30 years of experience meant some hard cuts affecting all stages such as lighting, look development, geometric modelling, scene description formats, the way we schedule for multi-threading, just to name a few. This means there is a rich set of people involved and as an expert in either one of these aspects it is easy to lose track of the big picture.This is part I of a full-day course, and it focuses on the necessary background knowledge. In this part, we would like to provide context for everybody interested in understanding the challenges behind writing renderers intended for movie production work. In particular we will give an insight into movie production requirements for new students and academic researchers. On the other side we will lay a solid mathematical foundation to develop new ideas to solve problems in this context.To further illustrate, part II of the course will focus on materials (acquisition and production requirements) and showcase practical efforts by prominent professionals in the field, pointing out unexpected challenges encountered in new shows and unsolved problems as well as room for future work wherever appropriate.},
+booktitle = {ACM SIGGRAPH 2019 Courses},
+articleno = {19},
+numpages = {113},
+location = {Los Angeles, California},
+series = {SIGGRAPH '19}
+}
 
   @article{bidirectional-ray-tracing,
 author = {Lafortune, Eric and Willems, Yves},
@@ -343,4 +358,198 @@ month = {apr},
 articleno = {5},
 numpages = {19},
 keywords = {path tracing, image reconstruction, machine learning, denoising, volumetric rendering}
+}
+
+@article{GALTIER201357,
+title = {Integral formulation of null-collision Monte Carlo algorithms},
+journal = {Journal of Quantitative Spectroscopy and Radiative Transfer},
+volume = {125},
+pages = {57-68},
+year = {2013},
+issn = {0022-4073},
+doi = {https://doi.org/10.1016/j.jqsrt.2013.04.001},
+url = {https://www.sciencedirect.com/science/article/pii/S0022407313001350},
+author = {M. Galtier and S. Blanco and C. Caliot and C. Coustet and J. Dauchet and M. {El Hafi} and V. Eymet and R. Fournier and J. Gautrais and A. Khuong and B. Piaud and G. Terrée},
+keywords = {Monte Carlo, Null-collision, Heterogeneous media, Integral formulation},
+abstract = {At the kinetic level, the meaning of null-collisions is straightforward: they correspond to pure-forward scattering events. We here discuss their technical significance in integral terms. We first consider a most standard null-collision Monte Carlo algorithm and show how it can be rigorously justified starting from a Fredholm equivalent to the radiative transfer equation. Doing so, we also prove that null-collision algorithms can be slightly modified so that they deal with unexpected occurrences of negative values of the null-collision coefficient (when the upper bound of the heterogeneous extinction coefficient is nonstrict). We then describe technically, in full details, the resulting algorithm, when applied to the evaluation of the local net-power density within a bounded, heterogeneous, multiple scattering and emitting/absorbing medium. The corresponding integral formulation is then explored theoretically in order to distinguish the statistical significance of introducing null-collisions from that of the integral-structure underlying modification.}
+}
+
+
+
+@book{P-766,
+author="Kahn, Herman",
+title="Use of Different Monte Carlo Sampling Techniques",
+address="Santa Monica, CA",
+year="1955",
+doi="",
+publisher="RAND Corporation"
+}
+
+
+@article{10.1145/2661229.2661292,
+author = {Nov\'{a}k, Jan and Selle, Andrew and Jarosz, Wojciech},
+title = {Residual Ratio Tracking for Estimating Attenuation in Participating Media},
+year = {2014},
+issue_date = {November 2014},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {33},
+number = {6},
+issn = {0730-0301},
+url = {https://doi.org/10.1145/2661229.2661292},
+doi = {10.1145/2661229.2661292},
+abstract = {Evaluating transmittance within participating media is a fundamental operation required by many light transport algorithms. We present ratio tracking and residual tracking, two complementary techniques that can be combined into an efficient, unbiased estimator for evaluating transmittance in complex heterogeneous media. In comparison to current approaches, our new estimator is unbiased, yields high efficiency, gracefully handles media with wavelength dependent extinction, and bridges the gap between closed form solutions and purely numerical, unbiased approaches. A key feature of ratio tracking is its ability to handle negative densities. This in turn enables us to separate the main part of the transmittance function, handle it analytically, and numerically estimate only the residual transmittance. In addition to proving the unbiasedness of our estimators, we perform an extensive empirical analysis to reveal parameters that lead to high efficiency. Finally, we describe how to integrate the new techniques into a production path tracer and demonstrate their benefits over traditional unbiased estimators.},
+journal = {ACM Trans. Graph.},
+month = {nov},
+articleno = {179},
+numpages = {11},
+keywords = {transmittance, delta tracking, participating media}
+}
+
+
+
+
+
+@article{doi:10.13182/NSE67-A18262,
+author = {R. R. Coveyou and V. R. Cain and K. J. Yost},
+title = {Adjoint and Importance in Monte Carlo Application},
+journal = {Nuclear Science and Engineering},
+volume = {27},
+number = {2},
+pages = {219-234},
+year  = {1967},
+publisher = {Taylor \& Francis},
+doi = {10.13182/NSE67-A18262},
+
+URL = { 
+    
+        https://doi.org/10.13182/NSE67-A18262
+    
+    
+
+},
+eprint = { 
+    
+        https://doi.org/10.13182/NSE67-A18262
+    
+    
+
+}
+
+}
+
+@inproceedings{10.1145/218380.218498,
+author = {Veach, Eric and Guibas, Leonidas J.},
+title = {Optimally Combining Sampling Techniques for Monte Carlo Rendering},
+year = {1995},
+isbn = {0897917014},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/218380.218498},
+doi = {10.1145/218380.218498},
+booktitle = {Proceedings of the 22nd Annual Conference on Computer Graphics and Interactive Techniques},
+pages = {419–428},
+numpages = {10},
+keywords = {lighting simulation, global illumination, variance reduction, distribution ray tracing, Monte Carlo, rendering},
+series = {SIGGRAPH '95}
+}
+
+
+
+@article{osti_4167844,
+title = {Particle-transport simulation with the Monte Carlo method},
+author = {Carter, L L and Cashwell, E D},
+abstractNote = {Attention is focused on the application of the Monte Carlo method to particle transport problems, with emphasis on neutron and photon transport. Topics covered include sampling methods, mathematical prescriptions for simulating particle transport, mechanics of simulating particle transport, neutron transport, and photon transport. A literature survey of 204 references is included. (GMT)},
+doi = {10.2172/4167844},
+url = {https://www.osti.gov/biblio/4167844}, journal = {},
+number = ,
+volume = ,
+place = {United States},
+year = {1975},
+month = {1}
+}
+
+@ARTICLE{659497,
+  author={Shannon, C.E.},
+  journal={Proceedings of the IEEE}, 
+  title={Communication In The Presence Of Noise}, 
+  year={1998},
+  volume={86},
+  number={2},
+  pages={447-457},
+  doi={10.1109/JPROC.1998.659497}}
+
+@Article{Cerezo2005,
+author={Cerezo, Eva
+and P{\'e}rez, Frederic
+and Pueyo, Xavier
+and Seron, Francisco J.
+and Sillion, Fran{\c{c}}ois X.},
+title={A survey on participating media rendering techniques},
+journal={The Visual Computer},
+year={2005},
+month={Jun},
+day={01},
+volume={21},
+number={5},
+pages={303-328},
+abstract={Rendering participating media is important for a number of domains, ranging from commercial applications (entertainment, virtual reality) to simulation systems (driving, flying, and space simulators) and safety analyses (driving conditions, sign visibility). This article surveys global illumination algorithms for environments including participating media. It reviews both appearance-based and physically-based media methods, including the single-scattering and the more general multiple-scattering techniques. The objective of the survey is the characterization of all these methods: identification of their base techniques, assumptions, limitations, and range of utilization. It concludes with some reflections about the suitability of the methods depending on the specific application involved, and possible future research lines.},
+issn={1432-2315},
+doi={10.1007/s00371-005-0287-1},
+url={https://doi.org/10.1007/s00371-005-0287-1}
+}
+
+
+@inproceedings{10.1145/563858.563893,
+author = {Blinn, James F.},
+title = {Models of Light Reflection for Computer Synthesized Pictures},
+year = {1977},
+isbn = {9781450373555},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/563858.563893},
+doi = {10.1145/563858.563893},
+abstract = {In the production of computer generated pictures of three dimensional objects, one stage of the calculation is the determination of the intensity of a given object once its visibility has been established. This is typically done by modelling the surface as a perfect diffuser, sometimes with a specular component added for the simulation of hilights. This paper presents a more accurate function for the generation of hilights which is based on some experimental measurements of how light reflects from real surfaces. It differs from previous models in that the intensity of the hilight changes with the direction of the light source. Also the position and shape of the hilights is somewhat different from that generated by simpler models. Finally, the hilight function generates different results when simulating metallic vs. nonmetallic surfaces. Many of the effects so generated are somewhat subtle and are apparent only during movie sequences. Some representative still frames from such movies are included.},
+booktitle = {Proceedings of the 4th Annual Conference on Computer Graphics and Interactive Techniques},
+pages = {192–198},
+numpages = {7},
+keywords = {computer graphics, graphic display, shading, hidden surface removal},
+location = {San Jose, California},
+series = {SIGGRAPH '77}
+}
+
+@article{KOBBELT2004801,
+title = {A survey of point-based techniques in computer graphics},
+journal = {Computers \& Graphics},
+volume = {28},
+number = {6},
+pages = {801-814},
+year = {2004},
+issn = {0097-8493},
+doi = {https://doi.org/10.1016/j.cag.2004.08.009},
+url = {https://www.sciencedirect.com/science/article/pii/S0097849304001487},
+author = {Leif Kobbelt and Mario Botsch},
+keywords = {Point-sampled geometry, Point-based graphics, GPU processing},
+abstract = {In recent years point-based geometry has gained increasing attention as an alternative surface representation, both for efficient rendering and for flexible geometry processing of highly complex 3D-models. Point-sampled objects do neither have to store nor to maintain globally consistent topological information. Therefore they are more flexible compared to triangle meshes when it comes to handling highly complex or dynamically changing shapes. In this paper, we make an attempt to give an overview of the various point-based methods that have been proposed over the last years. In particular we review and evaluate different shape representations, geometric algorithms, and rendering methods, which use points as a universal graphics primitive.}
+}
+
+
+@article{10.1145/965141.563893,
+author = {Blinn, James F.},
+title = {Models of Light Reflection for Computer Synthesized Pictures},
+year = {1977},
+issue_date = {Summer 1977},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {11},
+number = {2},
+issn = {0097-8930},
+url = {https://doi.org/10.1145/965141.563893},
+doi = {10.1145/965141.563893},
+abstract = {In the production of computer generated pictures of three dimensional objects, one stage of the calculation is the determination of the intensity of a given object once its visibility has been established. This is typically done by modelling the surface as a perfect diffuser, sometimes with a specular component added for the simulation of hilights. This paper presents a more accurate function for the generation of hilights which is based on some experimental measurements of how light reflects from real surfaces. It differs from previous models in that the intensity of the hilight changes with the direction of the light source. Also the position and shape of the hilights is somewhat different from that generated by simpler models. Finally, the hilight function generates different results when simulating metallic vs. nonmetallic surfaces. Many of the effects so generated are somewhat subtle and are apparent only during movie sequences. Some representative still frames from such movies are included.},
+journal = {SIGGRAPH Comput. Graph.},
+month = {jul},
+pages = {192–198},
+numpages = {7},
+keywords = {computer graphics, graphic display, hidden surface removal, shading}
 }

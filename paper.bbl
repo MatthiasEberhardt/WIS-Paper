@@ -1,6 +1,13 @@
 \newcommand{\etalchar}[1]{$^{#1}$}
 \begin{thebibliography}{\uppercase{HHCM21}}
 
+\bibitem[Bli77]{10.1145/965141.563893}
+\textsc{Blinn J.~F.}:
+\newblock Models of light reflection for computer synthesized pictures.
+\newblock \emph{SIGGRAPH Comput. Graph. 11}, 2 (jul 1977), 192–198.
+\newblock URL: \url{https://doi.org/10.1145/965141.563893}, \href
+  {https://doi.org/10.1145/965141.563893} {\path{doi:10.1145/965141.563893}}.
+
 \bibitem[Bli82]{10.1145/965145.801255}
 \textsc{Blinn J.~F.}:
 \newblock Light reflection functions for simulation of clouds and dusty
@@ -8,6 +15,20 @@
 \newblock \emph{SIGGRAPH Comput. Graph. 16}, 3 (jul 1982), 21–29.
 \newblock URL: \url{https://doi.org/10.1145/965145.801255}, \href
   {https://doi.org/10.1145/965145.801255} {\path{doi:10.1145/965145.801255}}.
+
+\bibitem[CC]{osti_4167844}
+\textsc{Carter L.~L., Cashwell E.~D.}:
+\newblock Particle-transport simulation with the monte carlo method.
+\newblock URL: \url{https://www.osti.gov/biblio/4167844}, \href
+  {https://doi.org/10.2172/4167844} {\path{doi:10.2172/4167844}}.
+
+\bibitem[CPP{\etalchar{*}}05]{Cerezo2005}
+\textsc{Cerezo E., P{\'e}rez F., Pueyo X., Seron F.~J., Sillion F.~X.}:
+\newblock A survey on participating media rendering techniques.
+\newblock \emph{The Visual Computer 21}, 5 (Jun 2005), 303--328.
+\newblock URL: \url{https://doi.org/10.1007/s00371-005-0287-1}, \href
+  {https://doi.org/10.1007/s00371-005-0287-1}
+  {\path{doi:10.1007/s00371-005-0287-1}}.
 
 \bibitem[DH92]{10.1145/147130.147155}
 \textsc{Danskin J., Hanrahan P.}:
@@ -17,6 +38,27 @@
   p.~91–98.
 \newblock URL: \url{https://doi.org/10.1145/147130.147155}, \href
   {https://doi.org/10.1145/147130.147155} {\path{doi:10.1145/147130.147155}}.
+
+\bibitem[FHH{\etalchar{*}}19]{10.1145/3305366.3328079}
+\textsc{Fascione L., Hanika J., Heckenberg D., Kulla C., Droske M.,
+  Schwarzhaupt J.}:
+\newblock Path tracing in production: Part 1: Modern path tracing.
+\newblock In \emph{ACM SIGGRAPH 2019 Courses} (New York, NY, USA, 2019),
+  SIGGRAPH '19, Association for Computing Machinery.
+\newblock URL: \url{https://doi.org/10.1145/3305366.3328079}, \href
+  {https://doi.org/10.1145/3305366.3328079}
+  {\path{doi:10.1145/3305366.3328079}}.
+
+\bibitem[GBC{\etalchar{*}}13]{GALTIER201357}
+\textsc{Galtier M., Blanco S., Caliot C., Coustet C., Dauchet J., {El Hafi} M.,
+  Eymet V., Fournier R., Gautrais J., Khuong A., Piaud B., Terrée G.}:
+\newblock Integral formulation of null-collision monte carlo algorithms.
+\newblock \emph{Journal of Quantitative Spectroscopy and Radiative Transfer
+  125} (2013), 57--68.
+\newblock URL:
+  \url{https://www.sciencedirect.com/science/article/pii/S0022407313001350},
+  \href {https://doi.org/https://doi.org/10.1016/j.jqsrt.2013.04.001}
+  {\path{doi:https://doi.org/10.1016/j.jqsrt.2013.04.001}}.
 
 \bibitem[Gla89]{10.5555/94788}
 \textsc{Glassner A.~S.} (Ed.):
@@ -45,6 +87,20 @@
 \newblock Global illumination using photon maps.
 \newblock In \emph{Proceedings of the Eurographics Workshop on Rendering
   Techniques '96} (Berlin, Heidelberg, 1996), Springer-Verlag, p.~21–30.
+
+\bibitem[Kah55]{P-766}
+\textsc{Kahn H.}:
+\newblock \emph{Use of Different Monte Carlo Sampling Techniques}.
+\newblock RAND Corporation, Santa Monica, CA, 1955.
+
+\bibitem[KB04]{KOBBELT2004801}
+\textsc{Kobbelt L., Botsch M.}:
+\newblock A survey of point-based techniques in computer graphics.
+\newblock \emph{Computers \& Graphics 28}, 6 (2004), 801--814.
+\newblock URL:
+  \url{https://www.sciencedirect.com/science/article/pii/S0097849304001487},
+  \href {https://doi.org/https://doi.org/10.1016/j.cag.2004.08.009}
+  {\path{doi:https://doi.org/10.1016/j.cag.2004.08.009}}.
 
 \bibitem[KVH84]{10.1145/964965.808594}
 \textsc{Kajiya J.~T., Von~Herzen B.~P.}:
@@ -86,11 +142,27 @@
 \newblock \href {https://doi.org/10.1109/2945.468400}
   {\path{doi:10.1109/2945.468400}}.
 
+\bibitem[NSJ14]{10.1145/2661229.2661292}
+\textsc{Nov\'{a}k J., Selle A., Jarosz W.}:
+\newblock Residual ratio tracking for estimating attenuation in participating
+  media.
+\newblock \emph{ACM Trans. Graph. 33}, 6 (nov 2014).
+\newblock URL: \url{https://doi.org/10.1145/2661229.2661292}, \href
+  {https://doi.org/10.1145/2661229.2661292}
+  {\path{doi:10.1145/2661229.2661292}}.
+
 \bibitem[PKK00]{10.1007/978-3-7091-6303-0_2}
 \textsc{Pauly M., Kollig T., Keller A.}:
 \newblock Metropolis light transport for participating media.
 \newblock In \emph{Rendering Techniques 2000} (Vienna, 2000), P{\'e}roche B.,
   Rushmeier H., (Eds.), Springer Vienna, pp.~11--22.
+
+\bibitem[Sha98]{659497}
+\textsc{Shannon C.}:
+\newblock Communication in the presence of noise.
+\newblock \emph{Proceedings of the IEEE 86}, 2 (1998), 447--457.
+\newblock \href {https://doi.org/10.1109/JPROC.1998.659497}
+  {\path{doi:10.1109/JPROC.1998.659497}}.
 
 \bibitem[VG70]{metropolis}
 \textsc{Veach E., Guibas L.}:
@@ -98,6 +170,15 @@
 \newblock \emph{Computer Graphics (SIGGRAPH '97 Proceedings) 31} (02 1970).
 \newblock \href {https://doi.org/10.1145/258734.258775}
   {\path{doi:10.1145/258734.258775}}.
+
+\bibitem[VG95]{10.1145/218380.218498}
+\textsc{Veach E., Guibas L.~J.}:
+\newblock Optimally combining sampling techniques for monte carlo rendering.
+\newblock In \emph{Proceedings of the 22nd Annual Conference on Computer
+  Graphics and Interactive Techniques} (New York, NY, USA, 1995), SIGGRAPH '95,
+  Association for Computing Machinery, p.~419–428.
+\newblock URL: \url{https://doi.org/10.1145/218380.218498}, \href
+  {https://doi.org/10.1145/218380.218498} {\path{doi:10.1145/218380.218498}}.
 
 \bibitem[WMG98]{729595}
 \textsc{Wittenbrink C., Malzbender T., Goss M.}:

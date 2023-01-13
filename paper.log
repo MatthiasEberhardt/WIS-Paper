@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.10.23)  13 JAN 2023 01:58
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.10.23)  13 JAN 2023 05:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -493,6 +493,9 @@ Package: lineno 2005/11/02 line numbers on paragraphs v4.41
 \bframesep=\dimen170
 \bframebox=\box53
 LaTeX Info: Redefining \\ on input line 3056.
+)
+(c:/texlive/2022/texmf-dist/tex/latex/doublestroke/dsfont.sty
+Package: dsfont 1995/08/01 v0.1 Double stroke roman fonts
 ) (./body.tex
 (c:/texlive/2022/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2022-09-28 L3 backend support: PDF output (pdfTeX)
@@ -541,16 +544,8 @@ Package hyperref Info: Link coloring ON on input line 31.
 \everyMPtoPDFconversion=\toks29
 ) (c:/texlive/2022/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
-
-(c:/texlive/2022/texmf-dist/tex/latex/grfext/grfext.sty
-Package: grfext 2019/12/03 v1.3 Manage graphics extensions (HO)
-)
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 85.
-Package grfext Info: Graphics extension search list:
-(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
-G,.JBIG2,.JB2,.eps]
-(grfext)             \AppendGraphicsExtensions on input line 504.
 
 (c:/texlive/2022/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
@@ -604,32 +599,32 @@ Underfull \hbox (badness 10000) in paragraph at lines 36--37
  []
 
 (./figures/fig_interactions.pdf_tex
-<figures//fig_interactions.pdf, id=12, page=1, 270.3012pt x 142.26378pt>
+<figures//fig_interactions.pdf, id=13, page=1, 270.3012pt x 142.26378pt>
 File: figures//fig_interactions.pdf Graphic file (type pdf)
 <use figures//fig_interactions.pdf, page 1>
 Package pdftex.def Info: figures//fig_interactions.pdf , page1 used on input li
 ne 56.
 (pdftex.def)             Requested size: 240.0pt x 126.31696pt.
-<figures//fig_interactions.pdf, id=13, page=2, 270.3012pt x 142.26378pt>
+<figures//fig_interactions.pdf, id=14, page=2, 270.3012pt x 142.26378pt>
 File: figures//fig_interactions.pdf Graphic file (type pdf)
 <use figures//fig_interactions.pdf, page 2>
 Package pdftex.def Info: figures//fig_interactions.pdf , page2 used on input li
 ne 62.
 (pdftex.def)             Requested size: 240.0pt x 126.31696pt.
 ) (./figures/fig_cylinder.pdf_tex
-<figures//fig_cylinder.pdf, id=18, page=1, 597.50786pt x 711.31892pt>
+<figures//fig_cylinder.pdf, id=19, page=1, 597.50786pt x 711.31892pt>
 File: figures//fig_cylinder.pdf Graphic file (type pdf)
 <use figures//fig_cylinder.pdf, page 1>
 Package pdftex.def Info: figures//fig_cylinder.pdf , page1 used on input line 5
 6.
 (pdftex.def)             Requested size: 240.0pt x 285.71645pt.
-<figures//fig_cylinder.pdf, id=19, page=2, 597.50786pt x 711.31892pt>
+<figures//fig_cylinder.pdf, id=20, page=2, 597.50786pt x 711.31892pt>
 File: figures//fig_cylinder.pdf Graphic file (type pdf)
 <use figures//fig_cylinder.pdf, page 2>
 Package pdftex.def Info: figures//fig_cylinder.pdf , page2 used on input line 5
 9.
 (pdftex.def)             Requested size: 240.0pt x 285.71645pt.
-<figures//fig_cylinder.pdf, id=20, page=3, 597.50786pt x 711.31892pt>
+<figures//fig_cylinder.pdf, id=21, page=3, 597.50786pt x 711.31892pt>
 File: figures//fig_cylinder.pdf Graphic file (type pdf)
 <use figures//fig_cylinder.pdf, page 3>
 Package pdftex.def Info: figures//fig_cylinder.pdf , page3 used on input line 6
@@ -637,9 +632,9 @@ Package pdftex.def Info: figures//fig_cylinder.pdf , page3 used on input line 6
 (pdftex.def)             Requested size: 240.0pt x 285.71645pt.
 )
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 8.99994pt on input line 99.
+(Font)              scaled to size 8.99994pt on input line 94.
 LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 9
-9.
+4.
 
 (c:/texlive/2022/texmf-dist/tex/latex/psnfss/ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
@@ -651,7 +646,7 @@ File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 pdfTeX warning: pdflatex.exe (file ./figures//fig_interactions.pdf): PDF inclus
 ion: multiple pdfs with page group included in a single page
 >] (./figures/fig_projected_cylinder.pdf_tex
-<figures//fig_projected_cylinder.pdf, id=48, page=1, 597.50786pt x 597.50786pt>
+<figures//fig_projected_cylinder.pdf, id=55, page=1, 597.50786pt x 597.50786pt>
 
 File: figures//fig_projected_cylinder.pdf Graphic file (type pdf)
 <use figures//fig_projected_cylinder.pdf, page 1>
@@ -660,25 +655,25 @@ put line 56.
 (pdftex.def)             Requested size: 240.0pt x 240.0018pt.
 )
 (./figures/fig_light_changes.pdf_tex
-<figures//fig_light_changes.pdf, id=51, page=1, 853.58266pt x 455.2441pt>
+<figures//fig_light_changes.pdf, id=60, page=1, 853.58266pt x 455.2441pt>
 File: figures//fig_light_changes.pdf Graphic file (type pdf)
 <use figures//fig_light_changes.pdf, page 1>
 Package pdftex.def Info: figures//fig_light_changes.pdf , page1 used on input l
 ine 56.
 (pdftex.def)             Requested size: 240.0pt x 127.9954pt.
-<figures//fig_light_changes.pdf, id=52, page=2, 853.58266pt x 455.2441pt>
+<figures//fig_light_changes.pdf, id=61, page=2, 853.58266pt x 455.2441pt>
 File: figures//fig_light_changes.pdf Graphic file (type pdf)
 <use figures//fig_light_changes.pdf, page 2>
 Package pdftex.def Info: figures//fig_light_changes.pdf , page2 used on input l
 ine 60.
 (pdftex.def)             Requested size: 240.0pt x 127.9954pt.
-<figures//fig_light_changes.pdf, id=53, page=3, 853.58266pt x 455.2441pt>
+<figures//fig_light_changes.pdf, id=62, page=3, 853.58266pt x 455.2441pt>
 File: figures//fig_light_changes.pdf Graphic file (type pdf)
 <use figures//fig_light_changes.pdf, page 3>
 Package pdftex.def Info: figures//fig_light_changes.pdf , page3 used on input l
 ine 62.
 (pdftex.def)             Requested size: 240.0pt x 127.9954pt.
-<figures//fig_light_changes.pdf, id=54, page=4, 853.58266pt x 455.2441pt>
+<figures//fig_light_changes.pdf, id=63, page=4, 853.58266pt x 455.2441pt>
 File: figures//fig_light_changes.pdf Graphic file (type pdf)
 <use figures//fig_light_changes.pdf, page 4>
 Package pdftex.def Info: figures//fig_light_changes.pdf , page4 used on input l
@@ -696,14 +691,20 @@ pdfTeX warning: pdflatex.exe (file ./figures//fig_cylinder.pdf): PDF inclusion:
 
 pdfTeX warning: pdflatex.exe (file ./figures//fig_projected_cylinder.pdf): PDF 
 inclusion: multiple pdfs with page group included in a single page
->] (./figures/fig_simple_algorithm.pdf_tex
-<figures//fig_simple_algorithm.pdf, id=90, page=1, 711.31892pt x 569.05513pt>
+>]
+Underfull \hbox (badness 2573) in paragraph at lines 163--166
+\T1/ptm/m/n/9 This in-te-gral is an-a-lyt-i-cally un-solv-able in the gen-eral 
+case
+ []
+
+(./figures/fig_simple_algorithm.pdf_tex
+<figures//fig_simple_algorithm.pdf, id=102, page=1, 711.31892pt x 569.05513pt>
 File: figures//fig_simple_algorithm.pdf Graphic file (type pdf)
 <use figures//fig_simple_algorithm.pdf, page 1>
 Package pdftex.def Info: figures//fig_simple_algorithm.pdf , page1 used on inpu
 t line 56.
 (pdftex.def)             Requested size: 240.0pt x 192.00006pt.
-<figures//fig_simple_algorithm.pdf, id=91, page=2, 711.31892pt x 569.05513pt>
+<figures//fig_simple_algorithm.pdf, id=103, page=2, 711.31892pt x 569.05513pt>
 File: figures//fig_simple_algorithm.pdf Graphic file (type pdf)
 <use figures//fig_simple_algorithm.pdf, page 2>
 Package pdftex.def Info: figures//fig_simple_algorithm.pdf , page2 used on inpu
@@ -735,62 +736,69 @@ clusion: multiple pdfs with page group included in a single page
 pdfTeX warning: pdflatex.exe (file ./figures//fig_simple_algorithm.pdf): PDF in
 clusion: multiple pdfs with page group included in a single page
 >]
-Underfull \hbox (badness 3343) in paragraph at lines 218--221
+Underfull \hbox (badness 3343) in paragraph at lines 214--217
 \T1/ptm/m/n/9 for one line seg-ment be-tween $\OML/ptmcm/m/it/9 p[]$ \T1/ptm/m/
 n/9 and $\OML/ptmcm/m/it/9 p[]$\T1/ptm/m/n/9 . The quan-tity
  []
 
 (./figures/fig_monte_carlo.pdf_tex
-<figures//fig_monte_carlo.pdf, id=127, page=1, 853.58266pt x 512.1496pt>
+<figures//fig_monte_carlo.pdf, id=149, page=1, 853.58266pt x 512.1496pt>
 File: figures//fig_monte_carlo.pdf Graphic file (type pdf)
 <use figures//fig_monte_carlo.pdf, page 1>
 Package pdftex.def Info: figures//fig_monte_carlo.pdf , page1 used on input lin
 e 56.
 (pdftex.def)             Requested size: 240.0pt x 143.99483pt.
-<figures//fig_monte_carlo.pdf, id=128, page=2, 853.58266pt x 512.1496pt>
+<figures//fig_monte_carlo.pdf, id=150, page=2, 853.58266pt x 512.1496pt>
 File: figures//fig_monte_carlo.pdf Graphic file (type pdf)
 <use figures//fig_monte_carlo.pdf, page 2>
 Package pdftex.def Info: figures//fig_monte_carlo.pdf , page2 used on input lin
 e 61.
 (pdftex.def)             Requested size: 240.0pt x 143.99483pt.
-<figures//fig_monte_carlo.pdf, id=129, page=3, 853.58266pt x 512.1496pt>
+<figures//fig_monte_carlo.pdf, id=151, page=3, 853.58266pt x 512.1496pt>
 File: figures//fig_monte_carlo.pdf Graphic file (type pdf)
 <use figures//fig_monte_carlo.pdf, page 3>
 Package pdftex.def Info: figures//fig_monte_carlo.pdf , page3 used on input lin
 e 63.
 (pdftex.def)             Requested size: 240.0pt x 143.99483pt.
-<figures//fig_monte_carlo.pdf, id=130, page=4, 853.58266pt x 512.1496pt>
+<figures//fig_monte_carlo.pdf, id=152, page=4, 853.58266pt x 512.1496pt>
 File: figures//fig_monte_carlo.pdf Graphic file (type pdf)
 <use figures//fig_monte_carlo.pdf, page 4>
 Package pdftex.def Info: figures//fig_monte_carlo.pdf , page4 used on input lin
 e 65.
 (pdftex.def)             Requested size: 240.0pt x 143.99483pt.
-<figures//fig_monte_carlo.pdf, id=131, page=5, 853.58266pt x 512.1496pt>
+<figures//fig_monte_carlo.pdf, id=153, page=5, 853.58266pt x 512.1496pt>
 File: figures//fig_monte_carlo.pdf Graphic file (type pdf)
 <use figures//fig_monte_carlo.pdf, page 5>
 Package pdftex.def Info: figures//fig_monte_carlo.pdf , page5 used on input lin
 e 67.
 (pdftex.def)             Requested size: 240.0pt x 143.99483pt.
-) [4] (./figures/fig_delta_tracking.pdf_tex
-<figures//fig_delta_tracking.pdf, id=153, page=1, 569.05513pt x 569.05513pt>
+) [4]
+LaTeX Font Info:    Trying to load font information for U+dsrom on input line 3
+11.
+
+(c:/texlive/2022/texmf-dist/tex/latex/doublestroke/Udsrom.fd
+File: Udsrom.fd 1995/08/01 v0.1 Double stroke roman font definitions
+)
+(./figures/fig_delta_tracking.pdf_tex
+<figures//fig_delta_tracking.pdf, id=187, page=1, 569.05513pt x 569.05513pt>
 File: figures//fig_delta_tracking.pdf Graphic file (type pdf)
 <use figures//fig_delta_tracking.pdf, page 1>
 Package pdftex.def Info: figures//fig_delta_tracking.pdf , page1 used on input 
 line 56.
 (pdftex.def)             Requested size: 240.0pt x 240.00008pt.
-<figures//fig_delta_tracking.pdf, id=154, page=2, 569.05513pt x 569.05513pt>
+<figures//fig_delta_tracking.pdf, id=188, page=2, 569.05513pt x 569.05513pt>
 File: figures//fig_delta_tracking.pdf Graphic file (type pdf)
 <use figures//fig_delta_tracking.pdf, page 2>
 Package pdftex.def Info: figures//fig_delta_tracking.pdf , page2 used on input 
 line 59.
 (pdftex.def)             Requested size: 240.0pt x 240.00008pt.
-<figures//fig_delta_tracking.pdf, id=155, page=3, 569.05513pt x 569.05513pt>
+<figures//fig_delta_tracking.pdf, id=189, page=3, 569.05513pt x 569.05513pt>
 File: figures//fig_delta_tracking.pdf Graphic file (type pdf)
 <use figures//fig_delta_tracking.pdf, page 3>
 Package pdftex.def Info: figures//fig_delta_tracking.pdf , page3 used on input 
 line 61.
 (pdftex.def)             Requested size: 240.0pt x 240.00008pt.
-<figures//fig_delta_tracking.pdf, id=156, page=4, 569.05513pt x 569.05513pt>
+<figures//fig_delta_tracking.pdf, id=190, page=4, 569.05513pt x 569.05513pt>
 File: figures//fig_delta_tracking.pdf Graphic file (type pdf)
 <use figures//fig_delta_tracking.pdf, page 4>
 Package pdftex.def Info: figures//fig_delta_tracking.pdf , page4 used on input 
@@ -798,21 +806,21 @@ line 68.
 (pdftex.def)             Requested size: 240.0pt x 240.00008pt.
 )
 (./figures/fig_delta_tracking_distance_a.pdf_tex
-<figures//fig_delta_tracking_distance_a.pdf, id=158, page=1, 569.05513pt x 569.
+<figures//fig_delta_tracking_distance_a.pdf, id=195, page=1, 569.05513pt x 569.
 05513pt>
 File: figures//fig_delta_tracking_distance_a.pdf Graphic file (type pdf)
 <use figures//fig_delta_tracking_distance_a.pdf, page 1>
 Package pdftex.def Info: figures//fig_delta_tracking_distance_a.pdf , page1 use
 d on input line 56.
 (pdftex.def)             Requested size: 115.19897pt x 115.19829pt.
-<figures//fig_delta_tracking_distance_a.pdf, id=159, page=2, 569.05513pt x 569.
+<figures//fig_delta_tracking_distance_a.pdf, id=196, page=2, 569.05513pt x 569.
 05513pt>
 File: figures//fig_delta_tracking_distance_a.pdf Graphic file (type pdf)
 <use figures//fig_delta_tracking_distance_a.pdf, page 2>
 Package pdftex.def Info: figures//fig_delta_tracking_distance_a.pdf , page2 use
 d on input line 60.
 (pdftex.def)             Requested size: 115.19897pt x 115.19829pt.
-<figures//fig_delta_tracking_distance_a.pdf, id=160, page=3, 569.05513pt x 569.
+<figures//fig_delta_tracking_distance_a.pdf, id=197, page=3, 569.05513pt x 569.
 05513pt>
 File: figures//fig_delta_tracking_distance_a.pdf Graphic file (type pdf)
 <use figures//fig_delta_tracking_distance_a.pdf, page 3>
@@ -821,21 +829,21 @@ d on input line 62.
 (pdftex.def)             Requested size: 115.19897pt x 115.19829pt.
 )
 (./figures/fig_delta_tracking_distance_b.pdf_tex
-<figures//fig_delta_tracking_distance_b.pdf, id=161, page=1, 569.05513pt x 569.
+<figures//fig_delta_tracking_distance_b.pdf, id=198, page=1, 569.05513pt x 569.
 05513pt>
 File: figures//fig_delta_tracking_distance_b.pdf Graphic file (type pdf)
 <use figures//fig_delta_tracking_distance_b.pdf, page 1>
 Package pdftex.def Info: figures//fig_delta_tracking_distance_b.pdf , page1 use
 d on input line 56.
 (pdftex.def)             Requested size: 115.19897pt x 115.19829pt.
-<figures//fig_delta_tracking_distance_b.pdf, id=162, page=2, 569.05513pt x 569.
+<figures//fig_delta_tracking_distance_b.pdf, id=199, page=2, 569.05513pt x 569.
 05513pt>
 File: figures//fig_delta_tracking_distance_b.pdf Graphic file (type pdf)
 <use figures//fig_delta_tracking_distance_b.pdf, page 2>
 Package pdftex.def Info: figures//fig_delta_tracking_distance_b.pdf , page2 use
 d on input line 60.
 (pdftex.def)             Requested size: 115.19897pt x 115.19829pt.
-<figures//fig_delta_tracking_distance_b.pdf, id=163, page=3, 569.05513pt x 569.
+<figures//fig_delta_tracking_distance_b.pdf, id=200, page=3, 569.05513pt x 569.
 05513pt>
 File: figures//fig_delta_tracking_distance_b.pdf Graphic file (type pdf)
 <use figures//fig_delta_tracking_distance_b.pdf, page 3>
@@ -904,25 +912,25 @@ pdfTeX warning: pdflatex.exe (file ./figures//fig_delta_tracking_distance_b.pdf
 pdfTeX warning: pdflatex.exe (file ./figures//fig_delta_tracking_distance_b.pdf
 ): PDF inclusion: multiple pdfs with page group included in a single page
 >] (./figures/fig_bidirectional.pdf_tex
-<figures//fig_bidirectional.pdf, id=187, page=1, 739.77165pt x 455.2441pt>
+<figures//fig_bidirectional.pdf, id=230, page=1, 739.77165pt x 455.2441pt>
 File: figures//fig_bidirectional.pdf Graphic file (type pdf)
 <use figures//fig_bidirectional.pdf, page 1>
 Package pdftex.def Info: figures//fig_bidirectional.pdf , page1 used on input l
 ine 56.
 (pdftex.def)             Requested size: 240.0pt x 147.68861pt.
-<figures//fig_bidirectional.pdf, id=188, page=2, 739.77165pt x 455.2441pt>
+<figures//fig_bidirectional.pdf, id=231, page=2, 739.77165pt x 455.2441pt>
 File: figures//fig_bidirectional.pdf Graphic file (type pdf)
 <use figures//fig_bidirectional.pdf, page 2>
 Package pdftex.def Info: figures//fig_bidirectional.pdf , page2 used on input l
 ine 60.
 (pdftex.def)             Requested size: 240.0pt x 147.68861pt.
-<figures//fig_bidirectional.pdf, id=189, page=3, 739.77165pt x 455.2441pt>
+<figures//fig_bidirectional.pdf, id=232, page=3, 739.77165pt x 455.2441pt>
 File: figures//fig_bidirectional.pdf Graphic file (type pdf)
 <use figures//fig_bidirectional.pdf, page 3>
 Package pdftex.def Info: figures//fig_bidirectional.pdf , page3 used on input l
 ine 62.
 (pdftex.def)             Requested size: 240.0pt x 147.68861pt.
-<figures//fig_bidirectional.pdf, id=190, page=4, 739.77165pt x 455.2441pt>
+<figures//fig_bidirectional.pdf, id=233, page=4, 739.77165pt x 455.2441pt>
 File: figures//fig_bidirectional.pdf Graphic file (type pdf)
 <use figures//fig_bidirectional.pdf, page 4>
 Package pdftex.def Info: figures//fig_bidirectional.pdf , page4 used on input l
@@ -933,44 +941,66 @@ ine 64.
 \openout5 = `paper.brf'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 32--32
-[]\T1/ptm/m/sc/8 Hofmann N., Has-sel-gren J., Clar-berg P.,
+Underfull \hbox (badness 3281) in paragraph at lines 10--10
+[]\T1/ptm/m/sc/8 Blinn J. F.\T1/ptm/m/n/8 :  Mod-els of light re-flec-tion for 
+com-puter
  []
 
 
-Underfull \hbox (badness 2644) in paragraph at lines 32--32
-\T1/ptm/m/sc/8 Munkberg J.\T1/ptm/m/n/8 :  In-ter-ac-tive path trac-ing and re-
-con-struc-tion of
+Underfull \hbox (badness 3942) in paragraph at lines 10--10
+\T1/ptm/m/n/8 syn-the-sized pic-tures.  \T1/ptm/m/it/8 SIG-GRAPH Com-put. Graph
+. 11\T1/ptm/m/n/8 , 2 (jul
  []
 
 
-Underfull \hbox (badness 4108) in paragraph at lines 32--32
-\T1/ptm/m/n/8 (apr 2021).  URL: [][]$\T1/pcr/m/n/8 https : / / doi . org / 10 .
- 1145 / 3451256$[][]\T1/ptm/m/n/8 ,
+Underfull \hbox (badness 1048) in paragraph at lines 32--32
+[]\T1/ptm/m/sc/8 Cerezo E., Pérez F., Pueyo X., Seron F. J., Sil-
  []
 
 
-Underfull \hbox (badness 2205) in paragraph at lines 42--42
-[]\T1/ptm/m/sc/8 Jensen H. W., Chris-tensen P. H.\T1/ptm/m/n/8 :  Ef-fi-cient s
-im-u-la-
+Underfull \hbox (badness 10000) in paragraph at lines 62--62
+[]\T1/ptm/m/sc/8 Galtier M., Blanco S., Caliot C., Coustet
  []
 
 
-Underfull \hbox (badness 2401) in paragraph at lines 42--42
-\T1/ptm/m/n/8 ton maps.  In \T1/ptm/m/it/8 Pro-ceed-ings of the 25th An-nual Co
-n-fer-ence on
+Underfull \hbox (badness 4913) in paragraph at lines 62--62
+\T1/ptm/m/sc/8 C., Dauchet J., El Hafi M., Eymet V., Fournier R.,
  []
 
 
-Underfull \hbox (badness 2818) in paragraph at lines 42--42
-\T1/ptm/m/it/8 Com-puter Graph-ics and In-ter-ac-tive Tech-niques \T1/ptm/m/n/8
- (New York, NY,
+Underfull \hbox (badness 3815) in paragraph at lines 62--62
+\T1/ptm/m/sc/8 Gau-trais J., Khuong A., Pi-aud B., Ter-rée G.\T1/ptm/m/n/8 :  I
+n-te-
  []
 
 
-Underfull \hbox (badness 7168) in paragraph at lines 55--55
-\T1/ptm/m/n/8 URL: [][]$\T1/pcr/m/n/8 https : / / doi . org / 10 . 1145 / 96496
-5 . 808594$[][]\T1/ptm/m/n/8 , [][]$\T1/pcr/m/n/8 doi :
+Underfull \hbox (badness 1521) in paragraph at lines 62--62
+\T1/ptm/m/n/8 gral for-mu-la-tion of null-collision monte carlo al-go-rithms.  
+\T1/ptm/m/it/8 Jour-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 62--62
+\T1/ptm/m/it/8 nal of Quan-ti-ta-tive Spec-troscopy and Ra-dia-tive Trans-fer 1
+25
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 62--62
+\T1/ptm/m/n/8 (2013), 57--68.  URL: [][]$\T1/pcr/m/n/8 https : / / www . scienc
+edirect .
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 62--62
+\T1/pcr/m/n/8 com / science / article / pii / S0022407313001350$[][]\T1/ptm/m/n
+/8 ,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 62--62
+[][]$\T1/pcr/m/n/8 doi : https : / / doi . org / 10 . 1016 / j . jqsrt . 2013 .
+ 04 . 001$[][]\T1/ptm/m/n/8 .
  []
 
 [6 <./figures//fig_bidirectional.pdf> <./figures//fig_bidirectional.pdf
@@ -986,23 +1016,70 @@ sion: multiple pdfs with page group included in a single page
 pdfTeX warning: pdflatex.exe (file ./figures//fig_bidirectional.pdf): PDF inclu
 sion: multiple pdfs with page group included in a single page
 >]
-Underfull \hbox (badness 1024) in paragraph at lines 116--116
+Underfull \hbox (badness 10000) in paragraph at lines 74--74
+[]\T1/ptm/m/sc/8 Hofmann N., Has-sel-gren J., Clar-berg P.,
+ []
+
+
+Underfull \hbox (badness 2644) in paragraph at lines 74--74
+\T1/ptm/m/sc/8 Munkberg J.\T1/ptm/m/n/8 :  In-ter-ac-tive path trac-ing and re-
+con-struc-tion of
+ []
+
+
+Underfull \hbox (badness 4108) in paragraph at lines 74--74
+\T1/ptm/m/n/8 (apr 2021).  URL: [][]$\T1/pcr/m/n/8 https : / / doi . org / 10 .
+ 1145 / 3451256$[][]\T1/ptm/m/n/8 ,
+ []
+
+
+Underfull \hbox (badness 2205) in paragraph at lines 84--84
+[]\T1/ptm/m/sc/8 Jensen H. W., Chris-tensen P. H.\T1/ptm/m/n/8 :  Ef-fi-cient s
+im-u-la-
+ []
+
+
+Underfull \hbox (badness 2401) in paragraph at lines 84--84
+\T1/ptm/m/n/8 ton maps.  In \T1/ptm/m/it/8 Pro-ceed-ings of the 25th An-nual Co
+n-fer-ence on
+ []
+
+
+Underfull \hbox (badness 2818) in paragraph at lines 84--84
+\T1/ptm/m/it/8 Com-puter Graph-ics and In-ter-ac-tive Tech-niques \T1/ptm/m/n/8
+ (New York, NY,
+ []
+
+
+Underfull \hbox (badness 4254) in paragraph at lines 104--104
+\T1/ptm/m/n/8 niques in com-puter graph-ics.  \T1/ptm/m/it/8 Com-put-ers & Grap
+h-ics 28\T1/ptm/m/n/8 , 6
+ []
+
+
+Underfull \hbox (badness 7168) in paragraph at lines 111--111
+\T1/ptm/m/n/8 URL: [][]$\T1/pcr/m/n/8 https : / / doi . org / 10 . 1145 / 96496
+5 . 808594$[][]\T1/ptm/m/n/8 , [][]$\T1/pcr/m/n/8 doi :
+ []
+
+
+Underfull \hbox (badness 1024) in paragraph at lines 197--197
 []\T1/ptm/m/sc/8 Zhou K., Ren Z., Lin S., Bao H., Guo B., Shum
  []
 
 
-Underfull \hbox (badness 1033) in paragraph at lines 116--116
+Underfull \hbox (badness 1033) in paragraph at lines 197--197
 \T1/ptm/m/n/8 Tech. Rep. MSR-TR-2007-142, Septem-ber 2007.  URL: [][]$\T1/pcr/m
 /n/8 https :
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 116--116
+Underfull \hbox (badness 10000) in paragraph at lines 197--197
 \T1/pcr/m/n/8 / / www . microsoft . com / en-[]us / research / publication /
  []
 
 
-Overfull \hbox (48.10017pt too wide) in paragraph at lines 116--116
+Overfull \hbox (48.10017pt too wide) in paragraph at lines 197--197
 \T1/pcr/m/n/8 real-[]time-[]smoke-[]rendering-[]using-[]compensated-[]ray-[]mar
 ching/$[][]\T1/ptm/m/n/8 .
  []
@@ -1012,36 +1089,36 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 []
  []
 
-[7
-
-] (./paper.aux)
+[7] (./paper.aux)
 Package rerunfilecheck Info: File `paper.brf' has not changed.
-(rerunfilecheck)             Checksum: F07C2E24F2FD8A43F10295B02DD78033;1996.
+(rerunfilecheck)             Checksum: A95538564B00E94DEC868F52DADB05C1;3348.
  ) 
 Here is how much of TeX's memory you used:
- 14332 strings out of 475071
- 248128 string characters out of 5782907
- 624525 words of memory out of 5000000
- 35334 multiletter control sequences out of 15000+600000
- 533381 words of font info for 117 fonts, out of 8000000 for 9000
+ 14381 strings out of 475071
+ 249003 string characters out of 5782907
+ 625461 words of memory out of 5000000
+ 35369 multiletter control sequences out of 15000+600000
+ 531013 words of font info for 120 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 94i,16n,92p,951b,548s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 94i,16n,92p,957b,550s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {c:/texlive/2022/texmf-dist/fonts/enc/dvips/base/8r.enc}<c:/texlive/2022/texm
-f-dist/fonts/type1/public/amsfonts/cmextra/cmex9.pfb><c:/texlive/2022/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2022/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmsy5.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmsy6.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.
-pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb><c:/te
-xlive/2022/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb><c:/texlive/2022/texmf
--dist/fonts/type1/urw/helvetic/uhvr8a.pfb><c:/texlive/2022/texmf-dist/fonts/typ
-e1/urw/symbol/usyr.pfb><c:/texlive/2022/texmf-dist/fonts/type1/urw/times/utmb8a
-.pfb><c:/texlive/2022/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/texlive/2
-022/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on paper.pdf (7 pages, 204001 bytes).
+f-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2022/texmf-dist/fo
+nts/type1/public/amsfonts/cmextra/cmex9.pfb><c:/texlive/2022/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmr10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmsy5.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6
+.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/t
+exlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb><c:/texlive/202
+2/texmf-dist/fonts/type1/public/doublestroke/dsrom8.pfb><c:/texlive/2022/texmf-
+dist/fonts/type1/urw/courier/ucrr8a.pfb><c:/texlive/2022/texmf-dist/fonts/type1
+/urw/helvetic/uhvr8a.pfb><c:/texlive/2022/texmf-dist/fonts/type1/urw/symbol/usy
+r.pfb><c:/texlive/2022/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/
+2022/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/texlive/2022/texmf-dist/fo
+nts/type1/urw/times/utmri8a.pfb>
+Output written on paper.pdf (7 pages, 222885 bytes).
 PDF statistics:
- 349 PDF objects out of 1000 (max. 8388607)
- 278 compressed objects within 3 object streams
- 77 named destinations out of 1000 (max. 500000)
+ 450 PDF objects out of 1000 (max. 8388607)
+ 367 compressed objects within 4 object streams
+ 87 named destinations out of 1000 (max. 500000)
  168 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -7,51 +7,56 @@ Reallocated global_strs (elt_size=200001) to 20 items from 10.
 Reallocated glb_str_end (elt_size=4) to 20 items from 10.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: bib.bib
-Repeated entry---line 457 of file bib.bib
- :   @inproceedings{10.1145/280814.280925
- :                                       ,
+Repeated entry---line 777 of file bib.bib
+ : @article{10.1145/2661229.2661292
+ :                                 ,
+I'm skipping whatever remains of this entry
+You're missing a field part---line 929 of file bib.bib
+ : number = 
+ :          ,
 I'm skipping whatever remains of this entry
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Warning--empty journal in osti_4167844
 Warning--empty institution in zhou2007real-time
-You've used 16 entries,
+You've used 26 entries,
             3585 wiz_defined-function locations,
-            855 strings with 8647 characters,
-and the built_in function-call counts, 8785 in all, are:
-= -- 917
-> -- 297
-< -- 7
-+ -- 96
-- -- 95
-* -- 612
-:= -- 1207
-add.period$ -- 43
-call.type$ -- 16
-change.case$ -- 96
-chr.to.int$ -- 16
-cite$ -- 17
-duplicate$ -- 337
-empty$ -- 768
-format.name$ -- 116
-if$ -- 2186
+            931 strings with 10844 characters,
+and the built_in function-call counts, 14477 in all, are:
+= -- 1503
+> -- 551
+< -- 10
++ -- 186
+- -- 183
+* -- 1074
+:= -- 2016
+add.period$ -- 71
+call.type$ -- 26
+change.case$ -- 170
+chr.to.int$ -- 26
+cite$ -- 28
+duplicate$ -- 511
+empty$ -- 1235
+format.name$ -- 214
+if$ -- 3557
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 15
-newline$ -- 95
-num.names$ -- 51
-pop$ -- 155
+missing$ -- 26
+newline$ -- 153
+num.names$ -- 81
+pop$ -- 261
 preamble$ -- 1
-purify$ -- 114
+purify$ -- 199
 quote$ -- 0
-skip$ -- 605
+skip$ -- 941
 stack$ -- 0
-substring$ -- 335
-swap$ -- 129
-text.length$ -- 7
-text.prefix$ -- 6
+substring$ -- 530
+swap$ -- 184
+text.length$ -- 10
+text.prefix$ -- 9
 top$ -- 0
-type$ -- 139
-warning$ -- 1
-while$ -- 57
-width$ -- 19
-write$ -- 229
-(There was 1 error message)
+type$ -- 224
+warning$ -- 2
+while$ -- 90
+width$ -- 29
+write$ -- 375
+(There were 2 error messages)
