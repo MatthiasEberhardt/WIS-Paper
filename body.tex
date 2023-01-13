@@ -11,7 +11,7 @@
         }
         \\
 % For Computer Graphics Forum: Please use the abbreviation of your first name.
-{\parbox{\textwidth}{\centering $^1$Ostbayerische Technische Hoschschule Regensburg, Germany
+{\parbox{\textwidth}{\centering $^1$Ostbayerische Technische Hochschule Regensburg, Germany
 %        $^2$ Another Department to illustrate the use in papers from authors
 %             with different affiliations
        }
@@ -59,7 +59,7 @@ We begin our paper by introducing the reader to the mathematical formalisms of v
 \label{sec:math}
 Volumetric ray tracing follows the same principle as classical ray tracing in which an image is rendered by spanning a pixel plane in front of the camera and casting one or multiple rays through each pixel\cite{10.5555/94788}.
 That means for a point ${x}$ on the plane we cast a ray in direction $-\omega$ and calculate the amount of light ${x}$ receives from direction $\omega$, called $L({x},\omega )$.
-To do this, we find the closest intersection point of the ray with a piece of geometry,  ${y}$,  from where a certain light intensity $L_e({y},\omega )$ is transported in direction $\omega$, either through reflection or emission (The method for calculating $L_e$ is a topic of classical raytracing\cite{10.5555/94788} and will not be further evaluated in this paper, and we assume $L_e$ to be known).
+To do this, we find the closest intersection point of the ray with a piece of geometry,  ${y}$,  from where a certain light intensity $L_e({y},\omega )$ is transported in direction $\omega$, either through reflection or emission (The method for calculating $L_e$ is a topic of classical raytracing\cite{10.5555/94788} and is assumed to be a known quantity in this paper).
 Thus, we get the equation 
 
 \begin{equation}\label{eq:no_attenuation}
@@ -76,11 +76,11 @@ L({x},\omega ) = L_e({y}, \omega )
 \end{figure}
 
 
-However, this equation assumes that the light has no interactions between ${x}$ and ${y}$, which is only true if the ray travels through a vacuum. If it travels through a medium that interacts with it (called a participating medium), the interactions change the light along the ray\cite{10.5555/275458.275468} (see figure \ref{fig:light_interactions}). The types of interactions we need to consider are absorption, emission, in-scattering, and out-scattering\cite{468400}.
+However, this equation assumes that the light has no interactions between ${x}$ and ${y}$, which is only true if the ray travels through a vacuum. If it travels through a medium that interacts with it (called a participating medium), the interactions change the light along the ray\cite{10.5555/275458.275468} (see figure \ref{fig:light_interactions}). The types of interactions we need to analyze are absorption, emission, in-scattering, and out-scattering\cite{468400}.
 
-Absorption and out-scattering attenuate the light intensity along the ray, in-scattering and emission add to it.
+Absorption and out-scattering attenuate the light intensity along the ray, whereas in-scattering and emission add to it.
 \subsection{Absorption and Out-Scattering}
-At first, let us consider only out-scattering and absorption, which (like in-scattering and emission) occur due to tiny particles suspended in the volume\cite{10.1145/1179352.1141986} (such as water droplets in clouds and fog).
+At first, we evaluate only out-scattering and absorption, which (like in-scattering and emission) occur due to tiny particles suspended in the volume\cite{10.1145/1179352.1141986} (such as water droplets in clouds and fog).
 Of course, these particles are far too numerous to be directly simulated, but their distribution in 3D space can be stochastically modeled\cite{10.1145/1179352.1141986} (similar to how detailed surface structures can be modeled by microfacets \cite{10.1145/965141.563893} in surface ray tracing).
 
 \begin{figure}
@@ -91,7 +91,7 @@ Of course, these particles are far too numerous to be directly simulated, but th
 \caption{Image adapted from Max \cite{468400}.}
 \label{fig:cylinder}
 \end{figure}
-We closely follow Max\cite{468400} in the derivation of the stochastical model: Consider a close-up look at a ray section traveling through the volume. This section is assumed as a cylinder with a base area $E$ and a height $\Delta h$ (see figure \ref{fig:cylinder}). Within it, there exists a certain number of out-scattering and absorbing particles, defined as $n_s={\rho}_sE{\Delta}h$ and $n_a={\rho}_aE{\Delta}h$ respectively, where ${\rho}_s$ and ${\rho}_a$ are the densities of the particles. From the top-down view (see figure \ref{fig:projected_cylinder}), the particles occupy an area of ${n_sA}=\frac{{\rho}_sAE{\Delta}h}{E}$ and ${n_aA}=\frac{{\rho}_aAE{\Delta}h}{E}$, respectively, if we assume that the particles do not overlap each other, which is reasonable if the densities and the height do not become too large.
+We closely follow Max\cite{468400} in the derivation of the stochastical model: Consider a close-up look at a ray section traveling through the volume. This section is modeled as a cylinder with a base area $E$ and a height $\Delta h$ (see figure \ref{fig:cylinder}). Within it, there exists a certain number of out-scattering and absorbing particles, defined as $n_s={\rho}_sE{\Delta}h$ and $n_a={\rho}_aE{\Delta}h$ respectively, where ${\rho}_s$ and ${\rho}_a$ are the densities of the particles. From the top-down view (see figure \ref{fig:projected_cylinder}), the particles occupy an area of ${n_sA}=\frac{{\rho}_sAE{\Delta}h}{E}$ and ${n_aA}=\frac{{\rho}_aAE{\Delta}h}{E}$, respectively, if we posit that the particles do not overlap each other, which is reasonable if the densities and the height do not become too large.
 
 
 
@@ -141,10 +141,10 @@ This equation is still not accurate since we also need to consider in-scattering
 \end{figure}
 
 
-Consider any arbitrary point ${u}$ on the ray from ${x}$ to ${y}$ (see figure \ref{fig:light_changes}).
+Postulate any arbitrary point ${u}$ on the ray from ${x}$ to ${y}$ (see figure \ref{fig:light_changes}).
 At ${u}$, the particles of the medium emit some light towards $\omega$\cite{468400}, which we call $\varepsilon ({u}, \omega )$. In the cylindrical model, the probability of finding an absorbing particle at position ${u}$ is ${\mu}_a({u})$. We assume that the particles responsible for absorption are also responsible for emission\cite{468400}, meaning the amount of light emitted at ${u}$ towards $\omega$ is ${\mu}_a({u})\epsilon ({u}, \omega )$.
 
-In-scattered light can arrive at ${u}$ from every direction, therefore we need to integrate over the unit sphere $\Omega$ surrounding ${u}$\cite{10.1145/280814.280925}:
+In-scattered light can arrive at ${u}$ from every direction, therefore we must integrate over the unit sphere $\Omega$ surrounding ${u}$\cite{10.1145/280814.280925}:
 \begin{align*}
 \int_{\Omega} L({u}, \omega `)d\omega `
 \end{align*}
@@ -152,7 +152,7 @@ However, not all light arriving at ${u}$ is scattered towards $\omega $. The pha
 \begin{align*}
 L_e^s({u}, \omega ) = {\mu}_s({u})\int_{\Omega} f_p({u}, \omega , -\omega `)L({u}, \omega `)d\omega `  + {\mu}_a({u})\varepsilon ({u}, \omega )
 \end{align*}
-describing the total amount of light being added to the ray at ${u}$.
+which describes the total amount of light being added to the ray at ${u}$.
 Not all of $L_e^s({u}, \omega )$ arrives at ${x}$ since the newly added light also needs to travel through the volume where it is attenuated by the transmittance $\tau ({x}, {u})$.
 To get the total light intensity added to the ray, we sum up the light contribution of all points along the ray by integrating over it\cite{zhou2007real-time}:
 \begin{align*}
@@ -180,13 +180,13 @@ In the following, we describe several methods for approximating a solution.
 \label{sec:ray_marching}
 In this chapter, we discuss an algorithmic solution\cite{511, 10.1145/147130.147155} to a simplified version of the rendering equation we derived in the previous section.
 \subsection{Simplified Rendering Equation}
-In the following, we ignore all scattering effects in the medium and assume that the medium only absorbs and emits light\cite{10.1145/147130.147155}, which can be understood as a scenario where all external light has been evenly distributed within the volume, analogous to only rendering ambient lighting in classical ray tracing, which assumes that the light is evenly distributed in the scene.
-Furthermore, we also ignore all other geometry in the scene and only focus on the volume. The term $\tau({x}, {y}) L_e({y}, \omega )$ therefore is omitted.
+In the following, we ignore all scattering effects in the medium and suppose that the medium only absorbs and emits light\cite{10.1145/147130.147155}. This can be understood as a scenario where all external light has been evenly distributed within the volume, analogous to only rendering ambient lighting in classical ray tracing, which assumes that the light is evenly distributed in the scene.
+Furthermore, we also ignore all other geometry in the scene and only focus on the volume. The term $\tau({x}, {y}) L_e({y}, \omega )$ is therefore omitted.
 Thus, we arrive at the equation
 \begin{equation} \label{eq:simplified_req}
 L({x}, \omega ) = \int_{{x}}^{{y}} \tau({x}, {u}){\mu}_a({u})\epsilon ({u}, \omega)d{u}
 \end{equation}
-For this chapter, we assume that the medium is contained within a cuboid boundary\cite{10.1145/147130.147155, 10.1145/78964.78965}. Since there is no geometry, the endpoint $y$ is located where the ray leaves the boundary (see figure \ref{fig:simple_algorithm}).
+For this chapter, we postulate that the medium is contained within a cuboid boundary\cite{10.1145/147130.147155, 10.1145/78964.78965}. Since there is no geometry, the endpoint $y$ is located where the ray leaves the boundary (see figure \ref{fig:simple_algorithm}).
 
 \subsection{Discrete Approximation to the Simplified Equation}
 \label{subsec:discrete_marching}
@@ -222,21 +222,21 @@ As a simplification, we assume all variables to be piecewise constant\cite{10.11
 for one line segment between $p_{i-1}$ and $p_i$ with $\tau(p_0, p_i)$ equal to
 
 
-\begin{align*}
-\tau(p_0, p_i)=\prod_{1\le j \le i}{(\tau(p_{j-1}, p_j)}
-\end{align*} 
+\begin{equation}\label{eq:discrete_tau_approx}
+\tau(p_0, p_i)=\prod_{1\le j \le i}{\tau(p_{j-1}, p_j)}
+\end{equation} 
 
 
 
-The quantity $\mu_a(p_{i})\varepsilon (p_{i}, \omega)s$ describes the emitted light from $p_i$ and will from now on be referred to as the color $c(i)$. $\tau(p_0, p_i)$ is the total attenuation (transparency) from $p_0$ to $p_i$, $\tau(p_{j-1}, p_j)$ is the attenuation from $p_{j-1}$ to $p_j$ and can be calculated under the assumption $\mu_t$ is constant between $p_{j-1}$ and $p_j$ by applying equation \ref{eq:tau_definition}: 
+The quantity $\mu_a(p_{i})\varepsilon (p_{i}, \omega)s$ describes the emitted light from $p_i$ and will from now on be referred to as the color $c(i)$. $\tau(p_0, p_i)$ is the total attenuation (transparency) from $p_0$ to $p_i$, $\tau(p_{j-1}, p_j)$ is the attenuation from $p_{j-1}$ to $p_j$ and can be calculated by applying equation \ref{eq:tau_definition}: 
 
 
 \begin{align*}
 \tau(p_{j-1}, p_j) = e^{-s\mu_t(p_j)}
 \end{align*}
-However, in computer graphics, it is more common to use opacity instead of transparency. Therefore, we refer to $\tau(p_{j-1}, p_j)$ as $1 - \alpha(j)$ from now on, where $\alpha(j)$ is the opacity \cite{10.1145/147130.147155}. Inserting this in formula for $\tau({x}, p_i)$ yields 
+However, in computer graphics, it is more common to use opacity instead of transparency. Therefore, we refer to $\tau(p_{j-1}, p_j)$ as $1 - \alpha(j)$ from now on, where $\alpha(j)$ is the opacity \cite{10.1145/147130.147155}. Inserting this in equation \ref{eq:discrete_tau_approx} yields 
 \begin{equation} \label{eq:discrete_transmittance}
-\prod_{1 \le j \le i} (1 - \alpha(j))
+\tau(p_0, p_i)=\prod_{1 \le j \le i} (1 - \alpha(j))
 \end{equation}
 Again, we can refer to this quantity in terms of opacity rather than transparency by using the equality
 \begin{align*}
@@ -251,17 +251,17 @@ which can be calculated in a single for loop\cite{10.1145/147130.147155}.
 
 
 \subsection{Underlying Volume Data}
-Due to our assumption that the variables $\mu_s$, $\mu_a$, $\mu_t$, and $\varepsilon$ are piecewise constant, opacity and color can easily be computed, if the volume provides such information. If the volume is already defined in terms of color and opacity $\alpha$ and $c$ can be sampled directly from it.
+Due to our postulation that the variables $\mu_s$, $\mu_a$, $\mu_t$, and $\varepsilon$ are piecewise constant, opacity and color can easily be computed, if the volume provides such information. If the volume is already defined in terms of color and opacity $\alpha$ and $c$ can be sampled directly from it.
 In some cases, the volume might contain other information such as density (e.g. for medical 3D scans), in which case a preprocessing step\cite{511} is necessary.
 If the volume is defined as a ternary function, sampling is straightforward. If the volume is defined as a 3D array of voxels, the value must be found through interpolation (usually trilinear interpolation\cite{511}).
 When interpolating color, $c$ must be weighted with its associated opacity\cite{729595}.
 
 \subsection{Direct Illumination}\label{subsec:direct_illumination}
-Until now, we have ignored scattering in the ray marching algorithm. In the following, we describe an approach to simulate single scattering (all light rays scattered only once) developed by Kajiya and Von Herzen\cite{10.1145/964965.808594} based on the work of Blinn\cite{10.1145/965145.801255}.
+Until now, we have ignored scattering in the ray marching algorithm. In the following, we describe an approach to simulate single scattering (light rays scattered only once) developed by Kajiya and Von Herzen\cite{10.1145/964965.808594} based on the work of Blinn\cite{10.1145/965145.801255}.
 This works as a two-step process.
 The first step is computed on a volume $\mathcal{V}$ containing opacity and albedo information and on a set of light sources $\{l_1, \ldots, l_m\}$.
 Based on $\mathcal{V}$, one discrete volume $\mathcal{V}'_k$ is created for every light source $l_k$ in the following manner:
-For a voxel ${x}$ in $\mathcal{V}'_k$ and light source $l_k$ the amount of light ${x}$ receives from $l_k$ is calculated by attenuating the emmited light $\varepsilon(l_k)$ by the transmittance $\tau({x}, l_k) = \int_{{x}}^{l_k}(1 - \alpha({x'}))d{x'}$, which can be computed as described above in equation \ref{eq:discrete_transmittance}.
+For a voxel ${x}$ in $\mathcal{V}'_k$ and light source $l_k$ the amount of light ${x}$ receives from $l_k$ is calculated by attenuating the emmited light $\varepsilon(l_k)$ by the transmittance $\tau({x}, l_k) = \int_{{x}}^{l_k}(1 - \alpha({x'}))d{x'}$. This is computed as described above in equation \ref{eq:discrete_transmittance}.
  The albedo $a({x})$ regulates how much of the arriving light is reflected at ${x}$. Thus, the color of ${x}$ is
 \begin{align*}
 c_k({x}) = a({x}) \tau({x}, l_k) \varepsilon(l_k)
@@ -273,7 +273,7 @@ $c_k(p_i)$ is the light intensity reflected at $p_i$, but only a portion is refl
 \begin{align*}
 c(i) = \sum_{1 \le k \le m} f_p(\omega, -\omega_k, p_i)c_k(p_i)
 \end{align*}
-with $\omega_k$ being the direction from $l_k$ to $p_i$ ($\omega_k$ is different for every $l_k$, which is why the different $c_k$ are stored seperately).
+with $\omega_k$ being the direction from $l_k$ to $p_i$ ($\omega_k$ is different for every $l_k$, which is the reason the different $c_k$ are stored seperately).
 
 
 This algorithm is an improvement to the one described in chapter \ref{subsec:discrete_marching}, but still suffers from problems such as increased computational complexity, inability to render volumes with high albedo \cite{10.1145/964965.808594} and its bias\cite{10.1145/3451256}. While certain optimizations concerning computational speed have been developed\cite{10.1145/78964.78965, 10.1145/147130.147155}, rendering photorealistic images requires more sophisticated techniques.
@@ -291,10 +291,10 @@ This algorithm is an improvement to the one described in chapter \ref{subsec:dis
 \label{sec:mc}
 A common technique in classical ray tracing to generate unbiased images with global illumination so-called monte carlo ray tracing (MCRT) approach \cite{mc_siggraph} which estimates the rendering equation by stochastically sampling it.
 
-In this chapter, we describe a typical MCRT and explain certain techniques necessary for its formulation.
+In this chapter, we explain a standard MCRT and explain certain techniques necessary for its formulation.
 \subsection{General Monte Carlo Algorithm}
-We describe a typical MCRT such as that used by Hofman et al. \cite{10.1145/3451256}.
-The algorithm starts by casting a ray from the camera $p_0$ in direction $-\omega_0$. Then, a distance $d_0$ is sampled stochastically and so-called path vertex $p_1$ is created. From $p_1$, a new direction $\omega_1$ is sampled. This process is repeated until a light source is hit or until the path gets terminated (usually by Russian roulette \cite{P-766}). Furthermore, at every path vertex $p_i$, a so-called next event estimation \cite{10.1145/3305366.3328079} is done by casting a shadow ray towards a randomly sampled point on a light source $l_i$. Then, the light contributions along the path are properly weighted \cite{10.1145/218380.218498} and summed up to compute the final result.
+This chapter describes a typical MCRT such as that used by Hofman et al. \cite{10.1145/3451256}.
+The algorithm starts by casting a ray from the camera $p_0$ in direction $-\omega_0$. Then, a distance $d_0$ is sampled stochastically and a so-called path vertex $p_1$ is created. From $p_1$, a new direction $\omega_1$ is sampled. This process is repeated until a light source is hit or until the path gets terminated (usually by Russian roulette \cite{P-766}). Furthermore, at every path vertex $p_i$, a so-called next event estimation \cite{10.1145/3305366.3328079} is done by casting a shadow ray towards a randomly sampled point on a light source $l_i$. Then, the light contributions along the path are properly weighted \cite{10.1145/218380.218498} and summed up to compute the final result.
 An illustration of the process can be seen in figure \ref{fig:monte_carlo}.
 
 
@@ -309,7 +309,7 @@ An illustration of the process can be seen in figure \ref{fig:monte_carlo}.
 
 
 For the algorithm, the following quantities need to be known: The transmittance $\tau$ between the various path vertices and light sources, the directions $\omega_i$, and the locations of $l_i$ and $p_i$.
-The sampling of $\omega_i$ and $l_i$ works like in classical ray tracing, using multiple importance sampling\cite{10.1145/218380.218498} of the phase function and light distribution. Sampling $p_i$ and estimating the transmittance require novel approaches not used in normal ray tracing, two of which are described below. 
+The sampling of $\omega_i$ and $l_i$ works like in classical ray tracing, using multiple importance sampling\cite{10.1145/218380.218498} of the phase function and light distribution. Sampling $p_i$ and estimating the transmittance require approaches not used in normal ray tracing, two of which are described below. 
 \subsection{Delta Tracking}
 To calculate $p_{i+1} = p_i - \,\omega t_i$ from a given $p_i$ and $\omega_i$, the distance $t_i$ between those two points must be sampled. Recall that $\tau(p_i, p_{i+1})$ describes the ratio of light arriving from $p_{i+1}$ at $p_i$ without colliding with a particle. Therefore, the probability density \cite{wiki:Probability_density_function} that a collision occurs between $p_i$ and $p_{i+1}$ is 
 \begin{equation} \label{eq:collision_p}
@@ -368,13 +368,14 @@ Ratio tracking \cite{10.1145/2661229.2661292} is used to estimate the transmitta
 \tau(p,p') = \prod_{1 \le i \le n}(1 - \frac{\mu_t(p^i)}{\overline{\mu}})
 \end{align*}
 where $n$ is the index of the last collision found before $p'$.
-\section{Selection of Various Monte Carlo Ray Tracing Algorithms}
+
+\section{Selection of Various Global Illumination Algorithms}
 \label{sec:mc_algorithms}
-In this chapter, we present a brief overview of several modified MCRT algorithms. For more details, we refer the reader to the sources.
+In this chapter, we present a brief overview of global illumination algorithms. For more details, we refer the reader to the sources.
 \subsection{Metropolis Light Transport}
-Metropolis light transport\cite{metropolis} works[REPLACE] by creating multiple paths from one initial path $\mathcal{P}_0$ consisting of several path vertices, by consecutively mutating path $\mathcal{P}_i$ to get $\mathcal{P}_{i+1}$. The mutations (such as adding or deleting vertices) might be rejected, if the new path does not contribute much light to the final image \cite{metropolis}. An extension to this algorithm for handling participating media has been proposed by Pauly et al. \cite{10.1007/978-3-7091-6303-0_2}.
-\subsection{Bi-directional Path Tracing}
-Bi-directional path tracing is a technique originally developed for surface rendering \cite{bidirectional-ray-tracing}. The algorithm works by not only tracing paths starting from the camera but also starting from the light (see figure \ref{fig:bidirectional}). Each vertex of the camera path then sends shadow rays to each vertex on the light path. An extension of the algorithm for rendering scenes with participating media has been presented by Lafortune and Willems \cite{10.5555/275458.275468}. The algorithm is particularly well suited for scenes with significant indirect illumination.
+Metropolis light transport\cite{metropolis} operates by creating multiple paths from one initial path $\mathcal{P}_0$ consisting of several path vertices, by consecutively mutating path $\mathcal{P}_i$ to get $\mathcal{P}_{i+1}$. The mutations (such as adding or deleting vertices) might be rejected, if the new path does not contribute much light to the final image \cite{metropolis}. An extension to this algorithm for handling participating media has been proposed by Pauly et al. \cite{10.1007/978-3-7091-6303-0_2}.
+\subsection{Bidirectional Path Tracing}
+Bidirectional path tracing is a technique originally developed for surface rendering \cite{bidirectional-ray-tracing}. The algorithm works by not only tracing paths starting from the camera but also starting from the light (see figure \ref{fig:bidirectional}). Each vertex of the camera path then sends shadow rays to each vertex on the light path. An extension of the algorithm for rendering scenes with participating media has been presented by Lafortune and Willems \cite{10.5555/275458.275468}. The algorithm is particularly well suited for scenes with significant indirect illumination.
 \begin{figure}
 \centering
 \def\svgwidth{\columnwidth}
@@ -388,17 +389,19 @@ Photon mapping is a two-pass process \cite{10.1145/280814.280925}, conceptionall
 Jensen and Christensen \cite{10.1145/280814.280925} extended this method to participating media by introducing volumetric photon maps (which differ from the volumes $\mathcal{V}'_k$ described in \ref{subsec:direct_illumination}, as they are not discrete and consider global illumination). These photon maps are computed by tracing rays from the light sources and storing the positions of interactions of those rays with the participating medium.
 \subsection{Compensated Ray Marching}
 This algorithm, developed by Zhou et al. \cite{zhou2007real-time} follows the same idea as photon mapping but computes its photon distribution on an approximation of the original volume.
-In a preprocessing step, the original volume $\mathcal{V}$ is split into a volume $\widetilde{\mathcal{V}}$ and a residual volume $\mathcal{R} = \mathcal{V} - \widetilde{\mathcal{V}}$. $\widetilde{\mathcal{V}}$ is a low frequency approximation to $\mathcal{V}$ and $\mathcal{R}$ is its error. The global lighting is calculated on $\widetilde{\mathcal{V}}$ and is afterward rendered using ray marching (similarly as in \ref{sec:ray_marching}). During the ray marching $\mathcal{R}$ is used to compensate for errors in $\widetilde{\mathcal{V}}$.
-\section{Conclusion and Further Works}
+In a preprocessing step, the original volume $\mathcal{V}$ is split into a volume $\widetilde{\mathcal{V}}$ and a residual volume $\mathcal{R} = \mathcal{V} - \widetilde{\mathcal{V}}$. $\widetilde{\mathcal{V}}$ is a low frequency approximation to $\mathcal{V}$ and $\mathcal{R}$ is its error. The global lighting is calculated on $\widetilde{\mathcal{V}}$ and is afterward rendered using ray marching (similarly as in \ref{sec:ray_marching}). During the ray marching $\mathcal{R}$ is used to compensate for errors in $\widetilde{\mathcal{V}}$. This is done by increasing the contribution of rays that travel through areas where $\widetilde{\mathcal{V}}$ overestimates the opacity $\mathcal{V}$. This overestimation makes the rays appear darker than they should, and the increase compensates for that.The same is done if $\widetilde{\mathcal{V}}$ underestimates $mathcal{V}$. $\mathcal{R}$ is used to determine this misestimation. 
+It should be emphasized that the rendering step uses ray marching similar as described in chapter \ref{sec:ray_marching} and is therefore biased. 
+\section{Conclusion}
 \label{sec:conclusion}
-In this chapter, we provide the reader with an overview of various other approaches to volume rendering and classify the here presented algorithms within that context. Furthermore, we draw a comparison between the presented algorithms and briefly discuss their strength and weaknesses.
+In this chapter, we evaluate the presented algorithms and briefly discuss their strength and weaknesses. Furthermore, we provide the reader with an overview of various other approaches to volume rendering and classify the here presented algorithms within that context.
+\subsection{Evaluation}
+The ray marching algorithms described in chapter \ref{sec:ray_marching} are conceptionally simpler but are incapable of supporting global illumination. In certain use cases, they might be preferable to more advanced algorithms, such when visualizing technical data (e.g a medical 3D scan), where sophisticated lighting is unnecessary, or when rendering objects with low albedo, where global illumination does not contribute much \cite{10.1145/964965.808594}. Of the algorithms described in chapter \ref{sec:mc_algorithms}, Metropolis light transport and bidirectional path tracing are particularly suited for scenes with much indirect lighting \cite{metropolis, bidirectional-ray-tracing}. Photon maps are very efficient in their memory usage \cite{10.1145/280814.280925}. Compensated ray marching is reported to render in real-time \cite{zhou2007real-time}. All the described monte carlo algorithms have the advantage of being unbiased.
 \subsection{Classification and Further Work}
 On the most basic level volume rendering can be divided into direct and indirect rendering\cite{Westover1991SplattingAP, 4384237}. Indirect rendering requires a pre-processing step to create intermediate surface data, which then is rendered in a second step.
-Direct algorithms (which include all algorithms presented in this paper) work directly on the volume data and can be further subdivided into feed-forward and feed-backward methods. Feed-forward methods work by starting with data and determining how much each data point contributes to the final image \cite{10.5555/94788} (e.g. by tracing paths from the light towards the camera), whereas feed-backward algorithms work the opposite way. Photon mapping and bi-directional path tracing are hybrid methods of the algorithms presented in this paper while the others are feed-backward.
+Direct algorithms (which include all algorithms presented in this paper) work directly on the volume data and can be further subdivided into feed-forward and feed-backward methods. Feed-forward methods work by starting with data and determining how much each data point contributes to the final image \cite{10.5555/94788} (e.g. by tracing paths from the light towards the camera), whereas feed-backward algorithms work the opposite way. Photon mapping and bidirectional path tracing are hybrid methods of the algorithms presented in this paper while the others are feed-backward.
 Another possibility to classify rendering algorithms is between stochastic and deterministic ones. Of the presented examples, the ray marching and the compensated ray marching are deterministic, the others stochastic. 
 An overview of the various methods is provided by Marmitt et al. \cite{Marmitt2006InteractiveVR}, Huang et al. \cite{4384237} and Raab et al. \cite{10.1007/978-3-540-74496-2_35}.
-\subsection{Comparison}
-The ray marching algorithms described in chapter \ref{sec:ray_marching} are conceptionally simpler but are incapable of supporting global illumination. In certain use cases, they might be preferable to more advanced algorithms, such when visualizing technical data (e.g a medical 3D scan), where sophisticated lighting is unnecessary, or when rendering objects with low albedo, where global illumination does not contribute much \cite{10.1145/964965.808594}. Of the algorithms described in chapter \ref{sec:mc_algorithms}, Metropolis light transport and bi-directional path tracing are particularly suited for scenes with much indirect lighting \cite{metropolis, bidirectional-ray-tracing}. Photon maps are very efficient in their memory usage \cite{10.1145/280814.280925}.
+
 
 
 

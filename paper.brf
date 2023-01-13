@@ -29,9 +29,9 @@
 \backcite {659497}{{3}{3.2}{figure.caption.5}}
 \backcite {10.1145/2661229.2661292}{{3}{3.2}{figure.caption.5}}
 \backcite {10.1145/147130.147155}{{4}{3.2}{figure.caption.5}}
-\backcite {10.1145/147130.147155}{{4}{3.2}{figure.caption.5}}
 \backcite {10.1145/147130.147155}{{4}{3.2}{equation.3.5}}
 \backcite {10.1145/147130.147155}{{4}{3.2}{equation.3.6}}
+\backcite {10.1145/147130.147155}{{4}{3.2}{equation.3.7}}
 \backcite {511}{{4}{3.3}{subsection.3.3}}
 \backcite {511}{{4}{3.3}{subsection.3.3}}
 \backcite {729595}{{4}{3.3}{subsection.3.3}}
@@ -49,11 +49,11 @@
 \backcite {10.1145/218380.218498}{{5}{4.1}{subsection.4.1}}
 \backcite {10.1145/218380.218498}{{5}{4.1}{figure.caption.6}}
 \backcite {wiki:Probability_density_function}{{5}{4.2}{subsection.4.2}}
-\backcite {osti_4167844}{{5}{4.2}{equation.4.7}}
-\backcite {10.1145/2661229.2661292}{{5}{4.2}{equation.4.7}}
+\backcite {osti_4167844}{{5}{4.2}{equation.4.8}}
+\backcite {10.1145/2661229.2661292}{{5}{4.2}{equation.4.8}}
+\backcite {morgan-delta-tracking}{{5}{4.2}{equation.4.8}}
 \backcite {GALTIER201357}{{5}{7}{figure.caption.7}}
-\backcite {morgan-delta-tracking}{{5}{4.2}{equation.4.7}}
-\backcite {10.1145/2661229.2661292}{{5}{4.2}{equation.4.7}}
+\backcite {10.1145/2661229.2661292}{{5}{4.2}{equation.4.8}}
 \backcite {10.1145/2661229.2661292}{{5}{4.3}{subsection.4.3}}
 \backcite {10.5555/275458.275468}{{6}{8}{figure.caption.8}}
 \backcite {10.1145/2661229.2661292}{{6}{4.3}{subsection.4.3}}
@@ -67,11 +67,12 @@
 \backcite {10.1145/280814.280925}{{6}{5.3}{subsection.5.3}}
 \backcite {10.1145/280814.280925}{{6}{5.3}{subsection.5.3}}
 \backcite {zhou2007real-time}{{6}{5.4}{subsection.5.4}}
-\backcite {Westover1991SplattingAP, 4384237}{{6}{6.1}{subsection.6.1}}
-\backcite {10.5555/94788}{{6}{6.1}{subsection.6.1}}
-\backcite {Marmitt2006InteractiveVR}{{6}{6.1}{subsection.6.1}}
-\backcite {4384237}{{6}{6.1}{subsection.6.1}}
-\backcite {10.1007/978-3-540-74496-2_35}{{6}{6.1}{subsection.6.1}}
-\backcite {10.1145/964965.808594}{{7}{6.2}{subsection.6.2}}
-\backcite {metropolis, bidirectional-ray-tracing}{{7}{6.2}{subsection.6.2}}
-\backcite {10.1145/280814.280925}{{7}{6.2}{subsection.6.2}}
+\backcite {10.1145/964965.808594}{{6}{6.1}{subsection.6.1}}
+\backcite {metropolis, bidirectional-ray-tracing}{{6}{6.1}{subsection.6.1}}
+\backcite {10.1145/280814.280925}{{6}{6.1}{subsection.6.1}}
+\backcite {zhou2007real-time}{{6}{6.1}{subsection.6.1}}
+\backcite {Westover1991SplattingAP, 4384237}{{6}{6.2}{subsection.6.2}}
+\backcite {10.5555/94788}{{7}{6.2}{subsection.6.2}}
+\backcite {Marmitt2006InteractiveVR}{{7}{6.2}{subsection.6.2}}
+\backcite {4384237}{{7}{6.2}{subsection.6.2}}
+\backcite {10.1007/978-3-540-74496-2_35}{{7}{6.2}{subsection.6.2}}
