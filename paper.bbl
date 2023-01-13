@@ -155,6 +155,11 @@
 \newblock \href {https://doi.org/10.1109/2945.468400}
   {\path{doi:10.1109/2945.468400}}.
 
+\bibitem[MFS06]{Marmitt2006InteractiveVR}
+\textsc{Marmitt G., Friedrich H., Slusallek P.}:
+\newblock Interactive volume rendering with ray tracing.
+\newblock In \emph{Eurographics} (2006).
+
 \bibitem[MK15]{morgan-delta-tracking}
 \textsc{Morgan L., Kotlyar D.}:
 \newblock Weighted-delta-tracking for monte carlo particle transport.
@@ -186,6 +191,13 @@
 \newblock Metropolis light transport for participating media.
 \newblock In \emph{Rendering Techniques 2000} (Vienna, 2000), P{\'e}roche B.,
   Rushmeier H., (Eds.), Springer Vienna, pp.~11--22.
+
+\bibitem[RSK08]{10.1007/978-3-540-74496-2_35}
+\textsc{Raab M., Seibert D., Keller A.}:
+\newblock Unbiased global illumination with participating media.
+\newblock In \emph{Monte Carlo and Quasi-Monte Carlo Methods 2006} (Berlin,
+  Heidelberg, 2008), Keller A., Heinrich S., Niederreiter H., (Eds.), Springer
+  Berlin Heidelberg, pp.~591--605.
 
 \bibitem[Sha98]{659497}
 \textsc{Shannon C.}:

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.10.23)  13 JAN 2023 18:30
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.10.23)  13 JAN 2023 19:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -855,7 +855,12 @@ File: figures//fig_bidirectional.pdf Graphic file (type pdf)
 Package pdftex.def Info: figures//fig_bidirectional.pdf , page4 used on input l
 ine 64.
 (pdftex.def)             Requested size: 240.0pt x 147.68861pt.
-) [6 <./figures//fig_bidirectional.pdf> <./figures//fig_bidirectional.pdf
+)
+
+LaTeX Warning: Reference `sec:raymarching' on page 6 undefined on input line 40
+1.
+
+[6 <./figures//fig_bidirectional.pdf> <./figures//fig_bidirectional.pdf
 
 pdfTeX warning: pdflatex.exe (file ./figures//fig_bidirectional.pdf): PDF inclu
 sion: multiple pdfs with page group included in a single page
@@ -982,7 +987,7 @@ Underfull \hbox (badness 7168) in paragraph at lines 124--124
  []
 
 
-Underfull \hbox (badness 2772) in paragraph at lines 174--174
+Underfull \hbox (badness 2772) in paragraph at lines 179--179
 []\T1/ptm/m/sc/8 Narasimhan S. G., Gupta M., Don-ner C., Ra-
  []
 
@@ -992,34 +997,34 @@ Underfull \hbox (badness 10000) has occurred while \output is active
  []
 
 [7]
-Underfull \hbox (badness 2495) in paragraph at lines 225--225
+Underfull \hbox (badness 2495) in paragraph at lines 237--237
 \T1/ptm/m/n/8 en-cy-clo-pe-dia.  [][]$\T1/pcr/m/n/8 http : / / en . wikipedia .
  org / w / index . php ?
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 225--225
+Underfull \hbox (badness 10000) in paragraph at lines 237--237
 \T1/pcr/m/n/8 title = Probability % 20density % 20function & oldid =
  []
 
 
-Underfull \hbox (badness 1024) in paragraph at lines 240--240
+Underfull \hbox (badness 1024) in paragraph at lines 252--252
 []\T1/ptm/m/sc/8 Zhou K., Ren Z., Lin S., Bao H., Guo B., Shum
  []
 
 
-Underfull \hbox (badness 1033) in paragraph at lines 240--240
+Underfull \hbox (badness 1033) in paragraph at lines 252--252
 \T1/ptm/m/n/8 Tech. Rep. MSR-TR-2007-142, Septem-ber 2007.  URL: [][]$\T1/pcr/m
 /n/8 https :
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 240--240
+Underfull \hbox (badness 10000) in paragraph at lines 252--252
 \T1/pcr/m/n/8 / / www . microsoft . com / en-[]us / research / publication /
  []
 
 
-Overfull \hbox (48.10017pt too wide) in paragraph at lines 240--240
+Overfull \hbox (48.10017pt too wide) in paragraph at lines 252--252
 \T1/pcr/m/n/8 real-[]time-[]smoke-[]rendering-[]using-[]compensated-[]ray-[]mar
 ching/$[][]\T1/ptm/m/n/8 .
  []
@@ -1028,46 +1033,37 @@ ching/$[][]\T1/ptm/m/n/8 .
 
 ] (./paper.aux)
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+LaTeX Warning: There were undefined references.
 
-
-Package rerunfilecheck Warning: File `paper.brf' has changed.
-(rerunfilecheck)                Rerun to get bibliographical references right.
-
-Package rerunfilecheck Info: Checksums for `paper.brf':
-(rerunfilecheck)             Before: B4A2683227E8FF429FED4E0E6F332A0F;4274
-(rerunfilecheck)             After:  1329841B227541DB2AB83682E31ACC5F;4094.
+Package rerunfilecheck Info: File `paper.brf' has not changed.
+(rerunfilecheck)             Checksum: F7C1F09AF8259AD74A93D279C772395E;4343.
  ) 
 Here is how much of TeX's memory you used:
- 14384 strings out of 475071
- 247926 string characters out of 5782907
- 630463 words of memory out of 5000000
- 35367 multiletter control sequences out of 15000+600000
+ 14393 strings out of 475071
+ 248196 string characters out of 5782907
+ 631269 words of memory out of 5000000
+ 35375 multiletter control sequences out of 15000+600000
  529369 words of font info for 119 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  94i,15n,92p,983b,546s stack positions out of 10000i,1000n,20000p,200000b,200000s
-
-pdfTeX warning (dest): name{figure.caption.9} has been referenced but does not 
-exist, replaced by a fixed one
-
-{c:/texlive/2022/texmf-dist/fonts/enc/dvips/base/8r.enc}<c:/texlive/2022/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2022/texmf-dist/font
-s/type1/public/amsfonts/cmextra/cmex9.pfb><c:/texlive/2022/texmf-dist/fonts/typ
-e1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmr10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmsy5.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.p
-fb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/tex
-live/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb><c:/texlive/2022/
-texmf-dist/fonts/type1/public/doublestroke/dsrom8.pfb><c:/texlive/2022/texmf-di
-st/fonts/type1/urw/courier/ucrr8a.pfb><c:/texlive/2022/texmf-dist/fonts/type1/u
-rw/helvetic/uhvr8a.pfb><c:/texlive/2022/texmf-dist/fonts/type1/urw/symbol/usyr.
-pfb><c:/texlive/2022/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/20
-22/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/texlive/2022/texmf-dist/font
-s/type1/urw/times/utmri8a.pfb>
-Output written on paper.pdf (8 pages, 224472 bytes).
+{c:/texlive/2022/texmf-dist/fonts/enc/dvips/base/8r.enc}<c:/texlive/2022/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2022/texmf-dist/fo
+nts/type1/public/amsfonts/cmextra/cmex9.pfb><c:/texlive/2022/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmr10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmsy5.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6
+.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/t
+exlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb><c:/texlive/202
+2/texmf-dist/fonts/type1/public/doublestroke/dsrom8.pfb><c:/texlive/2022/texmf-
+dist/fonts/type1/urw/courier/ucrr8a.pfb><c:/texlive/2022/texmf-dist/fonts/type1
+/urw/helvetic/uhvr8a.pfb><c:/texlive/2022/texmf-dist/fonts/type1/urw/symbol/usy
+r.pfb><c:/texlive/2022/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/
+2022/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/texlive/2022/texmf-dist/fo
+nts/type1/urw/times/utmri8a.pfb>
+Output written on paper.pdf (8 pages, 225675 bytes).
 PDF statistics:
- 499 PDF objects out of 1000 (max. 8388607)
- 421 compressed objects within 5 object streams
- 98 named destinations out of 1000 (max. 500000)
+ 508 PDF objects out of 1000 (max. 8388607)
+ 430 compressed objects within 5 object streams
+ 99 named destinations out of 1000 (max. 500000)
  138 words of extra memory for PDF output out of 10000 (max. 10000000)
 

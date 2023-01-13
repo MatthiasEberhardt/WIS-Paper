@@ -27,45 +27,45 @@ Name 3 in "Jensen, Henrik and Lecturers, James and Arvo, and Dutre, Phil and Kel
 while executing---line 3595 of file eg-alpha-doi.bst
 Warning--empty booktitle in Westover1991SplattingAP
 Warning--empty institution in zhou2007real-time
-You've used 32 entries,
+You've used 34 entries,
             3585 wiz_defined-function locations,
-            970 strings with 12153 characters,
-and the built_in function-call counts, 17813 in all, are:
-= -- 1827
-> -- 713
+            983 strings with 12591 characters,
+and the built_in function-call counts, 19012 in all, are:
+= -- 1942
+> -- 773
 < -- 12
-+ -- 244
-- -- 240
-* -- 1297
-:= -- 2486
-add.period$ -- 85
-call.type$ -- 32
-change.case$ -- 217
-chr.to.int$ -- 32
-cite$ -- 35
-duplicate$ -- 632
-empty$ -- 1503
-format.name$ -- 276
-if$ -- 4365
++ -- 265
+- -- 261
+* -- 1376
+:= -- 2658
+add.period$ -- 89
+call.type$ -- 34
+change.case$ -- 231
+chr.to.int$ -- 34
+cite$ -- 37
+duplicate$ -- 678
+empty$ -- 1605
+format.name$ -- 299
+if$ -- 4653
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 30
-newline$ -- 185
-num.names$ -- 99
-pop$ -- 346
+missing$ -- 32
+newline$ -- 195
+num.names$ -- 107
+pop$ -- 373
 preamble$ -- 1
-purify$ -- 252
+purify$ -- 268
 quote$ -- 0
-skip$ -- 1157
+skip$ -- 1229
 stack$ -- 0
-substring$ -- 615
-swap$ -- 229
+substring$ -- 661
+swap$ -- 241
 text.length$ -- 12
 text.prefix$ -- 11
 top$ -- 0
-type$ -- 278
+type$ -- 296
 warning$ -- 3
-while$ -- 109
-width$ -- 37
-write$ -- 452
+while$ -- 119
+width$ -- 39
+write$ -- 477
 (There were 5 error messages)
