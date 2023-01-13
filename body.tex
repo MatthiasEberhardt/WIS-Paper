@@ -57,12 +57,12 @@ In Computer Graphics, objects usually are represented as a set of geometric prim
 
 \section{Derivation Of The Rendering Equation}
 Volumetric ray tracing follows the same principle as classical ray tracing in which an image is rendered by spanning a pixel plane in front of the camera and casting one or multiple rays through each pixel.
-That means for a point $\vec{x}$ on the plane we cast a ray in direction $-\omega$ and calculate the amount of light $\vec{x}$ receives from direction $\omega$, called $L(\vec{x},\omega )$\cite{10.5555/94788}.
-To do this, we calculate $\vec{y}$, the closest intersection point of the ray with a piece of geometry. At $\vec{y}$, some amount of light is transported from $\vec{y}$ in direction $\omega$ (either through reflection or emission), called $L_e(\vec{y},\omega )$ (The method for calculating $L_e$ is a topic of classical raytracing\cite{10.5555/94788} and will not be further evaluated in this paper. In the following, we assume $L_e$ to be known).
+That means for a point ${x}$ on the plane we cast a ray in direction $-\omega$ and calculate the amount of light ${x}$ receives from direction $\omega$, called $L({x},\omega )$\cite{10.5555/94788}.
+To do this, we calculate ${y}$, the closest intersection point of the ray with a piece of geometry. At ${y}$, some amount of light is transported from ${y}$ in direction $\omega$ (either through reflection or emission), called $L_e({y},\omega )$ (The method for calculating $L_e$ is a topic of classical raytracing\cite{10.5555/94788} and will not be further evaluated in this paper. In the following, we assume $L_e$ to be known).
 Thus, we get the equation 
 
 \begin{equation}\label{eq:no_attenuation}
-L(\vec{x},\omega ) = L_e(\vec{y}, \omega )
+L({x},\omega ) = L_e({y}, \omega )
 \end{equation}
 
 \begin{figure}
@@ -75,7 +75,7 @@ L(\vec{x},\omega ) = L_e(\vec{y}, \omega )
 \end{figure}
 
 
-However, this equation assumes that the light has no interactions between $\vec{x}$ and $\vec{y}$, which is only true if the ray travels through a vacuum. If it travels through a medium that interacts with it (called a participating medium), the interactions change the light along the ray\cite{10.5555/275458.275468} (see figure \ref{fig:light_interactions}). The types of interactions we need to consider are absorption, emission, in-scattering, and out-scattering\cite{468400}.
+However, this equation assumes that the light has no interactions between ${x}$ and ${y}$, which is only true if the ray travels through a vacuum. If it travels through a medium that interacts with it (called a participating medium), the interactions change the light along the ray\cite{10.5555/275458.275468} (see figure \ref{fig:light_interactions}). The types of interactions we need to consider are absorption, emission, in-scattering, and out-scattering\cite{468400}.
 
 Absorption and out-scattering attenuate the light intensity along the ray, in-scattering and emission add to it.
 \subsection{Absorbtion And Out-Scattering}
@@ -120,11 +120,11 @@ Rearranging this results in the equation
 \begin{equation}
 \frac{L(h)}{L_0} = e^{-\int_{0}^{h} {\mu}_t(s)ds}
 \end{equation}
-describing the ratio of the light traveling a distance $h$ unimpeded. In the following, we call this quantity the transmittance and refer to it as $\tau(\vec{x}, \vec{x'})$ .
+describing the ratio of the light traveling a distance $h$ unimpeded. In the following, we call this quantity the transmittance and refer to it as $\tau({x}, {x'})$ .
 %remove going back to?%
 Thus, going back to equation \ref{eq:no_attenuation}, we can now specify how much $L_e$ gets attenuated:
 \begin{equation}
-L(\vec{x},\omega ) =\tau(\vec{x}, \vec{y}) L_e(\vec{y}, \omega )
+L({x},\omega ) =\tau({x}, {y}) L_e({y}, \omega )
 \end{equation}
 This equation is still not accurate since we also need to consider in-scattering and emission along the ray.
 \subsection{Emission And In-Scattering}
@@ -140,26 +140,26 @@ This equation is still not accurate since we also need to consider in-scattering
 \end{figure}
 
 
-Consider any arbitrary point $\vec{u}$ on the ray from $\vec{x}$ to $\vec{y}$ (see figure \ref{fig:light_changes}).
-At $\vec{u}$, the particles of the medium emit some light towards $\omega$\cite{468400}, which we call $\varepsilon (\vec{u}, \omega )$. In the cylindrical model, the probability of finding an absorbing particle at position $\vec{u}$ is ${\mu}_a(\vec{u})$. We assume that the particles responsible for absorption are also responsible for emission\cite{468400}, meaning the amount of light emitted at $\vec{u}$ towards $\omega$ is ${\mu}_a(\vec{u})\epsilon (\vec{u}, \omega )$.
-In-scattered light can arrive at $\vec{u}$ from every direction, therefore we need to integrate over the unit sphere $\Omega$ surrounding $\vec{u}$\cite{10.1145/280814.280925}:
+Consider any arbitrary point ${u}$ on the ray from ${x}$ to ${y}$ (see figure \ref{fig:light_changes}).
+At ${u}$, the particles of the medium emit some light towards $\omega$\cite{468400}, which we call $\varepsilon ({u}, \omega )$. In the cylindrical model, the probability of finding an absorbing particle at position ${u}$ is ${\mu}_a({u})$. We assume that the particles responsible for absorption are also responsible for emission\cite{468400}, meaning the amount of light emitted at ${u}$ towards $\omega$ is ${\mu}_a({u})\epsilon ({u}, \omega )$.
+In-scattered light can arrive at ${u}$ from every direction, therefore we need to integrate over the unit sphere $\Omega$ surrounding ${u}$\cite{10.1145/280814.280925}:
 \begin{equation}
-\int_{\Omega} L(\vec{u}, \omega `)d\omega `
+\int_{\Omega} L({u}, \omega `)d\omega `
 \end{equation}
-However, not all light arriving at $\vec{u}$ is scattered towards $\omega $. The so called phase function $f_p(\vec{u}, \omega , -\omega `)$ describes the probality that light hitting a particle at $\vec{u}$ from $\omega `$ is reflected towards $\omega$\cite{10.1145/280814.280925, Cerezo2005} [CHECK FIRST CITATION]. In this sense, it is analogous to the BRDF \cite{10.1145/965141.563893} in surface ray tracing. Furthermore, the amount of light scattered towards $\omega $ also depends on the probability that in-scattering particles are present at $\vec{u}$\cite{10.1145/280814.280925}. We assume that in-scattering particles are the same as out-scattering particles and get the equation
+However, not all light arriving at ${u}$ is scattered towards $\omega $. The so called phase function $f_p({u}, \omega , -\omega `)$ describes the probality that light hitting a particle at ${u}$ from $\omega `$ is reflected towards $\omega$ \cite{10.1145/280814.280925, Cerezo2005} [CHECK FIRST CITATION]. In this sense, it is analogous to the BRDF \cite{10.1145/965141.563893} in surface ray tracing. Furthermore, the amount of light scattered towards $\omega $ also depends on the probability that in-scattering particles are present at ${u}$\cite{10.1145/280814.280925}. We assume that in-scattering particles are the same as out-scattering particles and get the equation
 \begin{equation}
-L_e^s(\vec{u}, \omega ) = {\mu}_s(\vec{u})\int_{\Omega} f_p(\vec{u}, \omega , -\omega `)L(\vec{u}, \omega `)d\omega `  + {\mu}_a(\vec{u})\varepsilon (\vec{u}, \omega )
+L_e^s({u}, \omega ) = {\mu}_s({u})\int_{\Omega} f_p({u}, \omega , -\omega `)L({u}, \omega `)d\omega `  + {\mu}_a({u})\varepsilon ({u}, \omega )
 \end{equation}
-describing the total amount of light being added to the ray at $\vec{u}$. We call this quantity $L_e^s$ and use the superscript $s$ to differentiate it from $L_e$ (which describes light reflection at solid surfaces).
-Not all of $L_e^s(\vec{u}, \omega )$ arrives at $\vec{x}$ since the newly added light also needs to travel through the volume where it is attenuated by the transmittance $\tau (\vec{x}, \vec{u})$.
+describing the total amount of light being added to the ray at ${u}$. We call this quantity $L_e^s$ and use the superscript $s$ to differentiate it from $L_e$ (which describes light reflection at solid surfaces).
+Not all of $L_e^s({u}, \omega )$ arrives at ${x}$ since the newly added light also needs to travel through the volume where it is attenuated by the transmittance $\tau ({x}, {u})$.
 To get the total amount of light added to the ray, we sum up the light contribution of all points along the ray by integrating over it\cite{zhou2007real-time}:
 \begin{equation}
-\int_{\vec{x}}^{\vec{y}} \tau(\vec{x}, \vec{u})L_e^s(\vec{u}, \omega )d\vec{u}
+\int_{{x}}^{{y}} \tau({x}, {u})L_e^s({u}, \omega )d{u}
 \end{equation}
 \subsection{The Rendering Equation}
-Adding this to the light arriving from $\vec{y}$ gives the total amount of light arriving at $\vec{x}$ from $\omega $.
+Adding this to the light arriving from ${y}$ gives the total amount of light arriving at ${x}$ from $\omega $.
 \begin{equation}
-L(\vec{x}, \omega ) = {\int_{\vec{x}}^{\vec{y}} \tau(\vec{x}, \vec{u})L_e^s(\vec{u}, \omega )d\vec{u}} + \tau(\vec{x}, \vec{y}) L_e(\vec{y}, \omega )
+L({x}, \omega ) = {\int_{{x}}^{{y}} \tau({x}, {u})L_e^s({u}, \omega )d{u}} + \tau({x}, {y}) L_e({y}, \omega )
 \end{equation}
 This integral is analytically unsolvable in the general case \cite{10.1145/964965.808594}.
 In the following, we describe several methods for approximating a solution.
@@ -179,12 +179,12 @@ In the following, we describe several methods for approximating a solution.
 In this chapter, we discuss an algorithmic solution\cite{511, 10.1145/147130.147155} to a simplified version of the rendering equation we derived in the previous section.
 \subsection{Simplified Rendering Equation}
 In the following, we ignore all scattering effects in the medium (meaning $\mu_s $ is 0) and assume that the medium only absorbs and emits light\cite{10.1145/147130.147155}, which can be understood as a scenario where all external light has been evenly distributed within the volume. This is analogous to only rendering ambient lighting in classical ray tracing, which assumes that the light is evenly distributed in the scene.
-Furthermore, we also ignore all other geometry in the scene and only focus on the volume. The term $\tau(\vec{x}, \vec{y}) L_e(\vec{y}, \omega )$, which describes the light contribution from the nearest intersection with a piece of geometry, is omitted.
+Furthermore, we also ignore all other geometry in the scene and only focus on the volume. The term $\tau({x}, {y}) L_e({y}, \omega )$, which describes the light contribution from the nearest intersection with a piece of geometry, is omitted.
 Thus, we arrive at the equation
 \begin{equation} \label{eq:simplified_req}
-L(\vec{x}, \omega ) = \int_{\vec{x}}^{\vec{y}} \tau(\vec{x}, \vec{u}){\mu}_a(\vec{u})\epsilon (\vec{u}, \omega)d\vec{u}
+L({x}, \omega ) = \int_{{x}}^{{y}} \tau({x}, {u}){\mu}_a({u})\epsilon ({u}, \omega)d{u}
 \end{equation}
-For this chapter, we assume that the medium is contained within a cuboid boundary\cite{10.1145/147130.147155, 10.1145/78964.78965}. Since there is no geometry, we can't cast the ray until it intersects with the geometry. Instead, the endpoint $\vec{y}$ of the ray is the point where the ray leaves the boundary(see figure \ref{fig:simple_algorithm}).
+For this chapter, we assume that the medium is contained within a cuboid boundary\cite{10.1145/147130.147155, 10.1145/78964.78965}. Since there is no geometry, we can't cast the ray until it intersects with the geometry. Instead, the endpoint ${y}$ of the ray is the point where the ray leaves the boundary(see figure \ref{fig:simple_algorithm}).
 
 \subsection{Discrete Approximation To The Simplified Equation}
 
@@ -199,10 +199,10 @@ For this chapter, we assume that the medium is contained within a cuboid boundar
 
 
 
-$L(\vec{x},\omega )$ is approximated by casting a ray in direction $-\omega$ and sampling it at evenly spaced points along the ray (see figure \ref{fig:simple_algorithm}) and summing up their contributions\cite{511}. The distance $s$ between the sampling points should be smaller than the volumes Nyquist limit \cite{659497}, otherwise important details are missed \cite{10.1145/2661229.2661292}.
-We start sampling at the first point within the volume, which has a distance of $s_0$ to $\vec{x}$. The $i$-th sample point then is described by
+$L({x},\omega )$ is approximated by casting a ray in direction $-\omega$ and sampling it at evenly spaced points along the ray (see figure \ref{fig:simple_algorithm}) and summing up their contributions\cite{511}. The distance $s$ between the sampling points should be smaller than the volumes Nyquist limit \cite{659497}, otherwise important details are missed \cite{10.1145/2661229.2661292}.
+We start sampling at the first point within the volume, which has a distance of $s_0$ to ${x}$. The $i$-th sample point then is described by
 \begin{equation}
-p_i=\vec{x} + s_0(-\omega) + si(-\omega)
+p_i={x} + s_0(-\omega) + si(-\omega)
 \end{equation}
 The light contribution of a point $p_i$ is considered to be the light contribution of the ray segment between $p_{i-1}$ and $p_i$.
 \begin{equation}
@@ -213,20 +213,20 @@ As a simplification, we assume all variables to be piecewise constant\cite{10.11
 {\prod_{1\le j \le i}{(\tau(p_{j-1}, p_j))} \cdot \mu_a(p_{i})\varepsilon (p_{i}, \omega)s}
 \end{equation} 
 for one line segment between $p_{i-1}$ and $p_i$.
-The quantity $\mu_a(p_{i})\varepsilon (p_{i}, \omega)s$ describes the emitted light from $p_i$ and will from now on be referred to as the color $c(i)$. The product is the total attenuation (transparency) from $\vec{x}$ to $p_i$, $\tau(p_{j-1}, p_j)$ is the attenuation from $p_{j-1}$ to $p_j$ and can be calculated by
+The quantity $\mu_a(p_{i})\varepsilon (p_{i}, \omega)s$ describes the emitted light from $p_i$ and will from now on be referred to as the color $c(i)$. The product is the total attenuation (transparency) from ${x}$ to $p_i$, $\tau(p_{j-1}, p_j)$ is the attenuation from $p_{j-1}$ to $p_j$ and can be calculated by
 \begin{equation}
 \tau(p_{j-1}, p_j) = e^{-s\mu_t(j)}
 \end{equation}
-However, in computer graphics, it is more common to use opacity instead of transparency. Therefore, we refer to $\tau(p_{j-1}, p_j)$ as $1 - \alpha(j)$ from now on, where $\alpha(j)$ is the opacity. Inserting this in formula for $\tau(\vec{x}, p_i)$ yields $\prod_{1 \le j \le i} (1 - \alpha(j))$.
+However, in computer graphics, it is more common to use opacity instead of transparency. Therefore, we refer to $\tau(p_{j-1}, p_j)$ as $1 - \alpha(j)$ from now on, where $\alpha(j)$ is the opacity. Inserting this in formula for $\tau({x}, p_i)$ yields $\prod_{1 \le j \le i} (1 - \alpha(j))$.
 
 Again, we can refer to this quantity in terms of opacity rather than transparency by using the equality
 \begin{equation}
 1 - \beta(i) = \prod_{1 \le j \le i} (1 - \alpha(j))
 \end{equation}
-where $\beta(i)$ is the accumulated opacity between $\vec{x}$ and $p_i$.
+where $\beta(i)$ is the accumulated opacity between ${x}$ and $p_i$.
 Using these results, we can approximate the integral in equation \ref{eq:simplified_req} as the sum
 \begin{equation} \label{eq:discrete_approximation}
-L(\vec{x},\omega) = \sum_{1 \le i \le n}(1 - \beta(i))c(i)
+L({x},\omega) = \sum_{1 \le i \le n}(1 - \beta(i))c(i)
 \end{equation}
 which can be calculated in a single for loop\cite{10.1145/147130.147155}. Since $\beta(i)$ equals $\beta(i-1)(1-\alpha(i))$, it is not necessary to completely recalculate $\beta$ for every step.
 
@@ -242,10 +242,10 @@ Until now, we have ignored scattering in the ray marching algorithm. In the foll
 This works as a two-step process.
 The first step is computed on a volume $\mathcal{V}$ containing opacity and albedo information and on a set of light sources $\{l_1, \ldots, l_m\}$.
 Based on $\mathcal{V}$, one voxelized volume $\mathcal{V}'_k$ is created for every light source $l_k$ in the following manner:
-For a voxel $\vec{x}$ in $\mathcal{V}'_k$ and light source $l_k$ the amount of light $\vec{x}$ receives from $l_k$ is calculated by attenuating the emmited light $\varepsilon{l_k}$ by the transmittance $\tau(\vec{x}, l_k) = \int_{\vec{x}}^{l_k}(1 - \alpha(\vec{x'}))d\vec{x'}$, which can be computed as described above.
- The albedo $a(\vec{x})$ regulates how much of the arriving light is reflected at $\vec{x}$. Thus, the color of $\vec{x}$ is
+For a voxel ${x}$ in $\mathcal{V}'_k$ and light source $l_k$ the amount of light ${x}$ receives from $l_k$ is calculated by attenuating the emmited light $\varepsilon(l_k)$ by the transmittance $\tau(\vec{x}, l_k) = \int_{{x}}^{l_k}(1 - \alpha({x'}))d{x'}$, which can be computed as described above.
+ The albedo $a({x})$ regulates how much of the arriving light is reflected at ${x}$. Thus, the color of ${x}$ is
 \begin{equation}
-c_k(\vec{x}) = a(\vec{x}) \tau(\vec{x}, l_k) \varepsilon(l_k)
+c_k({x}) = a({x}) \tau({x}, l_k) \varepsilon(l_k)
 \end{equation}
 In other words, the volume $\mathcal{V}'_k$ contains information about the amount of light that is reflected from $l_k$ at every voxel.
 
