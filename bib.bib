@@ -41,6 +41,18 @@ numpages = {10},
 location = {Porto, Portugal}
 }
 
+
+
+  @article{bidirectional-ray-tracing,
+author = {Lafortune, Eric and Willems, Yves},
+year = {1998},
+month = {01},
+pages = {},
+title = {Bi-Directional Path Tracing},
+volume = {93},
+journal = {Proceedings of Third International Conference on Computational Graphics and Visualization Techniques (Compugraphics'}
+}
+
 @ARTICLE{468400,
   author={Max, N.},
   journal={IEEE Transactions on Visualization and Computer Graphics}, 
@@ -80,6 +92,33 @@ pages = {11},
 number = {MSR-TR-2007-142},
 }
 
+
+@article{metropolis,
+author = {Veach, Eric and Guibas, Leonidas},
+year = {1970},
+month = {02},
+pages = {},
+title = {Metropolis Light Transport},
+volume = {31},
+journal = {Computer Graphics (SIGGRAPH '97 Proceedings)},
+doi = {10.1145/258734.258775}
+}
+
+@InProceedings{10.1007/978-3-7091-6303-0_2,
+author="Pauly, Mark
+and Kollig, Thomas
+and Keller, Alexander",
+editor="P{\'e}roche, Bernard
+and Rushmeier, Holly",
+title="Metropolis Light Transport for Participating Media",
+booktitle="Rendering Techniques 2000",
+year="2000",
+publisher="Springer Vienna",
+address="Vienna",
+pages="11--22",
+abstract="In this paper we show how Metropolis Light Transport can be extended both in the underlying theoretical framework and the algorithmic implementation to incorporate volumetric scattering. We present a generalization of the path integral formulation that handles anisotropic scattering in non-homogeneous media. Based on this framework we introduce a new mutation strategy that is specifically designed for participating media. Our algorithm includes effects such as volume caustics and multiple volume scattering, is not restricted to certain classes of geometry and scattering models and has minimal memory requirements. Furthermore, it is unbiased and robust, in the sense that it produces satisfactory results for a wide range of input scenes and lighting situations within acceptable time bounds.",
+isbn="978-3-7091-6303-0"
+}
 
 @article{10.1145/78964.78965,
 author = {Levoy, Marc},
@@ -139,7 +178,24 @@ series = {VVS '92}
 }
 
 
-
+@article{10.1145/965145.801255,
+author = {Blinn, James F.},
+title = {Light Reflection Functions for Simulation of Clouds and Dusty Surfaces},
+year = {1982},
+issue_date = {July 1982},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {16},
+number = {3},
+issn = {0097-8930},
+url = {https://doi.org/10.1145/965145.801255},
+doi = {10.1145/965145.801255},
+abstract = {The study of the physical process of light interacting with matter is an important part of computer image synthesis since it forms the basis for calculations of intensities in the picture. The simpler models used in the past are being augmented by more complex models gleaned from the physics literature. This paper is another step in the direction of assimilating such knowledge. It concerns the statistical simulation of light passing through and being reflected by clouds of similar small particles. (It does not, however, address the cloud structure modeling problem). By extension it can be applied to surfaces completely covered by dust and is therefore a physical basis for various theories of diffuse reflection.},
+journal = {SIGGRAPH Comput. Graph.},
+month = {jul},
+pages = {21–29},
+numpages = {9}
+}
 
 @article{10.1145/97880.97886,
 author = {Arvo, James and Kirk, David},
@@ -169,6 +225,42 @@ numpages = {4}
   number={},
   pages={135-142},
   doi={10.1109/SVV.1998.729595}}
+
+
+
+@inproceedings{10.5555/275458.275461,
+author = {Jensen, Henrik Wann},
+title = {Global Illumination Using Photon Maps},
+year = {1996},
+isbn = {3211828834},
+publisher = {Springer-Verlag},
+address = {Berlin, Heidelberg},
+booktitle = {Proceedings of the Eurographics Workshop on Rendering Techniques '96},
+pages = {21–30},
+numpages = {10},
+keywords = {global illumination, photon maps, ray tracing, Monte Carlo},
+location = {Porto, Portugal}
+}
+
+@article{10.1145/2661229.2661292,
+author = {Nov\'{a}k, Jan and Selle, Andrew and Jarosz, Wojciech},
+title = {Residual Ratio Tracking for Estimating Attenuation in Participating Media},
+year = {2014},
+issue_date = {November 2014},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {33},
+number = {6},
+issn = {0730-0301},
+url = {https://doi.org/10.1145/2661229.2661292},
+doi = {10.1145/2661229.2661292},
+abstract = {Evaluating transmittance within participating media is a fundamental operation required by many light transport algorithms. We present ratio tracking and residual tracking, two complementary techniques that can be combined into an efficient, unbiased estimator for evaluating transmittance in complex heterogeneous media. In comparison to current approaches, our new estimator is unbiased, yields high efficiency, gracefully handles media with wavelength dependent extinction, and bridges the gap between closed form solutions and purely numerical, unbiased approaches. A key feature of ratio tracking is its ability to handle negative densities. This in turn enables us to separate the main part of the transmittance function, handle it analytically, and numerically estimate only the residual transmittance. In addition to proving the unbiasedness of our estimators, we perform an extensive empirical analysis to reveal parameters that lead to high efficiency. Finally, we describe how to integrate the new techniques into a production path tracer and demonstrate their benefits over traditional unbiased estimators.},
+journal = {ACM Trans. Graph.},
+month = {nov},
+articleno = {179},
+numpages = {11},
+keywords = {delta tracking, transmittance, participating media}
+}
 
 
 

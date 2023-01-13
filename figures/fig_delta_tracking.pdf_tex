@@ -54,16 +54,22 @@
     \lineheight{1}%
     \setlength\tabcolsep{0pt}%
     \put(0,0){\includegraphics[width=\unitlength,page=1]{fig_delta_tracking.pdf}}%
-    \put(0.12037528,0.07886635){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$p_i$\end{tabular}}}}%
-    \put(0.62502617,0.9297275){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$p_i^n = p_{i+1}$\end{tabular}}}}%
+    \put(0.12037528,0.06563736){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$p_i$\end{tabular}}}}%
+    \put(0.63063389,0.9297275){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$p_i^5 = p_{i+1}$\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=2]{fig_delta_tracking.pdf}}%
-    \put(0.084799,0.21647133){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\omega_i$\end{tabular}}}}%
+    \put(0.1053264,0.19978371){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\omega_i$\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=3]{fig_delta_tracking.pdf}}%
-    \put(0.31624344,0.29210892){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$p_i^1$\end{tabular}}}}%
-    \put(0.27720682,0.4320438){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$p_i^2$\end{tabular}}}}%
-    \put(0.57137959,0.63801334){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$p_i^3$\end{tabular}}}}%
-    \put(0.56239487,0.76841772){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$p_i^4$\end{tabular}}}}%
+    \put(0.2248003,0.34069229){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$p_i^1$\end{tabular}}}}%
+    \put(0.30431612,0.44344006){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$p_i^2$\end{tabular}}}}%
+    \put(0.4924408,0.67843002){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$p_i^3$\end{tabular}}}}%
+    \put(0.57065125,0.77702143){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$p_i^4$\end{tabular}}}}%
     \put(0.06687914,0.95268319){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}null collision\end{tabular}}}}%
     \put(0.06687914,0.8980582){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}real collision\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=4]{fig_delta_tracking.pdf}}%
+    \put(0.2723439,0.19978371){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$t_i^1$\end{tabular}}}}%
+    \put(0.35983704,0.35282814){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$t_i^2$\end{tabular}}}}%
+    \put(0.52022919,0.50654751){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$t_i^3$\end{tabular}}}}%
+    \put(0.62118446,0.69624836){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$t_i^4$\end{tabular}}}}%
+    \put(0.7213015,0.8104822){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$t_i^5$\end{tabular}}}}%
   \end{picture}%
 \endgroup%

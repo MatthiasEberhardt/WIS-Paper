@@ -1,6 +1,14 @@
 \newcommand{\etalchar}[1]{$^{#1}$}
 \begin{thebibliography}{\uppercase{HHCM21}}
 
+\bibitem[Bli82]{10.1145/965145.801255}
+\textsc{Blinn J.~F.}:
+\newblock Light reflection functions for simulation of clouds and dusty
+  surfaces.
+\newblock \emph{SIGGRAPH Comput. Graph. 16}, 3 (jul 1982), 21–29.
+\newblock URL: \url{https://doi.org/10.1145/965145.801255}, \href
+  {https://doi.org/10.1145/965145.801255} {\path{doi:10.1145/965145.801255}}.
+
 \bibitem[DH92]{10.1145/147130.147155}
 \textsc{Danskin J., Hanrahan P.}:
 \newblock Fast algorithms for volume ray tracing.
@@ -32,6 +40,12 @@
 \newblock URL: \url{https://doi.org/10.1145/280814.280925}, \href
   {https://doi.org/10.1145/280814.280925} {\path{doi:10.1145/280814.280925}}.
 
+\bibitem[Jen96]{10.5555/275458.275461}
+\textsc{Jensen H.~W.}:
+\newblock Global illumination using photon maps.
+\newblock In \emph{Proceedings of the Eurographics Workshop on Rendering
+  Techniques '96} (Berlin, Heidelberg, 1996), Springer-Verlag, p.~21–30.
+
 \bibitem[KVH84]{10.1145/964965.808594}
 \textsc{Kajiya J.~T., Von~Herzen B.~P.}:
 \newblock Ray tracing volume densities.
@@ -58,6 +72,12 @@
 \newblock In \emph{Proceedings of the Eurographics Workshop on Rendering
   Techniques '96} (Berlin, Heidelberg, 1996), Springer-Verlag, p.~91–100.
 
+\bibitem[LW98]{bidirectional-ray-tracing}
+\textsc{Lafortune E., Willems Y.}:
+\newblock Bi-directional path tracing.
+\newblock \emph{Proceedings of Third International Conference on Computational
+  Graphics and Visualization Techniques (Compugraphics' 93} (01 1998).
+
 \bibitem[Max95]{468400}
 \textsc{Max N.}:
 \newblock Optical models for direct volume rendering.
@@ -65,6 +85,19 @@
   (1995), 99--108.
 \newblock \href {https://doi.org/10.1109/2945.468400}
   {\path{doi:10.1109/2945.468400}}.
+
+\bibitem[PKK00]{10.1007/978-3-7091-6303-0_2}
+\textsc{Pauly M., Kollig T., Keller A.}:
+\newblock Metropolis light transport for participating media.
+\newblock In \emph{Rendering Techniques 2000} (Vienna, 2000), P{\'e}roche B.,
+  Rushmeier H., (Eds.), Springer Vienna, pp.~11--22.
+
+\bibitem[VG70]{metropolis}
+\textsc{Veach E., Guibas L.}:
+\newblock Metropolis light transport.
+\newblock \emph{Computer Graphics (SIGGRAPH '97 Proceedings) 31} (02 1970).
+\newblock \href {https://doi.org/10.1145/258734.258775}
+  {\path{doi:10.1145/258734.258775}}.
 
 \bibitem[WMG98]{729595}
 \textsc{Wittenbrink C., Malzbender T., Goss M.}:

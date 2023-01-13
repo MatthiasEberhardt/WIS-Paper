@@ -24,9 +24,9 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
      showgrid="false"
-     inkscape:zoom="1.087256"
-     inkscape:cx="448.37646"
-     inkscape:cy="311.79409"
+     inkscape:zoom="0.76880609"
+     inkscape:cx="848.71856"
+     inkscape:cy="323.87881"
      inkscape:window-width="1920"
      inkscape:window-height="1017"
      inkscape:window-x="1912"
@@ -270,5 +270,16 @@
        d="m 35.891169,87.10629 c 0.155109,-8.77551 54.119849,0.129082 61.082217,-9.357744 6.647464,9.489079 61.129314,0.47637 61.234464,9.253903"
        id="path4156-0"
        sodipodi:nodetypes="ccc" />
+    <text
+       xml:space="preserve"
+       style="font-size:7.05556px;line-height:1.25;font-family:'Bodoni MT';-inkscape-font-specification:'Bodoni MT';stroke-width:0.264583"
+       x="269.88696"
+       y="82.838196"
+       id="text11554-7-8"><tspan
+         sodipodi:role="line"
+         id="tspan11552-6-4"
+         style="font-size:7.05556px;stroke-width:0.264583"
+         x="269.88696"
+         y="82.838196">$L_e(y,\omega)$</tspan></text>
   </g>
 </svg>
