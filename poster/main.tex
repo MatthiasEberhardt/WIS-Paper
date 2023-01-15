@@ -45,7 +45,7 @@
 \begin{columns}
     \column{0.5}
     \block{Motivation}{
-    In Computer Graphics, objects usually are represented as a set of geometric primitives (e.g. triangles), displaying the surface of the object. However, if a volumetric object (e.g a cloud), is to be rendered, the traditional rendering technique requires an intermediate surface representation that can introduce unwanted artifacts \cite{511}. Volumetric ray tracing provides a mechanism to directly render such 3D data without the need for a surface representation.
+    In Computer Graphics, objects usually are represented as a set of geometric primitives (e.g. triangles), displaying the surface of the object. However, if a volumetric object (e.g a cloud) is to be rendered, the traditional rendering technique requires an intermediate surface representation that can introduce unwanted artifacts \cite{511}. Volumetric ray tracing provides a mechanism to directly render such 3D data without the need for a surface representation.
     
     }
     
@@ -61,7 +61,7 @@
    \begin{align*}
    L(x,\omega) = L_e(y, \omega)
    \end{align*}
-   This assumption holds only true if the light travels through a vacuum, if it travels through a medium that interacts with it (called a participating medium), the intensity changes. The possible interactions (see left) include absorption (e.g. in smoke), in and out-scattering (e.g. in clouds), and emission from within the medium that adds light to the ray (e.g. in fire). The goal of volumetric ray tracing is to correctly model those interactions. The interactions enumerated above occur due to tiny particles suspended within the medium, which are stochastically modeled by the absorption coefficient $\mu_a(x)$ and scattering coefficient $\mu_s(x)$ \cite{468400},  providing a measure for the light loss lost due to out-scattering and absorption respectively. Combining $\mu_a$ and $\mu_s$ to the extinction coefficient $\mu_t$ gives a measure for the total amount of light lost. Using the Beer-Lambert law, the attenuation or transmittance between $x$ and $y$ is calculated as 
+   This assumption holds only true if the light travels through a vacuum, if it travels through a medium that interacts with it (called a participating medium), the intensity changes. The possible interactions (see left) include absorption (e.g. in smoke), in and out-scattering (e.g. in clouds), and emission from within the medium that adds light to the ray (e.g. in fire). The goal of volumetric ray tracing is to correctly model those interactions. The interactions enumerated above occur due to tiny particles suspended within the medium, which are stochastically modeled by the absorption coefficient $\mu_a(x)$ and scattering coefficient $\mu_s(x)$ \cite{468400},  providing a measure for the light loss due to out-scattering and absorption respectively. Combining $\mu_a$ and $\mu_s$ to the extinction coefficient $\mu_t$ gives a measure for the total amount of light lost. Using the Beer-Lambert law, the attenuation or transmittance between $x$ and $y$ is calculated as 
          \begin{align*}
          \tau(x,y) = e^{-\int_{x}^{y}\mu_t(s)ds}
          \end{align*}
@@ -78,11 +78,12 @@
   
       Due to in-scattering and emission, light intensity changes for every point $u$ on the ray (see above) \cite{468400}. Emission is calculated as $\mu_a(u)\varepsilon(u, \omega)$, in-scattering as $\mu_s\int_{\Omega}f_p(u,\omega,-\omega')L(u,\omega')d\omega'$, where $\varepsilon(u,\omega)$ is the light emitted by a particle at $u$ in direction $\omega$, and $f_p$ is the phase function, which describes the probability that light arriving from $-\omega'$ is scattered towards $\omega$. 
      
-     Therefore, the light send from $u$ to $x$ is 
+     Therefore, the light sent from $u$ to $x$ is 
      \begin{align*}
      L_e^s(u,\omega) = \mu_s(u)\int_{\Omega}f_p(u,\omega,-\omega')L(u,\omega')d\omega' + \mu_a(u)\varepsilon(u, \omega)
      \end{align*}
-     The total added light intensity to the ray between $x$ and $y$ is computed by the line integral of $L_e^s$. Adding this to the attenuated light from $y$  results in the rendering equation
+     Since some of this light is lost due to attenuation, the light intensity that arrives at $x$ is $\tau(x,u)L_e^s(u,\omega)$.
+     The total added light intensity is then computed by the line integral between $x$ and $y$. Adding this to the attenuated light from $y$  results in the rendering equation
      \begin{equation}\label{eq:rendering_equation}
      L(x, \omega) = \int_{x}^{y}\tau(x,u)L_e^s(u,\omega)du + \tau(x,y)L_e(y,\omega)
      \end{equation} 
@@ -110,7 +111,7 @@
   \import{figures/}{fig_monte_carlo.pdf_tex}
   %\caption{Light interactions in participating media.}\label{fig:interactions}
   \end{wrapfigure}
-A more sophisticated approach is the so-called monte carlo ray tracing \cite{10.1145/3451256}. This method works by casting a ray from the camera ($p_0$) in direction $-\omega_0$ for a randomly sampled distance $t_0$. At $p_1 = p_0 -\omega_0 t_0$ a new direction $\omega_1$ is randomly sampled, and the process is repeated, until either a light is hit or the ray is randomly terminated. At each point $p_i$, next event estimation is done by sending shadow rays towards randomly sampled points on light sources (called $l_i$). The final result is computed by adding the contributions along the path together (while attenuating by the transmittance $\tau$ along the way). The light sources $l_i$ and the directions $\omega_i$ are calculated using importance sampling \cite{10.1145/218380.218498}. For the sampling of the distances $t_i$ delta tracking (also called woodcock tracking) is usually used \cite{10.1145/2661229.2661292}. To estimate the transmittance $\tau$, several methods related to delta tracking might be used \cite{10.1145/2661229.2661292}, e.g. ratio tracking.
+A more sophisticated approach is the so-called monte carlo ray tracing \cite{10.1145/3451256}. This method works by casting a ray from the camera ($p_0$) in direction $-\omega_0$ for a randomly sampled distance $t_0$. At $p_1 = p_0 -\omega_0 t_0$ a new direction $\omega_1$ is randomly sampled, and the process is repeated, until either a light is hit or the ray is terminated (e.g. by Russian roulette). At each point $p_i$, next event estimation is done by sending shadow rays towards randomly sampled points on light sources (called $l_i$). The final result is computed by adding the contributions along the path together (while attenuating by the transmittance $\tau$ along the way). The light sources $l_i$ and the directions $\omega_i$ are calculated using importance sampling \cite{10.1145/218380.218498}. For the sampling of the distances $t_i$ delta tracking (also called Woodcock tracking) is usually used \cite{10.1145/2661229.2661292}. To estimate the transmittance $\tau$, several methods related to delta tracking might be used \cite{10.1145/2661229.2661292}, e.g. ratio tracking.
     }
     \block{References}{
         \vspace{-1em}
