@@ -1,8 +1,8 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.10.23)  15 JAN 2023 18:30
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.10.23)  15 JAN 2023 20:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**main.tex
+**main
 (./main.tex
 LaTeX2e <2022-06-01> patch level 5
 L3 programming layer <2022-09-28>
@@ -1249,7 +1249,26 @@ Package biblatex Info: Automatic encoding selection.
 
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'main.bbl' found.
- (./main.bbl)
+ (./main.bbl
+Missing character: There is no [ in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no [ in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no [ in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no [ in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no [ in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no [ in font nullfont!
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no ] in font nullfont!
+)
 Package biblatex Info: Reference section=0 on input line 42.
 Package biblatex Info: Reference segment=0 on input line 42.
 Package caption Info: Begin \AtBeginDocument code.
@@ -1308,51 +1327,172 @@ File: figures/fig_interactions.pdf Graphic file (type pdf)
 Package pdftex.def Info: figures/fig_interactions.pdf , page1 used on input lin
 e 56.
 (pdftex.def)             Requested size: 722.7pt x 380.43788pt.
+) (./figures/fig_light_changes.pdf_tex
+<figures//fig_light_changes.pdf, id=31, page=1, 853.58266pt x 455.2441pt>
+File: figures//fig_light_changes.pdf Graphic file (type pdf)
+<use figures//fig_light_changes.pdf, page 1>
+Package pdftex.def Info: figures//fig_light_changes.pdf , page1 used on input l
+ine 56.
+(pdftex.def)             Requested size: 722.7pt x 385.44498pt.
+<figures//fig_light_changes.pdf, id=32, page=2, 853.58266pt x 455.2441pt>
+File: figures//fig_light_changes.pdf Graphic file (type pdf)
+<use figures//fig_light_changes.pdf, page 2>
+Package pdftex.def Info: figures//fig_light_changes.pdf , page2 used on input l
+ine 60.
+(pdftex.def)             Requested size: 722.7pt x 385.44498pt.
+<figures//fig_light_changes.pdf, id=33, page=3, 853.58266pt x 455.2441pt>
+File: figures//fig_light_changes.pdf Graphic file (type pdf)
+<use figures//fig_light_changes.pdf, page 3>
+Package pdftex.def Info: figures//fig_light_changes.pdf , page3 used on input l
+ine 62.
+(pdftex.def)             Requested size: 722.7pt x 385.44498pt.
+<figures//fig_light_changes.pdf, id=34, page=4, 853.58266pt x 455.2441pt>
+File: figures//fig_light_changes.pdf Graphic file (type pdf)
+<use figures//fig_light_changes.pdf, page 4>
+Package pdftex.def Info: figures//fig_light_changes.pdf , page4 used on input l
+ine 66.
+(pdftex.def)             Requested size: 722.7pt x 385.44498pt.
 )
-
-Package caption Warning: \label without proper reference on input line 77.
-See the caption package documentation for explanation.
-
-LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 23.63593pt on input line 77.
-
-LaTeX Warning: Reference `fig:interactions' on page 1 undefined on input line 7
-7.
-
+(./figures/fig_simple_algorithm.pdf_tex
+<figures//fig_simple_algorithm.pdf, id=35, page=1, 682.86612pt x 455.2441pt>
+File: figures//fig_simple_algorithm.pdf Graphic file (type pdf)
+<use figures//fig_simple_algorithm.pdf, page 1>
+Package pdftex.def Info: figures//fig_simple_algorithm.pdf , page1 used on inpu
+t line 56.
+(pdftex.def)             Requested size: 722.7pt x 481.83401pt.
+<figures//fig_simple_algorithm.pdf, id=36, page=2, 682.86612pt x 455.2441pt>
+File: figures//fig_simple_algorithm.pdf Graphic file (type pdf)
+<use figures//fig_simple_algorithm.pdf, page 2>
+Package pdftex.def Info: figures//fig_simple_algorithm.pdf , page2 used on inpu
+t line 58.
+(pdftex.def)             Requested size: 722.7pt x 481.83401pt.
+<figures//fig_simple_algorithm.pdf, id=37, page=3, 682.86612pt x 455.2441pt>
+File: figures//fig_simple_algorithm.pdf Graphic file (type pdf)
+<use figures//fig_simple_algorithm.pdf, page 3>
+Package pdftex.def Info: figures//fig_simple_algorithm.pdf , page3 used on inpu
+t line 61.
+(pdftex.def)             Requested size: 722.7pt x 481.83401pt.
+) (./figures/fig_monte_carlo.pdf_tex
+<figures//fig_monte_carlo.pdf, id=38, page=1, 853.58266pt x 512.1496pt>
+File: figures//fig_monte_carlo.pdf Graphic file (type pdf)
+<use figures//fig_monte_carlo.pdf, page 1>
+Package pdftex.def Info: figures//fig_monte_carlo.pdf , page1 used on input lin
+e 56.
+(pdftex.def)             Requested size: 722.7pt x 433.6256pt.
+<figures//fig_monte_carlo.pdf, id=39, page=2, 853.58266pt x 512.1496pt>
+File: figures//fig_monte_carlo.pdf Graphic file (type pdf)
+<use figures//fig_monte_carlo.pdf, page 2>
+Package pdftex.def Info: figures//fig_monte_carlo.pdf , page2 used on input lin
+e 61.
+(pdftex.def)             Requested size: 722.7pt x 433.6256pt.
+<figures//fig_monte_carlo.pdf, id=40, page=3, 853.58266pt x 512.1496pt>
+File: figures//fig_monte_carlo.pdf Graphic file (type pdf)
+<use figures//fig_monte_carlo.pdf, page 3>
+Package pdftex.def Info: figures//fig_monte_carlo.pdf , page3 used on input lin
+e 63.
+(pdftex.def)             Requested size: 722.7pt x 433.6256pt.
+<figures//fig_monte_carlo.pdf, id=41, page=4, 853.58266pt x 512.1496pt>
+File: figures//fig_monte_carlo.pdf Graphic file (type pdf)
+<use figures//fig_monte_carlo.pdf, page 4>
+Package pdftex.def Info: figures//fig_monte_carlo.pdf , page4 used on input lin
+e 65.
+(pdftex.def)             Requested size: 722.7pt x 433.6256pt.
+<figures//fig_monte_carlo.pdf, id=42, page=5, 853.58266pt x 512.1496pt>
+File: figures//fig_monte_carlo.pdf Graphic file (type pdf)
+<use figures//fig_monte_carlo.pdf, page 5>
+Package pdftex.def Info: figures//fig_monte_carlo.pdf , page5 used on input lin
+e 67.
+(pdftex.def)             Requested size: 722.7pt x 433.6256pt.
+)
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 13.67995pt on input line 95.
+(Font)              scaled to size 13.67995pt on input line 120.
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <20.74> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 120.
+LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
+(Font)              scaled to size 19.70294pt on input line 120.
+LaTeX Font Info:    Font shape `T1/phv/m/sc' will be
+(Font)              scaled to size 19.70294pt on input line 120.
+LaTeX Font Info:    Trying to load font information for T1+aett on input line 1
+20.
 
-LaTeX Warning: Empty bibliography on input line 95.
-
-[1
+(c:/texlive/2022/texmf-dist/tex/latex/ae/t1aett.fd
+File: t1aett.fd 1997/11/16 Font definitions for T1/aett.
+) [1
 
 {c:/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./oth.png> <./f
-igures/fig_interactions.pdf>] (./main.aux)
+igures/fig_interactions.pdf> <./figures//fig_light_changes.pdf
 
-LaTeX Warning: There were undefined references.
+pdfTeX warning: pdflatex.exe (file ./figures//fig_light_changes.pdf): PDF inclu
+sion: multiple pdfs with page group included in a single page
+> <./figures//fig_light_changes.pdf
 
+pdfTeX warning: pdflatex.exe (file ./figures//fig_light_changes.pdf): PDF inclu
+sion: multiple pdfs with page group included in a single page
+> <./figures//fig_light_changes.pdf
+
+pdfTeX warning: pdflatex.exe (file ./figures//fig_light_changes.pdf): PDF inclu
+sion: multiple pdfs with page group included in a single page
+> <./figures//fig_light_changes.pdf
+
+pdfTeX warning: pdflatex.exe (file ./figures//fig_light_changes.pdf): PDF inclu
+sion: multiple pdfs with page group included in a single page
+> <./figures//fig_simple_algorithm.pdf
+
+pdfTeX warning: pdflatex.exe (file ./figures//fig_simple_algorithm.pdf): PDF in
+clusion: multiple pdfs with page group included in a single page
+> <./figures//fig_simple_algorithm.pdf
+
+pdfTeX warning: pdflatex.exe (file ./figures//fig_simple_algorithm.pdf): PDF in
+clusion: multiple pdfs with page group included in a single page
+> <./figures//fig_simple_algorithm.pdf
+
+pdfTeX warning: pdflatex.exe (file ./figures//fig_simple_algorithm.pdf): PDF in
+clusion: multiple pdfs with page group included in a single page
+> <./figures//fig_monte_carlo.pdf
+
+pdfTeX warning: pdflatex.exe (file ./figures//fig_monte_carlo.pdf): PDF inclusi
+on: multiple pdfs with page group included in a single page
+> <./figures//fig_monte_carlo.pdf
+
+pdfTeX warning: pdflatex.exe (file ./figures//fig_monte_carlo.pdf): PDF inclusi
+on: multiple pdfs with page group included in a single page
+> <./figures//fig_monte_carlo.pdf
+
+pdfTeX warning: pdflatex.exe (file ./figures//fig_monte_carlo.pdf): PDF inclusi
+on: multiple pdfs with page group included in a single page
+> <./figures//fig_monte_carlo.pdf
+
+pdfTeX warning: pdflatex.exe (file ./figures//fig_monte_carlo.pdf): PDF inclusi
+on: multiple pdfs with page group included in a single page
+> <./figures//fig_monte_carlo.pdf
+
+pdfTeX warning: pdflatex.exe (file ./figures//fig_monte_carlo.pdf): PDF inclusi
+on: multiple pdfs with page group included in a single page
+>] (./main.aux)
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 30608 strings out of 475071
- 642284 string characters out of 5782907
- 1539683 words of memory out of 5000000
- 51436 multiletter control sequences out of 15000+600000
- 509427 words of font info for 84 fonts, out of 8000000 for 9000
+ 30953 strings out of 475071
+ 651025 string characters out of 5782907
+ 1564955 words of memory out of 5000000
+ 51761 multiletter control sequences out of 15000+600000
+ 515729 words of font info for 89 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 115i,13n,118p,677b,2311s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 115i,17n,118p,1227b,2970s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {c:/texlive/2022/texmf-dist/fonts/enc/dvips/base/8r.enc}<c:/texlive/2022/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2022/texmf-dist/fo
 nts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2022/texmf-dist/fonts/type1
 /public/amsfonts/cm/cmr17.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmsy10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/urw/helvetic/uhvb8
-a.pfb><c:/texlive/2022/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb>
-Output written on main.pdf (1 page, 89499 bytes).
+sfonts/cm/cmsy10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmtt12.pfb><c:/texlive/2022/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb><c:
+/texlive/2022/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb><c:/texlive/2022/t
+exmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
+Output written on main.pdf (1 page, 124443 bytes).
 PDF statistics:
- 71 PDF objects out of 1000 (max. 8388607)
- 36 compressed objects within 1 object stream
+ 96 PDF objects out of 1000 (max. 8388607)
+ 45 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 119 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 179 words of extra memory for PDF output out of 10000 (max. 10000000)
 

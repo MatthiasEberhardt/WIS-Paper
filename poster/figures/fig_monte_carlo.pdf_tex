@@ -1,6 +1,6 @@
 %% Creator: Inkscape 1.2.2 (732a01da63, 2022-12-09), www.inkscape.org
 %% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
-%% Accompanies image file 'fig_light_changes.pdf' (pdf, eps, ps)
+%% Accompanies image file 'fig_monte_carlo.pdf' (pdf, eps, ps)
 %%
 %% To include the image in your LaTeX document, write
 %%   \input{<filename>.pdf_tex}
@@ -50,20 +50,23 @@
   \global\let\svgwidth\undefined%
   \global\let\svgscale\undefined%
   \makeatother%
-  \begin{picture}(1,0.53333333)%
+  \begin{picture}(1,0.6)%
     \lineheight{1}%
     \setlength\tabcolsep{0pt}%
-    \put(0,0){\includegraphics[width=\unitlength,page=1]{fig_light_changes.pdf}}%
-    \put(0.08766123,0.20746226){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$x$\end{tabular}}}}%
-    \put(0.51708059,0.218536){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$u$\end{tabular}}}}%
-    \put(0.92690196,0.21052508){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$y$\end{tabular}}}}%
-    \put(0,0){\includegraphics[width=\unitlength,page=2]{fig_light_changes.pdf}}%
-    \put(0.13326813,0.2949498){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\omega$\end{tabular}}}}%
-    \put(0,0){\includegraphics[width=\unitlength,page=3]{fig_light_changes.pdf}}%
-    \put(0.54998851,0.33417219){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}${\omega}'$\end{tabular}}}}%
-    \put(0.47202667,0.16478706){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\tau(x,y)$\end{tabular}}}}%
-    \put(0.26704562,0.28212715){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\tau(x,u)$\end{tabular}}}}%
-    \put(0,0){\includegraphics[width=\unitlength,page=4]{fig_light_changes.pdf}}%
-    \put(0.80966476,0.25720601){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$L_e(y,\omega)$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{fig_monte_carlo.pdf}}%
+    \put(0.06087162,0.27331815){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$p_0$\end{tabular}}}}%
+    \put(0.29750699,0.31839579){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$p_1$\end{tabular}}}}%
+    \put(0.33747561,0.17587616){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$p_2$\end{tabular}}}}%
+    \put(0.61257339,0.26121579){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$p_3$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{fig_monte_carlo.pdf}}%
+    \put(0.09739124,0.33023834){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\omega_0$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{fig_monte_carlo.pdf}}%
+    \put(0.25495659,0.25595538){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\omega_1$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=4]{fig_monte_carlo.pdf}}%
+    \put(0.40483727,0.23754852){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\omega_2$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=5]{fig_monte_carlo.pdf}}%
+    \put(0.36069209,0.52128206){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$l_1$\end{tabular}}}}%
+    \put(0.73910334,0.09361908){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$l_2$\end{tabular}}}}%
+    \put(0.87456797,0.5413824){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$l_3$\end{tabular}}}}%
   \end{picture}%
 \endgroup%

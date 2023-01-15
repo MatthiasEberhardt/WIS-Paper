@@ -9,4 +9,92 @@
   pages={29-37},
   doi={10.1109/38.511}}
 
-  
+  @ARTICLE{468400,
+  author={Max, N.},
+  journal={IEEE Transactions on Visualization and Computer Graphics}, 
+  title={Optical models for direct volume rendering}, 
+  year={1995},
+  volume={1},
+  number={2},
+  pages={99-108},
+  doi={10.1109/2945.468400}}
+
+
+@article{10.1145/965145.801255,
+author = {Blinn, James F.},
+title = {Light Reflection Functions for Simulation of Clouds and Dusty Surfaces},
+year = {1982},
+issue_date = {July 1982},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {16},
+number = {3},
+issn = {0097-8930},
+url = {https://doi.org/10.1145/965145.801255},
+doi = {10.1145/965145.801255},
+abstract = {The study of the physical process of light interacting with matter is an important part of computer image synthesis since it forms the basis for calculations of intensities in the picture. The simpler models used in the past are being augmented by more complex models gleaned from the physics literature. This paper is another step in the direction of assimilating such knowledge. It concerns the statistical simulation of light passing through and being reflected by clouds of similar small particles. (It does not, however, address the cloud structure modeling problem). By extension it can be applied to surfaces completely covered by dust and is therefore a physical basis for various theories of diffuse reflection.},
+journal = {SIGGRAPH Comput. Graph.},
+month = {jul},
+pages = {21–29},
+numpages = {9}
+}
+
+
+@article{10.1145/964965.808594,
+author = {Kajiya, James T. and Von Herzen, Brian P},
+title = {Ray Tracing Volume Densities},
+year = {1984},
+issue_date = {July 1984},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {18},
+number = {3},
+issn = {0097-8930},
+url = {https://doi.org/10.1145/964965.808594},
+doi = {10.1145/964965.808594},
+abstract = {This paper presents new algorithms to trace objects represented by densities within a volume grid, e.g. clouds, fog, flames, dust, particle systems. We develop the light scattering equations, discuss previous methods of solution, and present a new approximate solution to the full three-dimensional radiative scattering problem suitable for use in computer graphics. Additionally we review dynamical models for clouds used to make an animated movie.},
+journal = {SIGGRAPH Comput. Graph.},
+month = {jan},
+pages = {165–174},
+numpages = {10},
+keywords = {Simulation of natural phenomena, Radiative transport, Ray tracing, Clouds, Particle systems, Raster graphics, Stochastic modeling, Light scattering, Computer graphics}
+}
+
+@article{10.1145/3451256,
+author = {Hofmann, Nikolai and Hasselgren, Jon and Clarberg, Petrik and Munkberg, Jacob},
+title = {Interactive Path Tracing and Reconstruction of Sparse Volumes},
+year = {2021},
+issue_date = {April 2021},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {4},
+number = {1},
+url = {https://doi.org/10.1145/3451256},
+doi = {10.1145/3451256},
+abstract = {We combine state-of-the-art techniques into a system for high-quality, interactive rendering of participating media. We leverage unbiased volume path tracing with multiple scattering, temporally stable neural denoising and NanoVDB [Museth 2021], a fast, sparse voxel tree data structure for the GPU, to explore what performance and image quality can be obtained for rendering volumetric data. Additionally, we integrate neural adaptive sampling to significantly improve image quality at a fixed sample budget. Our system runs at interactive rates at 1920 \texttimes{} 1080 on a single GPU and produces high quality results for complex dynamic volumes.},
+journal = {Proc. ACM Comput. Graph. Interact. Tech.},
+month = {apr},
+articleno = {5},
+numpages = {19},
+keywords = {path tracing, image reconstruction, machine learning, denoising, volumetric rendering}
+}
+
+@article{10.1145/2661229.2661292,
+author = {Nov\'{a}k, Jan and Selle, Andrew and Jarosz, Wojciech},
+title = {Residual Ratio Tracking for Estimating Attenuation in Participating Media},
+year = {2014},
+issue_date = {November 2014},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {33},
+number = {6},
+issn = {0730-0301},
+url = {https://doi.org/10.1145/2661229.2661292},
+doi = {10.1145/2661229.2661292},
+abstract = {Evaluating transmittance within participating media is a fundamental operation required by many light transport algorithms. We present ratio tracking and residual tracking, two complementary techniques that can be combined into an efficient, unbiased estimator for evaluating transmittance in complex heterogeneous media. In comparison to current approaches, our new estimator is unbiased, yields high efficiency, gracefully handles media with wavelength dependent extinction, and bridges the gap between closed form solutions and purely numerical, unbiased approaches. A key feature of ratio tracking is its ability to handle negative densities. This in turn enables us to separate the main part of the transmittance function, handle it analytically, and numerically estimate only the residual transmittance. In addition to proving the unbiasedness of our estimators, we perform an extensive empirical analysis to reveal parameters that lead to high efficiency. Finally, we describe how to integrate the new techniques into a production path tracer and demonstrate their benefits over traditional unbiased estimators.},
+journal = {ACM Trans. Graph.},
+month = {nov},
+articleno = {179},
+numpages = {11},
+keywords = {delta tracking, transmittance, participating media}
+}

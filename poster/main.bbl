@@ -16,5 +16,272 @@
   {}
 \endgroup
 
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global}
+    \entry{10.1145/965145.801255}{article}{}
+      \name{author}{1}{}{%
+        {{hash=31eca65cd9b9caf20488019e2dcda23a}{%
+           family={Blinn},
+           familyi={B\bibinitperiod},
+           given={James\bibnamedelima F.},
+           giveni={J\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {New York, NY, USA}%
+      }
+      \list{publisher}{1}{%
+        {Association for Computing Machinery}%
+      }
+      \strng{namehash}{31eca65cd9b9caf20488019e2dcda23a}
+      \strng{fullhash}{31eca65cd9b9caf20488019e2dcda23a}
+      \strng{bibnamehash}{31eca65cd9b9caf20488019e2dcda23a}
+      \strng{authorbibnamehash}{31eca65cd9b9caf20488019e2dcda23a}
+      \strng{authornamehash}{31eca65cd9b9caf20488019e2dcda23a}
+      \strng{authorfullhash}{31eca65cd9b9caf20488019e2dcda23a}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The study of the physical process of light interacting with matter is an important part of computer image synthesis since it forms the basis for calculations of intensities in the picture. The simpler models used in the past are being augmented by more complex models gleaned from the physics literature. This paper is another step in the direction of assimilating such knowledge. It concerns the statistical simulation of light passing through and being reflected by clouds of similar small particles. (It does not, however, address the cloud structure modeling problem). By extension it can be applied to surfaces completely covered by dust and is therefore a physical basis for various theories of diffuse reflection.}
+      \field{issn}{0097-8930}
+      \field{journaltitle}{SIGGRAPH Comput. Graph.}
+      \field{month}{7}
+      \field{number}{3}
+      \field{title}{Light Reflection Functions for Simulation of Clouds and Dusty Surfaces}
+      \field{volume}{16}
+      \field{year}{1982}
+      \field{pages}{21\bibrangedash 29}
+      \range{pages}{9}
+      \verb{doi}
+      \verb 10.1145/965145.801255
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1145/965145.801255
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1145/965145.801255
+      \endverb
+    \endentry
+    \entry{10.1145/3451256}{article}{}
+      \name{author}{4}{}{%
+        {{hash=2618ff53bcc88ee38bffad9e4deecb37}{%
+           family={Hofmann},
+           familyi={H\bibinitperiod},
+           given={Nikolai},
+           giveni={N\bibinitperiod}}}%
+        {{hash=9842cd8a2db2500fc43800d94ae836bc}{%
+           family={Hasselgren},
+           familyi={H\bibinitperiod},
+           given={Jon},
+           giveni={J\bibinitperiod}}}%
+        {{hash=16463793b4c7dc80718750710de4c5b7}{%
+           family={Clarberg},
+           familyi={C\bibinitperiod},
+           given={Petrik},
+           giveni={P\bibinitperiod}}}%
+        {{hash=89515eb54ce31e956c0cfdbe5423ab60}{%
+           family={Munkberg},
+           familyi={M\bibinitperiod},
+           given={Jacob},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {New York, NY, USA}%
+      }
+      \list{publisher}{1}{%
+        {Association for Computing Machinery}%
+      }
+      \strng{namehash}{f776bc01693e2c29d2a42d04a8776b21}
+      \strng{fullhash}{3365c46fec11d4fe1a65548b79edc949}
+      \strng{bibnamehash}{f776bc01693e2c29d2a42d04a8776b21}
+      \strng{authorbibnamehash}{f776bc01693e2c29d2a42d04a8776b21}
+      \strng{authornamehash}{f776bc01693e2c29d2a42d04a8776b21}
+      \strng{authorfullhash}{3365c46fec11d4fe1a65548b79edc949}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We combine state-of-the-art techniques into a system for high-quality, interactive rendering of participating media. We leverage unbiased volume path tracing with multiple scattering, temporally stable neural denoising and NanoVDB [Museth 2021], a fast, sparse voxel tree data structure for the GPU, to explore what performance and image quality can be obtained for rendering volumetric data. Additionally, we integrate neural adaptive sampling to significantly improve image quality at a fixed sample budget. Our system runs at interactive rates at 1920 \texttimes{} 1080 on a single GPU and produces high quality results for complex dynamic volumes.}
+      \field{journaltitle}{Proc. ACM Comput. Graph. Interact. Tech.}
+      \field{month}{4}
+      \field{number}{1}
+      \field{title}{Interactive Path Tracing and Reconstruction of Sparse Volumes}
+      \field{volume}{4}
+      \field{year}{2021}
+      \verb{doi}
+      \verb 10.1145/3451256
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1145/3451256
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1145/3451256
+      \endverb
+      \keyw{path tracing,image reconstruction,machine learning,denoising,volumetric rendering}
+    \endentry
+    \entry{10.1145/964965.808594}{article}{}
+      \name{author}{2}{}{%
+        {{hash=d6809030fb64a95f48cc716603631fb7}{%
+           family={Kajiya},
+           familyi={K\bibinitperiod},
+           given={James\bibnamedelima T.},
+           giveni={J\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
+        {{hash=45867a447055d50941a192052f080e92}{%
+           family={Von\bibnamedelima Herzen},
+           familyi={V\bibinitperiod\bibinitdelim H\bibinitperiod},
+           given={Brian\bibnamedelima P},
+           giveni={B\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {New York, NY, USA}%
+      }
+      \list{publisher}{1}{%
+        {Association for Computing Machinery}%
+      }
+      \strng{namehash}{5c702b04afcfd6cc710b3f19367b3703}
+      \strng{fullhash}{5c702b04afcfd6cc710b3f19367b3703}
+      \strng{bibnamehash}{5c702b04afcfd6cc710b3f19367b3703}
+      \strng{authorbibnamehash}{5c702b04afcfd6cc710b3f19367b3703}
+      \strng{authornamehash}{5c702b04afcfd6cc710b3f19367b3703}
+      \strng{authorfullhash}{5c702b04afcfd6cc710b3f19367b3703}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{This paper presents new algorithms to trace objects represented by densities within a volume grid, e.g. clouds, fog, flames, dust, particle systems. We develop the light scattering equations, discuss previous methods of solution, and present a new approximate solution to the full three-dimensional radiative scattering problem suitable for use in computer graphics. Additionally we review dynamical models for clouds used to make an animated movie.}
+      \field{issn}{0097-8930}
+      \field{journaltitle}{SIGGRAPH Comput. Graph.}
+      \field{month}{1}
+      \field{number}{3}
+      \field{title}{Ray Tracing Volume Densities}
+      \field{volume}{18}
+      \field{year}{1984}
+      \field{pages}{165\bibrangedash 174}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.1145/964965.808594
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1145/964965.808594
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1145/964965.808594
+      \endverb
+      \keyw{Simulation of natural phenomena,Radiative transport,Ray tracing,Clouds,Particle systems,Raster graphics,Stochastic modeling,Light scattering,Computer graphics}
+    \endentry
+    \entry{511}{article}{}
+      \name{author}{1}{}{%
+        {{hash=37674bed327a5b6dcb92aef5e4298f5d}{%
+           family={Levoy},
+           familyi={L\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{37674bed327a5b6dcb92aef5e4298f5d}
+      \strng{fullhash}{37674bed327a5b6dcb92aef5e4298f5d}
+      \strng{bibnamehash}{37674bed327a5b6dcb92aef5e4298f5d}
+      \strng{authorbibnamehash}{37674bed327a5b6dcb92aef5e4298f5d}
+      \strng{authornamehash}{37674bed327a5b6dcb92aef5e4298f5d}
+      \strng{authorfullhash}{37674bed327a5b6dcb92aef5e4298f5d}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Computer Graphics and Applications}
+      \field{number}{3}
+      \field{title}{Display of surfaces from volume data}
+      \field{volume}{8}
+      \field{year}{1988}
+      \field{pages}{29\bibrangedash 37}
+      \range{pages}{9}
+      \verb{doi}
+      \verb 10.1109/38.511
+      \endverb
+    \endentry
+    \entry{468400}{article}{}
+      \name{author}{1}{}{%
+        {{hash=72a9b45cd1e2abaaa523591dffea7b30}{%
+           family={Max},
+           familyi={M\bibinitperiod},
+           given={N.},
+           giveni={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{72a9b45cd1e2abaaa523591dffea7b30}
+      \strng{fullhash}{72a9b45cd1e2abaaa523591dffea7b30}
+      \strng{bibnamehash}{72a9b45cd1e2abaaa523591dffea7b30}
+      \strng{authorbibnamehash}{72a9b45cd1e2abaaa523591dffea7b30}
+      \strng{authornamehash}{72a9b45cd1e2abaaa523591dffea7b30}
+      \strng{authorfullhash}{72a9b45cd1e2abaaa523591dffea7b30}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Transactions on Visualization and Computer Graphics}
+      \field{number}{2}
+      \field{title}{Optical models for direct volume rendering}
+      \field{volume}{1}
+      \field{year}{1995}
+      \field{pages}{99\bibrangedash 108}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.1109/2945.468400
+      \endverb
+    \endentry
+    \entry{10.1145/2661229.2661292}{article}{}
+      \name{author}{3}{}{%
+        {{hash=eb871242c3cc6b59592dcb005fddd0cd}{%
+           family={Novák},
+           familyi={N\bibinitperiod},
+           given={Jan},
+           giveni={J\bibinitperiod}}}%
+        {{hash=f80edf92c872088191b3ae1861ccbba3}{%
+           family={Selle},
+           familyi={S\bibinitperiod},
+           given={Andrew},
+           giveni={A\bibinitperiod}}}%
+        {{hash=a4203652e4fe6f9a55d6d2f8dcedf6af}{%
+           family={Jarosz},
+           familyi={J\bibinitperiod},
+           given={Wojciech},
+           giveni={W\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {New York, NY, USA}%
+      }
+      \list{publisher}{1}{%
+        {Association for Computing Machinery}%
+      }
+      \strng{namehash}{dd8408046eb04f12bc138226f4b7ffa5}
+      \strng{fullhash}{dd8408046eb04f12bc138226f4b7ffa5}
+      \strng{bibnamehash}{dd8408046eb04f12bc138226f4b7ffa5}
+      \strng{authorbibnamehash}{dd8408046eb04f12bc138226f4b7ffa5}
+      \strng{authornamehash}{dd8408046eb04f12bc138226f4b7ffa5}
+      \strng{authorfullhash}{dd8408046eb04f12bc138226f4b7ffa5}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Evaluating transmittance within participating media is a fundamental operation required by many light transport algorithms. We present ratio tracking and residual tracking, two complementary techniques that can be combined into an efficient, unbiased estimator for evaluating transmittance in complex heterogeneous media. In comparison to current approaches, our new estimator is unbiased, yields high efficiency, gracefully handles media with wavelength dependent extinction, and bridges the gap between closed form solutions and purely numerical, unbiased approaches. A key feature of ratio tracking is its ability to handle negative densities. This in turn enables us to separate the main part of the transmittance function, handle it analytically, and numerically estimate only the residual transmittance. In addition to proving the unbiasedness of our estimators, we perform an extensive empirical analysis to reveal parameters that lead to high efficiency. Finally, we describe how to integrate the new techniques into a production path tracer and demonstrate their benefits over traditional unbiased estimators.}
+      \field{issn}{0730-0301}
+      \field{journaltitle}{ACM Trans. Graph.}
+      \field{month}{11}
+      \field{number}{6}
+      \field{title}{Residual Ratio Tracking for Estimating Attenuation in Participating Media}
+      \field{volume}{33}
+      \field{year}{2014}
+      \verb{doi}
+      \verb 10.1145/2661229.2661292
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1145/2661229.2661292
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1145/2661229.2661292
+      \endverb
+      \keyw{delta tracking,transmittance,participating media}
+    \endentry
+  \enddatalist
+\endrefsection
 \endinput
 

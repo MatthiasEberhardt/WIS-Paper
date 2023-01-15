@@ -35,7 +35,7 @@
 
 \title{Volumetric Ray Tracing}
 \author{Matthias Eberhardt}
-\institute{Ostbayerische Technische Hochschuler Regensburg}
+\institute{Ostbayerische Technische Hochschule Regensburg}
 \titlegraphic{\includegraphics[width=0.06\textwidth]{oth.png}}
 
 % begin document
@@ -45,67 +45,73 @@
 \begin{columns}
     \column{0.5}
     \block{Motivation}{
-    In Computer Graphics, objects usually are represented as a set of geometric primitives (e.g. triangles), displaying the surface of the object. However, if a volumtric object (e.g a cloud), is to be rendered, the traditional rendering technique requires an intermediate surface representation that can introduce unwanted artifacts. Volumetric ray tracing provides a mechanism to directly render such 3D data without the need for a surface representation.
+    In Computer Graphics, objects usually are represented as a set of geometric primitives (e.g. triangles), displaying the surface of the object. However, if a volumetric object (e.g a cloud), is to be rendered, the traditional rendering technique requires an intermediate surface representation that can introduce unwanted artifacts \cite{511}. Volumetric ray tracing provides a mechanism to directly render such 3D data without the need for a surface representation.
     
     }
     
     
     \block{Participating Media and the Beer-Lambert Law}{
-      \begin{wrapfigure}{l}{0.25\columnwidth}\label{fig:interactions}
+      \begin{wrapfigure}{l}{0.25\columnwidth}
 \def\svgwidth{0.25\columnwidth}
   \import{figures/}{fig_interactions.pdf_tex}
-  \caption{Light interactions in participating media.}
+  %\caption{Light interactions in participating media.}\label{fig:interactions}
   \end{wrapfigure}
-   Surface ray tracing calcualtes the light point $x$ receives from the nearest surface point $y$ in direction $-\omega$. This quantity is called $L_e(y,\omega)$. Surface ray tracing then makes the assumption that the light experiences no changes during its travel:
+   Surface ray tracing assumes that the light which arrives at a point $x$ from another point $y$ in direction $-\omega$ experiences no interactions during its travel:
+   %Surface ray tracing calculates the light point $x$ receives from the nearest surface point $y$ in direction $-\omega$. This quantity is called $L_e(y,\omega)$. Surface ray tracing then assumes that the light experiences no changes during its travel:
    \begin{align*}
    L(x,\omega) = L_e(y, \omega)
    \end{align*}
-   This assumption holds only true if the light travels through a vacuum, if it travels through a medium that interacts with it (called a participating medium), the intensity changes. The possible interactions (see figure \ref{fig:interactions}) include absorption (e.g. in smoke), in and out-scattering (e.g. in clouds), and emission from within the medium that add light to the ray (e.g. in fire). The goal of volumetric ray tracing is to correctly model those interactions.
-  
-
-  
-        %\begin{tikzfigure}[Interactions in participating media]\label{fig:interactions}
-         %   \includegraphics[width=0.3\linewidth]{fig_interactions.eps}
-        %\end{tikzfigure}
-
-   
-         The interactions enumerated above occur due to tiny particles suspended within the medium, which are stochastically modeled by the absorption coefficient $\mu_a(x)$ and scattering coefficient $\mu_s(x)$,  providing a measure for the light loss lost due to out-scattering and absorption respectively. Combining $\mu_a$ and $\mu_s$ to the extinction coefficient $\mu_t$ gives a measure for the total amount of light lost. Using the Beer-Lambert law, the attenuation or transmittance between $x$ and $y$ is calculated as 
+   This assumption holds only true if the light travels through a vacuum, if it travels through a medium that interacts with it (called a participating medium), the intensity changes. The possible interactions (see left) include absorption (e.g. in smoke), in and out-scattering (e.g. in clouds), and emission from within the medium that adds light to the ray (e.g. in fire). The goal of volumetric ray tracing is to correctly model those interactions. The interactions enumerated above occur due to tiny particles suspended within the medium, which are stochastically modeled by the absorption coefficient $\mu_a(x)$ and scattering coefficient $\mu_s(x)$ \cite{468400},  providing a measure for the light loss lost due to out-scattering and absorption respectively. Combining $\mu_a$ and $\mu_s$ to the extinction coefficient $\mu_t$ gives a measure for the total amount of light lost. Using the Beer-Lambert law, the attenuation or transmittance between $x$ and $y$ is calculated as 
          \begin{align*}
          \tau(x,y) = e^{-\int_{x}^{y}\mu_t(s)ds}
          \end{align*}
-         This describes the percentage of light that ``survives'' the travel from $x$ to $y$.
+         This describes the percentage of light that ``survives'' the travel from $x$ to $y$. Thus, $L_e$ gets attenuated by $\tau(x,y)$.
     }
     \block{Mathematical Model}{
     
-    
-    \begin{wrapfigure}{l}{0.25\columnwidth}\label{fig:light_changes}
 
+    \begin{tikzfigure}%{l}{0.25\columnwidth}\label{fig:light_changes}
 \def\svgwidth{0.25\columnwidth}
   \import{figures/}{fig_light_changes.pdf_tex}
-  \caption{TEst.}
-  \end{wrapfigure}
+  \end{tikzfigure}
+
   
-  
-     Thus, $L_e$ gets attenuated by $\tau(x,y)$. Furthermore, for every point $u$ between $x$ and $y$, the ray intensity changes due to emission and in-scattering. Emission is calculated as $\mu_a(u)\varepsilon(u, \omega)$, in-scattering as $\mu_s\int_{\Omega}f_p(u,\omega,-\omega')L(u,\omega')d\omega'$, where $\varepsilon(u,\omega)$ is the light emitted by a particle at $u$ in direction$\omega$, and $f_p$ is the phase function, which describes the probabilty that light arriving from $-\omega'$ is scattered towards $\omega$. 
-     \newline
+      Due to in-scattering and emission, light intensity changes for every point $u$ on the ray (see above). Emission is calculated as $\mu_a(u)\varepsilon(u, \omega)$, in-scattering as $\mu_s\int_{\Omega}f_p(u,\omega,-\omega')L(u,\omega')d\omega'$, where $\varepsilon(u,\omega)$ is the light emitted by a particle at $u$ in direction $\omega$, and $f_p$ is the phase function, which describes the probability that light arriving from $-\omega'$ is scattered towards $\omega$. 
+     
      Therefore, the light send from $u$ to $x$ is 
      \begin{align*}
      L_e^s(u,\omega) = \mu_s\int_{\Omega}f_p(u,\omega,-\omega')L(u,\omega')d\omega' + \mu_a(u)\varepsilon(u, \omega)
      \end{align*}
      The total added light intensity to the ray between $x$ and $y$ is computed by the line integral of $L_e^s$. Adding this to the attenuated light from $y$  results in the rendering equation
-     \begin{align*}
-     L(x, \omega) = \int_{x}^{y}\tau(x,u)L_e^s(u,\omega)du + L_e(y,\omega)
-     \end{align*} 
+     \begin{equation}\label{eq:rendering_equation}
+     L(x, \omega) = \int_{x}^{y}\tau(x,u)L_e^s(u,\omega)du + \tau(x,y)L_e(y,\omega)
+     \end{equation} 
     }
 
     \column{0.5}
     \block{Discrete Ray Marching}{
-    
+    \begin{wrapfigure}{l}{0.25\columnwidth}
+\def\svgwidth{0.25\columnwidth}
+  \import{figures/}{fig_simple_algorithm.pdf_tex}
+  %\caption{Light interactions in participating media.}\label{fig:interactions}
+  \end{wrapfigure}
+  A simple approximation to equation \ref{eq:rendering_equation} that ignores all global illumination effects is the so-called ray marching algorithm (left), which works by sampling each ray at multiple, evenly spaced points $p_i$ and compositing those samples to a final value. If $c(i)$ is the color of $p_i$ and $\alpha(i)$ its opacity, this composition is described as
+  \begin{align*}
+  \sum_{1 \le i \le n} \left( 1 - \prod_{1 \le j \le i}(1-\alpha(j))\right) \cdot c(i)
+  \end{align*}
+  As a simplification, the values of $c$ and $ \alpha$ are assumed to be piecewise constant between the different $p_i$.
+   An extension of the method was described by Blinn \cite{10.1145/965145.801255} and further developed by Kajiya and Von Herzen \cite{10.1145/964965.808594}, which improves the algorithm by also considering direct illumination. This works as a two-pass process: In the first step, at each voxel of the original volume, the intensity of direct illumination is calculated and saved in an intermediate 3D array. In the second step, the ray marching algorithm is used to render the output of the first step. 
     }
     
-    \block{Monte Carlo Ray Tracing}
-
-    
+    \block{Monte Carlo Ray Tracing}{
+      
+    \begin{wrapfigure}{l}{0.25\columnwidth}
+\def\svgwidth{0.25\columnwidth}
+  \import{figures/}{fig_monte_carlo.pdf_tex}
+  %\caption{Light interactions in participating media.}\label{fig:interactions}
+  \end{wrapfigure}
+A more sophisticated approach is the so-called monte carlo ray tracing \cite{10.1145/3451256}. This method works by casting a ray from the camera ($p_0$) in direction $-\omega_0$ for a randomly sampled distance $t_0$. At $p_1 = p_0 -\omega_0 t_0$ a new direction $\omega_1$ is randomly sampled, and the process is repeated, until either a light is hit or the ray is randomly terminated. At each point $p_i$, next event estimation is done by sending shadow rays towards randomly sampled points on light sources (called $l_i$). The final result is computed by adding the contributions along the path together (while attenuating by the transmittance $\tau$ along the way). The light sources $l_i$ and the directions $\omega_i$ are calculated using importance sampling. For the sampling of the distances $t_i$ delta tracking (also called woodcock tracking) is usually used \cite{10.1145/2661229.2661292}. To estimate the transmittance $\tau$, several methods related to delta tracking might be used \cite{10.1145/2661229.2661292}, e.g. ratio tracking.
+    }
     \block{References}{
         \vspace{-1em}
         \begin{footnotesize}
