@@ -59,7 +59,7 @@ We begin our paper by introducing the reader to the mathematical formalisms of v
 \label{sec:math}
 Volumetric ray tracing follows the same principle as classical ray tracing in which an image is rendered by spanning a pixel plane in front of the camera and casting one or multiple rays through each pixel\cite{10.5555/94788}.
 That means for a point ${x}$ on the plane we cast a ray in direction $-\omega$ and calculate the amount of light ${x}$ receives from direction $\omega$, called $L({x},\omega )$.
-To do this, we find the closest intersection point of the ray with a piece of geometry,  ${y}$,  from where a certain light intensity $L_e({y},\omega )$ is transported in direction $\omega$, either through reflection or emission (The method for calculating $L_e$ is a topic of classical raytracing\cite{10.5555/94788} and is assumed to be a known quantity in this paper).
+To do this, we find the closest intersection point of the ray with a piece of geometry,  ${y}$,  from where a certain light intensity $L_e({y},\omega )$ is transported in direction $\omega$, either through reflection or emission (The method for calculating $L_e$ is a topic of classical raytracing\cite{10.5555/94788} and $L_e$ is assumed to be a known quantity in this paper).
 Thus, we get the equation 
 
 \begin{equation}\label{eq:no_attenuation}
@@ -148,12 +148,12 @@ In-scattered light can arrive at ${u}$ from every direction, therefore we must i
 \begin{align*}
 \int_{\Omega} L({u}, \omega `)d\omega `
 \end{align*}
-However, not all light arriving at ${u}$ is scattered towards $\omega $. The phase function $f_p({u}, \omega , -\omega `)$ describes the probality that light hitting a particle at ${u}$ from $\omega `$ is reflected towards $\omega$ \cite{10.1145/280814.280925, Cerezo2005}, analogous to the BRDF \cite{10.1145/965141.563893} in surface ray tracing. Furthermore, the amount of light scattered towards $\omega $ also depends on the probability that in-scattering particles are present at ${u}$\cite{10.1145/280814.280925}. Assuming that in and out-scattering particles are the same results in the equation
+However, not all light arriving at ${u}$ is scattered towards $\omega $. The phase function $f_p({u}, \omega , -\omega `)$ describes the probality density \cite{wiki:Probability_density_function} that light hitting a particle at ${u}$ from $\omega `$ is reflected towards $\omega$ \cite{10.1145/280814.280925, Cerezo2005}, analogous to the BRDF \cite{10.1145/965141.563893} in surface ray tracing. Furthermore, the amount of light scattered towards $\omega $ also depends on the probability that in-scattering particles are present at ${u}$\cite{10.1145/280814.280925}. Assuming that in and out-scattering particles are the same results in the equation
 \begin{align*}
 L_e^s({u}, \omega ) = {\mu}_s({u})\int_{\Omega} f_p({u}, \omega , -\omega `)L({u}, \omega `)d\omega `  + {\mu}_a({u})\varepsilon ({u}, \omega )
 \end{align*}
 which describes the total amount of light being added to the ray at ${u}$.
-Not all of $L_e^s({u}, \omega )$ arrives at ${x}$ since the newly added light also needs to travel through the volume where it is attenuated by the transmittance $\tau ({x}, {u})$.
+Not all of $L_e^s({u}, \omega )$ arrives at ${x}$ since the newly added light also needs to travel through the volume, where it is attenuated by the transmittance $\tau ({x}, {u})$.
 To get the total light intensity added to the ray, we sum up the light contribution of all points along the ray by integrating over it\cite{zhou2007real-time}:
 \begin{align*}
 \int_{{x}}^{{y}} \tau({x}, {u})L_e^s({u}, \omega )d{u}
@@ -219,7 +219,7 @@ As a simplification, we assume all variables to be piecewise constant\cite{10.11
 \end{align*} 
 
 
-for one line segment between $p_{i-1}$ and $p_i$ with $\tau(p_0, p_i)$ equal to
+for the light contribution from one line segment between $p_{i-1}$ and $p_i$ with $\tau(p_0, p_i)$ equal to
 
 
 \begin{equation}\label{eq:discrete_tau_approx}
@@ -389,7 +389,7 @@ Photon mapping is a two-pass process \cite{10.1145/280814.280925}, conceptionall
 Jensen and Christensen \cite{10.1145/280814.280925} extended this method to participating media by introducing volumetric photon maps (which differ from the volumes $\mathcal{V}'_k$ described in \ref{subsec:direct_illumination}, as they are not discrete and consider global illumination). These photon maps are computed by tracing rays from the light sources and storing the positions of interactions of those rays with the participating medium.
 \subsection{Compensated Ray Marching}
 This algorithm, developed by Zhou et al. \cite{zhou2007real-time} follows the same idea as photon mapping but computes its photon distribution on an approximation of the original volume.
-In a preprocessing step, the original volume $\mathcal{V}$ is split into a volume $\widetilde{\mathcal{V}}$ and a residual volume $\mathcal{R} = \mathcal{V} - \widetilde{\mathcal{V}}$. $\widetilde{\mathcal{V}}$ is a low frequency approximation to $\mathcal{V}$ and $\mathcal{R}$ is its error. The global lighting is calculated on $\widetilde{\mathcal{V}}$ and is afterward rendered using ray marching (similarly as in \ref{sec:ray_marching}). During the ray marching $\mathcal{R}$ is used to compensate for errors in $\widetilde{\mathcal{V}}$. This is done by increasing the contribution of rays that travel through areas where $\widetilde{\mathcal{V}}$ overestimates the opacity $\mathcal{V}$. This overestimation makes the rays appear darker than they should, and the increase compensates for that.The same is done if $\widetilde{\mathcal{V}}$ underestimates $mathcal{V}$. $\mathcal{R}$ is used to determine this misestimation. 
+In a preprocessing step, the original volume $\mathcal{V}$ is split into a volume $\widetilde{\mathcal{V}}$ and a residual volume $\mathcal{R} = \mathcal{V} - \widetilde{\mathcal{V}}$. $\widetilde{\mathcal{V}}$ is a low frequency approximation to $\mathcal{V}$ and $\mathcal{R}$ is its error. The global lighting is calculated on $\widetilde{\mathcal{V}}$ and is afterward rendered using ray marching (similarly as in \ref{sec:ray_marching}). During the ray marching $\mathcal{R}$ is used to compensate for errors in $\widetilde{\mathcal{V}}$. This is done by increasing the contribution of rays that travel through areas where $\widetilde{\mathcal{V}}$ overestimates the opacity $\mathcal{V}$. This overestimation makes the rays appear darker than they should, and the increase compensates for that.The same is done if $\widetilde{\mathcal{V}}$ underestimates $\mathcal{V}$. $\mathcal{R}$ is used to determine this misestimation. 
 It should be emphasized that the rendering step uses ray marching similar as described in chapter \ref{sec:ray_marching} and is therefore biased. 
 \section{Conclusion}
 \label{sec:conclusion}

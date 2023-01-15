@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.10.23)  13 JAN 2023 21:34
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.10.23)  13 JAN 2023 21:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -755,19 +755,25 @@ pdfTeX warning: pdflatex.exe (file ./figures//fig_cylinder.pdf): PDF inclusion:
 pdfTeX warning: pdflatex.exe (file ./figures//fig_projected_cylinder.pdf): PDF 
 inclusion: multiple pdfs with page group included in a single page
 >]
+Underfull \hbox (badness 1371) in paragraph at lines 150--152
+\T1/ptm/m/n/9 However, not all light ar-riv-ing at $\OML/ptmcm/m/it/9 u$ \T1/pt
+m/m/n/9 is scat-tered to-wards $\OML/ptmcm/m/it/9 !$\T1/ptm/m/n/9 .
+ []
+
+
 Underfull \hbox (badness 2573) in paragraph at lines 165--168
 \T1/ptm/m/n/9 This in-te-gral is an-a-lyt-i-cally un-solv-able in the gen-eral 
 case
  []
 
 (./figures/fig_simple_algorithm.pdf_tex
-<figures//fig_simple_algorithm.pdf, id=107, page=1, 711.31892pt x 569.05513pt>
+<figures//fig_simple_algorithm.pdf, id=108, page=1, 711.31892pt x 569.05513pt>
 File: figures//fig_simple_algorithm.pdf Graphic file (type pdf)
 <use figures//fig_simple_algorithm.pdf, page 1>
 Package pdftex.def Info: figures//fig_simple_algorithm.pdf , page1 used on inpu
 t line 56.
 (pdftex.def)             Requested size: 240.0pt x 192.00006pt.
-<figures//fig_simple_algorithm.pdf, id=108, page=2, 711.31892pt x 569.05513pt>
+<figures//fig_simple_algorithm.pdf, id=109, page=2, 711.31892pt x 569.05513pt>
 File: figures//fig_simple_algorithm.pdf Graphic file (type pdf)
 <use figures//fig_simple_algorithm.pdf, page 2>
 Package pdftex.def Info: figures//fig_simple_algorithm.pdf , page2 used on inpu
@@ -799,31 +805,31 @@ clusion: multiple pdfs with page group included in a single page
 pdfTeX warning: pdflatex.exe (file ./figures//fig_simple_algorithm.pdf): PDF in
 clusion: multiple pdfs with page group included in a single page
 >] [4] (./figures/fig_monte_carlo.pdf_tex
-<figures//fig_monte_carlo.pdf, id=175, page=1, 853.58266pt x 512.1496pt>
+<figures//fig_monte_carlo.pdf, id=177, page=1, 853.58266pt x 512.1496pt>
 File: figures//fig_monte_carlo.pdf Graphic file (type pdf)
 <use figures//fig_monte_carlo.pdf, page 1>
 Package pdftex.def Info: figures//fig_monte_carlo.pdf , page1 used on input lin
 e 56.
 (pdftex.def)             Requested size: 240.0pt x 143.99483pt.
-<figures//fig_monte_carlo.pdf, id=176, page=2, 853.58266pt x 512.1496pt>
+<figures//fig_monte_carlo.pdf, id=178, page=2, 853.58266pt x 512.1496pt>
 File: figures//fig_monte_carlo.pdf Graphic file (type pdf)
 <use figures//fig_monte_carlo.pdf, page 2>
 Package pdftex.def Info: figures//fig_monte_carlo.pdf , page2 used on input lin
 e 61.
 (pdftex.def)             Requested size: 240.0pt x 143.99483pt.
-<figures//fig_monte_carlo.pdf, id=177, page=3, 853.58266pt x 512.1496pt>
+<figures//fig_monte_carlo.pdf, id=179, page=3, 853.58266pt x 512.1496pt>
 File: figures//fig_monte_carlo.pdf Graphic file (type pdf)
 <use figures//fig_monte_carlo.pdf, page 3>
 Package pdftex.def Info: figures//fig_monte_carlo.pdf , page3 used on input lin
 e 63.
 (pdftex.def)             Requested size: 240.0pt x 143.99483pt.
-<figures//fig_monte_carlo.pdf, id=178, page=4, 853.58266pt x 512.1496pt>
+<figures//fig_monte_carlo.pdf, id=180, page=4, 853.58266pt x 512.1496pt>
 File: figures//fig_monte_carlo.pdf Graphic file (type pdf)
 <use figures//fig_monte_carlo.pdf, page 4>
 Package pdftex.def Info: figures//fig_monte_carlo.pdf , page4 used on input lin
 e 65.
 (pdftex.def)             Requested size: 240.0pt x 143.99483pt.
-<figures//fig_monte_carlo.pdf, id=179, page=5, 853.58266pt x 512.1496pt>
+<figures//fig_monte_carlo.pdf, id=181, page=5, 853.58266pt x 512.1496pt>
 File: figures//fig_monte_carlo.pdf Graphic file (type pdf)
 <use figures//fig_monte_carlo.pdf, page 5>
 Package pdftex.def Info: figures//fig_monte_carlo.pdf , page5 used on input lin
@@ -837,25 +843,25 @@ LaTeX Font Info:    Trying to load font information for U+dsrom on input line 3
 File: Udsrom.fd 1995/08/01 v0.1 Double stroke roman font definitions
 )
 (./figures/fig_delta_tracking.pdf_tex
-<figures//fig_delta_tracking.pdf, id=193, page=1, 569.05513pt x 569.05513pt>
+<figures//fig_delta_tracking.pdf, id=195, page=1, 569.05513pt x 569.05513pt>
 File: figures//fig_delta_tracking.pdf Graphic file (type pdf)
 <use figures//fig_delta_tracking.pdf, page 1>
 Package pdftex.def Info: figures//fig_delta_tracking.pdf , page1 used on input 
 line 56.
 (pdftex.def)             Requested size: 240.0pt x 240.00008pt.
-<figures//fig_delta_tracking.pdf, id=194, page=2, 569.05513pt x 569.05513pt>
+<figures//fig_delta_tracking.pdf, id=196, page=2, 569.05513pt x 569.05513pt>
 File: figures//fig_delta_tracking.pdf Graphic file (type pdf)
 <use figures//fig_delta_tracking.pdf, page 2>
 Package pdftex.def Info: figures//fig_delta_tracking.pdf , page2 used on input 
 line 59.
 (pdftex.def)             Requested size: 240.0pt x 240.00008pt.
-<figures//fig_delta_tracking.pdf, id=195, page=3, 569.05513pt x 569.05513pt>
+<figures//fig_delta_tracking.pdf, id=197, page=3, 569.05513pt x 569.05513pt>
 File: figures//fig_delta_tracking.pdf Graphic file (type pdf)
 <use figures//fig_delta_tracking.pdf, page 3>
 Package pdftex.def Info: figures//fig_delta_tracking.pdf , page3 used on input 
 line 61.
 (pdftex.def)             Requested size: 240.0pt x 240.00008pt.
-<figures//fig_delta_tracking.pdf, id=196, page=4, 569.05513pt x 569.05513pt>
+<figures//fig_delta_tracking.pdf, id=198, page=4, 569.05513pt x 569.05513pt>
 File: figures//fig_delta_tracking.pdf Graphic file (type pdf)
 <use figures//fig_delta_tracking.pdf, page 4>
 Package pdftex.def Info: figures//fig_delta_tracking.pdf , page4 used on input 
@@ -899,25 +905,25 @@ usion: multiple pdfs with page group included in a single page
 pdfTeX warning: pdflatex.exe (file ./figures//fig_delta_tracking.pdf): PDF incl
 usion: multiple pdfs with page group included in a single page
 >] (./figures/fig_bidirectional.pdf_tex
-<figures//fig_bidirectional.pdf, id=228, page=1, 739.77165pt x 455.2441pt>
+<figures//fig_bidirectional.pdf, id=229, page=1, 739.77165pt x 455.2441pt>
 File: figures//fig_bidirectional.pdf Graphic file (type pdf)
 <use figures//fig_bidirectional.pdf, page 1>
 Package pdftex.def Info: figures//fig_bidirectional.pdf , page1 used on input l
 ine 56.
 (pdftex.def)             Requested size: 240.0pt x 147.68861pt.
-<figures//fig_bidirectional.pdf, id=229, page=2, 739.77165pt x 455.2441pt>
+<figures//fig_bidirectional.pdf, id=230, page=2, 739.77165pt x 455.2441pt>
 File: figures//fig_bidirectional.pdf Graphic file (type pdf)
 <use figures//fig_bidirectional.pdf, page 2>
 Package pdftex.def Info: figures//fig_bidirectional.pdf , page2 used on input l
 ine 60.
 (pdftex.def)             Requested size: 240.0pt x 147.68861pt.
-<figures//fig_bidirectional.pdf, id=230, page=3, 739.77165pt x 455.2441pt>
+<figures//fig_bidirectional.pdf, id=231, page=3, 739.77165pt x 455.2441pt>
 File: figures//fig_bidirectional.pdf Graphic file (type pdf)
 <use figures//fig_bidirectional.pdf, page 3>
 Package pdftex.def Info: figures//fig_bidirectional.pdf , page3 used on input l
 ine 62.
 (pdftex.def)             Requested size: 240.0pt x 147.68861pt.
-<figures//fig_bidirectional.pdf, id=231, page=4, 739.77165pt x 455.2441pt>
+<figures//fig_bidirectional.pdf, id=232, page=4, 739.77165pt x 455.2441pt>
 File: figures//fig_bidirectional.pdf Graphic file (type pdf)
 <use figures//fig_bidirectional.pdf, page 4>
 Package pdftex.def Info: figures//fig_bidirectional.pdf , page4 used on input l
@@ -1096,12 +1102,12 @@ ching/$[][]\T1/ptm/m/n/8 .
 
 ] (./paper.aux)
 Package rerunfilecheck Info: File `paper.brf' has not changed.
-(rerunfilecheck)             Checksum: 641438A1EC97C949A764EE471E567A55;4414.
+(rerunfilecheck)             Checksum: F819A1CA46629F953612CE97EE8443F3;4488.
  ) 
 Here is how much of TeX's memory you used:
  15070 strings out of 475071
  257197 string characters out of 5782907
- 641617 words of memory out of 5000000
+ 640617 words of memory out of 5000000
  36054 multiletter control sequences out of 15000+600000
  532657 words of font info for 121 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1120,10 +1126,10 @@ dist/fonts/type1/urw/courier/ucrr8a.pfb><c:/texlive/2022/texmf-dist/fonts/type1
 r.pfb><c:/texlive/2022/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/
 2022/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/texlive/2022/texmf-dist/fo
 nts/type1/urw/times/utmri8a.pfb>
-Output written on paper.pdf (8 pages, 225137 bytes).
+Output written on paper.pdf (8 pages, 225256 bytes).
 PDF statistics:
- 489 PDF objects out of 1000 (max. 8388607)
- 411 compressed objects within 5 object streams
+ 491 PDF objects out of 1000 (max. 8388607)
+ 413 compressed objects within 5 object streams
  81 named destinations out of 1000 (max. 500000)
  138 words of extra memory for PDF output out of 10000 (max. 10000000)
 
