@@ -18,7 +18,7 @@
 
 
 \refsection{0}
-  \datalist[entry]{nty/global//global/global}
+  \datalist[entry]{anyt/global//global/global}
     \entry{10.1145/965145.801255}{article}{}
       \name{author}{1}{}{%
         {{hash=31eca65cd9b9caf20488019e2dcda23a}{%
@@ -39,6 +39,7 @@
       \strng{authorbibnamehash}{31eca65cd9b9caf20488019e2dcda23a}
       \strng{authornamehash}{31eca65cd9b9caf20488019e2dcda23a}
       \strng{authorfullhash}{31eca65cd9b9caf20488019e2dcda23a}
+      \field{labelalpha}{Bli82}
       \field{sortinit}{B}
       \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
       \field{labelnamesource}{author}
@@ -98,6 +99,7 @@
       \strng{authorbibnamehash}{f776bc01693e2c29d2a42d04a8776b21}
       \strng{authornamehash}{f776bc01693e2c29d2a42d04a8776b21}
       \strng{authorfullhash}{3365c46fec11d4fe1a65548b79edc949}
+      \field{labelalpha}{Hof+21}
       \field{sortinit}{H}
       \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
       \field{labelnamesource}{author}
@@ -145,6 +147,7 @@
       \strng{authorbibnamehash}{5c702b04afcfd6cc710b3f19367b3703}
       \strng{authornamehash}{5c702b04afcfd6cc710b3f19367b3703}
       \strng{authorfullhash}{5c702b04afcfd6cc710b3f19367b3703}
+      \field{labelalpha}{KV84}
       \field{sortinit}{K}
       \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
       \field{labelnamesource}{author}
@@ -184,6 +187,7 @@
       \strng{authorbibnamehash}{37674bed327a5b6dcb92aef5e4298f5d}
       \strng{authornamehash}{37674bed327a5b6dcb92aef5e4298f5d}
       \strng{authorfullhash}{37674bed327a5b6dcb92aef5e4298f5d}
+      \field{labelalpha}{Lev88}
       \field{sortinit}{L}
       \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
       \field{labelnamesource}{author}
@@ -213,6 +217,7 @@
       \strng{authorbibnamehash}{72a9b45cd1e2abaaa523591dffea7b30}
       \strng{authornamehash}{72a9b45cd1e2abaaa523591dffea7b30}
       \strng{authorfullhash}{72a9b45cd1e2abaaa523591dffea7b30}
+      \field{labelalpha}{Max95}
       \field{sortinit}{M}
       \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
       \field{labelnamesource}{author}
@@ -258,6 +263,7 @@
       \strng{authorbibnamehash}{dd8408046eb04f12bc138226f4b7ffa5}
       \strng{authornamehash}{dd8408046eb04f12bc138226f4b7ffa5}
       \strng{authorfullhash}{dd8408046eb04f12bc138226f4b7ffa5}
+      \field{labelalpha}{NSJ14}
       \field{sortinit}{N}
       \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
       \field{labelnamesource}{author}
@@ -280,6 +286,54 @@
       \verb https://doi.org/10.1145/2661229.2661292
       \endverb
       \keyw{delta tracking,transmittance,participating media}
+    \endentry
+    \entry{10.1145/218380.218498}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{hash=2ee4bba29b67221f275d1e485adf6739}{%
+           family={Veach},
+           familyi={V\bibinitperiod},
+           given={Eric},
+           giveni={E\bibinitperiod}}}%
+        {{hash=03578abbf51650fbfaf563c532898f30}{%
+           family={Guibas},
+           familyi={G\bibinitperiod},
+           given={Leonidas\bibnamedelima J.},
+           giveni={L\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {New York, NY, USA}%
+      }
+      \list{publisher}{1}{%
+        {Association for Computing Machinery}%
+      }
+      \strng{namehash}{b3feb8b18ed07bb265f79bf95843bd00}
+      \strng{fullhash}{b3feb8b18ed07bb265f79bf95843bd00}
+      \strng{bibnamehash}{b3feb8b18ed07bb265f79bf95843bd00}
+      \strng{authorbibnamehash}{b3feb8b18ed07bb265f79bf95843bd00}
+      \strng{authornamehash}{b3feb8b18ed07bb265f79bf95843bd00}
+      \strng{authorfullhash}{b3feb8b18ed07bb265f79bf95843bd00}
+      \field{labelalpha}{VG95}
+      \field{sortinit}{V}
+      \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the 22nd Annual Conference on Computer Graphics and Interactive Techniques}
+      \field{isbn}{0897917014}
+      \field{series}{SIGGRAPH '95}
+      \field{title}{Optimally Combining Sampling Techniques for Monte Carlo Rendering}
+      \field{year}{1995}
+      \field{pages}{419\bibrangedash 428}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.1145/218380.218498
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1145/218380.218498
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1145/218380.218498
+      \endverb
+      \keyw{lighting simulation,global illumination,variance reduction,distribution ray tracing,Monte Carlo,rendering}
     \endentry
   \enddatalist
 \endrefsection

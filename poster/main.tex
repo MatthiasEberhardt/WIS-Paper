@@ -10,7 +10,7 @@
 \usepackage{graphicx}
 \usepackage{adjustbox}
 \usepackage{enumitem}
-\usepackage[backend=biber,style=numeric]{biblatex}
+\usepackage[backend=biber,style=alphabetic]{biblatex}
 \usepackage{SUtheme}
 
 \usepackage{mwe} % for placeholder images
@@ -76,11 +76,11 @@
   \end{tikzfigure}
 
   
-      Due to in-scattering and emission, light intensity changes for every point $u$ on the ray (see above). Emission is calculated as $\mu_a(u)\varepsilon(u, \omega)$, in-scattering as $\mu_s\int_{\Omega}f_p(u,\omega,-\omega')L(u,\omega')d\omega'$, where $\varepsilon(u,\omega)$ is the light emitted by a particle at $u$ in direction $\omega$, and $f_p$ is the phase function, which describes the probability that light arriving from $-\omega'$ is scattered towards $\omega$. 
+      Due to in-scattering and emission, light intensity changes for every point $u$ on the ray (see above) \cite{468400}. Emission is calculated as $\mu_a(u)\varepsilon(u, \omega)$, in-scattering as $\mu_s\int_{\Omega}f_p(u,\omega,-\omega')L(u,\omega')d\omega'$, where $\varepsilon(u,\omega)$ is the light emitted by a particle at $u$ in direction $\omega$, and $f_p$ is the phase function, which describes the probability that light arriving from $-\omega'$ is scattered towards $\omega$. 
      
      Therefore, the light send from $u$ to $x$ is 
      \begin{align*}
-     L_e^s(u,\omega) = \mu_s\int_{\Omega}f_p(u,\omega,-\omega')L(u,\omega')d\omega' + \mu_a(u)\varepsilon(u, \omega)
+     L_e^s(u,\omega) = \mu_s(u)\int_{\Omega}f_p(u,\omega,-\omega')L(u,\omega')d\omega' + \mu_a(u)\varepsilon(u, \omega)
      \end{align*}
      The total added light intensity to the ray between $x$ and $y$ is computed by the line integral of $L_e^s$. Adding this to the attenuated light from $y$  results in the rendering equation
      \begin{equation}\label{eq:rendering_equation}
@@ -95,7 +95,7 @@
   \import{figures/}{fig_simple_algorithm.pdf_tex}
   %\caption{Light interactions in participating media.}\label{fig:interactions}
   \end{wrapfigure}
-  A simple approximation to equation \ref{eq:rendering_equation} that ignores all global illumination effects is the so-called ray marching algorithm (left), which works by sampling each ray at multiple, evenly spaced points $p_i$ and compositing those samples to a final value. If $c(i)$ is the color of $p_i$ and $\alpha(i)$ its opacity, this composition is described as
+  A simple approximation to equation \ref{eq:rendering_equation} that ignores all global illumination effects is the so-called ray marching algorithm (left), which works by sampling each ray at multiple, evenly spaced points $p_i$ and compositing those samples to a final value \cite{511}. If $c(i)$ is the color of $p_i$ and $\alpha(i)$ its opacity, this composition is given by
   \begin{align*}
   \sum_{1 \le i \le n} \left( 1 - \prod_{1 \le j \le i}(1-\alpha(j))\right) \cdot c(i)
   \end{align*}
@@ -110,7 +110,7 @@
   \import{figures/}{fig_monte_carlo.pdf_tex}
   %\caption{Light interactions in participating media.}\label{fig:interactions}
   \end{wrapfigure}
-A more sophisticated approach is the so-called monte carlo ray tracing \cite{10.1145/3451256}. This method works by casting a ray from the camera ($p_0$) in direction $-\omega_0$ for a randomly sampled distance $t_0$. At $p_1 = p_0 -\omega_0 t_0$ a new direction $\omega_1$ is randomly sampled, and the process is repeated, until either a light is hit or the ray is randomly terminated. At each point $p_i$, next event estimation is done by sending shadow rays towards randomly sampled points on light sources (called $l_i$). The final result is computed by adding the contributions along the path together (while attenuating by the transmittance $\tau$ along the way). The light sources $l_i$ and the directions $\omega_i$ are calculated using importance sampling. For the sampling of the distances $t_i$ delta tracking (also called woodcock tracking) is usually used \cite{10.1145/2661229.2661292}. To estimate the transmittance $\tau$, several methods related to delta tracking might be used \cite{10.1145/2661229.2661292}, e.g. ratio tracking.
+A more sophisticated approach is the so-called monte carlo ray tracing \cite{10.1145/3451256}. This method works by casting a ray from the camera ($p_0$) in direction $-\omega_0$ for a randomly sampled distance $t_0$. At $p_1 = p_0 -\omega_0 t_0$ a new direction $\omega_1$ is randomly sampled, and the process is repeated, until either a light is hit or the ray is randomly terminated. At each point $p_i$, next event estimation is done by sending shadow rays towards randomly sampled points on light sources (called $l_i$). The final result is computed by adding the contributions along the path together (while attenuating by the transmittance $\tau$ along the way). The light sources $l_i$ and the directions $\omega_i$ are calculated using importance sampling \cite{10.1145/218380.218498}. For the sampling of the distances $t_i$ delta tracking (also called woodcock tracking) is usually used \cite{10.1145/2661229.2661292}. To estimate the transmittance $\tau$, several methods related to delta tracking might be used \cite{10.1145/2661229.2661292}, e.g. ratio tracking.
     }
     \block{References}{
         \vspace{-1em}
